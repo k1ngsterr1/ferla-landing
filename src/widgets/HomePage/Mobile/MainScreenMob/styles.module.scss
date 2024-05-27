@@ -4,31 +4,33 @@
 @import "../../../../shared/styles/animations";
 
 .main_screen_mob {
-  height: 120svh;
-  background-image: url(../../../../assets/webp/mob/phone_bg.webp);
+  height: 100svh;
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
   overflow-y: hidden;
 
-  @include respond-to("xs") {
-    height: 90svh;
-  }
-
-  @include respond-to("fsf") {
+  &__image {
+    width: 100%;
     height: 100svh;
-  }
+    position: absolute;
+    top: 0;
+    z-index: -1;
 
-  @include respond-to("sm") {
+    @include respond-to("xs") {
+      height: 120svh;
+    }
+
+    @include respond-to("fsf") {
+      height: 140svh;
+    }
+  }
+  @include respond-to("xs") {
     height: 120svh;
   }
 
-  @include respond-to("es") {
+  @include respond-to("fsf") {
     height: 140svh;
-  }
-
-  @include respond-to("md") {
-    height: 180svh;
   }
 
   &__content {

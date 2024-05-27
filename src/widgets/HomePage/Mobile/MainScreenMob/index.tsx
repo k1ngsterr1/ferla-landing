@@ -1,6 +1,9 @@
 import React from "react";
 import Button from "@shared/ui/Button";
 import Link from "next/link";
+import Image from "next/image";
+
+import mob_bg from "@assets/webp/mob/phone_bg.webp";
 
 import styles from "./styles.module.scss";
 
@@ -28,6 +31,12 @@ import styles from "./styles.module.scss";
 export const MainScreenMobile = () => {
   return (
     <main className={styles.main_screen_mob} id="home-mob">
+      <Image
+        src={mob_bg}
+        alt="background image"
+        priority
+        className={styles.main_screen_mob__image}
+      />
       <div className={styles.main_screen_mob__content}>
         <h1 className={styles.main_screen_mob__content__heading}>
           <strong>Business on Wheels for Everyone</strong>
