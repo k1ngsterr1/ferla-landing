@@ -48,14 +48,7 @@ export const BikesEverywhereMobile = () => {
         </p>
       </div>
       <div className={styles.bikes_everywhere_mob__gallery}>
-        {bikes.map((bike, index) => (
-          <Image
-            key={index}
-            src={bike.image}
-            className={styles.bikes_everywhere_mob__gallery_image}
-            alt="bike"
-          />
-        ))}
+        <HeavyImage />
       </div>
       <Button
         text="Start Selling"

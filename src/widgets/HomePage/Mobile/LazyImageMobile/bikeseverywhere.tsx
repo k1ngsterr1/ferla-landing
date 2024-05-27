@@ -1,18 +1,23 @@
 import React from "react";
 import Image from "next/image";
 
-import styles from "../BestSellersMobile/styles.module.scss";
+import { bikes } from "@shared/lib/content/bikesImagesContent";
 
-import bike from "@assets/webp/mob/best_sellers_mob.webp";
+import styles from "../BikeEverywhereMobile/styles.module.scss";
 
-const LazyImage = () => {
+const LazyImage: React.FC<ISrc> = () => {
   return (
-    <Image
-      src={bike}
-      priority
-      alt="Ferla Bikes Main Image"
-      className={styles.best_sellers_mob__image}
-    />
+    <>
+      {bikes.map((bike, index) => (
+        <Image
+          key={index}
+          src={bike.image}
+          priority
+          className={styles.bikes_everywhere_mob__gallery_image}
+          alt="bike"
+        />
+      ))}
+    </>
   );
 };
 
