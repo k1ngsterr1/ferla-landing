@@ -24,7 +24,13 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button className={buttonClass} {...rest}>
       {text}
-      <FontAwesomeIcon icon={icon} className={styles.icon} />
+      {icon && (
+        <FontAwesomeIcon
+          icon={icon}
+          className={styles.icon}
+          data-testid="icon"
+        />
+      )}
     </button>
   );
 };
