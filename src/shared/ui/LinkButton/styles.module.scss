@@ -1,8 +1,6 @@
 @import "breakpoint-slicer";
-@import "../../styles/mixins";
-@import "../../styles/variables";
 
-%button_general {
+%link {
   width: clamp(125px, 250 / 360 * 100vw, 500px);
   height: clamp(27.5px, 55 / 360 * 100vw, 110px);
   font-size: clamp(8px, 16 / 360 * 100vw, 32px);
@@ -63,14 +61,8 @@
   }
 }
 
-.icon {
-  @apply text-base;
-  @apply text-dark;
-  transition: 0.3s all;
-}
-
-.button--filled {
-  @extend %button_general;
+.link--filled {
+  @extend %link;
   @apply text-white;
   @apply bg-red;
 
@@ -79,8 +71,8 @@
   }
 }
 
-.button--outline {
-  @extend %button_general;
+.link--outline {
+  @extend %link;
   background: transparent;
   @apply text-red;
   @apply rounded-full;
@@ -88,29 +80,5 @@
   &:hover {
     @apply bg-hover_red;
     @apply text-hover_red;
-  }
-}
-
-.button--underline {
-  @extend %button_general;
-}
-
-.button--transparent {
-  @extend %button_general;
-  background: transparent;
-  display: flex;
-  text-align: left;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid;
-  @apply border-dark;
-  @apply text-white;
-
-  &:hover {
-    @apply border-red;
-  }
-
-  &:hover .icon {
-    @apply text-red;
   }
 }
