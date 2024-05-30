@@ -1,4 +1,5 @@
 @import "breakpoint-slicer";
+@import "tailwindcss/utilities";
 @import "./mixins";
 @import "./variables";
 
@@ -21,6 +22,50 @@ body {
   scroll-behavior: smooth;
 }
 
+h1 {
+  font-size: clamp(25px, 50 / 360 * 100vw, 100px);
+  text-transform: capitalize;
+
+  @include respond-to("xs") {
+    font-size: clamp(25px, 50 / 480 * 100vw, 100px);
+  }
+
+  @include respond-to("sm") {
+    font-size: clamp(25px, 50 / 720 * 100vw, 100px);
+  }
+
+  @include respond-to("md") {
+    font-size: clamp(25px, 50 / 992 * 100vw, 100px);
+  }
+
+  @include respond-to("lg") {
+    font-size: clamp(45px, 90 / 1200 * 100vw, 180px);
+  }
+
+  @include respond-to("xl") {
+    font-size: clamp(45px, 90 / 1360 * 100vw, 180px);
+  }
+
+  @include respond-to("2xl") {
+    font-size: clamp(45px, 90 / 1520 * 100vw, 180px);
+  }
+
+  @include respond-to("3xl") {
+    width: 40%;
+    font-size: clamp(45px, 90 / 1680 * 100vw, 180px);
+  }
+
+  @include respond-to("4xl") {
+    width: 50%;
+    font-size: clamp(45px, 90 / 1920 * 100vw, 180px);
+  }
+
+  @include respond-to("5xl") {
+    width: 50%;
+    font-size: clamp(55px, 4.297vw, 220px);
+  }
+}
+
 h1,
 h2,
 h3,
@@ -28,4 +73,61 @@ h4,
 h5,
 h6 {
   font-family: "Poppins";
+}
+
+p {
+  font-family: "Rubik";
+  font-size: clamp(8px, 16 / 360 * 100vw, 32px);
+  line-height: 138.6%;
+  @apply text-dark;
+
+  @include respond-to("xs") {
+    font-size: clamp(8px, 16 / 480 * 100vw, 32px);
+  }
+
+  @include respond-to("sm") {
+    font-size: clamp(8px, 16 / 768 * 100vw, 32px);
+  }
+
+  @include respond-to("md") {
+    font-size: clamp(8px, 16 / 992 * 100vw, 32px);
+  }
+
+  @include respond-to("lg") {
+    font-size: clamp(10px, 20 / 1200 * 100vw, 40px);
+  }
+
+  @include respond-to("xl") {
+    font-size: clamp(10px, 20 / 1360 * 100vw, 40px);
+  }
+
+  @include respond-to("2xl") {
+    font-size: clamp(10px, 20 / 1520 * 100vw, 40px);
+  }
+
+  @include respond-to("3xl") {
+    font-size: clamp(10px, 20 / 1680 * 100vw, 40px);
+  }
+
+  @include respond-to("4xl") {
+    font-size: clamp(10px, 20 / 1920 * 100vw, 40px);
+  }
+
+  @include respond-to("5xl") {
+    font-size: clamp(10px, 20 / 2560 * 100vw, 40px);
+  }
+}
+
+button,
+a {
+  outline: none;
+  font-family: "Poppins";
+  cursor: pointer;
+}
+
+.container {
+  width: 86.6%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
 }

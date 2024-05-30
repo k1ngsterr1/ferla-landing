@@ -1,5 +1,14 @@
-import Image from "next/image";
+import React from "react";
+import { Header } from "@features/Header";
+import { MainScreen } from "@widgets/HomePage/Main";
 
-export default function Home() {
-  return <main></main>;
-}
+const HomePage = () => {
+  return (
+    <div>
+      <Header />
+      <MainScreen />
+    </div>
+  );
+};
+
+export default HomePage;
