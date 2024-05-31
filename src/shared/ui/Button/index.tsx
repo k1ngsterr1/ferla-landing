@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import { IconDefinition, IconProp } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {

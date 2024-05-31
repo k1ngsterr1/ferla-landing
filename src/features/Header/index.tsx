@@ -19,7 +19,7 @@ export const Header = () => {
       />
       <nav className={styles.header__nav}>
         {navLinks.map((link, index) => (
-          <NavLink label={link.label} href={link.href} />
+          <NavLink label={link.label} href={link.href} key={index} />
         ))}
       </nav>
       <LinkButton text="Contact Us" buttonType="outline" href="#form" />
