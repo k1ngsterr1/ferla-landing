@@ -7,6 +7,10 @@
   flex-direction: column;
   @apply mt-80;
 
+  @include respond-to("5xl") {
+    margin-top: clamp(256px, 20vw, 1024px);
+  }
+
   &__upper {
     width: 100%;
     display: flex;

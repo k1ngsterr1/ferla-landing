@@ -4,6 +4,8 @@ import { MainScreen } from "@widgets/HomePage/Main";
 import { BusinessBlock } from "@widgets/HomePage/BusinessBlock";
 import { BestSellers } from "@widgets/HomePage/BestSellers";
 import { BikesEverywhere } from "@widgets/HomePage/BikesEverywhere";
+import { PartnersScreen } from "@widgets/HomePage/Partners";
+import { ManageScreen } from "@widgets/HomePage/ManageScreen";
 
 const HomePage = () => {
   return (
@@ -13,6 +15,8 @@ const HomePage = () => {
       <BusinessBlock />
       <BestSellers />
       <BikesEverywhere />
+      <PartnersScreen />
+      <ManageScreen />
     </div>
   );
 };
