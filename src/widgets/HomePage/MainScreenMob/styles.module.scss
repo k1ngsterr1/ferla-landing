@@ -7,6 +7,7 @@
     background-image: url(../../../assets/webp/mob/phone_bg.webp);
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-x: hidden;
 
     &__content {
         display: flex;
@@ -14,6 +15,8 @@
         align-items: center;
         width: 90%;
         margin: auto;
+        overflow-x: hidden;
+
 
         &__heading {
             color: #FFF;

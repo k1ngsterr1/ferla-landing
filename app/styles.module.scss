@@ -6,6 +6,7 @@
 @include respond-to('lg') {
     .mob {
         display: none;
+        overflow-x: hidden;
     }
 }
 
