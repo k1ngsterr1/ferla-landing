@@ -13,7 +13,7 @@ interface IIConDot {
 export const IconDot: React.FC<IIConDot> = ({ icon, margins }) => {
   return (
     <div className={`${styles.icon_dot} ${margins}`}>
-      <FontAwesomeIcon icon={icon} />
+      <FontAwesomeIcon icon={icon} className={styles.icon_dot__icon} />
     </div>
   );
 };
