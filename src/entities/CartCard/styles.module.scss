@@ -1,0 +1,16 @@
+@import "breakpoint-slicer";
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.cart_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @apply rounded-md;
+  @apply bg-gray-300;
+
+  &__image {
+    width: 90%;
+    height: 250px;
+  }
+}
