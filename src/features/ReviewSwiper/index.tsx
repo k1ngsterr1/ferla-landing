@@ -12,7 +12,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export const ReviewSwiper = () => {
-  const swiperRef = useRef(null);
+  const swiperRef = useRef<any>(null);
 
   return (
     <>
