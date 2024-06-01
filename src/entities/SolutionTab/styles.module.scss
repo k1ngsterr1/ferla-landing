@@ -25,6 +25,10 @@
     @apply text-red;
   }
 
+  @include respond-to('xxs') {
+    height: clamp(75px,41.667vw,300px);
+  }
+
   @include respond-to("xs") {
     height: clamp(75px, 150 / 480 * 100vw, 300px);
   }
@@ -60,6 +64,16 @@
 
   @include respond-to("5xl") {
     height: clamp(75px, 150 / 2560 * 100vw, 300px);
+  }
+
+  &__text {
+    @include respond-to('xxs') {
+      @apply mt-16;
+    }
+
+    @include respond-to('md') {
+      @apply mt-0;
+    }
   }
 
   &__star {
@@ -122,6 +136,12 @@
     font-weight: 600;
     transition: 0.3s all;
     @apply text-dark;
+    letter-spacing: 1.1px;
+    text-transform: capitaliz;
+
+    @include respond-to('xxs') {
+      font-size: clamp(9px,5vw,36px);
+    }
 
     @include respond-to("xs") {
       font-size: clamp(12px, 24 / 480 * 100vw, 48px);
