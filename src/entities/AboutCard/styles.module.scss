@@ -9,8 +9,13 @@
   align-items: flex-start;
   flex-direction: column;
   border: 2px solid rgba(37, 37, 37, 0.1);
+  transition: 0.3s all;
   @apply rounded-lg;
   @apply p-4;
+
+  &:hover {
+    @apply border-red;
+  }
 
   &__name {
     font-size: clamp(9px, 18 / 360 * 100vw, 36px);
