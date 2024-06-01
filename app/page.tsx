@@ -17,6 +17,7 @@ import { BusinessBlockMobile } from "@widgets/HomePage/Mobile/BusinessBlockMobil
 import { BestSellersMobile } from "@widgets/HomePage/Mobile/BestSellersMobile";
 
 import styles from "./styles.module.scss";
+import { VideoBlock } from "@widgets/HomePage/PC/VideoBlock";
 
 const HomePage = () => {
   return (
@@ -31,6 +32,7 @@ const HomePage = () => {
         <ManageScreen />
         <OurBikes />
         <Reviews />
+        <VideoBlock />
       </div>
       <div className={styles.mob}>
         <MainScreenMob />
