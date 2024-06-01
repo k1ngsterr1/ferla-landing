@@ -7,6 +7,7 @@ import { BikesEverywhere } from "@widgets/HomePage/BikesEverywhere";
 import { PartnersScreen } from "@widgets/HomePage/Partners";
 import { ManageScreen } from "@widgets/HomePage/ManageScreen";
 import { OurBikes } from "@widgets/HomePage/OurBikes";
+import { Reviews } from "@widgets/HomePage/Reviews";
 
 const HomePage = () => {
   return (
@@ -19,6 +20,7 @@ const HomePage = () => {
       <PartnersScreen />
       <ManageScreen />
       <OurBikes />
+      <Reviews />
     </div>
   );
 };

@@ -18,8 +18,8 @@ const ArrowRight = () => {
         ref={arrowRef}
         d="M67 0V55.7654H0.999996M0.999996 55.7654L5.71428 49.5307M0.999996 55.7654L5.71428 62"
         stroke="#E33A3A"
-        stroke-width="2"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinejoin="round"
         style={{ strokeDasharray: 400, strokeDashoffset: 400 }} // Adjust these values based on the length of the path
       />
     </svg>
