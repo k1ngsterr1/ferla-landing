@@ -1,5 +1,4 @@
 import React from "react";
-import arrow from "@assets/vectors/arrow.svg";
 import Image from "next/image";
 import Button from "@shared/ui/Button";
 import { MiniText } from "@shared/ui/MiniText";

@@ -16,8 +16,8 @@
         @apply mt-16;
 
         &_paragraph {
-            width: 223px;
-            height: 66px;
+            width: clamp(111.5px,61.944vw,446px);
+            height: clamp(33px,18.333vw,132px);
             flex-shrink: 0; 
             text-align: center;
             font-style: normal;
