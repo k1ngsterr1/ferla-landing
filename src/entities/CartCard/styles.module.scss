@@ -1,16 +1,64 @@
 @import "breakpoint-slicer";
-@import "../../styles/variables";
-@import "../../styles/mixins";
+@import "../../shared/styles/variables";
+@import "../../shared/styles/mixins";
 
 .cart_card {
+  width: 100%;
+  height: clamp(114.5px, 229 / 360 * 100vw, 458px);
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 2px solid red;
   @apply rounded-md;
-  @apply bg-gray-300;
+  @apply bg-gray-100;
+
+  @include respond-to("xs") {
+    width: 100%;
+    height: clamp(114.5px, 229 / 480 * 100vw, 458px);
+  }
+
+  @include respond-to("sm") {
+    width: 100%;
+    height: clamp(114.5px, 229 / 768 * 100vw, 458px);
+  }
+
+  @include respond-to("md") {
+    width: 100%;
+    height: clamp(114.5px, 229 / 992 * 100vw, 458px);
+  }
+
+  @include respond-to("lg") {
+    width: clamp(185px, 370 / 1200 * 100vw, 640px);
+    height: clamp(116px, 232 / 1200 * 100vw, 464px);
+  }
+
+  @include respond-to("xl") {
+    width: clamp(185px, 370 / 1360 * 100vw, 640px);
+    height: clamp(116px, 232 / 1360 * 100vw, 464px);
+  }
+
+  @include respond-to("2xl") {
+    width: clamp(185px, 370 / 1520 * 100vw, 640px);
+    height: clamp(116px, 232 / 1520 * 100vw, 464px);
+  }
+
+  @include respond-to("3xl") {
+    width: clamp(185px, 370 / 1680 * 100vw, 640px);
+    height: clamp(116px, 232 / 1680 * 100vw, 464px);
+  }
+
+  @include respond-to("4xl") {
+    width: clamp(185px, 370 / 1920 * 100vw, 640px);
+    height: clamp(116px, 232 / 1920 * 100vw, 464px);
+  }
+
+  @include respond-to("5xl") {
+    width: clamp(185px, 370 / 2560 * 100vw, 640px);
+    height: clamp(116px, 232 / 2560 * 100vw, 464px);
+  }
 
   &__image {
     width: 90%;
-    height: 250px;
+    height: clamp(125px, 250 / 360 * 100vw, 500px);
   }
 }

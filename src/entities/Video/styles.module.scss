@@ -43,8 +43,7 @@
   }
 
   @include respond-to("4xl") {
-    width: clamp(303.5px, 607 / 1920 * 100vw, 2400px);
-    height: clamp(249px, 498 / 1920 * 100vw, 996px);
+    width: clamp(750px, 78.125vw, 3000px);
   }
 
   @include respond-to("5xl") {
@@ -54,5 +53,6 @@
 
   &__market {
     width: 100%;
+    height: 100%;
   }
 }

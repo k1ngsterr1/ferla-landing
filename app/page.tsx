@@ -6,6 +6,7 @@ import { BestSellers } from "@widgets/HomePage/BestSellers";
 import { BikesEverywhere } from "@widgets/HomePage/BikesEverywhere";
 import { PartnersScreen } from "@widgets/HomePage/Partners";
 import { ManageScreen } from "@widgets/HomePage/ManageScreen";
+import { OurBikes } from "@widgets/HomePage/OurBikes";
 
 const HomePage = () => {
   return (
@@ -17,6 +18,7 @@ const HomePage = () => {
       <BikesEverywhere />
       <PartnersScreen />
       <ManageScreen />
+      <OurBikes />
     </div>
   );
 };
