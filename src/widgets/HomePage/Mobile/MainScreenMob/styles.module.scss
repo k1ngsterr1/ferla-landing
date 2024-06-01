@@ -3,11 +3,16 @@
 @import "../../../../shared/styles/variables";
 
 .main_screen_mob {
-    height: 72vh;
+    height: 120dvh;
     background-image: url(../../../../assets/webp/mob/phone_bg.webp);
     background-repeat: no-repeat;
     background-size: cover;
     overflow-x: hidden;
+    overflow-y: hidden;
+    
+    @include respond-to('xs') {
+        height: 90dvh;
+    }
 
     &__content {
         display: flex;
