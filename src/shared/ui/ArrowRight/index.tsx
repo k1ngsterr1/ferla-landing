@@ -1,5 +1,5 @@
 "use client";
-import { useArrowRightAnimation } from "@shared/animations/arrowRightAnimation";
+import { useArrowRightAnimation } from "@shared/lib/animations/arrowRightAnimation";
 import React, { useRef, useEffect } from "react";
 
 const ArrowRight = () => {
