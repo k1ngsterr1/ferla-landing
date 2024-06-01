@@ -18,6 +18,7 @@ import { BestSellersMobile } from "@widgets/HomePage/Mobile/BestSellersMobile";
 
 import styles from "./styles.module.scss";
 import { VideoBlock } from "@widgets/HomePage/PC/VideoBlock";
+import { Blog } from "@widgets/HomePage/PC/Blog";
 
 const HomePage = () => {
   return (
@@ -33,6 +34,7 @@ const HomePage = () => {
         <OurBikes />
         <Reviews />
         <VideoBlock />
+        <Blog />
       </div>
       <div className={styles.mob}>
         <MainScreenMob />
