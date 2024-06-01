@@ -1,7 +1,11 @@
 .best_sellers_mob {
+    width: 90%;
+    margin: auto;
     display: flex;
-    align-items: center;
+    align-items: start;
+    justify-content: start;
     flex-direction: column;
+    overflow-x: hidden;
     @apply mt-16;
 
     &__text {
@@ -17,6 +21,18 @@
             font-weight: 300;
             line-height: 138.6%; 
             @apply mt-8;
+        }
+    }
+
+    &__swiper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @apply mt-8;
+
+        &_container {
+            width: 72% !important;
         }
     }
 }

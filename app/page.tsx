@@ -30,7 +30,7 @@ const HomePage = () => {
         <PartnersScreen />
         <ManageScreen />
         <OurBikes />
-        <Reviews />
+        {/* <Reviews /> */}
       </div>
       <div className={styles.mob}>
         <MainScreenMob />
