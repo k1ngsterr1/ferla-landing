@@ -1,0 +1,22 @@
+.best_sellers_mob {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @apply mt-16;
+
+    &__text {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        &_paragraph {
+            width: clamp(124.5px,69.167vw,498px);
+            height: clamp(40px,22.222vw,160px);
+            text-align: center;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 138.6%; 
+            @apply mt-8;
+        }
+    }
+}

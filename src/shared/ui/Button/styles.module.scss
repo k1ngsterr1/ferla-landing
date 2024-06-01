@@ -11,6 +11,13 @@
   @apply font-medium;
   @apply rounded-full;
 
+  @include respond-to('xxs') {
+    width: clamp(125px,69.444vw,500px);
+    height: clamp(27.5px,15.278vw,110px);
+    font-size: clamp(8px,4.444vw,32px);
+  }
+
+
   @include respond-to("xs") {
     width: clamp(125px, 250 / 480 * 100vw, 500px);
     height: clamp(27.5px, 55 / 480 * 100vw, 110px);

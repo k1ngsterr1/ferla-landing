@@ -15,15 +15,17 @@ export const SolutionTab: React.FC<ISolutionTab> = ({ name, href }) => {
   return (
     <div className={styles.solution_tab}>
       <FontAwesomeIcon icon={faStar} className={styles.solution_tab__star} />
-      <span className={styles.solution_tab__name}>{name}</span>
-      <div className="flex items-center gap-2">
-        <Link href={href} className={styles.solution_tab__link}>
-          Learn More
-        </Link>
-        <FontAwesomeIcon
-          icon={faChevronRight}
-          className={styles.solution_tab__icon}
-        />
+      <div className={styles.solution_tab__text}>
+        <span className={styles.solution_tab__name}>{name}</span>
+        <span className="flex items-center gap-2">
+          <Link href={href} className={styles.solution_tab__link}>
+            Learn More
+          </Link>
+          <FontAwesomeIcon
+            icon={faChevronRight}
+            className={styles.solution_tab__icon}
+          />
+        </span>
       </div>
     </div>
   );
