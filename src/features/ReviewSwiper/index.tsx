@@ -12,22 +12,24 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export const ReviewSwiper = () => {
-  const swiperRef = useRef<any>(null);
+  const swiperRef = useRef(null);
 
   return (
     <>
       <Swiper
+        spaceBetween={0}
         slidesPerView={3}
         className={`${styles.review_swiper} !w-[100%]`}
         navigation={false}
-        onSwiper={(swiper) => {
+        onSlideChange={() => console.log("slide change")}
+        onSwiper={(swiper: any) => {
           swiperRef.current = swiper;
           console.log(swiper);
         }}
       >
         {reviewCardContent.map((review, index) => (
           <SwiperSlide
-            className="!flex !items-center !justify-center"
+            className={styles.review_swiper__slides__slide}
             key={index}
           >
             <ReviewCard

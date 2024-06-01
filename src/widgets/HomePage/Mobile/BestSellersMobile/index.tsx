@@ -1,9 +1,22 @@
+"use client";
+
 import React from "react";
-import Image from "next/image";
 import Button from "@shared/ui/Button";
 import { MiniText } from "@shared/ui/MiniText";
+import { AboutCard } from "@entities/AboutCard";
+import Image from "next/image";
+import { content } from "@shared/lib/content/aboutCardContent";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./styles.module.scss";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+import bike from "@assets/webp/mob/best_sellers_mob.webp";
 
 export const BestSellersMobile = () => {
   return (

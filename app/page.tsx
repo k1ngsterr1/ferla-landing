@@ -32,6 +32,7 @@ const HomePage = () => {
         <PartnersScreen />
         <ManageScreen />
         <OurBikes />
+        {/* <Reviews /> */}
         <Reviews />
         <VideoBlock />
         <Blog />

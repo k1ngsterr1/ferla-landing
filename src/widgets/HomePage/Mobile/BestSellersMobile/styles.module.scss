@@ -1,22 +1,52 @@
 .best_sellers_mob {
+    width: 100%;
+    margin: auto;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
+    overflow-x: hidden;
     @apply mt-16;
 
-    &__text {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+        &__content {
+            width: 90%;
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            flex-direction: column;
 
-        &_paragraph {
-            width: clamp(124.5px,69.167vw,498px);
-            height: clamp(40px,22.222vw,160px);
-            text-align: center;
-            font-style: normal;
-            font-weight: 300;
-            line-height: 138.6%; 
-            @apply mt-8;
+        &__text {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            &_paragraph {
+                width: clamp(124.5px,69.167vw,498px);
+                height: clamp(40px,22.222vw,160px);
+                text-align: center;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 138.6%; 
+                @apply mt-8;
+            }
         }
+
+        &__swiper {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @apply mt-8;
+
+            &_container {
+                width: 73%;
+            }
+        }
+    }
+
+    &__image {
+        width: clamp(152.5px,84.722vw,610px);
+        height: clamp(166.5px,92.5vwv,666px);
+        @apply mt-8;
     }
 }
