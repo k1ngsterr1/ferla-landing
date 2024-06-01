@@ -1,8 +1,8 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
 import styles from "./styles.module.scss";
-import Link from "next/link";
 
 export interface IBlogCard {
   title: string;
