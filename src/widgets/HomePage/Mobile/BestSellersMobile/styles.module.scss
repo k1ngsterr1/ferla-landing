@@ -1,25 +1,22 @@
-.business_block_mob {
+.best_sellers_mob {
     display: flex;
     align-items: center;
     flex-direction: column;
-    overflow-x: hidden;
-
-    &__image {
-        width: clamp(215px,119.444vw,860px);
-        height: clamp(207px,115vw,828px);
-    }
+    @apply mt-16;
 
     &__text {
-        @apply mt-16;
         display: flex;
         align-items: center;
         flex-direction: column;
 
-        &_text {
+        &_paragraph {
+            width: clamp(124.5px,69.167vw,498px);
+            height: clamp(40px,22.222vw,160px);
             text-align: center;
             font-style: normal;
             font-weight: 300;
-            line-height: 138.6%;
+            line-height: 138.6%; 
+            @apply mt-8;
         }
     }
 }

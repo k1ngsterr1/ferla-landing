@@ -1,0 +1,40 @@
+.business_block_mob {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+
+    &__image {
+        width: clamp(215px,119.444vw,860px);
+        height: clamp(207px,115vw,828px);
+    }
+
+    &__text {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        @apply mt-16;
+
+        &_paragraph {
+            width: clamp(111.5px,61.944vw,446px);
+            height: clamp(33px,18.333vw,132px);
+            flex-shrink: 0; 
+            text-align: center;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 138.6%;
+            @apply mt-4;
+        }
+    }
+
+    &__tabs {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        @apply mt-8;
+        @apply gap-4;
+    }
+}

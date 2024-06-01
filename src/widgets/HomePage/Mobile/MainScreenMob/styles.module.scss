@@ -1,10 +1,10 @@
 @import "breakpoint-slicer";
-@import "../../../shared/styles/mixins";
-@import "../../../shared/styles/variables";
+@import "../../../../shared/styles/mixins";
+@import "../../../../shared/styles/variables";
 
 .main_screen_mob {
     height: 72vh;
-    background-image: url(../../../assets/webp/mob/phone_bg.webp);
+    background-image: url(../../../../assets/webp/mob/phone_bg.webp);
     background-repeat: no-repeat;
     background-size: cover;
     overflow-x: hidden;
@@ -40,7 +40,6 @@
         }
 
         &__link {
-            @apply mt-4;
             align-items: center;
             justify-content: center;
             text-decoration: none;
