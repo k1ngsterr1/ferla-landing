@@ -7,7 +7,7 @@
   height: clamp(135.5px, 271 / 360 * 100vw, 542px);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   @apply mt-16;
 
   @include respond-to("xs") {

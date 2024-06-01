@@ -17,11 +17,9 @@ export const ReviewSwiper = () => {
   return (
     <>
       <Swiper
-        spaceBetween={0}
         slidesPerView={3}
         className={`${styles.review_swiper} !w-[100%]`}
         navigation={false}
-        onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
           console.log(swiper);
@@ -29,7 +27,7 @@ export const ReviewSwiper = () => {
       >
         {reviewCardContent.map((review, index) => (
           <SwiperSlide
-            className={styles.review_swiper__slides__slide}
+            className="!flex !items-center !justify-center"
             key={index}
           >
             <ReviewCard
