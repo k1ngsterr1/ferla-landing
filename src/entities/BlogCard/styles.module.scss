@@ -1,0 +1,98 @@
+@import "breakpoint-slicer";
+@import "../../../../shared/styles/mixins";
+@import "../../../../shared/styles/variables";
+
+.blog_card {
+  width: 100%;
+  height: clamp(175px, 350 / 360 * 100vw, 700px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  @apply bg-white;
+
+  &__title {
+    font-family: "Poppins";
+    font-weight: 500;
+    text-align: center;
+    font-size: clamp(9px, 18 / 360 * 100vw, 36px);
+    @apply text-dark;
+
+    @include respond-to("xs") {
+      font-size: clamp(9px, 18 / 480 * 100vw, 36px);
+    }
+
+    @include respond-to("sm") {
+      font-size: clamp(9px, 18 / 768 * 100vw, 36px);
+    }
+
+    @include respond-to("md") {
+      font-size: clamp(9px, 18 / 992 * 100vw, 36px);
+    }
+
+    @include respond-to("lg") {
+      font-size: clamp(9px, 18 / 1200 * 100vw, 36px);
+    }
+
+    @include respond-to("xl") {
+      font-size: clamp(9px, 18 / 1360 * 100vw, 36px);
+    }
+
+    @include respond-to("2xl") {
+      font-size: clamp(9px, 18 / 1520 * 100vw, 36px);
+    }
+
+    @include respond-to("3xl") {
+      font-size: clamp(9px, 18 / 1680 * 100vw, 36px);
+    }
+
+    @include respond-to("4xl") {
+      font-size: clamp(9px, 18 / 1920 * 100vw, 36px);
+    }
+
+    @include respond-to("5xl") {
+      font-size: clamp(9px, 18 / 2560 * 100vw, 36px);
+    }
+  }
+
+  &__link {
+    font-family: "Rubik";
+    font-size: clamp(8.5px, 17 / 360 * 100vw, 34px);
+    @apply text-red;
+
+    @include respond-to("xs") {
+      font-size: clamp(8.5px, 17 / 480 * 100vw, 34px);
+    }
+
+    @include respond-to("sm") {
+      font-size: clamp(8.5px, 17 / 720 * 100vw, 34px);
+    }
+
+    @include respond-to("md") {
+      font-size: clamp(8.5px, 17 / 992 * 100vw, 34px);
+    }
+
+    @include respond-to("lg") {
+      font-size: clamp(8.5px, 17 / 1200 * 100vw, 34px);
+    }
+
+    @include respond-to("xl") {
+      font-size: clamp(8.5px, 17 / 1360 * 100vw, 34px);
+    }
+
+    @include respond-to("2xl") {
+      font-size: clamp(8.5px, 17 / 1520 * 100vw, 34px);
+    }
+
+    @include respond-to("3xl") {
+      font-size: clamp(8.5px, 17 / 1680 * 100vw, 34px);
+    }
+
+    @include respond-to("4xl") {
+      font-size: clamp(8.5px, 17 / 1920 * 100vw, 34px);
+    }
+
+    @include respond-to("5xl") {
+      font-size: clamp(8.5px, 17 / 2560 * 100vw, 34px);
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import "breakpoint-slicer";
+@import "../../../../shared/styles/mixins";
+@import "../../../../shared/styles/variables";
+
+.video_block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @apply mt-32;
+
+  &__logo {
+    width: clamp(147.5px, 295 / 360 * 100vw, 590px);
+    height: clamp(52.5px, 105 / 360 * 100vw, 210px);
+
+    @include respond-to("xs") {
+      width: clamp(147.5px, 295 / 480 * 100vw, 590px);
+      height: clamp(52.5px, 105 / 480 * 100vw, 210px);
+    }
+
+    @include respond-to("sm") {
+      width: clamp(147.5px, 295 / 720 * 100vw, 590px);
+      height: clamp(52.5px, 105 / 720 * 100vw, 210px);
+    }
+
+    @include respond-to("md") {
+      width: clamp(147.5px, 295 / 992 * 100vw, 590px);
+      height: clamp(52.5px, 105 / 992 * 100vw, 210px);
+    }
+
+    @include respond-to("lg") {
+      width: clamp(147.5px, 295 / 1200 * 100vw, 590px);
+      height: clamp(52.5px, 105 / 1200 * 100vw, 210px);
+    }
+
+    @include respond-to("xl") {
+      width: clamp(147.5px, 295 / 1360 * 100vw, 590px);
+      height: clamp(52.5px, 105 / 1360 * 100vw, 210px);
+    }
+
+    @include respond-to("2xl") {
+      width: clamp(147.5px, 295 / 1520 * 100vw, 590px);
+      height: clamp(52.5px, 105 / 1520 * 100vw, 210px);
+    }
+
+    @include respond-to("3xl") {
+      width: clamp(147.5px, 295 / 1680 * 100vw, 590px);
+      height: clamp(52.5px, 105 / 1680 * 100vw, 210px);
+    }
+
+    @include respond-to("4xl") {
+      width: clamp(147.5px, 295 / 1920 * 100vw, 590px);
+      height: clamp(52.5px, 105 / 1920 * 100vw, 210px);
+    }
+
+    @include respond-to("5xl") {
+      width: clamp(147.5px, 295 / 2560 * 100vw, 590px);
+      height: clamp(52.5px, 105 / 2560 * 100vw, 210px);
+    }
+  }
+}

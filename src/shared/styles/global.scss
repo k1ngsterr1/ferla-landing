@@ -26,8 +26,8 @@ h1 {
   font-size: clamp(25px, 50 / 360 * 100vw, 100px);
   text-transform: capitalize;
 
-  @include respond-to('xxs') {
-    font-size: clamp(22.75px,12.639vw,91px);
+  @include respond-to("xxs") {
+    font-size: clamp(22.75px, 12.639vw, 91px);
   }
 
   @include respond-to("xs") {
@@ -86,14 +86,14 @@ h5,
 h6 {
   font-size: clamp(24px, 48 / 360 * 100vw, 96px);
 
-  @include respond-to('xxs') {
+  @include respond-to("xxs") {
     text-align: center;
-    font-size: clamp(16px,8.889vw,64px);
+    font-size: clamp(16px, 8.889vw, 64px);
     font-style: normal;
     font-weight: 700;
-    line-height: 150%; 
+    line-height: 150%;
     letter-spacing: 1.6px;
-    text-transform: capitalize; 
+    text-transform: capitalize;
   }
 
   @include respond-to("xs") {
@@ -125,10 +125,12 @@ h6 {
   }
 
   @include respond-to("4xl") {
+    text-align: left;
     font-size: clamp(24px, 48 / 1920 * 100vw, 96px);
   }
 
   @include respond-to("5xl") {
+    text-align: left;
     font-size: clamp(24px, 48 / 2560 * 100vw, 96px);
   }
 }
@@ -154,8 +156,8 @@ p {
   text-wrap: balance;
   @apply text-dark;
 
-  @include respond-to('xxs') {
-    font-size: clamp(8px,4.444vw,32px) ;
+  @include respond-to("xxs") {
+    font-size: clamp(8px, 4.444vw, 32px);
   }
 
   @include respond-to("xs") {
@@ -203,11 +205,11 @@ a {
 }
 
 .container {
-  @include respond-to('lg') {
-  width: 86.6%;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
+  @include respond-to("lg") {
+    width: 86.6%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
   }
 
   // @include respond-to('xxs') {
