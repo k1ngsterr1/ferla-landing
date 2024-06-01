@@ -3,8 +3,9 @@ import Image from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 import styles from "./styles.module.scss";
+import { Stars } from "@shared/ui/Stars";
 
-interface IReviewCard {
+export interface IReviewCard {
   name: string;
   undername: string;
   photo: string | StaticImport;
@@ -28,6 +29,7 @@ export const ReviewCard: React.FC<IReviewCard> = ({
           <span className={styles.review_card__undername}>{undername}</span>
         </div>
       </div>
+      <Stars quantity={5} />
       <span className={styles.review_card__text}>{text}</span>
     </div>
   );

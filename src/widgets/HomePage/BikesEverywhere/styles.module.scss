@@ -2,39 +2,21 @@
 @import "../../../shared/styles/mixins";
 @import "../../../shared/styles/variables";
 
-.business_block {
+.everywhere_block {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  @apply mt-80;
-
-  @include respond-to("5xl") {
-    margin-top: clamp(256px, 20vw, 1024px);
-  }
+  @apply mt-32;
 
   &__upper {
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  &__perfect {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
     align-items: start;
-    @apply gap-12;
-    @apply mt-4;
-
-    &__arrow {
-      width: 66px;
-      height: 62px;
-    }
+    justify-content: space-between;
 
     &__paragraph {
-      width: 40%;
+      width: 30%;
       font-size: clamp(8px, 16 / 360 * 100vw, 32px);
-      text-align: left;
 
       @include respond-to("xs") {
         font-size: clamp(8px, 16 / 480 * 100vw, 32px);
@@ -71,6 +53,18 @@
       @include respond-to("5xl") {
         font-size: clamp(8px, 16 / 2560 * 100vw, 32px);
       }
+    }
+  }
+
+  &__photos {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @apply mt-16;
+
+    &__photo {
+      width: clamp(195px, 20.313vw, 780px);
+      height: clamp(195px, 20.313vw, 780px);
     }
   }
 }
