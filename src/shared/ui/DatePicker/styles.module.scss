@@ -1,0 +1,18 @@
+.input {
+  width: clamp(150px, 15.624vw, 600px);
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: clamp(9px, 0.93744vw, 36px);
+  z-index: 1;
+  border-bottom: 1px solid;
+  transition: 0.3s all;
+  @apply border-dark;
+  @apply pl-2;
+  @apply pb-1;
+
+  &:hover {
+    @apply border-red;
+    @apply text-red;
+  }
+}

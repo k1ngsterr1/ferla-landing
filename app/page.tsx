@@ -20,12 +20,16 @@ import styles from "./styles.module.scss";
 import { VideoBlock } from "@widgets/HomePage/PC/VideoBlock";
 import { Blog } from "@widgets/HomePage/PC/Blog";
 import { EmailForm } from "@features/EmailForm";
+import { Form } from "@widgets/HomePage/PC/Form";
+import { Cursor } from "@shared/ui/Cursor";
+import { Footer } from "@features/Footer";
 
 const HomePage = () => {
   return (
     <>
       <div className={styles.pc}>
         <Header />
+        <Cursor />
         <MainScreen />
         <BusinessBlock />
         <BestSellers />
@@ -38,6 +42,8 @@ const HomePage = () => {
         <VideoBlock />
         <Blog />
         <EmailForm />
+        <Form />
+        <Footer />
       </div>
       <div className={styles.mob}>
         <MainScreenMob />

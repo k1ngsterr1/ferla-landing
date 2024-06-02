@@ -13,6 +13,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: none;
 }
 
 body {
@@ -20,6 +21,7 @@ body {
   overflow-x: hidden;
   background-color: #fbfbfb;
   scroll-behavior: smooth;
+  cursor: none;
 }
 
 h1 {
@@ -201,7 +203,7 @@ button,
 a {
   outline: none;
   font-family: "Poppins";
-  cursor: pointer;
+  cursor: тщту;
 }
 
 .container {

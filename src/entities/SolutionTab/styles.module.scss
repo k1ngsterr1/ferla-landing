@@ -11,7 +11,6 @@
   align-items: flex-start;
   border: 2px solid;
   background: transparent;
-  cursor: pointer;
   transition: 0.3s all;
   @apply rounded-2xl;
   @apply border-dark;
@@ -25,8 +24,8 @@
     @apply text-red;
   }
 
-  @include respond-to('xxs') {
-    height: clamp(75px,41.667vw,300px);
+  @include respond-to("xxs") {
+    height: clamp(75px, 41.667vw, 300px);
   }
 
   @include respond-to("xs") {
@@ -67,11 +66,11 @@
   }
 
   &__text {
-    @include respond-to('xxs') {
+    @include respond-to("xxs") {
       @apply mt-16;
     }
 
-    @include respond-to('md') {
+    @include respond-to("md") {
       @apply mt-0;
     }
   }
@@ -139,8 +138,8 @@
     letter-spacing: 1.1px;
     text-transform: capitaliz;
 
-    @include respond-to('xxs') {
-      font-size: clamp(9px,5vw,36px);
+    @include respond-to("xxs") {
+      font-size: clamp(9px, 5vw, 36px);
     }
 
     @include respond-to("xs") {

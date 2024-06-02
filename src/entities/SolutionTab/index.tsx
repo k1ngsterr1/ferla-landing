@@ -13,7 +13,7 @@ interface ISolutionTab {
 
 export const SolutionTab: React.FC<ISolutionTab> = ({ name, href }) => {
   return (
-    <div className={styles.solution_tab}>
+    <div className={`${styles.solution_tab} hoverable`}>
       <FontAwesomeIcon icon={faStar} className={styles.solution_tab__star} />
       <div className={styles.solution_tab__text}>
         <span className={styles.solution_tab__name}>{name}</span>

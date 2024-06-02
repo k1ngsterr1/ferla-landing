@@ -1,0 +1,12 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @apply mt-16;
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    @apply gap-8;
+  }
+}

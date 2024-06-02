@@ -16,9 +16,9 @@ const LinkButton: React.FC<IButtonLink> = ({
   buttonType,
   ...rest
 }) => {
-  const linkClass = `${styles.link} ${styles["link--" + buttonType]} ${
-    margin || ""
-  }`;
+  const linkClass = `${styles.link} hoverable ${
+    styles["link--" + buttonType]
+  } ${margin || ""}`;
 
   return (
     <Link className={linkClass} {...rest} href={href} scroll={false}>

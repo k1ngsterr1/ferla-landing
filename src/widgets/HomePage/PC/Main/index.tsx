@@ -22,7 +22,7 @@ export const MainScreen = () => {
         buttonType="filled"
         margin="mt-8"
       />
-      <Link className={styles.main_screen__link} href="#video">
+      <Link className={`${styles.main_screen__link} hoverable`} href="#video">
         Watch the true story
       </Link>
       <Image

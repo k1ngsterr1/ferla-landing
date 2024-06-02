@@ -12,7 +12,7 @@ interface IAboutCard {
 
 export const AboutCard: React.FC<IAboutCard> = ({ name, text, icon }) => {
   return (
-    <div className={styles.about_card}>
+    <div className={`${styles.about_card} hoverable`}>
       <IconDot icon={icon} />
       <span className={styles.about_card__name}>{name}</span>
       <span className={styles.about_card__text}>{text}</span>

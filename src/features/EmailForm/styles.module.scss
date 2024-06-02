@@ -10,7 +10,6 @@
   align-items: center;
   justify-content: center;
   background-image: url("../../assets/webp/pc/ferla.webp");
-  //   background-size: ;
   background-size: auto;
   background-position: center center;
   background-repeat: no-repeat;
@@ -100,6 +99,6 @@
   }
 
   @include respond-to("5xl") {
-    height: clamp(160px, 320 / 2560 * 100vw, 640px);
+    height: clamp(200px, 400 / 2560 * 100vw, 800px);
   }
 }
