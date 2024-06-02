@@ -157,7 +157,8 @@
     }
 
     @include respond-to("lg") {
-      font-size: clamp(12px, 24 / 1200 * 100vw, 48px);
+      width: 100%;
+      font-size: clamp(8.5px, 17 / 1200 * 100vw, 34px);
     }
 
     @include respond-to("xl") {
@@ -204,7 +205,8 @@
     }
 
     @include respond-to("lg") {
-      font-size: clamp(8px, 16 / 1200 * 100vw, 32px);
+      font-size: clamp(7px, 14 / 1200 * 100vw, 28px);
+      @apply mt-2;
     }
 
     @include respond-to("xl") {
@@ -253,6 +255,7 @@
     @include respond-to("lg") {
       width: clamp(6px, 12 / 1200 * 100vw, 48px);
       height: clamp(6px, 12 / 1200 * 100vw, 48px);
+      @apply mt-2;
     }
 
     @include respond-to("xl") {

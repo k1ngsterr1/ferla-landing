@@ -44,6 +44,10 @@
     width: 20%;
     @apply mt-8;
 
+    @include respond-to("lg") {
+      width: 35%;
+    }
+
     @include respond-to("xl") {
       width: 40%;
     }
@@ -90,6 +94,11 @@
       transform: scaleX(0);
       transform-origin: right;
       transition: transform 250ms;
+    }
+
+    @include respond-to("lg") {
+      width: clamp(102.5px, 205 / 1200 * 100vw, 410px);
+      font-size: clamp(7px, 14 / 1200 * 100vw, 28px);
     }
 
     @include respond-to("xl") {

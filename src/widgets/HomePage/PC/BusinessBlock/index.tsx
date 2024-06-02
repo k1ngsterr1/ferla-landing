@@ -19,7 +19,9 @@ export const BusinessBlock = () => {
           <MiniText text="Aesthetic Vending Solutions" />
         </div>
         <div className={styles.business_block__perfect}>
-          <div className="flex flex-col items-start">
+          <div
+            className={`flex flex-col items-start ${styles.business_block__perfect__content}`}
+          >
             <div className="flex items-start gap-12">
               <Image
                 src={arrow}

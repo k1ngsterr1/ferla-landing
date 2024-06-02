@@ -8,6 +8,10 @@
   align-items: center;
   justify-content: space-between;
   margin: auto;
+  // position: sticky;
+  top: 0;
+  z-index: 10000;
+  // @apply bg-white;
   @apply mt-16;
 
   &__logo {

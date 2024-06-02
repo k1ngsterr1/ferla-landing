@@ -17,6 +17,11 @@
   @apply rounded-full;
   @apply text-dark;
 
+  @include respond-to("lg") {
+    width: clamp(12px, 24 / 1200 * 100vw, 48px);
+    height: clamp(12px, 24 / 1200 * 100vw, 48px);
+  }
+
   @include respond-to("xl") {
     width: clamp(32px, 64 / 1360 * 100vw, 128px);
     height: clamp(32px, 64 / 1360 * 100vw, 128px);
@@ -45,6 +50,11 @@
   &__wheel {
     width: clamp(24px, 48 / 1200 * 100vw, 96px);
     height: clamp(24px, 48 / 1200 * 100vw, 96px);
+
+    @include respond-to("lg") {
+      width: clamp(16px, 32 / 1200 * 100vw, 64px);
+      height: clamp(16px, 32 / 1200 * 100vw, 64px);
+    }
 
     @include respond-to("xl") {
       width: clamp(24px, 48 / 1360 * 100vw, 96px);
