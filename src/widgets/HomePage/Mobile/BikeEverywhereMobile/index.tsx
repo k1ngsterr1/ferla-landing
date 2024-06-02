@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Button from "@shared/ui/Button";
 
-import { images } from "@shared/lib/content/bikesImagesContent";
+import { bikes } from "@shared/lib/content/bikesImagesContent";
 
 import styles from './styles.module.scss'
 
@@ -20,8 +20,8 @@ export const BikesEverywhereMobile = () => {
                     </p>
                 </div>
                 <div className={styles.bikes_everywhere_mob__gallery}>
-                    {images.map((image) =>
-                        <Image src={image.src} className={styles.bikes_everywhere_mob__gallery_image} alt="bike"/>
+                    {bikes.map((bike) =>
+                        <Image src={bike.image} className={styles.bikes_everywhere_mob__gallery_image} alt="bike"/>
                     )}
                 </div>
                 <Button
