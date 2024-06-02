@@ -17,12 +17,12 @@ export const VideoBlock = () => {
         <iframe
           src="https://www.youtube.com/embed/N-yJypPvBN0?si=vSnMUT_Gcdu3Nmuo"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           className={styles.video_block__cover}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
       </div>
     </section>
   );
