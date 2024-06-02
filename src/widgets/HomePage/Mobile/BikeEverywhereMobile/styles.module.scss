@@ -13,17 +13,16 @@
         justify-content: center;
         flex-direction: column;
 
-        &_heading {
+        &__heading {
             display: flex;
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
         }
 
-        &_paragraph {
-            width: clamp(136px,75.556vw,544px);
+        &__paragraph {
+            width: 75%;
             text-align: center;
-            font-weight: 300;
             @apply mt-4;
         }
     }

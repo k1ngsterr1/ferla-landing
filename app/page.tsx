@@ -12,7 +12,7 @@ import { Reviews } from "@widgets/HomePage/Reviews";
 import { BestSellers } from "@widgets/HomePage/PC/BestSellers";
 
 // MOB
-import { MainScreenMob } from "@widgets/HomePage/Mobile/MainScreenMob";
+import { MainScreenMobile } from "@widgets/HomePage/Mobile/MainScreenMob";
 import { BusinessBlockMobile } from "@widgets/HomePage/Mobile/BusinessBlockMobile";
 import { BestSellersMobile } from "@widgets/HomePage/Mobile/BestSellersMobile";
 import { BikesEverywhereMobile } from "@widgets/HomePage/Mobile/BikeEverywhereMobile";
@@ -40,7 +40,7 @@ const HomePage = () => {
         <Blog />
       </div>
       <div className={styles.mob}>
-        <MainScreenMob />
+        <MainScreenMobile />
         <BusinessBlockMobile />
         <BestSellersMobile />
         <BikesEverywhereMobile/>

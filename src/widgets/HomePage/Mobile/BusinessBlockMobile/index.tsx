@@ -7,7 +7,6 @@ import { tabs } from "@shared/lib/content/solutionTabContent";
 
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
-
 import main_pc from "@assets/webp/pc/mainImage_pc.png";
 
 import styles from "./styles.module.scss";
@@ -26,7 +25,7 @@ export const BusinessBlockMobile = () => {
           <h2 className='mt-4'>
               Perfect <strong className="text-red">for Any Business</strong>
           </h2>
-          <p className={styles.business_block_mob__content__text_paragraph}>
+          <p className={styles.business_block_mob__content__text__paragraph}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem ipsum dolor sit amet.
           </p>
       </div>

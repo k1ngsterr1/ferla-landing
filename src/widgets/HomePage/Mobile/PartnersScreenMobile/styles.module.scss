@@ -23,7 +23,7 @@
     }
 
     &__marquee {
-        width: 110px;
+        width: clamp(55px,30.556vw,220px);
         @apply ml-8;
     }
 }

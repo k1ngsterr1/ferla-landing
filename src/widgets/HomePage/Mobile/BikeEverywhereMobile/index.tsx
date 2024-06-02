@@ -12,16 +12,16 @@ export const BikesEverywhereMobile = () => {
     return (
         <section className={styles.bikes_everywhere_mob}>
                 <div className={styles.bikes_everywhere_mob__text}>
-                    <h4 className={styles.bikes_everywhere_mob__text_heading}>
+                    <h4 className={styles.bikes_everywhere_mob__text__heading}>
                         Ferla Bikes<strong className="text-red">everywhere</strong>
                     </h4>
-                    <p className={styles.bikes_everywhere_mob__text_paragraph}>
+                    <p className={styles.bikes_everywhere_mob__text__paragraph}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                 </div>
                 <div className={styles.bikes_everywhere_mob__gallery}>
-                    {bikes.map((bike) =>
-                        <Image src={bike.image} className={styles.bikes_everywhere_mob__gallery_image} alt="bike"/>
+                    {bikes.map((bike, index) =>
+                        <Image key={index} src={bike.image} className={styles.bikes_everywhere_mob__gallery_image} alt="bike"/>
                     )}
                 </div>
                 <Button

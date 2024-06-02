@@ -1,20 +1,12 @@
-'use client'
-
 import React from "react";
 import Button from "@shared/ui/Button";
 import { MiniText } from "@shared/ui/MiniText";
-import { AboutCard } from "@entities/AboutCard";
 import Image from "next/image";
-import { content } from "@shared/lib/content/aboutCardContent";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { AboutCardSwiper } from "@features/AboutCardSwiper";
 
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./styles.module.scss";
-
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 import bike from '@assets/webp/mob/best_sellers_mob.webp'
 
@@ -27,30 +19,11 @@ export const BestSellersMobile = () => {
                 <h3 className='mt-4'>
                     <strong>Your Business, Your Cart, Your Way</strong>
                 </h3>
-                <p className={styles.best_sellers_mob__content__text_paragraph}>
+                <p className={styles.best_sellers_mob__content__text__paragraph}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
             </div>
-        <div className={styles.best_sellers_mob__content__swiper}>
-            <Swiper
-            spaceBetween={20}
-            slidesPerView={1}
-            className={styles.best_sellers_mob__content__swiper_container}
-            navigation={false}
-        >
-            {content.map((item, index) => (
-            <SwiperSlide
-                key={index}
-            >
-                <AboutCard
-                name={item.name}
-                icon={item.icon}
-                text={item.text}
-                />
-            </SwiperSlide>
-            ))}
-            </Swiper>
-        </div>
+          <AboutCardSwiper/>
             <Button
             text="Manage Your Business"
             buttonType="transparent"

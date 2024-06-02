@@ -1,7 +1,13 @@
-import { faMoneyBill } from "@fortawesome/free-solid-svg-icons";
+import { IconDefinition, faMoneyBill } from "@fortawesome/free-solid-svg-icons";
+
+interface IAboutCard {
+    icon: IconDefinition,
+    name: string,
+    text: string
+}
 
 
-export const content = [
+export const content: IAboutCard[] = [
     {
         icon: faMoneyBill,
         name: 'Coffee Bikes',

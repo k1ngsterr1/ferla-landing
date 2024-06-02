@@ -22,13 +22,10 @@
                 flex-direction: column;
                 @apply mt-16;
 
-                &_paragraph {
-                    width: clamp(111.5px,61.944vw,446px);
-                    height: clamp(33px,18.333vw,132px);
+                &__paragraph {
+                    width: 75%;
                     flex-shrink: 0; 
                     text-align: center;
-                    font-style: normal;
-                    font-weight: 300;
                     line-height: 138.6%;
                     @apply mt-4;
                 }

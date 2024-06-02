@@ -11,7 +11,7 @@ export interface IBikes{
   }
   
 
-export const bikes = [
+export const bikes: IBikes[] = [
     { image: bike_01 },
     { image: bike_02 },
     { image: bike_03 },
