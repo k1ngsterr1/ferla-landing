@@ -17,6 +17,7 @@ import { BusinessBlockMobile } from "@widgets/HomePage/Mobile/BusinessBlockMobil
 import { BestSellersMobile } from "@widgets/HomePage/Mobile/BestSellersMobile";
 import { BikesEverywhereMobile } from "@widgets/HomePage/Mobile/BikeEverywhereMobile";
 import { PartnersScreenMobile } from "@widgets/HomePage/Mobile/PartnersScreenMobile";
+import { ManageScreenMobile } from "@widgets/HomePage/Mobile/ManageScreenMobile";
 
 import styles from "./styles.module.scss";
 import { VideoBlock } from "@widgets/HomePage/PC/VideoBlock";
@@ -45,6 +46,7 @@ const HomePage = () => {
         <BestSellersMobile />
         <BikesEverywhereMobile/>
         <PartnersScreenMobile/>
+        <ManageScreenMobile/>
       </div>
     </>
   );
