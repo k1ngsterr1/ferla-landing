@@ -62,5 +62,9 @@
     flex-direction: column;
     align-items: flex-start;
     @apply mt-8;
+
+    @include respond-to("xl") {
+      @apply mt-0;
+    }
   }
 }

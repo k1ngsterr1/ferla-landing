@@ -22,7 +22,12 @@ export const PartnersScreen = () => {
       </div>
       <div className={styles.partners__images}>
         {clientContent.map((image, index) => (
-          <Image src={image.image} alt={image.alt} key={index} />
+          <Image
+            src={image.image}
+            alt={image.alt}
+            key={index}
+            className={styles.partners__images__image}
+          />
         ))}
       </div>
     </section>

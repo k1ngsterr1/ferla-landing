@@ -10,6 +10,14 @@
   justify-content: space-between;
   @apply mt-16;
 
+  &__slides {
+    &__slide {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+  }
+
   @include respond-to("xs") {
     width: 100%;
     height: clamp(135.5px, 271 / 480 * 100vw, 542px);
@@ -28,6 +36,7 @@
   @include respond-to("lg") {
     width: clamp(265px, 530 / 1200 * 100vw, 1060px);
     height: clamp(135.5px, 270/ 1200 * 100vw, 542px);
+    @apply mt-8;
   }
 
   @include respond-to("xl") {

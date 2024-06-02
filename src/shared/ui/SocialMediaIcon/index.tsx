@@ -1,9 +1,10 @@
 import React from "react";
-import styles from "./styles.module.scss";
+import Link from "next/link";
 
 import { ISocialMediaProps } from "@shared/lib/content/socialMediaContent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Link from "next/link";
+
+import styles from "./styles.module.scss";
 
 export const SocialMediaIcon: React.FC<ISocialMediaProps> = ({
   icon,

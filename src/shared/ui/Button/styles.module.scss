@@ -43,7 +43,8 @@
 
   @include respond-to("xl") {
     width: clamp(110px, 220 / 1360 * 100vw, 440px);
-    height: clamp(25px, 50 / 1360 * 100vw, 100px);
+    // height: clamp(25px, 50 / 1360 * 100vw, 100px);
+    height: clamp(22.5px, 45 / 1360 * 100vw, 90px);
     font-size: clamp(7px, 14 / 1360 * 100vw, 28px);
   }
 

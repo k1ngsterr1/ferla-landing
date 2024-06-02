@@ -30,6 +30,7 @@
 
   @include respond-to("xl") {
     width: clamp(235px, 470 / 1360 * 100vw, 940px);
+    height: 55px;
   }
 
   @include respond-to("2xl") {
@@ -126,8 +127,8 @@
     }
 
     @include respond-to("xl") {
-      width: clamp(228.5px, 457 / 1360 * 100vw, 914px);
-      height: clamp(26px, 52 / 1360 * 100vw, 104px);
+      width: clamp(60px, 120 / 1360 * 100vw, 240px);
+      height: clamp(25px, 50 / 1360 * 100vw, 100px);
     }
 
     @include respond-to("2xl") {

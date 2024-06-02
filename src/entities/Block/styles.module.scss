@@ -31,7 +31,8 @@
     }
 
     @include respond-to("xl") {
-      font-size: clamp(9px, 18 / 1360 * 100vw, 36px);
+      width: 70%;
+      font-size: clamp(8px, 16 / 1360 * 100vw, 32px);
     }
 
     @include respond-to("2xl") {

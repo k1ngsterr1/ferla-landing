@@ -11,7 +11,13 @@
 
   &__heading {
     width: 40%;
+    text-align: left;
     @apply mt-2;
+
+    @include respond-to("xl") {
+      font-size: clamp(19px, 38 / 1360 * 100vw, 76px);
+      width: 60%;
+    }
   }
 
   &__list {
@@ -19,6 +25,10 @@
     flex-direction: column;
     @apply gap-4;
     @apply mt-8;
+
+    @include respond-to("xl") {
+      width: 80%;
+    }
 
     &__separator {
       width: 32%;

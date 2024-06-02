@@ -35,7 +35,8 @@
       }
 
       @include respond-to("xl") {
-        width: 50%;
+        font-size: clamp(19px, 38 / 1360 * 100vw, 76px);
+        width: 80%;
       }
 
       @include respond-to("2xl") {
@@ -67,5 +68,12 @@
     align-items: center;
     display: flex;
     @apply mt-20;
+
+    &__image {
+      @include respond-to("xl") {
+        width: clamp(70px, 140 / 1360 * 100vw, 280px);
+        height: clamp(42.5px, 85 / 1360 * 100vw, 170px);
+      }
+    }
   }
 }

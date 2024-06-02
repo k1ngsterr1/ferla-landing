@@ -18,6 +18,14 @@
   @apply rounded-xl;
   @apply bg-red;
 
+  @include respond-to("xl") {
+    @apply mt-0;
+  }
+
+  @include respond-to("5xl") {
+    @apply mt-32;
+  }
+
   &__heading {
     font-size: clamp(12px, 24 / 360 * 100vw, 48px);
     @apply text-white;

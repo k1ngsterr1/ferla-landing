@@ -30,7 +30,7 @@ export const ReviewSwiper = () => {
       >
         {reviewCardContent.map((review, index) => (
           <SwiperSlide
-            className={styles.review_swiper__slides__slide}
+            className={`${styles.review_swiper__slides__slide} flex items-center justify-center`}
             key={index}
           >
             <ReviewCard

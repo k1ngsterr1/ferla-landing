@@ -31,13 +31,13 @@ export const ManageScreen = () => {
               icon={faMoneyBill}
               paragraph="Unlock the potential of mobile commerce with Ferla Bikes' premier range of innovative and eco-friendly commercial bikes and carts. Our specialty lies in enhancing the dynamic event industry with unparalleled solutions."
             />
-            <span className={styles.manage_block__list__separator} />
+            <hr className={styles.manage_block__list__separator} />
             <Block
               icon={faMoneyBill}
               margin="mt-8"
               paragraph="Unlock the potential of mobile commerce with Ferla Bikes' premier range of innovative and eco-friendly commercial bikes and carts. Our specialty lies in enhancing the dynamic event industry with unparalleled solutions."
             />
-            <span className={styles.manage_block__list__separator} />
+            <hr className={styles.manage_block__list__separator} />
             <Block
               icon={faMoneyBill}
               margin="mt-8"

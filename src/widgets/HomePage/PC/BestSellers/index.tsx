@@ -60,7 +60,7 @@ export const BestSellers = () => {
       <Image
         src={best_sellers_pc}
         alt="Best Sellers"
-        className={styles.best_sellerc__image}
+        className={styles.best_sellers__image}
       />
     </section>
   );

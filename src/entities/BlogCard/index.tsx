@@ -12,10 +12,10 @@ export interface IBlogCard {
 
 export const BlogCard: React.FC<IBlogCard> = ({ title, href, image }) => {
   return (
-    <div className={styles.blog_card}>
+    <div className={`${styles.blog_card} hoverable`}>
       <Image src={image} alt={title} className={styles.blog_card__image} />
       <span className={styles.blog_card__title}>{title}</span>
-      <Link href={href} className={styles.blog_card__link}>
+      <Link href={href} className={`${styles.blog_card__link} hoverable`}>
         Read More
       </Link>
     </div>

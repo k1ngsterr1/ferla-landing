@@ -43,7 +43,8 @@
     }
 
     @include respond-to("xl") {
-      font-size: clamp(9px, 18 / 1360 * 100vw, 36px);
+      width: 100%;
+      font-size: clamp(8px, 16 / 1360 * 100vw, 32px);
     }
 
     @include respond-to("2xl") {
@@ -127,8 +128,8 @@
   }
 
   @include respond-to("xl") {
-    width: clamp(265px, 530 / 1360 * 100vw, 1060px);
-    height: clamp(135.5px, 270/ 1360 * 100vw, 542px);
+    width: 90%;
+    height: clamp(115px, 230 / 1360 * 100vw, 460px);
   }
 
   @include respond-to("2xl") {

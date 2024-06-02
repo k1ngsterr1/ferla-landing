@@ -14,7 +14,7 @@ export const BikesEverywhere = () => {
   return (
     <section className={styles.everywhere_block}>
       <div className={styles.everywhere_block__upper}>
-        <h4 className={styles.everywhere_block__heading}>
+        <h4 className={styles.everywhere_block__upper__heading}>
           Ferla Bikes <strong className="text-red">Everywhere</strong>
         </h4>
         <div className="flex flex-col items-end">
@@ -33,22 +33,22 @@ export const BikesEverywhere = () => {
       <div className={styles.everywhere_block__photos}>
         <Image
           src={bike01}
-          className={styles.everywhere_block__photo}
+          className={styles.everywhere_block__photos__photo}
           alt="Ferla Bike"
         />
         <Image
           src={bike02}
-          className={styles.everywhere_block__photo}
+          className={styles.everywhere_block__photos__photo}
           alt="Ferla Bike"
         />
         <Image
           src={bike03}
-          className={styles.everywhere_block__photo}
+          className={styles.everywhere_block__photos__photo}
           alt="Ferla Bike"
         />
         <Image
           src={bike04}
-          className={styles.everywhere_block__photo}
+          className={styles.everywhere_block__photos__photo}
           alt="Ferla Bike"
         />
       </div>

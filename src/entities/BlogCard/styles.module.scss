@@ -11,11 +11,16 @@
   background-color: #fbfbfb;
   transition: 0.3s all;
 
+  &:hover &__title {
+    @apply text-red;
+  }
+
   &__title {
     font-family: "Poppins";
     font-weight: 500;
     text-align: center;
     font-size: clamp(9px, 18 / 360 * 100vw, 36px);
+    transition: 0.3s all;
     @apply text-dark;
     @apply mt-4;
 
@@ -81,7 +86,7 @@
     }
 
     @include respond-to("xl") {
-      height: clamp(130px, 260 / 1360 * 100vw, 520px);
+      height: clamp(100px, 200 / 1360 * 100vw, 400px);
     }
 
     @include respond-to("2xl") {
@@ -166,7 +171,7 @@
   }
 
   @include respond-to("xl") {
-    width: clamp(195px, 390 / 1360 * 100vw, 780px);
+    width: clamp(125px, 250 / 1360 * 100vw, 500px);
     height: clamp(205px, 410 / 1360 * 100vw, 820px);
   }
 

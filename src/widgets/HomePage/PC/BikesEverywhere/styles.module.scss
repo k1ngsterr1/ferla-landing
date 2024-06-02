@@ -14,6 +14,10 @@
     align-items: start;
     justify-content: space-between;
 
+    &__heading {
+      text-align: left !important;
+    }
+
     &__paragraph {
       width: 30%;
       font-size: clamp(8px, 16 / 360 * 100vw, 32px);
@@ -65,6 +69,11 @@
     &__photo {
       width: clamp(195px, 20.313vw, 780px);
       height: clamp(195px, 20.313vw, 780px);
+
+      @include respond-to("xl") {
+        width: clamp(125px, 250 / 1360 * 100vw, 500px);
+        height: clamp(125px, 250 / 1360 * 100vw, 500px);
+      }
     }
   }
 }
