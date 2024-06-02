@@ -28,7 +28,12 @@ export const Footer = () => {
       </div>
       <div className="flex items-center justify-center w-full gap-4 mt-8">
         {socialMediaContent.map((icon, index) => (
-          <SocialMediaIcon icon={icon.icon} href={icon.href} key={index} />
+          <SocialMediaIcon
+            icon={icon.icon}
+            href={icon.href}
+            aria_label={icon.aria_label}
+            key={index}
+          />
         ))}
       </div>
       <div className="flex flex-col items-center mt-12">

@@ -9,6 +9,10 @@
   justify-content: space-between;
   @apply mt-32;
 
+  &__heading {
+    text-align: left;
+  }
+
   &__paragraph {
     width: 30%;
     font-size: clamp(8px, 16 / 360 * 100vw, 32px);
@@ -53,6 +57,11 @@
   &__image {
     width: clamp(362.5px, 37.76vw, 1450px);
     height: clamp(391.5px, 40.781vw, 1566px);
+
+    @include respond-to("xl") {
+      width: 50% !important;
+      border: 2px solid red !important;
+    }
 
     @include respond-to("5xl") {
       width: clamp(362.5px, 28.32vw, 1450px);
