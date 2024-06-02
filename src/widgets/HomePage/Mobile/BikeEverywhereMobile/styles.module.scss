@@ -21,11 +21,25 @@
         }
 
         &_paragraph {
-            width: 272px;
-            height: 80px;
+            width: clamp(136px,75.556vw,544px);
             text-align: center;
-            font-style: normal;
             font-weight: 300;
+            @apply mt-4;
+        }
+    }
+
+    &__gallery {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        @apply gap-4;
+        @apply mt-8;
+
+        &_image {
+            width: clamp(155px,86.111vw,620px);
+            height: clamp(165px,86.111vw,660px);
+            flex-shrink: 0;
         }
     }
 }
