@@ -12,9 +12,11 @@ import { Reviews } from "@widgets/HomePage/Reviews";
 import { BestSellers } from "@widgets/HomePage/PC/BestSellers";
 
 // MOB
-import { MainScreenMob } from "@widgets/HomePage/Mobile/MainScreenMob";
+import { MainScreenMobile } from "@widgets/HomePage/Mobile/MainScreenMob";
 import { BusinessBlockMobile } from "@widgets/HomePage/Mobile/BusinessBlockMobile";
 import { BestSellersMobile } from "@widgets/HomePage/Mobile/BestSellersMobile";
+import { BikesEverywhereMobile } from "@widgets/HomePage/Mobile/BikeEverywhereMobile";
+import { PartnersScreenMobile } from "@widgets/HomePage/Mobile/PartnersScreenMobile";
 
 import styles from "./styles.module.scss";
 import { VideoBlock } from "@widgets/HomePage/PC/VideoBlock";
@@ -46,9 +48,11 @@ const HomePage = () => {
         <Footer />
       </div>
       <div className={styles.mob}>
-        <MainScreenMob />
+        <MainScreenMobile />
         <BusinessBlockMobile />
         <BestSellersMobile />
+        <BikesEverywhereMobile/>
+        <PartnersScreenMobile/>
       </div>
     </>
   );
