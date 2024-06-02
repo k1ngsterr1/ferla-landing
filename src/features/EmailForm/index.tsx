@@ -1,6 +1,7 @@
 import React from "react";
-import styles from "./styles.module.scss";
 import { EmailInput } from "@entities/EmailInput";
+
+import styles from "./styles.module.scss";
 
 export const EmailForm = () => {
   return (

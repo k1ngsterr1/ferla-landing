@@ -15,7 +15,7 @@ export const ManageScreen = () => {
           <MiniText text="From Initial Concept to Market Leader" />
           <div className="w-full flex items-start justify-between">
             <h6 className={styles.manage_block__heading}>
-              Redefining Mobile Business Solutions With
+              Redefining Mobile Business Solutions With {""}
               <strong className="text-red">Ferla Bikes</strong>
             </h6>
             <Button

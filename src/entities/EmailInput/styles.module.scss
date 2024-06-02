@@ -26,11 +26,12 @@
 
   @include respond-to("lg") {
     width: clamp(235px, 470 / 1200 * 100vw, 940px);
+    height: clamp(25px, 50 / 1200 * 100vw, 100px);
   }
 
   @include respond-to("xl") {
     width: clamp(235px, 470 / 1360 * 100vw, 940px);
-    height: 55px;
+    height: clamp(27.5px, 55 / 1360 * 100vw, 110px);
   }
 
   @include respond-to("2xl") {
@@ -43,6 +44,7 @@
 
   @include respond-to("4xl") {
     width: clamp(235px, 470 / 1920 * 100vw, 940px);
+    height: clamp(30px, 60 / 1920 * 100vw, 120px);
   }
 
   @include respond-to("5xl") {
@@ -122,8 +124,8 @@
     }
 
     @include respond-to("lg") {
-      width: clamp(228.5px, 457 / 1200 * 100vw, 914px);
-      height: clamp(26px, 52 / 1200 * 100vw, 104px);
+      width: clamp(80px, 160 / 1200 * 100vw, 320px);
+      height: clamp(21px, 42 / 1200 * 100vw, 84px);
     }
 
     @include respond-to("xl") {
@@ -132,17 +134,17 @@
     }
 
     @include respond-to("2xl") {
-      width: clamp(228.5px, 457 / 1520 * 100vw, 914px);
-      height: clamp(26px, 52 / 1520 * 100vw, 104px);
+      width: clamp(80px, 160 / 1520 * 100vw, 160px);
+      height: clamp(25px, 50 / 1520 * 100vw, 100px);
     }
 
     @include respond-to("3xl") {
-      width: clamp(228.5px, 457 / 1680 * 100vw, 914px);
-      height: clamp(26px, 52 / 1680 * 100vw, 104px);
+      width: clamp(70px, 140 / 1680 * 100vw, 280px);
+      height: clamp(21px, 42 / 1680 * 100vw, 84px);
     }
 
     @include respond-to("4xl") {
-      width: clamp(228.5px, 457 / 1920 * 100vw, 914px);
+      width: clamp(75px, 150 / 1920 * 100vw, 300px);
       height: clamp(26px, 52 / 1920 * 100vw, 104px);
     }
 

@@ -50,7 +50,7 @@
   }
 
   @include respond-to("2xl") {
-    height: clamp(75px, 150 / 1520 * 100vw, 300px);
+    height: clamp(80px, 160 / 1520 * 100vw, 320px);
   }
 
   @include respond-to("3xl") {
@@ -166,7 +166,7 @@
     }
 
     @include respond-to("2xl") {
-      font-size: clamp(12px, 24 / 1520 * 100vw, 48px);
+      font-size: clamp(11px, 22 / 1520 * 100vw, 44px);
     }
 
     @include respond-to("3xl") {

@@ -90,11 +90,11 @@
     }
 
     @include respond-to("2xl") {
-      height: clamp(130px, 260 / 1520 * 100vw, 520px);
+      height: clamp(105px, 210 / 1520 * 100vw, 420px);
     }
 
     @include respond-to("3xl") {
-      height: clamp(130px, 260 / 1680 * 100vw, 520px);
+      height: clamp(110px, 220 / 1680 * 100vw, 440px);
     }
 
     @include respond-to("4xl") {
@@ -166,8 +166,8 @@
   }
 
   @include respond-to("lg") {
-    width: clamp(195px, 390 / 1200 * 100vw, 780px);
-    height: clamp(205px, 410 / 1200 * 100vw, 820px);
+    width: clamp(125px, 250 / 1200 * 100vw, 500px);
+    height: clamp(100px, 200 / 1200 * 100vw, 400px);
   }
 
   @include respond-to("xl") {
@@ -176,13 +176,12 @@
   }
 
   @include respond-to("2xl") {
-    width: clamp(195px, 390 / 1520 * 100vw, 780px);
+    width: 20%;
     height: clamp(205px, 410 / 1520 * 100vw, 820px);
   }
 
   @include respond-to("3xl") {
-    width: clamp(195px, 390 / 1680 * 100vw, 780px);
-    height: clamp(205px, 410 / 1680 * 100vw, 820px);
+    width: clamp(160px, 320 / 1680 * 100vw, 640px);
   }
 
   @include respond-to("4xl") {

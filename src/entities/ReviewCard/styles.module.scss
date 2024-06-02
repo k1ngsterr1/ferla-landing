@@ -134,8 +134,8 @@
   }
 
   @include respond-to("2xl") {
-    width: clamp(265px, 530 / 1520 * 100vw, 1060px);
-    height: clamp(135.5px, 270/ 1520 * 100vw, 542px);
+    width: 88%;
+    height: 90%;
   }
 
   @include respond-to("3xl") {

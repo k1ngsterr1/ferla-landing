@@ -1,10 +1,10 @@
 import React from "react";
-
-import styles from "./styles.module.scss";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-regular-svg-icons";
+
+import styles from "./styles.module.scss";
 
 interface ISolutionTab {
   name: string;

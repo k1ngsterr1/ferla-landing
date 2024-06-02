@@ -28,8 +28,8 @@
   }
 
   @include respond-to("2xl") {
-    width: clamp(32px, 64 / 1520 * 100vw, 128px);
-    height: clamp(32px, 64 / 1520 * 100vw, 128px);
+    width: clamp(12px, 24 / 1520 * 100vw, 48px);
+    height: clamp(12px, 24 / 1520 * 100vw, 48px);
   }
 
   @include respond-to("3xl") {

@@ -18,7 +18,10 @@ export const SocialMediaIcon: React.FC<ISocialMediaProps> = ({
       aria-label={aria_label}
       title="Follow us on social media"
     >
-      <FontAwesomeIcon icon={icon} className={styles.link__icon} />
+      <FontAwesomeIcon
+        icon={icon}
+        className={`${styles.link__icon} hoverable`}
+      />
     </Link>
   );
 };
