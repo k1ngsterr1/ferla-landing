@@ -13,6 +13,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: none;
 }
 
 body {
@@ -20,6 +21,7 @@ body {
   overflow-x: hidden;
   background-color: #fbfbfb;
   scroll-behavior: smooth;
+  cursor: none;
 }
 
 h1 {
@@ -47,7 +49,8 @@ h1 {
   }
 
   @include respond-to("xl") {
-    font-size: clamp(45px, 90 / 1360 * 100vw, 180px);
+    width: 50%;
+    font-size: clamp(30px, 60 / 1360 * 100vw, 120px);
   }
 
   @include respond-to("2xl") {
@@ -113,15 +116,15 @@ h6 {
   }
 
   @include respond-to("xl") {
-    font-size: clamp(24px, 48 / 1200 * 100vw, 96px);
+    font-size: clamp(22px, 44 / 1360 * 100vw, 88px);
   }
 
   @include respond-to("2xl") {
-    font-size: clamp(24px, 48 / 1360 * 100vw, 96px);
+    font-size: clamp(24px, 48 / 1520 * 100vw, 96px);
   }
 
   @include respond-to("3xl") {
-    font-size: clamp(24px, 48 / 1520 * 100vw, 96px);
+    font-size: clamp(24px, 48 / 1680 * 100vw, 96px);
   }
 
   @include respond-to("4xl") {
@@ -177,7 +180,7 @@ p {
   }
 
   @include respond-to("xl") {
-    font-size: clamp(10px, 20 / 1360 * 100vw, 40px);
+    font-size: clamp(8px, 16 / 1360 * 100vw, 32px);
   }
 
   @include respond-to("2xl") {
@@ -201,7 +204,7 @@ button,
 a {
   outline: none;
   font-family: "Poppins";
-  cursor: pointer;
+  cursor: тщту;
 }
 
 .container {

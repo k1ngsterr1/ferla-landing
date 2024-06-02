@@ -22,7 +22,7 @@ const SwiperButton: React.FC<ISwiperButtonProps> = ({
 
   return (
     <button
-      className={`${styles.swiperButton} ${buttonClass} ${position}`}
+      className={`${styles.swiperButton} ${buttonClass} hoverable ${position}`}
       onClick={onClick}
     >
       <FontAwesomeIcon

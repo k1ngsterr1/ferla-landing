@@ -1,5 +1,6 @@
 "use client";
 import React, { useRef } from "react";
+import SwiperCore from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ReviewCard } from "@entities/ReviewCard";
 import { reviewCardContent } from "@shared/lib/content/reviewsContent";
@@ -12,7 +13,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export const ReviewSwiper = () => {
-  const swiperRef = useRef(null);
+  const swiperRef = useRef<SwiperCore | null>(null);
 
   return (
     <>
