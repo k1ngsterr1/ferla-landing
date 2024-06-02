@@ -1,0 +1,66 @@
+@import "breakpoint-slicer";
+@import "../../../../shared/styles/mixins";
+@import "../../../../shared/styles/variables";
+
+.form_section {
+  width: 100%;
+  @apply mt-16;
+  background-image: url("../../../../assets/vectors/bike_transparent.svg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-repeat: center center;
+
+  &__upper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo {
+      width: clamp(145px, 290 / 1200 * 100vw, 580px);
+      height: clamp(52.5px, 105 / 1200 * 100vw, 210px);
+
+      @include respond-to("xl") {
+        width: clamp(145px, 290 / 1360 * 100vw, 580px);
+        height: clamp(52.5px, 105 / 1360 * 100vw, 210px);
+      }
+
+      @include respond-to("2xl") {
+        width: clamp(145px, 290 / 1520 * 100vw, 580px);
+        height: clamp(52.5px, 105 / 1520 * 100vw, 210px);
+      }
+
+      @include respond-to("3xl") {
+        width: clamp(145px, 290 / 1680 * 100vw, 580px);
+        height: clamp(52.5px, 105 / 1680 * 100vw, 210px);
+      }
+
+      @include respond-to("4xl") {
+        width: clamp(145px, 290 / 1920 * 100vw, 580px);
+        height: clamp(52.5px, 105 / 1920 * 100vw, 210px);
+      }
+
+      @include respond-to("5xl") {
+        width: clamp(145px, 290 / 2560 * 100vw, 580px);
+        height: clamp(52.5px, 105 / 2560 * 100vw, 210px);
+      }
+    }
+
+    &__heading {
+      text-align: left;
+    }
+
+    &__paragraph {
+      width: 50%;
+      text-align: left;
+      @apply mt-4;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @apply mt-8;
+  }
+}

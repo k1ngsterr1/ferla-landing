@@ -40,12 +40,16 @@ export const BusinessBlock = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col">
-            <div className="flex justify-center items-center gap-4">
+          <div className="w-full flex flex-col">
+            <div
+              className={`flex justify-center items-center gap-4 ${styles.business_block__perfect__upper_tab}`}
+            >
               <SolutionTab name="Cafe-On-Wheels" href="AAA" />
               <SolutionTab name="Stand-Out Trade Shows" href="AAA" />
             </div>
-            <div className="flex justify-center items-center gap-4 mt-4">
+            <div
+              className={`flex justify-center items-center gap-4 mt-4 ${styles.business_block__perfect__lower_tab}`}
+            >
               <SolutionTab name="Stand-Out Trade Shows" href="AAA" />
               <SolutionTab name="Promo Activation Cart " href="AAA" />
             </div>
