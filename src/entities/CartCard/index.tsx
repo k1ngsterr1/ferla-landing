@@ -20,7 +20,7 @@ export const CartCard: React.FC<ICartCard> = ({ photo, name, href }) => {
       </div>
       <div className="flex items-center justify-center gap-2 mt-4">
         <Link href={href} className={styles.link}>
-          Explore{" "}
+          Explore
           <FontAwesomeIcon
             icon={faChevronRight}
             className={styles.link__icon}

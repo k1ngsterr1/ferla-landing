@@ -62,7 +62,7 @@
 
   @include respond-to("5xl") {
     width: clamp(185px, 370 / 2560 * 100vw, 640px);
-    height: clamp(250px, 500 / 2560 * 100vw, 1000px);
+    height: clamp(175px, 350 / 2560 * 100vw, 700px);
   }
 
   &__image {
