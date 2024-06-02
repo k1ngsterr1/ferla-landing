@@ -39,7 +39,8 @@
     }
 
     @include respond-to("lg") {
-      font-size: clamp(9px, 18 / 1200 * 100vw, 36px);
+      width: 100%;
+      font-size: clamp(8px, 16 / 1200 * 100vw, 32px);
     }
 
     @include respond-to("xl") {
@@ -123,8 +124,8 @@
   }
 
   @include respond-to("lg") {
-    width: clamp(265px, 530 / 1200 * 100vw, 1060px);
-    height: clamp(135.5px, 270/ 1200 * 100vw, 542px);
+    width: 90%;
+    height: clamp(115px, 230/ 1200 * 100vw, 460px);
   }
 
   @include respond-to("xl") {
@@ -138,8 +139,8 @@
   }
 
   @include respond-to("3xl") {
-    width: clamp(265px, 530 / 1680 * 100vw, 1060px);
-    height: clamp(135.5px, 270/ 1680 * 100vw, 542px);
+    width: 80%;
+    height: 85%;
   }
 
   @include respond-to("4xl") {

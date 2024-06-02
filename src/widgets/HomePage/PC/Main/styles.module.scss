@@ -17,6 +17,10 @@
     overflow: hidden;
     @apply text-dark;
 
+    @include respond-to("3xl") {
+      width: 50%;
+    }
+
     &:after,
     &:before {
       content: "";
@@ -132,6 +136,10 @@
     height: clamp(500px, 39.063vw, 2000px);
     position: absolute;
     right: 0;
+
+    @include respond-to("3xl") {
+      height: clamp(375px, 750 / 1680 * 100vw, 1500px);
+    }
   }
 }
 

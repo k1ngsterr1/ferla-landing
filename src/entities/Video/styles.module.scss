@@ -23,8 +23,8 @@
   }
 
   @include respond-to("lg") {
-    width: clamp(303.5px, 607 / 1200 * 100vw, 2400px);
-    height: clamp(249px, 498 / 1200 * 100vw, 996px);
+    width: 100%;
+    height: clamp(175px, 350 / 1200 * 100vw, 700px);
   }
 
   @include respond-to("xl") {

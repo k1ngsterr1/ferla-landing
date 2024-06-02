@@ -31,7 +31,7 @@
       }
 
       @include respond-to("lg") {
-        width: 50%;
+        width: 80%;
       }
 
       @include respond-to("xl") {
@@ -70,6 +70,11 @@
     @apply mt-20;
 
     &__image {
+      @include respond-to("lg") {
+        width: clamp(70px, 140 / 1200 * 100vw, 280px);
+        height: clamp(42.5px, 85 / 1200 * 100vw, 170px);
+      }
+
       @include respond-to("xl") {
         width: clamp(70px, 140 / 1360 * 100vw, 280px);
         height: clamp(42.5px, 85 / 1360 * 100vw, 170px);

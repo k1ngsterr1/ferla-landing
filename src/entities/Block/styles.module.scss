@@ -27,11 +27,12 @@
     }
 
     @include respond-to("lg") {
-      font-size: clamp(9px, 18 / 1200 * 100vw, 36px);
+      width: 60%;
+      font-size: clamp(7px, 14 / 1200 * 100vw, 28px);
     }
 
     @include respond-to("xl") {
-      width: 70%;
+      width: 55%;
       font-size: clamp(8px, 16 / 1360 * 100vw, 32px);
     }
 

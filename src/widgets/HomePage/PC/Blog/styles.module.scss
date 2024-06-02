@@ -7,6 +7,10 @@
   flex-direction: column;
   @apply mt-16;
 
+  @include respond-to("lg") {
+    @apply mt-20 #{!important};
+  }
+
   @include respond-to("xl") {
     @apply mt-16;
   }

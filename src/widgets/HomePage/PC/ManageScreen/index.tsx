@@ -16,7 +16,7 @@ export const ManageScreen = () => {
           <div className="w-full flex items-start justify-between">
             <h6 className={styles.manage_block__heading}>
               Redefining Mobile Business Solutions With
-              <strong className="text-red"> Ferla Bikes</strong>
+              <strong className="text-red">Ferla Bikes</strong>
             </h6>
             <Button
               text="Manage Your Business"

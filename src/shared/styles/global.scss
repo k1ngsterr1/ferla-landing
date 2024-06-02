@@ -60,7 +60,7 @@ h1 {
 
   @include respond-to("3xl") {
     width: 40%;
-    font-size: clamp(45px, 90 / 1680 * 100vw, 180px);
+    font-size: clamp(40px, 80 / 1680 * 100vw, 160px);
   }
 
   @include respond-to("4xl") {

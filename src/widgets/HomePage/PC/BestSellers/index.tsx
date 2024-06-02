@@ -1,15 +1,14 @@
 import React from "react";
 import Button from "@shared/ui/Button";
 import Image from "next/image";
-import arrowLeft from "@assets/vectors/arrow_left.svg";
 import best_sellers_pc from "@assets/webp/pc/best_sellers_pc.png";
+import ArrowAnimation from "@shared/ui/ArrowRight";
 
 import { MiniText } from "@shared/ui/MiniText";
 import { faChevronRight, faMoneyBill } from "@fortawesome/free-solid-svg-icons";
 import { AboutCard } from "@entities/AboutCard";
 
 import styles from "./styles.module.scss";
-import ArrowAnimation from "@shared/ui/ArrowRight";
 
 export const BestSellers = () => {
   return (
