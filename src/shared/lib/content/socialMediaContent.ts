@@ -7,7 +7,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { IconDefinition, faX } from "@fortawesome/free-solid-svg-icons";
 
-interface ISocialMediaProps {
+export interface ISocialMediaProps {
   icon: IconDefinition;
   href: string;
 }
