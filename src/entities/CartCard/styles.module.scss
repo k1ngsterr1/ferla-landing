@@ -19,6 +19,11 @@
     @apply shadow-2xl;
   }
 
+  @include respond-to('xxs') {
+    width: 90%;
+    height: clamp(125px,69.444vw,500px);
+  }
+
   @include respond-to("xs") {
     width: 100%;
     height: clamp(114.5px, 229 / 480 * 100vw, 458px);
@@ -67,6 +72,11 @@
   &__image {
     width: 90%;
     height: clamp(125px, 250 / 360 * 100vw, 500px);
+
+    @include respond-to('xxs') {
+      width: 70%;
+      height: 85%;
+    }
 
     @include respond-to("xs") {
       height: clamp(125px, 250 / 480 * 100vw, 500px);
