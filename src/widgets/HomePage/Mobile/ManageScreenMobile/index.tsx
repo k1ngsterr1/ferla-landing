@@ -14,9 +14,9 @@ export const ManageScreenMobile = () => {
         <section className={styles.manage_screen_mob}>
             <MiniText text="From Initial Concept to"/>
             <MiniText text="Market Leader"/>
-            <h4 className={styles.manage_screen_mob__heading}>
+            <h6 className={styles.manage_screen_mob__heading}>
             Redefining Mobile Business Solutions with<strong className="text-red"> Ferla Bikes</strong>
-            </h4>
+            </h6>
             <div className="flex flex-col justify-center items-center mt-8">
             <Block
               icon={faMoneyBill}
