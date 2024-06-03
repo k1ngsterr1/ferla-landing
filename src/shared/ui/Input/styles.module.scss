@@ -20,6 +20,10 @@
     @apply mt-10;
   }
 
+  @include respond-to("5xl") {
+    @apply mt-12;
+  }
+
   &:hover {
     @apply border-red;
     @apply text-red;

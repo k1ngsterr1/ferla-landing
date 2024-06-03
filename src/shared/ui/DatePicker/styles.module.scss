@@ -39,7 +39,7 @@
 
   @include respond-to("5xl") {
     width: clamp(200px, 400 / 2560 * 100vw, 800px);
-    @apply mt-10;
+    @apply mt-12;
   }
 
   &:hover {
