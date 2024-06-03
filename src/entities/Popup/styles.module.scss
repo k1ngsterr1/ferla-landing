@@ -7,9 +7,12 @@
   height: 100%;
   position: fixed;
   display: flex;
+  top: 0;
+  left: 0;
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1000 !important;
 }
 
 .popup {
@@ -17,6 +20,7 @@
   align-items: flex-start;
   @apply rounded-lg;
   @apply p-4;
+  @apply bg-white;
 
   &__image {
     width: 400px;

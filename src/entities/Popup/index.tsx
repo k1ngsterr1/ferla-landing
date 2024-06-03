@@ -11,12 +11,12 @@ interface IPopup {
 }
 
 export const Popup: React.FC<IPopup> = ({ image, title, paragraph }) => {
-  const { isCartPopupVisible } = useCartPopup();
+  const { isCartPopupVisible, toggleCartPopup } = useCartPopup();
 
   if (!isCartPopupVisible) return null;
 
   return (
-    <div className={styles.layout}>
+    <div className={styles.layout} onClick={toggleCartPopup}>
       <div className={styles.popup}>
         <Image src={image} alt={title} className={styles.popup__image} />
         <span className={styles.popup__title}>{title}</span>
