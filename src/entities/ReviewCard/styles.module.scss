@@ -16,6 +16,10 @@
   @apply rounded-md;
   @apply p-8;
 
+  @include respond-to('xxs') {
+    height: clamp(115px,63.889vw,460px);
+  }
+
   &:hover {
     @apply border-red;
     @apply shadow-xl;
@@ -25,6 +29,11 @@
     width: 30%;
     font-size: clamp(9px, 18 / 360 * 100vw, 36px);
     @apply text-dark;
+
+    @include respond-to('xxs') {
+      width: 100%;
+      font-size: clamp(8px,4.444vw,32px);
+    }
 
     @include respond-to("xs") {
       font-size: clamp(9px, 18 / 480 * 100vw, 36px);
