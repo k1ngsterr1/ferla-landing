@@ -6,7 +6,7 @@ import styles from "./styles.module.scss";
 
 export const NavLink: React.FC<INavLink> = ({ label, href }) => {
   return (
-    <Link scroll={false} href={href} className={`${styles.nav_link} hoverable`}>
+    <Link href={href} className={`${styles.nav_link} hoverable`} passHref>
       {label}
     </Link>
   );

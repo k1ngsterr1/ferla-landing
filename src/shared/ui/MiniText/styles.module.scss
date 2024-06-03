@@ -1,4 +1,5 @@
 @import "breakpoint-slicer";
+@import "../../styles/animations";
 @import "../../styles/mixins";
 @import "../../styles/variables";
 
@@ -7,6 +8,9 @@
   font-family: "Poppins";
   font-weight: 500;
   text-transform: capitalize;
+  animation: reveal 2s linear both;
+  transition: 0.3s all;
+  animation-timeline: view(40%);
   @apply text-red;
 
   @include respond-to("xs") {

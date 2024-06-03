@@ -12,7 +12,7 @@ import styles from "./styles.module.scss";
 
 export const BestSellers = () => {
   return (
-    <section className={styles.best_sellers}>
+    <section className={styles.best_sellers} id="business">
       <div className="flex flex-col items-start">
         <MiniText text="Best Sellers" />
         <h3 className={styles.best_sellers__heading}>Your Bike, Your Way</h3>

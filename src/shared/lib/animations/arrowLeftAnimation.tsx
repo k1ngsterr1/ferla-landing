@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-export function useArrowRightAnimation(
+export function useArrowLeftAnimation(
   arrowRef: React.RefObject<SVGPathElement>
 ) {
   const observerRef = useRef<IntersectionObserver | null>(null);

@@ -5,10 +5,10 @@ export interface INavLink {
 
 export const navLinks: INavLink[] = [
   { label: "Home", href: "#home" },
-  { label: "Partners", href: "#partners" },
   { label: "Perfect For", href: "#perfect" },
   { label: "Business", href: "#business" },
-  { label: "Markets", href: "#Markets" },
-  { label: "Bikes", href: "#Bikes" },
-  { label: "Reviews", href: "#Reviews" },
+  { label: "Bikes", href: "#bikes" },
+  { label: "Partners", href: "#partners" },
+  { label: "Reviews", href: "#reviews" },
+  { label: "Markets", href: "#markets" },
 ];

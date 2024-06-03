@@ -1,6 +1,7 @@
 @import "breakpoint-slicer";
 @import "../../shared/styles/mixins";
 @import "../../shared/styles/variables";
+@import "../../shared/styles/animations";
 
 .about_card {
   width: clamp(115px, 230 / 360 * 100vw, 460px);

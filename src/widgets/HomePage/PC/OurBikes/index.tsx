@@ -6,7 +6,7 @@ import styles from "./styles.module.scss";
 
 export const OurBikes = () => {
   return (
-    <section className={styles.bikes}>
+    <section className={styles.bikes} id="bikes">
       <div className={styles.bikes__upper}>
         <h6 className={styles.bikes__upper__heading}>
           Our <strong className="text-red">Bikes</strong>

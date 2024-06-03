@@ -17,6 +17,7 @@ export const CartCard: React.FC<ICartCard> = ({ photo, name, href }) => {
     <div className="flex flex-col items-center hoverable">
       <div className={`${styles.cart_card} hoverable`}>
         <Image src={photo} alt={name} className={styles.cart_card__image} />
+        <span className={styles.cart_card__name}>{name}</span>
       </div>
       <div className="flex items-center justify-center gap-2 mt-4">
         <Link href={href} className={styles.link}>

@@ -1,6 +1,7 @@
 @import "breakpoint-slicer";
 @import "../../styles/mixins";
 @import "../../styles/variables";
+@import "../../styles/animations";
 
 %button_general {
   width: clamp(125px, 250 / 360 * 100vw, 500px);
@@ -158,6 +159,7 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid;
+
   @apply pl-2;
   @apply pb-1;
   @apply rounded-none;

@@ -20,7 +20,7 @@ const ArrowRight = () => {
         stroke="#E33A3A"
         strokeWidth="2"
         strokeLinejoin="round"
-        style={{ strokeDasharray: 400, strokeDashoffset: 400 }} // Adjust these values based on the length of the path
+        style={{ strokeDasharray: 400, strokeDashoffset: 400 }}
       />
     </svg>
   );

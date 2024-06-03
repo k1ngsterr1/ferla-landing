@@ -7,7 +7,7 @@ import styles from "./styles.module.scss";
 
 export const PartnersScreen = () => {
   return (
-    <section className={styles.partners}>
+    <section className={styles.partners} id="partners">
       <div className={styles.partners__upper}>
         <Image
           src={illustration}

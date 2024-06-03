@@ -1,6 +1,7 @@
 @import "breakpoint-slicer";
 @import "../../../../shared/styles/mixins";
 @import "../../../../shared/styles/variables";
+@import "../../../../shared/styles/animations";
 
 .manage_block {
   width: 100%;
@@ -12,6 +13,9 @@
   &__heading {
     width: 40%;
     text-align: left;
+    animation: reveal 2s linear both;
+    transition: 0.3s all;
+    animation-timeline: view(40%);
     @apply mt-2;
 
     @include respond-to("lg") {

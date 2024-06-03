@@ -8,8 +8,8 @@ import styles from "./styles.module.scss";
 
 export const MainScreen = () => {
   return (
-    <main className={styles.main_screen}>
-      <h1 className={styles.main_screen__heading}>
+    <main className={styles.main_screen} id="home">
+      <h1 className={`${styles.main_screen__heading} animate__fadeInLeft`}>
         Let us introduce <strong className="text-red">ferla bikes</strong>
       </h1>
       <p className={styles.main_screen__paragraph}>
@@ -19,6 +19,7 @@ export const MainScreen = () => {
       </p>
       <Button
         text="Get A Free Consultation"
+        animation="fade-reveal-left"
         buttonType="filled"
         margin="mt-8"
       />

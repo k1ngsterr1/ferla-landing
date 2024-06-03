@@ -1,5 +1,6 @@
 @import "breakpoint-slicer";
 @import "tailwindcss/utilities";
+@import "./animations";
 @import "./mixins";
 @import "./variables";
 
@@ -16,8 +17,12 @@
   cursor: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: "Rubik";
+  font-family: "Rubik" !important;
   overflow-x: hidden;
   background-color: #fbfbfb;
   scroll-behavior: smooth;
@@ -222,4 +227,8 @@ a {
   //   flex-direction: column;
   //   margin: auto;
   // }
+}
+
+.fade-reveal-left {
+  animation: fadeRevealLeft 0.9s ease-out forwards;
 }

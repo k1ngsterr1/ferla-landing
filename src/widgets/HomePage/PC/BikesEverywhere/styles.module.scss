@@ -1,6 +1,7 @@
 @import "breakpoint-slicer";
 @import "../../../../shared/styles/mixins";
 @import "../../../../shared/styles/variables";
+@import "../../../../shared/styles/animations";
 
 .everywhere_block {
   width: 100%;
@@ -16,11 +17,17 @@
 
     &__heading {
       text-align: left !important;
+      animation: reveal 2s linear both;
+      transition: 0.3s all;
+      animation-timeline: view(40%);
     }
 
     &__paragraph {
       width: 30%;
       font-size: clamp(8px, 16 / 360 * 100vw, 32px);
+      animation: reveal 2s linear both;
+      transition: 0.3s all;
+      animation-timeline: view(40%);
 
       @include respond-to("xs") {
         font-size: clamp(8px, 16 / 480 * 100vw, 32px);
@@ -64,6 +71,8 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    animation: reveal 3s linear both;
+    transition: 0.3s all;
     @apply mt-16;
 
     &__photo {

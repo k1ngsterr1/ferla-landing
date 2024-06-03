@@ -9,7 +9,7 @@ import styles from "./styles.module.scss";
 
 export const ManageScreen = () => {
   return (
-    <section className={styles.manage_block}>
+    <section className={styles.manage_block} id="markets">
       <div className="flex flex-col items-start w-full">
         <div className="flex flex-col items-start w-full">
           <MiniText text="From Initial Concept to Market Leader" />

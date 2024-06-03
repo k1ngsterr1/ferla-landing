@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   margin?: string;
   icon?: any;
+  animation?: string;
   text: string;
   buttonType: "filled" | "outline" | "underline" | "transparent";
 }
@@ -12,13 +13,14 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 const Button: React.FC<ButtonProps> = ({
   margin,
   text,
+  animation,
   icon,
   buttonType,
   ...rest
 }) => {
   const buttonClass = `${styles.button} hoverable ${
     styles["button--" + buttonType]
-  } ${margin || ""}`;
+  } ${margin || ""} ${animation}`;
 
   return (
     <button className={buttonClass} {...rest}>

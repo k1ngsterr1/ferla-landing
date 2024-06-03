@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        "fade-reveal-left": "fadeRevealLeft 0.9s ease-out forwards",
+      },
       colors: {
         red: "#E33A3A",
         hover_red: "#D61F1F",

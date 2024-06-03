@@ -25,11 +25,13 @@ import { EmailForm } from "@features/EmailForm";
 import { Form } from "@widgets/HomePage/PC/Form";
 import { Cursor } from "@shared/ui/Cursor";
 import { Footer } from "@features/Footer";
+import { ProgressBar } from "@shared/ui/ProgressBar";
 
 const HomePage = () => {
   return (
     <>
       <div className={styles.pc}>
+        <ProgressBar />
         <Header />
         <Cursor />
         <MainScreen />

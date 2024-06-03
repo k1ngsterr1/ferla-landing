@@ -7,13 +7,14 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { SolutionTab } from "@entities/SolutionTab";
 
 import styles from "./styles.module.scss";
+import { ArrowLeft } from "@shared/ui/ArrowLeft";
 
 export const BusinessBlock = () => {
   return (
-    <section className={styles.business_block}>
+    <section className={styles.business_block} id="perfect">
       <div className="flex flex-col items-start w-full">
         <div className={styles.business_block__upper}>
-          <h2 className={styles.business_block__heading}>
+          <h2 className={styles.business_block__upper__heading}>
             Perfect <strong className="text-red">for Any Business</strong>
           </h2>
           <MiniText text="Aesthetic Vending Solutions" />
@@ -23,11 +24,7 @@ export const BusinessBlock = () => {
             className={`flex flex-col items-start ${styles.business_block__perfect__content}`}
           >
             <div className="flex items-start gap-12">
-              <Image
-                src={arrow}
-                className={styles.business_block__arrow}
-                alt="arrow"
-              />
+              <ArrowLeft />
               <div className="flex flex-col items-start">
                 <p className={styles.business_block__perfect__paragraph}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit..
