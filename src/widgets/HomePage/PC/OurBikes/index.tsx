@@ -1,6 +1,7 @@
 import React from "react";
 import { cartsContent } from "@shared/lib/content/cartsContent";
 import { CartCard } from "@entities/CartCard";
+import { Popup } from "@entities/Popup";
 
 import styles from "./styles.module.scss";
 
@@ -22,6 +23,7 @@ export const OurBikes = () => {
           />
         ))}
       </div>
+      <Popup title="LOL" />
     </section>
   );
 };
