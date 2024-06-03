@@ -140,7 +140,7 @@
 
     @include respond-to("3xl") {
       width: clamp(70px, 140 / 1680 * 100vw, 280px);
-      height: clamp(21px, 42 / 1680 * 100vw, 84px);
+      height: clamp(27px, 54 / 1680 * 100vw, 108px);
     }
 
     @include respond-to("4xl") {

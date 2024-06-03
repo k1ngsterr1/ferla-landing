@@ -15,8 +15,12 @@
   @apply pl-2;
   @apply pb-1;
 
+  @include respond-to("lg") {
+    width: clamp(100px, 200 / 1200 * 100vw, 400px);
+  }
+
   @include respond-to("xl") {
-    width: clamp(200px, 400 / 1360 * 100vw, 800px);
+    width: clamp(110px, 220 / 1360 * 100vw, 440px);
     @apply mt-8;
   }
 
@@ -25,11 +29,11 @@
   }
 
   @include respond-to("3xl") {
-    width: clamp(200px, 400 / 1680 * 100vw, 800px);
+    width: clamp(130px, 260 / 1680 * 100vw, 520px);
   }
 
   @include respond-to("4xl") {
-    width: clamp(200px, 400 / 1920 * 100vw, 800px);
+    width: clamp(150px, 300 / 1920 * 100vw, 600px);
     @apply mt-10;
   }
 
