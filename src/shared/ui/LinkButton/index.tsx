@@ -5,6 +5,7 @@ import Link from "next/link";
 interface IButtonLink {
   margin?: string;
   text: string;
+  animation?: string;
   href: string;
   buttonType: "filled" | "outline";
 }
@@ -13,6 +14,7 @@ const LinkButton: React.FC<IButtonLink> = ({
   margin,
   text,
   href,
+  animation,
   buttonType,
   ...rest
 }) => {

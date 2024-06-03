@@ -31,6 +31,7 @@ export const BusinessBlock = () => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
                 <Button
+                  id="form"
                   text="Get Started"
                   buttonType="transparent"
                   margin="mt-4"

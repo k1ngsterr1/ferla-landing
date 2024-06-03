@@ -5,6 +5,8 @@ import Image from "next/image";
 import main_pc from "@assets/webp/pc/mainImage_pc.png";
 
 import styles from "./styles.module.scss";
+import LinkButton from "@shared/ui/LinkButton";
+import { useHandleScroll } from "@shared/lib/hooks/useHandleScroll";
 
 export const MainScreen = () => {
   return (
@@ -21,6 +23,7 @@ export const MainScreen = () => {
         text="Get A Free Consultation"
         animation="fade-reveal-left"
         buttonType="filled"
+        targetId="form"
         margin="mt-8"
       />
       <Link className={`${styles.main_screen__link} hoverable`} href="#video">
