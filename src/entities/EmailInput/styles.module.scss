@@ -150,7 +150,7 @@
 
     @include respond-to("5xl") {
       width: clamp(70px, 140 / 2560 * 100vw, 280px);
-      height: clamp(26px, 52 / 2560 * 100vw, 104px);
+      height: clamp(35px, 70 / 2560 * 100vw, 140px) !important;
     }
 
     &:hover {
