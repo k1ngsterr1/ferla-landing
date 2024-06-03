@@ -27,6 +27,9 @@ import { BusinessBlockMobile } from "@widgets/HomePage/Mobile/BusinessBlockMobil
 import { BestSellersMobile } from "@widgets/HomePage/Mobile/BestSellersMobile";
 import { BikesEverywhereMobile } from "@widgets/HomePage/Mobile/BikeEverywhereMobile";
 import { PartnersScreenMobile } from "@widgets/HomePage/Mobile/PartnersScreenMobile";
+import { ManageScreenMobile } from "@widgets/HomePage/Mobile/ManageScreenMobile";
+import { OurBikesMobile } from "@widgets/HomePage/Mobile/OurBikesMobile";
+import { ReviewsMobile } from "@widgets/HomePage/Mobile/ReviewsScreenMobile";
 
 import styles from "./styles.module.scss";
 
@@ -59,6 +62,11 @@ const HomePage = () => {
         <BestSellersMobile />
         <BikesEverywhereMobile />
         <PartnersScreenMobile />
+        <ManageScreenMobile />
+        <OurBikesMobile />
+        <ReviewsMobile />
+        <VideoBlock />
+        <Blog />
       </div>
     </>
   );

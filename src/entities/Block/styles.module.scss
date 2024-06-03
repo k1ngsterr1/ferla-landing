@@ -8,11 +8,24 @@
   @apply gap-5;
   @apply pb-4;
 
+  @include respond-to('xxs') {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
   &__paragraph {
     width: 30%;
     font-family: "Poppins";
     font-size: clamp(9px, 18 / 360 * 100vw, 36px);
     @apply text-dark;
+
+    @include respond-to('xxs') {
+      font-size: clamp(7px,3.889vw,28px);
+      text-align: center;
+      width: 100%;
+      font-weight: 300;
+    }
 
     @include respond-to("xs") {
       font-size: clamp(9px, 18 / 480 * 100vw, 36px);

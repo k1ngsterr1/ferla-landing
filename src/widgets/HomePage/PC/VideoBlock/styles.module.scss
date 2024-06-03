@@ -10,6 +10,12 @@
   justify-content: center;
   @apply mt-32;
 
+  @include respond-to('xxs') {
+    width: 90%;
+    margin: auto;
+    @apply mt-16;
+  }
+
   &__logo {
     width: clamp(147.5px, 295 / 360 * 100vw, 590px);
     height: clamp(52.5px, 105 / 360 * 100vw, 210px);
@@ -62,7 +68,7 @@
 
   &__cover {
     width: 100%;
-    height: clamp(175px, 350 / 360 * 100vw, 700px);
+    height: clamp(160px,88.889vw,640px);
     @apply rounded-xl;
     @apply mt-8;
 
