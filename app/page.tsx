@@ -59,6 +59,7 @@ const HomePage = () => {
         <OurBikesMobile/>
         <ReviewsMobile/>
         <VideoBlock/>
+        <Blog/>
       </div>
     </>
   );
