@@ -1,5 +1,5 @@
 import React from "react";
-import { ReviewSwiper } from "@features/ReviewSwiper";
+import TrustIndexWidget from "@features/TrustIndexWidget";
 
 import styles from "./styles.module.scss";
 
@@ -11,7 +11,9 @@ export const Reviews = () => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor. Duis aute irure dolor in reprehenderit in...
       </p>
-      <ReviewSwiper />
+      <TrustIndexWidget />
+
+      {/* <ReviewSwiper /> */}
     </section>
   );
 };

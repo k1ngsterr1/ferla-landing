@@ -34,7 +34,6 @@ const HomePage = () => {
   return (
     <>
       <div className={styles.pc}>
-        <TrustIndexWidget />
         <ProgressBar />
         <Header />
         <Cursor />
