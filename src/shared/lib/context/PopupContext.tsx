@@ -8,10 +8,13 @@ import React, {
   ReactNode,
 } from "react";
 
+import { ICard } from "../content/cartsContent";
+
 interface AppContextType {
   // Popup for cart
   isCartPopupVisible: boolean;
-  toggleCartPopup: () => void;
+  toggleCartPopup: (data?: ICard | null | undefined) => void;
+  cartData: ICard | null | undefined;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -26,8 +29,10 @@ export const useCartPopup = () => {
 
 export const PopupProvider = ({ children }: { children: ReactNode }) => {
   const [isCartPopupVisible, setIsCartPopupVisible] = useState<boolean>(false);
+  const [cartData, setCartData] = useState<ICard | null | undefined>(null);
 
-  const toggleCartPopup = useCallback(() => {
+  const toggleCartPopup = useCallback((data?: ICard | null | undefined) => {
+    setCartData(data);
     setIsCartPopupVisible((prev) => !prev);
   }, []);
 
@@ -36,6 +41,7 @@ export const PopupProvider = ({ children }: { children: ReactNode }) => {
       value={{
         isCartPopupVisible,
         toggleCartPopup,
+        cartData,
       }}
     >
       {children}

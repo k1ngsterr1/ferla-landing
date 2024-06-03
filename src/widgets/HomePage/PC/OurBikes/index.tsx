@@ -16,14 +16,15 @@ export const OurBikes = () => {
       <div className={styles.bikes__cards}>
         {cartsContent.map((card, index) => (
           <CartCard
+            title={card.title}
             name={card.name}
+            paragraph={card.paragraph}
             photo={card.image}
-            href={card.href}
             key={index}
           />
         ))}
       </div>
-      <Popup title="LOL" />
+      <Popup />
     </section>
   );
 };

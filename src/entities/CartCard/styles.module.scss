@@ -45,7 +45,8 @@
     }
 
     @include respond-to("5xl") {
-      font-size: clamp(12px, 24 / 1520 * 100vw, 48px);
+      font-size: clamp(12px, 24 / 2560 * 100vw, 48px);
+      @apply mt-2;
     }
   }
 
@@ -157,7 +158,12 @@
   @apply gap-2;
 
   &:hover {
-    @apply text-hover_red;
+    @apply text-red;
+
+    &::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
   }
 
   &__icon {

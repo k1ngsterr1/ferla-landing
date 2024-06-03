@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 
-import styles from "./styles.module.scss";
 import "react-datepicker/dist/react-datepicker.css";
+import styles from "./styles.module.scss";
 
 interface IDatePickerProps {
   placeholder: string;
@@ -18,7 +18,7 @@ export const DatePickerInput: React.FC<IDatePickerProps> = ({
 
   return (
     <DatePicker
-      className={`${styles.input} ${margin} hoverable`}
+      className={`${styles.input} ${margin} hoverable `}
       placeholderText={placeholder}
       selected={startDate}
       required
