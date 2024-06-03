@@ -14,6 +14,8 @@ export const SocialMediaIcon: React.FC<ISocialMediaProps> = ({
   return (
     <Link
       className={`${styles.link} hoverable`}
+      target="_blank"
+      rel="noopener noreferrer" // Important for security reasons
       href={href}
       aria-label={aria_label}
       title="Follow us on social media"

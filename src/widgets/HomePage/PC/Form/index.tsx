@@ -2,15 +2,13 @@ import React from "react";
 import Image from "next/image";
 
 import ferla_logo from "@assets/vectors/logo_dark.svg";
-
+import form_image from "@assets/webp/pc/form_image_pc.webp";
 import styles from "./styles.module.scss";
-import { Input } from "@shared/ui/Input";
-import { DatePickerInput } from "@shared/ui/DatePicker";
-import Button from "@shared/ui/Button";
+import { SubmitForm } from "../SubmitForm";
 
 export const Form = () => {
   return (
-    <section className={styles.form_section}>
+    <section className={styles.form_section} id="form">
       <div className={styles.form_section__upper}>
         <div className="flex flex-col items-start">
           <h6 className={styles.form_section__upper__heading}>
@@ -27,18 +25,12 @@ export const Form = () => {
           className={styles.form_section__upper__logo}
         />
       </div>
-      <form className={styles.form_section__form}>
-        <Input labelText="Your Name" type="text" margin="mt-4" required />
-        <Input labelText="Phone Number" type="phone" margin="mt-14" required />
-        <Input labelText="Email" type="email" margin="mt-14" required />
-        <DatePickerInput placeholder="Pick a Date" margin="mt-14" />
-        <Button
-          text="Send Form"
-          type="submit"
-          buttonType="filled"
-          margin="mt-8"
-        />
-      </form>
+      <SubmitForm />
+      <Image
+        src={form_image}
+        alt="Ferla Bikes Form Image Alternative"
+        className={styles.form_section__image}
+      />
     </section>
   );
 };

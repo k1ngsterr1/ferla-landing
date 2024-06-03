@@ -1,5 +1,8 @@
 import React from "react";
 
+// Trust Index IO
+import TrustIndexWidget from "@features/TrustIndexWidget";
+
 // PC
 import { Header } from "@features/Header";
 import { MainScreen } from "@widgets/HomePage/PC/Main";
@@ -10,6 +13,13 @@ import { ManageScreen } from "@widgets/HomePage/PC/ManageScreen";
 import { OurBikes } from "@widgets/HomePage/PC/OurBikes";
 import { Reviews } from "@widgets/HomePage/Reviews";
 import { BestSellers } from "@widgets/HomePage/PC/BestSellers";
+import { VideoBlock } from "@widgets/HomePage/PC/VideoBlock";
+import { Blog } from "@widgets/HomePage/PC/Blog";
+import { EmailForm } from "@features/EmailForm";
+import { Form } from "@widgets/HomePage/PC/Form";
+import { Cursor } from "@shared/ui/Cursor";
+import { Footer } from "@features/Footer";
+import { ProgressBar } from "@shared/ui/ProgressBar";
 
 // MOB
 import { MainScreenMobile } from "@widgets/HomePage/Mobile/MainScreenMob";
@@ -19,18 +29,12 @@ import { BikesEverywhereMobile } from "@widgets/HomePage/Mobile/BikeEverywhereMo
 import { PartnersScreenMobile } from "@widgets/HomePage/Mobile/PartnersScreenMobile";
 
 import styles from "./styles.module.scss";
-import { VideoBlock } from "@widgets/HomePage/PC/VideoBlock";
-import { Blog } from "@widgets/HomePage/PC/Blog";
-import { EmailForm } from "@features/EmailForm";
-import { Form } from "@widgets/HomePage/PC/Form";
-import { Cursor } from "@shared/ui/Cursor";
-import { Footer } from "@features/Footer";
-import { ProgressBar } from "@shared/ui/ProgressBar";
 
 const HomePage = () => {
   return (
     <>
       <div className={styles.pc}>
+        <TrustIndexWidget />
         <ProgressBar />
         <Header />
         <Cursor />

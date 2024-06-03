@@ -31,7 +31,6 @@ const useProgressBarAnimation = (progressBarRef: RefObject<HTMLDivElement>) => {
 
     return () => {
       ScrollTrigger.getAll().forEach((st) => st.kill());
-      console.log("Cleaned up ScrollTrigger"); // Debugging
     };
   }, [progressBarRef]);
 };

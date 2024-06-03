@@ -1,6 +1,8 @@
 import React from "react";
-import styles from "./styles.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useCartPopup } from "@shared/lib/context/PopupContext";
+
+import styles from "./styles.module.scss";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   margin?: string;
@@ -21,6 +23,12 @@ const Button: React.FC<ButtonProps> = ({
   const buttonClass = `${styles.button} hoverable ${
     styles["button--" + buttonType]
   } ${margin || ""} ${animation}`;
+
+  // const handleClick = () => {
+  //   if (functionType === "webPopup") {
+  //     toggleCartPopup();
+  //   }
+  // };
 
   return (
     <button className={buttonClass} {...rest}>

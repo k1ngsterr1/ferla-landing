@@ -19,6 +19,11 @@
     @apply mt-8;
   }
 
+  @include respond-to("4xl") {
+    width: 100%;
+    @apply mt-10;
+  }
+
   &:hover {
     @apply border-red;
     @apply text-red;

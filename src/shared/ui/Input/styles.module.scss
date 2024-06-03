@@ -16,6 +16,10 @@
     @apply mt-8;
   }
 
+  @include respond-to("4xl") {
+    @apply mt-10;
+  }
+
   &:hover {
     @apply border-red;
     @apply text-red;

@@ -7,6 +7,7 @@ export const EmailInput = () => {
     <div className={`${styles.email_input} hoverable`}>
       <input
         className={styles.email_input__input}
+        required
         placeholder="Request A Quote"
       />
       <button

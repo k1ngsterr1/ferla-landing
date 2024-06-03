@@ -21,7 +21,7 @@ const LinkButton: React.FC<IButtonLink> = ({
   } ${margin || ""}`;
 
   return (
-    <Link className={linkClass} {...rest} href={href} scroll={false}>
+    <Link className={linkClass} {...rest} href={href} scroll={true} passHref>
       {text}
     </Link>
   );

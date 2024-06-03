@@ -16,28 +16,28 @@ export interface ISocialMediaProps {
 export const socialMediaContent: ISocialMediaProps[] = [
   {
     icon: faTwitter,
-    href: "test",
+    href: "https://x.com/ferlabikes?lang=en&mx=2",
     aria_label: "twitter",
   },
   {
     icon: faPinterest,
-    href: "test",
+    href: "https://www.pinterest.com/ferlabikespinterest/",
     aria_label: "pinterest",
   },
   {
     icon: faFacebook,
-    href: "test",
+    href: "https://www.facebook.com/FerlaBikes/",
     aria_label: "facebook",
   },
   {
     icon: faInstagram,
-    href: "test",
+    href: "https://www.instagram.com/ferlabikes/",
     aria_label: "instagram",
   },
 
   {
     icon: faYoutube,
-    href: "test",
+    href: "https://www.youtube.com/channel/UCZa63PA8Ls17M4v3NebRqLQ",
     aria_label: "youtube",
   },
 ];

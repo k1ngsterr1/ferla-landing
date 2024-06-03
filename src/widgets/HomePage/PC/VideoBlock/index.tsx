@@ -7,7 +7,7 @@ import styles from "./styles.module.scss";
 
 export const VideoBlock = () => {
   return (
-    <section className={styles.video_block}>
+    <section className={styles.video_block} id="video">
       <Image
         src={red_logo}
         className={styles.video_block__logo}

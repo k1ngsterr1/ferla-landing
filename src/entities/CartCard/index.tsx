@@ -1,10 +1,13 @@
+"use client";
 import React from "react";
-import styles from "./styles.module.scss";
 import Image, { StaticImageData } from "next/image";
-import LinkButton from "@shared/ui/LinkButton";
 import Link from "next/link";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { useCartPopup } from "@shared/lib/context/PopupContext";
+
+import styles from "./styles.module.scss";
 
 interface ICartCard {
   photo: string | StaticImageData;
@@ -13,8 +16,13 @@ interface ICartCard {
 }
 
 export const CartCard: React.FC<ICartCard> = ({ photo, name, href }) => {
+  const { toggleCartPopup } = useCartPopup();
+
   return (
-    <div className="flex flex-col items-center hoverable">
+    <div
+      className="flex flex-col items-center hoverable"
+      onClick={toggleCartPopup}
+    >
       <div className={`${styles.cart_card} hoverable`}>
         <Image src={photo} alt={name} className={styles.cart_card__image} />
         <span className={styles.cart_card__name}>{name}</span>

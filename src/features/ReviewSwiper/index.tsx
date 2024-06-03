@@ -22,7 +22,6 @@ export const ReviewSwiper = () => {
         slidesPerView={3}
         className={`${styles.review_swiper} !w-[100%]`}
         navigation={false}
-        onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper: any) => {
           swiperRef.current = swiper;
           console.log(swiper);

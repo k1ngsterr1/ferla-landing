@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import "@shared/styles/global.scss";
+import { PopupProvider } from "@shared/lib/context/PopupContext";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="container">{children}</div>
+        <PopupProvider>
+          <div className="container">{children}</div>
+        </PopupProvider>
       </body>
     </html>
   );

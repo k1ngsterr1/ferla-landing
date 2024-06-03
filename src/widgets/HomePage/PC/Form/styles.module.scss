@@ -4,6 +4,8 @@
 
 .form_section {
   width: 100%;
+  height: 70vh;
+  position: relative;
   @apply mt-16;
   background-image: url("../../../../assets/vectors/bike_transparent.svg");
   background-size: auto;
@@ -67,4 +69,16 @@
       @apply mt-0;
     }
   }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    right: clamp(-256px, -26.66496vw, -1024px);
+  }
+}
+
+.error {
+  @apply text-sm;
+  @apply text-red;
+  @apply mt-2;
 }

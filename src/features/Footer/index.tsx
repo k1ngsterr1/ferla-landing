@@ -14,11 +14,13 @@ export const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className="flex items-center justify-between w-full">
-        <Image
-          className={styles.footer__logo}
-          src={dark_logo}
-          alt="Ferlabikes Logo"
-        />
+        <a href="#home">
+          <Image
+            className={styles.footer__logo}
+            src={dark_logo}
+            alt="Ferlabikes Logo"
+          />
+        </a>
         <nav className={styles.footer__nav}>
           {navLinks.map((link, index) => (
             <NavLink label={link.label} href={link.href} key={index} />
