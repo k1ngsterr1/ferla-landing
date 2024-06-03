@@ -42,7 +42,6 @@ const HomePage = () => {
         <PartnersScreen />
         <ManageScreen />
         <OurBikes />
-        {/* <Reviews /> */}
         <Reviews />
         <VideoBlock />
         <Blog />
@@ -59,6 +58,7 @@ const HomePage = () => {
         <ManageScreenMobile/>
         <OurBikesMobile/>
         <ReviewsMobile/>
+        <VideoBlock/>
       </div>
     </>
   );
