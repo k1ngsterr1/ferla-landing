@@ -1,10 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import styles from "./styles.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
+import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 
-export const Counter = () => {
+import styles from "../Counter/styles.module.scss";
+
+export const DayCounter = () => {
   const [count, setCount] = useState<number>(0);
 
   const handleIncrement = () => {
@@ -17,18 +18,17 @@ export const Counter = () => {
 
   return (
     <div className={styles.counter}>
-      <span className={styles.counter__dollar}>$</span>
+      <FontAwesomeIcon
+        icon={faMinus}
+        className={styles.counter__decrement}
+        onClick={handleDecrement}
+      />
       <span className={styles.counter__count}>{count}</span>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center ">
         <FontAwesomeIcon
-          icon={faCaretUp}
+          icon={faPlus}
           className={styles.counter__increment}
           onClick={handleIncrement}
-        />
-        <FontAwesomeIcon
-          icon={faCaretDown}
-          className={styles.counter__decrement}
-          onClick={handleDecrement}
         />
       </div>
     </div>

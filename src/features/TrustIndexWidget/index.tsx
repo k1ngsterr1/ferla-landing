@@ -15,8 +15,6 @@ const TrustIndexWidget = () => {
         "trustindex-widget-container"
       );
 
-      console.log("LOL");
-
       if (widget && targetContainer) {
         targetContainer.appendChild(widget); // Move the widget to the specified container
         clearInterval(interval);

@@ -19,7 +19,7 @@ export const CalculatorRange = () => {
   };
 
   return (
-    <div className={`${styles.calculator_range} hoverable gap-4 text-red`}>
+    <div className={`${styles.calculator_range} hoverable gap-4 text-red mt-3`}>
       <FontAwesomeIcon
         icon={faMinus}
         onClick={handleDecrement}

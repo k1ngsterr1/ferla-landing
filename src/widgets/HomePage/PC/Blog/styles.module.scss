@@ -36,6 +36,11 @@
       flex-wrap: wrap;
     }
 
+    @include respond-to("md") {
+      width: 100%;
+      text-align: right;
+    }
+
     &__heading {
       @include respond-to("xl") {
         font-size: clamp(19px, 38 / 1360 * 100vw, 76px);
@@ -48,6 +53,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @apply gap-4;
     @apply mt-4;
 
     @include respond-to("xxs") {
@@ -55,6 +61,7 @@
     }
 
     @include respond-to("md") {
+      width: 100%;
       flex-direction: row;
     }
   }

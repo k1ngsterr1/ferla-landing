@@ -15,7 +15,6 @@ interface SelectorProps {
 const Selector: React.FC<SelectorProps> = ({
   placeholder,
   value,
-  margin,
   onChange,
   options,
 }) => {
@@ -28,8 +27,8 @@ const Selector: React.FC<SelectorProps> = ({
   };
 
   return (
-    <div className={`w-full flex flex-col items-center margin`}>
-      <div className={styles.selector} onClick={toggleDropdown}>
+    <div className={`w-full flex flex-col items-center margin relative`}>
+      <div className={`${styles.selector} flex gap-2`} onClick={toggleDropdown}>
         <span className={styles.selectorPlaceholder}>
           {value || placeholder}
         </span>
