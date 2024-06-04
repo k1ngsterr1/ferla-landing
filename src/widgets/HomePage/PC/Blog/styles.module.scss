@@ -36,6 +36,10 @@
       flex-wrap: wrap;
     }
 
+    @include respond-to("md") {
+      width: 100%;
+    }
+
     &__heading {
       @include respond-to("xl") {
         font-size: clamp(19px, 38 / 1360 * 100vw, 76px);
@@ -52,6 +56,7 @@
 
     @include respond-to("xxs") {
       flex-direction: column;
+      @apply mt-10;
     }
 
     @include respond-to("md") {

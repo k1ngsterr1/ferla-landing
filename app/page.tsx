@@ -1,8 +1,5 @@
 import React from "react";
 
-// Trust Index IO
-import TrustIndexWidget from "@features/TrustIndexWidget";
-
 // PC
 import { Header } from "@features/Header";
 import { MainScreen } from "@widgets/HomePage/PC/Main";
@@ -65,7 +62,7 @@ const HomePage = () => {
         <PartnersScreenMobile />
         <ManageScreenMobile />
         <OurBikesMobile />
-        {/* <ReviewsMobile /> */}
+        <ReviewsMobile />
         <VideoBlock />
         <Blog />
       </div>

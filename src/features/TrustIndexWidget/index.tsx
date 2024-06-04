@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useEffect } from "react";
 import useScript from "@shared/lib/hooks/useScript";
 
@@ -15,9 +16,8 @@ const TrustIndexWidget = () => {
         "trustindex-widget-container"
       );
 
-      console.log("LOL");
-
       if (widget && targetContainer) {
+        console.log("widget:", widget, "target container:", targetContainer);
         targetContainer.appendChild(widget); // Move the widget to the specified container
         clearInterval(interval);
       }

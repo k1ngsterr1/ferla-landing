@@ -11,6 +11,14 @@
   background-color: #fbfbfb;
   transition: 0.3s all;
 
+  @include respond-to("xxs") {
+    align-items: center;
+  }
+
+  @include respond-to("md") {
+    align-items: flex-start;
+  }
+
   &:hover &__title {
     @apply text-red;
   }
@@ -23,6 +31,11 @@
     transition: 0.3s all;
     @apply text-dark;
     @apply mt-4;
+
+    @include respond-to("xxs") {
+      width: 80%;
+      @apply mt-4;
+    }
 
     @include respond-to("xs") {
       font-size: clamp(9px, 18 / 480 * 100vw, 36px);
@@ -69,6 +82,10 @@
     height: clamp(122.5px, 245 / 360 * 100vw, 490px);
     @apply rounded-lg;
 
+    @include respond-to("xxs") {
+      height: 65%;
+    }
+
     @include respond-to("xs") {
       height: clamp(122.5px, 245 / 480 * 100vw, 490px);
     }
@@ -112,6 +129,10 @@
     text-decoration: none;
     @apply text-red;
     @apply mt-2;
+
+    @include respond-to("xxs") {
+      @apply mt-2;
+    }
 
     @include respond-to("xs") {
       font-size: clamp(8.5px, 17 / 480 * 100vw, 34px);

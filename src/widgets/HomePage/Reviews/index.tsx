@@ -12,8 +12,6 @@ export const Reviews = () => {
         tempor. Duis aute irure dolor in reprehenderit in...
       </p>
       <TrustIndexWidget />
-
-      {/* <ReviewSwiper /> */}
     </section>
   );
 };

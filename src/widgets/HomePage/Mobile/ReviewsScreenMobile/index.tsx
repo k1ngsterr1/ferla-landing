@@ -1,19 +1,19 @@
-
 import React from "react";
-import { ReviewSwiperMobile } from "@features/ReviewSwiperMobile";
+import TrustIndexWidget from "@features/TrustIndexWidget";
 
 import styles from "./styles.module.scss";
 
 export const ReviewsMobile = () => {
   return (
-    <section className={styles.reviews_mob}>
+    <section className={styles.reviews_mob} id="reviews">
       <h6>
         <strong>Reviews</strong>
       </h6>
       <p className={styles.reviews_mob__paragraph}>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Duis aute irure dolor in reprehenderit in...
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor. Duis aute irure dolor in reprehenderit in...
       </p>
-      <ReviewSwiperMobile/>
+      <TrustIndexWidget />
     </section>
   );
 };
