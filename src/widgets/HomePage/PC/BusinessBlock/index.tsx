@@ -1,13 +1,12 @@
+"use client";
 import React from "react";
-import arrow from "@assets/vectors/arrow.svg";
-import Image from "next/image";
-import Button from "@shared/ui/Button";
 import { MiniText } from "@shared/ui/MiniText";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { SolutionTab } from "@entities/SolutionTab";
+import { ArrowLeft } from "@shared/ui/ArrowLeft";
+import Button from "@shared/ui/Button";
 
 import styles from "./styles.module.scss";
-import { ArrowLeft } from "@shared/ui/ArrowLeft";
 
 export const BusinessBlock = () => {
   return (

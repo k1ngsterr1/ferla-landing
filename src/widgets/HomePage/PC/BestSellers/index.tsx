@@ -1,12 +1,12 @@
+"use client";
 import React from "react";
+import { MiniText } from "@shared/ui/MiniText";
+import { faChevronRight, faMoneyBill } from "@fortawesome/free-solid-svg-icons";
+import { AboutCard } from "@entities/AboutCard";
 import Button from "@shared/ui/Button";
 import Image from "next/image";
 import best_sellers_pc from "@assets/webp/pc/best_sellers_pc.png";
 import ArrowAnimation from "@shared/ui/ArrowRight";
-
-import { MiniText } from "@shared/ui/MiniText";
-import { faChevronRight, faMoneyBill } from "@fortawesome/free-solid-svg-icons";
-import { AboutCard } from "@entities/AboutCard";
 
 import styles from "./styles.module.scss";
 

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import logo from "@assets/vectors/logo_dark.svg";
 import LinkButton from "@shared/ui/LinkButton";

@@ -1,4 +1,4 @@
-
+"use client";
 import React from "react";
 import { CartCardSwiper } from "@features/CartCardSwiper";
 
@@ -10,7 +10,7 @@ export const OurBikesMobile = () => {
       <h6>
         <strong>Our Bikes</strong>
       </h6>
-      <CartCardSwiper/>
+      <CartCardSwiper />
     </section>
   );
 };

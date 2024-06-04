@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import dark_logo from "@assets/vectors/logo_dark.svg";
 import Image from "next/image";

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { cartsContent } from "@shared/lib/content/cartsContent";
 import { CartCard } from "@entities/CartCard";

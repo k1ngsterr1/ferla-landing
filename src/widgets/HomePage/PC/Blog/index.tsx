@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { blogContent } from "@shared/lib/content/blogContent";
 import { BlogCard } from "@entities/BlogCard";
