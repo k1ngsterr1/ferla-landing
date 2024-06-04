@@ -14,6 +14,10 @@
   font-size: clamp(8px, 16 / 360 * 100vw, 32px);
   @apply text-red;
 
+  @include respond-to('xxs') {
+    font-size: clamp(12px,5.60736vw,48px);
+  }
+
   @include respond-to("xs") {
     font-size: clamp(8px, 16 / 480 * 100vw, 32px);
   }
