@@ -1,14 +1,34 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import useScript from "@shared/lib/hooks/useScript";
 
 const TrustIndexWidget = () => {
   const scriptUrl =
-    "https://cdn.trustindex.io/loader.js?eba5607293f1059b7c7618079df";
-
+    "https://cdn.trustindex.io/loader.js?9fa959e30e81566f4c668f3ff30";
   useScript(scriptUrl);
 
-  return <div id="trustindex-widget-container"></div>;
+  // Effect to relocate the TrustIndex widget after it loads
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const widget = document.querySelector(".ti-widget"); // TrustIndex should provide the correct class or ID
+      const targetContainer = document.getElementById(
+        "trustindex-widget-container"
+      );
+
+      console.log("LOL");
+
+      if (widget && targetContainer) {
+        targetContainer.appendChild(widget); // Move the widget to the specified container
+        clearInterval(interval);
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div id="trustindex-widget-container"></div> // Container where you want the widget to appear
+  );
 };
 
 export default TrustIndexWidget;

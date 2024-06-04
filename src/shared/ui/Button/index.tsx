@@ -1,6 +1,7 @@
+"use client";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useCartPopup } from "@shared/lib/context/PopupContext";
+import { useHandleScroll } from "@shared/lib/hooks/useHandleScroll";
 
 import styles from "./styles.module.scss";
 
@@ -9,6 +10,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   icon?: any;
   animation?: string;
   text: string;
+  targetId?: string;
   buttonType: "filled" | "outline" | "underline" | "transparent";
 }
 
@@ -18,20 +20,21 @@ const Button: React.FC<ButtonProps> = ({
   animation,
   icon,
   buttonType,
+  targetId,
   ...rest
 }) => {
   const buttonClass = `${styles.button} hoverable ${
     styles["button--" + buttonType]
   } ${margin || ""} ${animation}`;
 
-  // const handleClick = () => {
-  //   if (functionType === "webPopup") {
-  //     toggleCartPopup();
-  //   }
-  // };
+  const { handleScroll } = useHandleScroll();
 
   return (
-    <button className={buttonClass} {...rest}>
+    <button
+      className={buttonClass}
+      {...rest}
+      onClick={() => handleScroll(targetId)}
+    >
       {text}
       {icon && (
         <FontAwesomeIcon

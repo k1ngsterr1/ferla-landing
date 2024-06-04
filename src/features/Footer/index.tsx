@@ -6,9 +6,9 @@ import { navLinks } from "@shared/lib/content/navLinks";
 import { NavLink } from "@shared/ui/NavLink";
 import { socialMediaContent } from "@shared/lib/content/socialMediaContent";
 import { SocialMediaIcon } from "@shared/ui/SocialMediaIcon";
+import { SparkLogo } from "@shared/ui/SparkLogo";
 
 import styles from "./styles.module.scss";
-import { SparkLogo } from "@shared/ui/SparkLogo";
 
 export const Footer = () => {
   return (

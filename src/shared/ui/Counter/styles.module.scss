@@ -1,0 +1,29 @@
+.counter {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  @apply gap-6;
+  @apply rounded-sm;
+  @apply border-gray-200;
+  @apply bg-white;
+  @apply mt-2;
+
+  &__dollar {
+    @apply text-lg;
+    @apply text-red;
+  }
+
+  &__count {
+    @apply text-lg;
+    @apply text-dark;
+  }
+
+  &__increment,
+  &__decrement {
+    @apply text-lg;
+    @apply text-red;
+  }
+}

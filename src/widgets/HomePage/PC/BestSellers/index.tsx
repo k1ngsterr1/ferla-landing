@@ -24,6 +24,7 @@ export const BestSellers = () => {
           <ArrowAnimation />
         </div>
         <Button
+          id="form"
           text="Manage Your Business"
           buttonType="transparent"
           margin="mt-8"

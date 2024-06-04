@@ -8,10 +8,16 @@
   @apply gap-5;
   @apply pb-4;
 
-  @include respond-to('xxs') {
+  @include respond-to("xxs") {
     display: flex;
     justify-content: center;
     flex-direction: column;
+  }
+
+  @include respond-to("md") {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
   }
 
   &__paragraph {
@@ -20,11 +26,15 @@
     font-size: clamp(9px, 18 / 360 * 100vw, 36px);
     @apply text-dark;
 
-    @include respond-to('xxs') {
-      font-size: clamp(7px,3.889vw,28px);
+    @include respond-to("xxs") {
+      font-size: clamp(7px, 3.889vw, 28px);
       text-align: center;
       width: 100%;
       font-weight: 300;
+    }
+
+    @include respond-to("md") {
+      text-align: left;
     }
 
     @include respond-to("xs") {

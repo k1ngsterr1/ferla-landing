@@ -1,0 +1,93 @@
+@import "breakpoint-slicer";
+@import "../../../shared/styles/mixins";
+@import "../../../shared/styles/variables";
+
+.selector {
+  position: relative;
+  width: clamp(125px, 250 / 1200 * 100vw, 500px);
+  height: clamp(25px, 50 / 1200 * 100vw, 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @apply bg-white;
+  @apply text-dark;
+
+  @include respond-to("xl") {
+    width: clamp(125px, 250 / 1360 * 100vw, 500px);
+    height: clamp(25px, 50 / 1360 * 100vw, 100px);
+  }
+
+  @include respond-to("2xl") {
+    width: clamp(125px, 250 / 1520 * 100vw, 500px);
+    height: clamp(25px, 50 / 1520 * 100vw, 100px);
+  }
+
+  @include respond-to("3xl") {
+    width: clamp(125px, 250 / 1680 * 100vw, 500px);
+    height: clamp(25px, 50 / 1680 * 100vw, 100px);
+  }
+
+  @include respond-to("4xl") {
+    width: clamp(125px, 250 / 1920 * 100vw, 500px);
+    height: clamp(25px, 50 / 1920 * 100vw, 100px);
+  }
+
+  @include respond-to("5xl") {
+    width: clamp(125px, 250 / 2560 * 100vw, 500px);
+    height: clamp(25px, 50 / 2560 * 100vw, 100px);
+  }
+}
+
+.list {
+  width: clamp(125px, 250 / 1200 * 100vw, 500px);
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  @apply bg-white;
+
+  @include respond-to("xl") {
+    width: clamp(125px, 250 / 1360 * 100vw, 500px);
+    height: clamp(25px, 50 / 1360 * 100vw, 100px);
+  }
+
+  @include respond-to("2xl") {
+    width: clamp(125px, 250 / 1520 * 100vw, 500px);
+    height: clamp(25px, 50 / 1520 * 100vw, 100px);
+  }
+
+  @include respond-to("3xl") {
+    width: clamp(125px, 250 / 1680 * 100vw, 500px);
+    height: clamp(25px, 50 / 1680 * 100vw, 100px);
+  }
+
+  @include respond-to("4xl") {
+    width: clamp(125px, 250 / 1920 * 100vw, 500px);
+    height: clamp(25px, 50 / 1920 * 100vw, 100px);
+  }
+
+  @include respond-to("5xl") {
+    width: clamp(125px, 250 / 2560 * 100vw, 500px);
+    height: clamp(25px, 50 / 2560 * 100vw, 100px);
+  }
+}
+
+.selectorChevron {
+  @apply text-base;
+  @apply text-red;
+}
+
+.listItem {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  transition: 0.3s all;
+  @apply p-2;
+  &:hover {
+    @apply bg-gray-200;
+  }
+}
