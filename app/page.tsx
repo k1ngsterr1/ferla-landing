@@ -64,7 +64,7 @@ const HomePage = () => {
         <PartnersScreenMobile />
         <ManageScreenMobile />
         <OurBikesMobile />
-        <ReviewsMobile />
+        {/* <ReviewsMobile /> */}
         <VideoBlock />
         <Blog />
       </div>
