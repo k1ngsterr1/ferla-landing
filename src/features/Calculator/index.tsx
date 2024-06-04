@@ -41,11 +41,11 @@ export const Calculator = () => {
   };
 
   const handleDecrementOrders = () => {
-    setOrdersPerDay(ordersPerDay - 1);
+    setOrdersPerDay((currentOrders) => Math.max(0, Number(currentOrders) - 1));
   };
 
   const handleIncrementOrders = () => {
-    setOrdersPerDay(ordersPerDay + 1);
+    setOrdersPerDay((currentOrders) => Number(currentOrders) + 1);
   };
 
   return (
