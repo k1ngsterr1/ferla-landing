@@ -1,0 +1,9 @@
+.calculator {
+  &__heading {
+  }
+
+  &__paragraph {
+    width: 40%;
+    @apply mt-2;
+  }
+}

@@ -20,6 +20,7 @@ import { Form } from "@widgets/HomePage/PC/Form";
 import { Cursor } from "@shared/ui/Cursor";
 import { Footer } from "@features/Footer";
 import { ProgressBar } from "@shared/ui/ProgressBar";
+import { CalculatorBlock } from "@widgets/HomePage/PC/CalculatorBlock";
 
 // MOB
 import { MainScreenMobile } from "@widgets/HomePage/Mobile/MainScreenMob";
@@ -47,6 +48,7 @@ const HomePage = () => {
         <Reviews />
         <VideoBlock />
         <Blog />
+        <CalculatorBlock />
         <EmailForm />
         <Form />
         <Footer />
