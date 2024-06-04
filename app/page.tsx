@@ -1,8 +1,5 @@
 import React from "react";
 
-// Trust Index IO
-import TrustIndexWidget from "@features/TrustIndexWidget";
-
 // PC
 import { Header } from "@features/Header";
 import { MainScreen } from "@widgets/HomePage/PC/Main";
@@ -33,6 +30,7 @@ import { OurBikesMobile } from "@widgets/HomePage/Mobile/OurBikesMobile";
 import { ReviewsMobile } from "@widgets/HomePage/Mobile/ReviewsScreenMobile";
 
 import styles from "./styles.module.scss";
+import { Result } from "@features/Result";
 
 const HomePage = () => {
   return (
@@ -52,6 +50,7 @@ const HomePage = () => {
         <VideoBlock />
         <Blog />
         <CalculatorBlock />
+        <Result />
         <EmailForm />
         <Form />
         <Footer />
