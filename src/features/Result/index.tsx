@@ -2,8 +2,8 @@ import React from "react";
 import styles from "./styles.module.scss";
 
 interface IResultProps {
-  moneyBack: string;
-  estimatedEarnings: string;
+  moneyBack: number;
+  estimatedEarnings: number;
 }
 
 export const Result: React.FC<IResultProps> = ({
@@ -22,7 +22,7 @@ export const Result: React.FC<IResultProps> = ({
           In 3 months estimated earnings:
         </span>
         <span className={styles.result__money_back_amount}>
-          {estimatedEarnings}
+          {estimatedEarnings}$
         </span>
       </div>
     </div>

@@ -3,6 +3,9 @@
 @import "../../../../shared/styles/variables";
 
 .calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   @apply mt-16;
 
   @include respond-to("5xl") {
@@ -11,6 +14,7 @@
 
   &__paragraph {
     width: 40%;
+    text-align: center;
     @apply mt-2;
   }
 }

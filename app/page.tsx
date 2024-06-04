@@ -30,7 +30,6 @@ import { OurBikesMobile } from "@widgets/HomePage/Mobile/OurBikesMobile";
 import { ReviewsMobile } from "@widgets/HomePage/Mobile/ReviewsScreenMobile";
 
 import styles from "./styles.module.scss";
-import { Result } from "@features/Result";
 
 const HomePage = () => {
   return (
@@ -49,9 +48,8 @@ const HomePage = () => {
         <Reviews />
         <VideoBlock />
         <Blog />
-        <CalculatorBlock />
-        <Result />
         <EmailForm />
+        <CalculatorBlock />
         <Form />
         <Footer />
       </div>

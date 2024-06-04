@@ -23,6 +23,7 @@
   }
 
   &__money_back_amount {
+    @apply mt-2;
     @apply text-4xl;
     @apply text-white;
   }
