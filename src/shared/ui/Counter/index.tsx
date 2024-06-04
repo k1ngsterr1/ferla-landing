@@ -16,18 +16,20 @@ export const Counter: React.FC<ICounter> = ({
   handleIncrement,
 }) => {
   return (
-    <div className={styles.counter}>
-      <span className={styles.counter__dollar}>$</span>
-      <span className={styles.counter__count}>{averageOrderPrice}</span>
-      <div className="flex flex-col items-center">
+    <div className={`${styles.counter} hoverable`}>
+      <span className={`${styles.counter__dollar} hoverable`}>$</span>
+      <span className={`${styles.counter__count} hoverable`}>
+        {averageOrderPrice}
+      </span>
+      <div className="flex flex-col items-center hoverable">
         <FontAwesomeIcon
           icon={faCaretUp}
-          className={styles.counter__increment}
+          className={`${styles.counter__increment} hoverable`}
           onClick={handleIncrement}
         />
         <FontAwesomeIcon
           icon={faCaretDown}
-          className={styles.counter__decrement}
+          className={`${styles.counter__decrement} hoveralbe`}
           onClick={handleDecrement}
         />
       </div>

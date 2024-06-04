@@ -17,17 +17,19 @@ export const DayCounter: React.FC<IDayCounter> = ({
   handleIncrementDayPerWeek,
 }) => {
   return (
-    <div className={styles.counter}>
+    <div className={`${styles.counter} hoverable`}>
       <FontAwesomeIcon
         icon={faMinus}
-        className={styles.counter__decrement}
+        className={`${styles.counter__decrement} hoverable`}
         onClick={handleDecrementDayPerWeek}
       />
-      <span className={styles.counter__count}>{daysPerWeek}</span>
-      <div className="flex flex-col items-center ">
+      <span className={`${styles.counter__count} hoverable`}>
+        {daysPerWeek}
+      </span>
+      <div className="flex flex-col items-center hoverable">
         <FontAwesomeIcon
           icon={faPlus}
-          className={styles.counter__increment}
+          className={`${styles.counter__increment} hoverable`}
           onClick={handleIncrementDayPerWeek}
         />
       </div>

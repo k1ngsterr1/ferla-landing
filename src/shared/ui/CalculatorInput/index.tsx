@@ -12,7 +12,7 @@ export const CalculatorInput: React.FC<ICalculatorInput> = ({
 }) => {
   return (
     <input
-      className={styles.calculator_input}
+      className={`${styles.calculator_input} hoverable`}
       value={bikePrice}
       onChange={onChange}
       placeholder="Bike Price"

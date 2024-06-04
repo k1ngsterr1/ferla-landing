@@ -1,5 +1,12 @@
+@import "breakpoint-slicer";
+@import "../../../../shared/styles/mixins";
+@import "../../../../shared/styles/variables";
+
 .calculator {
-  &__heading {
+  @apply mt-16;
+
+  @include respond-to("5xl") {
+    @apply mt-32;
   }
 
   &__paragraph {
