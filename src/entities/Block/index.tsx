@@ -4,7 +4,6 @@ import styles from "./styles.module.scss";
 
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { IconDot } from "@shared/ui/IconDot";
-import { faMoneyBill } from "@fortawesome/free-solid-svg-icons";
 
 interface IBlock {
   icon: IconDefinition;

@@ -1,18 +1,15 @@
-.manage_screen_mob {
+.reviews_mob {
     width: 90%;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    @apply mt-20;
+    @apply mt-16;
 
-    &__heading {
-        @apply mt-4;
-    }
-
-    &__separator {
-        width: 90%;
+    &__paragraph {
+        width: 75%;
+        text-align: center;
         @apply mt-4;
     }
 }
