@@ -4,21 +4,21 @@ import styles from "./styles.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
 
-export const Counter = () => {
-  const [count, setCount] = useState<number>(0);
+interface ICounter {
+  averageOrderPrice: number;
+  handleIncrement: () => void;
+  handleDecrement: () => void;
+}
 
-  const handleIncrement = () => {
-    setCount(count + 1);
-  };
-
-  const handleDecrement = () => {
-    setCount(count - 1);
-  };
-
+export const Counter: React.FC<ICounter> = ({
+  averageOrderPrice,
+  handleDecrement,
+  handleIncrement,
+}) => {
   return (
     <div className={styles.counter}>
       <span className={styles.counter__dollar}>$</span>
-      <span className={styles.counter__count}>{count}</span>
+      <span className={styles.counter__count}>{averageOrderPrice}</span>
       <div className="flex flex-col items-center">
         <FontAwesomeIcon
           icon={faCaretUp}

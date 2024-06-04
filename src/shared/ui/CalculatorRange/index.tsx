@@ -7,26 +7,28 @@ import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./styles.module.scss";
 
-export const CalculatorRange = () => {
-  const [value, setValue] = useState<number>(0);
+interface ICalculatorRange {
+  ordersPerDay: number;
+  handleOrdersIncrement: () => void;
+  handleOrdersDecrement: () => void;
+  onChange: (changeEvent: any) => void;
+}
 
-  const handleIncrement = () => {
-    setValue(value + 1);
-  };
-
-  const handleDecrement = () => {
-    setValue(value - 1);
-  };
-
+export const CalculatorRange: React.FC<ICalculatorRange> = ({
+  ordersPerDay,
+  onChange,
+  handleOrdersIncrement,
+  handleOrdersDecrement,
+}) => {
   return (
     <div className={`${styles.calculator_range} hoverable gap-4 text-red mt-3`}>
       <FontAwesomeIcon
         icon={faMinus}
-        onClick={handleDecrement}
+        onClick={handleOrdersDecrement}
         className={`${styles.calculator_range__button__icon} hoverable`}
       />
       <RangeSlider
-        value={value}
+        value={ordersPerDay}
         color="#E33A3A"
         size="lg"
         min={0}
@@ -39,11 +41,11 @@ export const CalculatorRange = () => {
         className={`${styles.calculator_range__input} hoverable`}
         tooltip="on"
         tooltipPlacement="top"
-        onChange={(changeEvent) => setValue(changeEvent.target.value)}
+        onChange={onChange}
       />
       <FontAwesomeIcon
         icon={faPlus}
-        onClick={handleIncrement}
+        onClick={handleOrdersIncrement}
         className={`${styles.calculator_range__button__icon} hoverable`}
       />
     </div>
