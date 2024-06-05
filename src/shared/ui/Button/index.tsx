@@ -11,7 +11,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   animation?: string;
   text: string;
   targetId?: string;
-  buttonType: "filled" | "outline" | "underline" | "transparent";
+  buttonType: "filled" | "outline" | "underline" | "transparent" | "outlinemob";
 }
 
 const Button: React.FC<ButtonProps> = ({
