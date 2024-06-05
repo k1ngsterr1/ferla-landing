@@ -18,21 +18,23 @@
   }
 
   &__label {
+    pointer-events: none;
     position: absolute;
-    z-index: -1;
     font-size: clamp(9px, 4.20552vw, 36px);
-    @apply bottom-1;
+    z-index: -1;
+    transition: all 0.4s ease;
+    @apply bottom-2;
     @apply left-2;
   }
 
   &__input {
     width: 100%;
-    font-size: clamp(9px, 4.20552vw, 36px);
     background: transparent;
     border: none;
     outline: none;
-    @apply text-dark;
-    @apply pl-2;
+    font-size: clamp(9px, 4.20552vw, 36px);
     z-index: 1;
+    @apply pl-2;
+    @apply pb-1;
   }
 }

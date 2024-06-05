@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useRef, useState } from "react";
-import { useCustomLabelMobile } from "@shared/lib/animations/customLabelAnimation";
+import React, { useRef } from "react";
+import { useCustomLabel } from "@shared/lib/animations/customLabelAnimationMobile";
 
 import styles from "./styles.module.scss";
 
@@ -11,15 +11,13 @@ interface Input extends React.InputHTMLAttributes<HTMLInputElement> {
   type: string;
 }
 
-export const Input: React.FC<Input> = ({
+export const InputMobile: React.FC<Input> = ({
   labelText,
   margin,
   type,
   ...rest
 }) => {
-  const labelRef = useRef<HTMLLabelElement>(null);
-  const { onLabelFocusMobile, onLabelBlurMobile } =
-    useCustomLabelMobile(labelRef);
+  const { onLabelFocus, onLabelBlur, labelRef } = useCustomLabel();
 
   return (
     <div
@@ -34,8 +32,8 @@ export const Input: React.FC<Input> = ({
       </label>
       <input
         type={type}
-        onFocus={onLabelFocusMobile}
-        onBlur={onLabelBlurMobile}
+        onFocus={onLabelFocus}
+        onBlur={onLabelBlur}
         className={`${styles.input_container__input} hoverable`}
       />
     </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { SubmitForm } from "@widgets/HomePage/PC/SubmitForm";
+import { SubmitFormMobile } from "@widgets/HomePage/Mobile/SubmitFormMobile";
 
 import styles from "./styles.module.scss";
 
@@ -12,7 +12,7 @@ export const FormMobile = () => {
       <p className={styles.form_mob__paragraph}>
         We've got more options Hop on a call with us today!
       </p>
-      <SubmitForm />
+      <SubmitFormMobile />
     </section>
   );
 };
