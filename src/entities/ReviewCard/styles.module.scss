@@ -17,6 +17,7 @@
   @apply p-8;
 
   @include respond-to('xxs') {
+    width: 90%;
     height: clamp(115px,63.889vw,460px);
   }
 

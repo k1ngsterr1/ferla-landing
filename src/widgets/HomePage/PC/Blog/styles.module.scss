@@ -58,6 +58,7 @@
 
     @include respond-to("xxs") {
       flex-direction: column;
+      @apply mt-10;
     }
 
     @include respond-to("md") {

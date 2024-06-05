@@ -28,6 +28,8 @@ import { PartnersScreenMobile } from "@widgets/HomePage/Mobile/PartnersScreenMob
 import { ManageScreenMobile } from "@widgets/HomePage/Mobile/ManageScreenMobile";
 import { OurBikesMobile } from "@widgets/HomePage/Mobile/OurBikesMobile";
 import { ReviewsMobile } from "@widgets/HomePage/Mobile/ReviewsScreenMobile";
+import { FormMobile } from "@widgets/HomePage/Mobile/FormMobile";
+import { FooterMobile } from "@features/FooterMobile/index";
 
 import styles from "./styles.module.scss";
 
@@ -65,6 +67,8 @@ const HomePage = () => {
         <ReviewsMobile />
         <VideoBlock />
         <Blog />
+        <FormMobile />
+        <FooterMobile />
       </div>
     </>
   );
