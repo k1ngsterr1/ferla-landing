@@ -15,7 +15,9 @@ interface IVideoProps {
 export const Video: React.FC<IVideoProps> = ({ video_link, onClick }) => {
   return (
     <div className={styles.video}>
-      <VideoButton onClick={() => console.log("LOL")} />
+      <VideoButton
+        onClick={() => window.open(video_link, "_blank", "noopener,noreferrer")}
+      />
       <Image
         src={market_image}
         onClick={onClick}

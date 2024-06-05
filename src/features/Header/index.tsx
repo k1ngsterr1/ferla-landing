@@ -11,7 +11,7 @@ import styles from "./styles.module.scss";
 
 export const Header = () => {
   return (
-    <header className={styles.header}>
+    <header className={styles.header} id="home">
       <Image
         priority
         src={logo}

@@ -4,8 +4,8 @@
 
 .video {
   position: relative;
-  width: clamp(180px,84.1104vw,720px);
-  height: clamp(125px,58.41vw,500px);
+  width: clamp(180px, 84.1104vw, 720px);
+  height: clamp(125px, 58.41vw, 500px);
 
   @include respond-to("xs") {
     width: clamp(183px, 366 / 480 * 100vw, 732px);
@@ -24,7 +24,7 @@
 
   @include respond-to("lg") {
     width: 100%;
-    height: clamp(175px, 350 / 1200 * 100vw, 700px);
+    height: clamp(150px, 300 / 1200 * 100vw, 600px);
   }
 
   @include respond-to("xl") {
@@ -38,12 +38,13 @@
   }
 
   @include respond-to("3xl") {
-    width: clamp(303.5px, 607 / 1680 * 100vw, 2400px);
-    height: clamp(249px, 498 / 1680 * 100vw, 996px);
+    width: clamp(452.5px, 905 / 1680 * 100vw, 1810px);
+    height: clamp(225px, 450 / 1680 * 100vw, 900px);
   }
 
   @include respond-to("4xl") {
     width: clamp(750px, 78.125vw, 3000px);
+    height: clamp(300px, 600px, 1200px);
   }
 
   @include respond-to("5xl") {
@@ -55,7 +56,7 @@
     width: 100%;
     height: 100%;
 
-    @include respond-to('xxs') {
+    @include respond-to("xxs") {
       border-radius: 8px;
     }
   }

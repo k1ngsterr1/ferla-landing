@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useCartPopup } from "@shared/lib/context/PopupContext";
 
 import styles from "./styles.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClose } from "@fortawesome/free-solid-svg-icons";
 
 export const Popup = () => {
   const { isCartPopupVisible, toggleCartPopup, cartData } = useCartPopup();
@@ -21,7 +23,13 @@ export const Popup = () => {
               className={styles.popup__image}
             />
             <div className="flex flex-col items-start ml-12">
-              <span className={styles.popup__title}>{cartData.title}</span>
+              <div className="flex items-center justify-between w-full">
+                <span className={styles.popup__title}>{cartData.title}</span>
+                <FontAwesomeIcon
+                  icon={faClose}
+                  className="text-3xl text-red hoverable"
+                />
+              </div>
               <p className={styles.popup__paragraph}>{cartData?.paragraph}</p>
             </div>
           </div>

@@ -23,7 +23,7 @@ export const MainScreen = () => {
           onClick={(e: React.SyntheticEvent) => handleImageFormVisible(e)}
         />
       )}
-      <main className={styles.main_screen} id="home">
+      <main className={styles.main_screen}>
         <h1 className={`${styles.main_screen__heading} animate__fadeInLeft`}>
           Let us introduce <strong className="text-red">ferla bikes</strong>
         </h1>

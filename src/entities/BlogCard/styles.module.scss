@@ -86,7 +86,7 @@
     }
 
     @include respond-to("xl") {
-      height: clamp(100px, 200 / 1360 * 100vw, 400px);
+      height: clamp(90px, 180 / 1360 * 100vw, 360px);
     }
 
     @include respond-to("2xl") {

@@ -59,7 +59,10 @@ export const ManageScreen = () => {
                 paragraph="Unlock the potential of mobile commerce with Ferla Bikes' premier range of innovative and eco-friendly commercial bikes and carts. Our specialty lies in enhancing the dynamic event industry with unparalleled solutions."
               />
             </div>
-            <Video video_link="https" onClick={handleImageFormVisible} />
+            <Video
+              video_link="https://www.youtube.com/channel/UCZa63PA8Ls17M4v3NebRqLQ"
+              onClick={handleImageFormVisible}
+            />
           </div>
         </div>
       </section>
