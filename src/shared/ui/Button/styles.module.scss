@@ -175,3 +175,17 @@
     @apply text-red;
   }
 }
+
+.button--outlinemob {
+  @extend %button_general;
+  border: 2px solid;
+  background: transparent;
+  @apply text-red;
+  @apply border-red;
+  @apply rounded-full;
+
+  &:hover {
+    @apply bg-hover_red;
+    @apply text-white;
+  }
+}

@@ -1,0 +1,40 @@
+@import "breakpoint-slicer";
+@import "../../../shared/styles/mixins";
+@import "../../../shared/styles/variables";
+
+.input_container {
+  width: clamp(150px, 70.092vw, 600px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 1px solid;
+  cursor: pointer;
+  transition: 0.3s all;
+
+  &:hover {
+    @apply border-red;
+    @apply text-red;
+  }
+
+  &__label {
+    pointer-events: none;
+    position: absolute;
+    font-size: clamp(9px, 4.20552vw, 36px);
+    z-index: -1;
+    transition: all 0.4s ease;
+    @apply bottom-2;
+    @apply left-2;
+  }
+
+  &__input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: clamp(9px, 4.20552vw, 36px);
+    z-index: 1;
+    @apply pl-2;
+    @apply pb-1;
+  }
+}
