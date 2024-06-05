@@ -1,7 +1,8 @@
 import React from "react";
-import styles from "./styles.module.scss";
 import { blogContent } from "@shared/lib/content/blogContent";
 import { BlogCard } from "@entities/BlogCard";
+
+import styles from "./styles.module.scss";
 
 export const Blog = () => {
   return (

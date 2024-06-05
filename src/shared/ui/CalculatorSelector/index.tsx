@@ -15,7 +15,6 @@ interface SelectorProps {
 const Selector: React.FC<SelectorProps> = ({
   placeholder,
   value,
-  margin,
   onChange,
   options,
 }) => {
@@ -28,23 +27,28 @@ const Selector: React.FC<SelectorProps> = ({
   };
 
   return (
-    <div className={`w-full flex flex-col items-center margin`}>
-      <div className={styles.selector} onClick={toggleDropdown}>
-        <span className={styles.selectorPlaceholder}>
+    <div
+      className={`w-full flex flex-col items-center margin relative hoveralbe`}
+    >
+      <div
+        className={`${styles.selector} flex gap-2 hoverable`}
+        onClick={toggleDropdown}
+      >
+        <span className={`${styles.selectorPlaceholder} hoverable`}>
           {value || placeholder}
         </span>
         <FontAwesomeIcon
-          className={styles.selectorChevron}
+          className={`${styles.selectorChevron} hoverable`}
           icon={isOpen ? faChevronUp : faChevronDown}
         />
       </div>
       {isOpen && (
-        <ul className={styles.list}>
+        <ul className={`${styles.list} hoverable`}>
           {options.map((option) => (
             <li
               key={option.value}
               onClick={() => handleOptionClick(option.value)}
-              className={styles.listItem}
+              className={`${styles.listItem} hoverable`}
             >
               {option.label}
             </li>

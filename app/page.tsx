@@ -50,8 +50,8 @@ const HomePage = () => {
         <Reviews />
         <VideoBlock />
         <Blog />
-        <CalculatorBlock />
         <EmailForm />
+        <CalculatorBlock />
         <Form />
         <Footer />
       </div>

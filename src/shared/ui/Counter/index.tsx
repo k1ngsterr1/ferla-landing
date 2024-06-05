@@ -2,37 +2,34 @@
 import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowDown,
-  faArrowUp,
-  faCaretDown,
-  faCaretUp,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
 
-export const Counter = () => {
-  const [count, setCount] = useState<number>(0);
+interface ICounter {
+  averageOrderPrice: number;
+  handleIncrement: () => void;
+  handleDecrement: () => void;
+}
 
-  const handleIncrement = () => {
-    setCount(count + 1);
-  };
-
-  const handleDecrement = () => {
-    setCount(count - 1);
-  };
-
+export const Counter: React.FC<ICounter> = ({
+  averageOrderPrice,
+  handleDecrement,
+  handleIncrement,
+}) => {
   return (
-    <div className={styles.counter}>
-      <span className={styles.counter__dollar}>$</span>
-      <span className={styles.counter__count}>{count}</span>
-      <div className="flex flex-col items-center ">
+    <div className={`${styles.counter} hoverable`}>
+      <span className={`${styles.counter__dollar} hoverable`}>$</span>
+      <span className={`${styles.counter__count} hoverable`}>
+        {averageOrderPrice}
+      </span>
+      <div className="flex flex-col items-center hoverable">
         <FontAwesomeIcon
           icon={faCaretUp}
-          className={styles.counter__increment}
+          className={`${styles.counter__increment} hoverable`}
           onClick={handleIncrement}
         />
         <FontAwesomeIcon
           icon={faCaretDown}
-          className={styles.counter__decrement}
+          className={`${styles.counter__decrement} hoveralbe`}
           onClick={handleDecrement}
         />
       </div>
