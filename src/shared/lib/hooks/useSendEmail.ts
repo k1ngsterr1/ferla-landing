@@ -17,6 +17,7 @@ export function useSendEmail() {
 
   const onSubmit = (data: IData, event?: React.BaseSyntheticEvent) => {
     event?.preventDefault();
+
     const formData = data as unknown as Record<string, unknown>;
 
     emailjs
@@ -33,20 +34,6 @@ export function useSendEmail() {
         console.error("Failed to send email", error.text);
       });
   };
-
-  //   const onSubmit = async (data: any) => {
-  //     try {
-  //       const response = await emailjs.send(
-  //         "service_j2x3a8g",
-  //         "template_2l26rvq",
-  //         data,
-  //         "pdnZmc2F8nj777ZFR"
-  //       );
-  //       console.log("Email sent successfully", response.text);
-  //     } catch (error) {
-  //       console.error("Failed to send email", error);
-  //     }
-  //   };
 
   return {
     register,

@@ -1,8 +1,7 @@
 "use client";
-import React, { ChangeEvent, useState } from "react";
+import React, { ChangeEvent, useEffect, useState } from "react";
 import Button from "@shared/ui/Button";
 import { Input } from "@shared/ui/Input";
-import { useForm, SubmitHandler } from "react-hook-form";
 import { DatePickerInput } from "@shared/ui/DatePicker";
 import { useSendEmail } from "@shared/lib/hooks/useSendEmail";
 
@@ -21,8 +20,14 @@ export const SubmitForm = () => {
   const [email, setEmail] = useState<string>("");
   const [date, setDate] = useState<any>();
 
-  const { register, handleSubmit, control, errors, onSubmit, setValue } =
-    useSendEmail();
+  const { handleSubmit, onSubmit, setValue } = useSendEmail();
+
+  useEffect(() => {
+    setValue("name", name);
+    setValue("phone", phone);
+    setValue("email", email);
+    setValue("date", date);
+  }, [name, phone, email, date, setValue]);
 
   return (
     <>
