@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import red_logo from "@assets/vectors/logo.svg";
-import video_cover from "@assets/webp/pc/video_cover_pc.webp";
 
 import styles from "./styles.module.scss";
 
