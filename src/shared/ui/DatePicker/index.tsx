@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { ChangeEvent, SyntheticEvent, useState } from "react";
 import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
@@ -8,21 +8,27 @@ import styles from "./styles.module.scss";
 interface IDatePickerProps {
   placeholder: string;
   margin: string;
+  date: Date | undefined;
+  onChange: (
+    date: Date | null,
+    event: SyntheticEvent<any, Event> | undefined
+  ) => void;
 }
 
 export const DatePickerInput: React.FC<IDatePickerProps> = ({
   placeholder,
   margin,
+  date,
+  onChange,
 }) => {
-  const [startDate, setStartDate] = useState<null | Date>(new Date());
-
   return (
     <DatePicker
       className={`${styles.input} ${margin} hoverable `}
       placeholderText={placeholder}
-      selected={startDate}
+      selected={date}
       required
-      onChange={(date) => setStartDate(date)}
+      name="date"
+      onChange={onChange}
     />
   );
 };

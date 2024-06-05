@@ -18,6 +18,7 @@ export const Input: React.FC<Input> = ({
   ...rest
 }) => {
   const labelRef = useRef<HTMLLabelElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
   const { onLabelFocus, onLabelBlur } = useCustomLabel(labelRef);
 
   return (
@@ -36,6 +37,7 @@ export const Input: React.FC<Input> = ({
         onFocus={onLabelFocus}
         onBlur={onLabelBlur}
         className={`${styles.input_container__input} hoverable`}
+        {...rest}
       />
     </div>
   );
