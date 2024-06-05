@@ -9,14 +9,16 @@ import styles from "./styles.module.scss";
 
 interface IVideoProps {
   video_link: string;
+  onClick?: () => void;
 }
 
-export const Video: React.FC<IVideoProps> = ({ video_link }) => {
+export const Video: React.FC<IVideoProps> = ({ video_link, onClick }) => {
   return (
     <div className={styles.video}>
       <VideoButton onClick={() => console.log("LOL")} />
       <Image
         src={market_image}
+        onClick={onClick}
         className={styles.video__market}
         alt="Video Market"
       />

@@ -1,17 +1,28 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
+import { ImageForm } from "@entities/ClientComponents/ImageForm";
 import Button from "@shared/ui/Button";
 import Link from "next/link";
 import Image from "next/image";
 import main_pc from "@assets/webp/pc/mainImage_pc.png";
 
 import styles from "./styles.module.scss";
-import { ImageForm } from "@entities/ClientComponents/ImageForm";
 
 export const MainScreen = () => {
+  const [imageFormVisible, setImageFormVisible] = useState<boolean>(false);
+
+  const handleImageFormVisible = (e: React.SyntheticEvent) => {
+    e.stopPropagation();
+    setImageFormVisible(!imageFormVisible);
+  };
+
   return (
     <>
-      <ImageForm />
+      {imageFormVisible && (
+        <ImageForm
+          onClick={(e: React.SyntheticEvent) => handleImageFormVisible(e)}
+        />
+      )}
       <main className={styles.main_screen} id="home">
         <h1 className={`${styles.main_screen__heading} animate__fadeInLeft`}>
           Let us introduce <strong className="text-red">ferla bikes</strong>
@@ -33,6 +44,7 @@ export const MainScreen = () => {
         </Link>
         <Image
           src={main_pc}
+          onClick={handleImageFormVisible}
           alt="Ferla Bikes Main Image"
           className={styles.main_screen__image}
         />

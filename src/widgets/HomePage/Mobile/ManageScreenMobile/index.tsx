@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import Button from "@shared/ui/Button";
 import { MiniText } from "@shared/ui/MiniText";
 import { faChevronRight, faMoneyBill } from "@fortawesome/free-solid-svg-icons";

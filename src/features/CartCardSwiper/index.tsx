@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -11,7 +11,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-export const CartCardSwiper  = () => {
+export const CartCardSwiper = () => {
   return (
     <Swiper
       spaceBetween={20}
@@ -23,12 +23,12 @@ export const CartCardSwiper  = () => {
         <SwiperSlide key={index}>
           <CartCard
             name={card.name}
+            title={card.name}
             photo={card.image}
-            href={card.href}
+            paragraph={card.paragraph}
           />
         </SwiperSlide>
       ))}
     </Swiper>
   );
 };
-
