@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { cartsMenuContent } from "@shared/lib/content/bikesMenuContent";
 import { BikeMenuCard } from "@entities/BikeMenuCard";
 
@@ -14,12 +14,37 @@ export const BikesMenu: React.FC<IBikesMenu> = ({
   setMenuRef,
 }) => {
   const localRef = useRef<HTMLDivElement | null>(null);
+  const [filteredContent, setFilteredContent] = useState(cartsMenuContent);
+  const [activeFilter, setActiveFilter] = useState("all");
 
   useEffect(() => {
     if (localRef.current) {
       setMenuRef(localRef.current);
     }
   }, [setMenuRef]);
+
+  useEffect(() => {
+    switch (activeFilter) {
+      case "coffeeBikes":
+        setFilteredContent(
+          cartsMenuContent.filter((card) => card.type === "Coffee Bike")
+        );
+        break;
+      case "coffeeCarts":
+        setFilteredContent(
+          cartsMenuContent.filter((card) => card.type === "Coffee Cart")
+        );
+        break;
+      case "ferlaCarts":
+        setFilteredContent(
+          cartsMenuContent.filter((card) => card.type === "Ferla Cart")
+        );
+        break;
+      default:
+        setFilteredContent(cartsMenuContent);
+        break;
+    }
+  }, [activeFilter]);
 
   return (
     <div
