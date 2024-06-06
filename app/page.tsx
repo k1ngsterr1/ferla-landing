@@ -20,6 +20,7 @@ import { ProgressBar } from "@shared/ui/ProgressBar";
 import { CalculatorBlock } from "@widgets/HomePage/PC/CalculatorBlock";
 
 // MOB
+import { HeaderMobile } from "@features/HeaderMobile";
 import { MainScreenMobile } from "@widgets/HomePage/Mobile/MainScreenMob";
 import { BusinessBlockMobile } from "@widgets/HomePage/Mobile/BusinessBlockMobile";
 import { BestSellersMobile } from "@widgets/HomePage/Mobile/BestSellersMobile";
@@ -57,6 +58,7 @@ const HomePage = () => {
       </div>
       <div className={styles.tablet}></div>
       <div className={styles.mob}>
+        <HeaderMobile />
         <MainScreenMobile />
         <BusinessBlockMobile />
         <BestSellersMobile />

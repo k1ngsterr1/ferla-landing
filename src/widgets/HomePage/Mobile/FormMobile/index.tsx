@@ -10,7 +10,7 @@ export const FormMobile = () => {
         <strong>Contact Us</strong>
       </h6>
       <p className={styles.form_mob__paragraph}>
-        We've got more options Hop on a call with us today!
+        We have got more options Hop on a call with us today!
       </p>
       <SubmitFormMobile />
     </section>
