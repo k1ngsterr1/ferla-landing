@@ -6,6 +6,7 @@ import { DatePickerInput } from "@shared/ui/DatePicker";
 import { useSendEmail } from "@shared/lib/hooks/useSendEmail";
 
 import styles from "../../PC/Form/styles.module.scss";
+import { FormPopup } from "@entities/FormPopup";
 
 export interface IData {
   name: string;
@@ -81,6 +82,7 @@ export const SubmitForm = () => {
           margin="mt-8"
         />
       </form>
+      <FormPopup />
     </>
   );
 };

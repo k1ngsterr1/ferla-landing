@@ -33,6 +33,7 @@ import { FormMobile } from "@widgets/HomePage/Mobile/FormMobile";
 import { FooterMobile } from "@features/FooterMobile/index";
 
 import styles from "./styles.module.scss";
+import { FormPopup } from "@entities/FormPopup";
 
 const HomePage = () => {
   return (
@@ -41,6 +42,7 @@ const HomePage = () => {
         <ProgressBar />
         <Header />
         <Cursor />
+
         <MainScreen />
         <BusinessBlock />
         <BestSellers />

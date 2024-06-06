@@ -1,7 +1,9 @@
 "use client";
-import emailjs from "@emailjs/browser";
 import { IData } from "@widgets/HomePage/PC/SubmitForm";
 import { useForm } from "react-hook-form";
+import { useFormPopup } from "../context/PopupContext";
+
+import emailjs from "@emailjs/browser";
 
 export function useSendEmail() {
   const {
@@ -14,6 +16,7 @@ export function useSendEmail() {
     mode: "onChange",
     criteriaMode: "all",
   });
+  const { toggleFormPopup } = useFormPopup();
 
   const onSubmit = async (data: IData, event?: React.BaseSyntheticEvent) => {
     event?.preventDefault();
@@ -32,15 +35,16 @@ export function useSendEmail() {
     const formData = data as unknown as Record<string, unknown>;
 
     // NEXT ENV
-    emailjs.send(
-      process.env.NEXT_PUBLIC_SERVICE_ID!,
-      process.env.NEXT_PUBLIC_TEMPLATE_ID!,
-      formData,
-      process.env.NEXT_PUBLIC_PUBLIC_KEY!
-    );
-    // .then((response) => {
-    //   console.log("Email sent successfully", response.text);
-    // })
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID!,
+        formData,
+        process.env.NEXT_PUBLIC_PUBLIC_KEY!
+      )
+      .then(() => {
+        toggleFormPopup();
+      });
     // .catch((error) => {
     //   console.error("Failed to send email", error.text);
     // });
@@ -53,6 +57,7 @@ export function useSendEmail() {
     handleSubmit,
     onSubmit,
     errors,
+
     isSubmitting,
     isValid,
     control,
