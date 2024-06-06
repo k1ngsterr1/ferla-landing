@@ -8,11 +8,17 @@
   align-items: center;
   justify-content: space-between;
   margin: auto;
-  // position: sticky;
-  top: 0;
+  position: fixed;
+  top: 0px;
+  left: 0;
   z-index: 10000;
-  // @apply bg-white;
-  @apply mt-16;
+  @apply pt-4;
+  @apply pb-4;
+  // @apply mt-16;
+
+  &__container {
+    width: 86.6%;
+  }
 
   &__logo {
     width: clamp(95px, 190 / 360 * 100vw, 380px);

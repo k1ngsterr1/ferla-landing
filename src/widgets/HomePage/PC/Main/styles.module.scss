@@ -8,6 +8,10 @@
   flex-direction: column;
   @apply mt-16;
 
+  @include respond-to("4xl") {
+    @apply mt-32;
+  }
+
   @include respond-to("5xl") {
     @apply mt-32;
   }

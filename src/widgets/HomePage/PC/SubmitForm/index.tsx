@@ -1,13 +1,13 @@
 "use client";
-import React from "react";
+import React, { ChangeEvent, useEffect, useState } from "react";
 import Button from "@shared/ui/Button";
 import { Input } from "@shared/ui/Input";
-import { useForm, SubmitHandler } from "react-hook-form";
 import { DatePickerInput } from "@shared/ui/DatePicker";
+import { useSendEmail } from "@shared/lib/hooks/useSendEmail";
 
 import styles from "../../PC/Form/styles.module.scss";
 
-interface IData {
+export interface IData {
   name: string;
   phone: string;
   email: string;
@@ -15,56 +15,65 @@ interface IData {
 }
 
 export const SubmitForm = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  const [name, setName] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [date, setDate] = useState<any>();
 
-  const submitFunction = (data: any) => {
-    console.log(data);
-  };
+  const { handleSubmit, onSubmit, setValue } = useSendEmail();
+
+  useEffect(() => {
+    setValue("name", name);
+    setValue("phone", phone);
+    setValue("email", email);
+    setValue("date", date);
+  }, [name, phone, email, date, setValue]);
 
   return (
     <>
-      {" "}
       <form
         className={styles.form_section__form}
-        onSubmit={handleSubmit(submitFunction)}
+        onSubmit={handleSubmit(onSubmit)}
       >
         <Input
           labelText="Your Name"
           type="text"
+          name="name"
           margin="mt-4"
-          required
-          {...register("name", { required: true, maxLength: 50 })}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
         />
-        {errors.name && <p className={styles.error}>Name is required!</p>}
         <Input
           labelText="Phone Number"
           type="phone"
+          name="phone"
           margin="mt-14"
-          required
-          {...register("phoneNumber", { required: true, pattern: /^[0-9]+$/ })}
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
         />
-        {errors.phoneNumber && (
-          <p className={styles.error}>Invalid phone number!</p>
-        )}
         <Input
           labelText="Email"
           type="email"
+          name="email"
           margin="mt-14"
-          required
-          {...register("email", { required: true, pattern: /^\S+@\S+\.\S+$/ })}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
-        {errors.email && <p className={styles.error}>Invalid email address!</p>}
         <DatePickerInput
           placeholder="Pick a Date"
           margin="mt-14"
-          {...register("date", { required: true })}
+          date={date}
+          onChange={(
+            selectedDate: Date | null,
+            event: React.SyntheticEvent<any, Event> | undefined
+          ) => {
+            if (selectedDate) {
+              setDate(selectedDate.toISOString());
+            } else {
+              setDate("");
+            }
+          }}
         />
-        {errors.date && <p className={styles.error}>Date is required!</p>}
-
         <Button
           text="Send Form"
           type="submit"
