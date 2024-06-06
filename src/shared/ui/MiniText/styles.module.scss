@@ -14,7 +14,7 @@
   @apply text-red;
 
   @include respond-to("xs") {
-    font-size: clamp(8px, 16 / 480 * 100vw, 32px);
+    font-size: clamp(10px, 4.167vw, 40px);
   }
 
   @include respond-to("sm") {

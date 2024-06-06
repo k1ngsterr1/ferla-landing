@@ -18,7 +18,6 @@ export const Input: React.FC<Input> = ({
   ...rest
 }) => {
   const labelRef = useRef<HTMLLabelElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
   const { onLabelFocus, onLabelBlur } = useCustomLabel(labelRef);
 
   return (
