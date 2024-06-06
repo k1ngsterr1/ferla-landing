@@ -10,6 +10,7 @@ import { NavLink } from "@shared/ui/NavLink";
 import { navLinks } from "@shared/lib/content/navLinks";
 
 import styles from "./styles.module.scss";
+import Link from "next/link";
 
 export const Header = () => {
   const headerRef = useRef<null>(null);
@@ -34,12 +35,14 @@ export const Header = () => {
         className={`${styles.header__container}  m-auto w-full  !flex !flex-row items-center justify-between`}
       >
         <BikesMenu onMouseLeave={closeMenu} setMenuRef={setRef} />
-        <Image
-          priority
-          src={logo}
-          alt="Ferla Bikes Logo"
-          className={styles.header__logo}
-        />
+        <Link href="/">
+          <Image
+            priority
+            src={logo}
+            alt="Ferla Bikes Logo"
+            className={`${styles.header__logo} hoverable`}
+          />
+        </Link>
         <nav className={styles.header__nav}>
           {baseNavLinks.map((link, index) => (
             <NavLink

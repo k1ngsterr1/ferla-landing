@@ -10,6 +10,12 @@
   align-items: flex-start;
   background-color: #fbfbfb;
   transition: 0.3s all;
+  @apply p-2;
+
+  &:hover {
+    @apply rounded-md;
+    @apply bg-gray-100;
+  }
 
   @include respond-to("xxs") {
     align-items: center;
@@ -24,6 +30,7 @@
   }
 
   &:hover &__title {
+    @apply font-bold;
     @apply text-red;
   }
 
