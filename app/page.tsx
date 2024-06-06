@@ -47,7 +47,7 @@ const HomePage = () => {
         <BikesEverywhere />
         <PartnersScreen />
         <ManageScreen />
-        <OurBikes />
+        <OurBikes allBikes={true} />
         <Reviews />
         <VideoBlock />
         <Blog />
