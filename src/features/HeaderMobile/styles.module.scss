@@ -1,24 +1,29 @@
 .header_mob {
+  width: 100%;
   position: fixed;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 95%;
-  @apply mt-10;
+  z-index: 999;
 
-  &__logo {
-    width: clamp(60px, 33.333vw, 240px);
-    flex-shrink: 0;
-  }
+  .header_mob__container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @apply mt-4 mb-4;
 
-  &__link {
-    @apply text-red;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 150%;
-    letter-spacing: 0.8px;
-    font-size: clamp(8px, 4.444vw, 32px);
-    text-transform: capitalize;
-    text-decoration: none;
+    &__logo {
+      width: clamp(60px, 33.333vw, 240px);
+      flex-shrink: 0;
+    }
+
+    &__link {
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%;
+      letter-spacing: 0.8px;
+      font-size: clamp(8px, 4.444vw, 32px);
+      text-transform: capitalize;
+      text-decoration: none;
+      @apply text-red;
+    }
   }
 }

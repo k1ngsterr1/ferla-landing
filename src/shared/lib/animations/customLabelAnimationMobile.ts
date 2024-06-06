@@ -8,8 +8,6 @@ export const useCustomLabel = () => {
 
   const onLabelFocus: React.FocusEventHandler<HTMLInputElement> = (e) => {
     if (labelRef.current) {
-      console.log("aaaa");
-
       // Move the label up
       gsap.to(labelRef.current, {
         bottom: "32px", // Move up when focused
