@@ -36,7 +36,8 @@ export const Calculator = () => {
   };
 
   const handleIncrementDaysPerWeek = () => {
-    setDaysPerWeek(Math.max(7, daysPerWeek + 1));
+    // Ensures that daysPerWeek does not go above 7
+    setDaysPerWeek((prevDays) => Math.min(7, prevDays + 1));
   };
 
   const handleDecrementDaysPerWeek = () => {

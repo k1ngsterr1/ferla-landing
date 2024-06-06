@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+
 import styles from "./styles.module.scss";
 
 interface SelectorProps {
@@ -21,6 +22,7 @@ const Selector: React.FC<SelectorProps> = ({
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
+
   const handleOptionClick = (selectedValue: string) => {
     onChange(selectedValue);
     setIsOpen(false);
