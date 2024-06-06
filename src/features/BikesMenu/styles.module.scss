@@ -59,8 +59,8 @@
       @apply mt-20;
 
       > * {
-        flex: 1 1 22%; // flex-grow, flex-shrink, flex-basis
-        max-width: 22%; // Ensure no single item grows beyond this width
+        flex: 1 1 22%;
+        max-width: 22%;
       }
     }
 

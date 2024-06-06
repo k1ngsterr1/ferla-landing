@@ -17,9 +17,13 @@ export const BikeMenuCard: React.FC<IBikeMenuCard> = ({
 }) => {
   return (
     <div className={`${styles.bike_card} hoverable`}>
-      <Image className={styles.bike_card__image} src={image} alt={name} />
-      <span className={styles.bike_card__name}>{name}</span>
-      <Link href={href} className={styles.bike_card__link}>
+      <Image
+        className={`${styles.bike_card__image} hoveralbe`}
+        src={image}
+        alt={name}
+      />
+      <span className={`${styles.bike_card__name} hoverable`}>{name}</span>
+      <Link href={href} className={`${styles.bike_card__link} hoverable`}>
         Learn
       </Link>
     </div>
