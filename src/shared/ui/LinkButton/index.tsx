@@ -8,6 +8,7 @@ interface IButtonLink {
   animation?: string;
   href: string;
   buttonType: "filled" | "outline";
+  zIndex?: string;
 }
 
 const LinkButton: React.FC<IButtonLink> = ({
@@ -16,11 +17,12 @@ const LinkButton: React.FC<IButtonLink> = ({
   href,
   animation,
   buttonType,
+  zIndex,
   ...rest
 }) => {
   const linkClass = `${styles.link} hoverable ${
     styles["link--" + buttonType]
-  } ${margin || ""}`;
+  } ${margin || ""} ${zIndex}`;
 
   return (
     <Link className={linkClass} {...rest} href={href} scroll={true} passHref>

@@ -23,6 +23,7 @@
   &__logo {
     width: clamp(95px, 190 / 360 * 100vw, 380px);
     height: clamp(35px, 70 / 360 * 100vw, 140px);
+    z-index: 1000000000;
 
     @include respond-to("xs") {
       width: clamp(95px, 190 / 480 * 100vw, 380px);

@@ -1,14 +1,15 @@
 import { useState } from "react";
 
-const useHoverEffect = () => {
-  const [hovered, setHovered] = useState<boolean>(false);
+export const useHoverMenu = () => {
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
-  const bind = {
-    onMouseEnter: () => setHovered(true),
-    onMouseLeave: () => setHovered(false),
+  const openMenu = () => {
+    setIsVisible(true);
   };
 
-  return [hovered, bind];
-};
+  const closeMenu = () => {
+    setIsVisible(false);
+  };
 
-export default useHoverEffect;
+  return { isVisible, openMenu, closeMenu };
+};
