@@ -1,3 +1,6 @@
+@import "../../shared/styles/mixins";
+@import "../../shared/styles/variables";
+
 .result {
   width: 100%;
   height: auto;
@@ -24,7 +27,14 @@
 
   &__money_back_amount {
     @apply mt-2;
-    @apply text-4xl;
     @apply text-white;
+
+    @include respond-to("xxs") {
+      @apply text-2xl;
+    }
+
+    @include respond-to("md") {
+      @apply text-4xl;
+    }
   }
 }
