@@ -68,6 +68,7 @@ const HomePage = () => {
         <VideoBlock />
         <Blog />
         <EmailForm />
+        <CalculatorBlock />
         <FormMobile />
         <FooterMobile />
       </div>

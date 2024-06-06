@@ -12,6 +12,11 @@
   @apply rounded-full;
   @apply bg-white;
 
+  @include respond-to("xxs") {
+    width: clamp(170px, 79.43759999999999vw, 680px);
+    @apply mt-8;
+  }
+
   @include respond-to("xs") {
     width: clamp(170px, 340 / 480 * 100vw, 680px);
   }
@@ -60,6 +65,11 @@
     @apply pr-1;
     @apply text-dark;
 
+    @include respond-to("xxs") {
+      font-size: clamp(7.5px, 3.5046vw, 30px);
+      width: 80%;
+    }
+
     @include respond-to("xs") {
       font-size: clamp(8px, 16 / 480 * 100vw, 32px);
     }
@@ -107,6 +117,11 @@
     @apply text-white;
     @apply bg-red;
     @apply rounded-full;
+
+    @include respond-to("xxs") {
+      width: clamp(30px, 14.0184vw, 120px);
+      height: clamp(15px, 7.0092vw, 60px);
+    }
 
     @include respond-to("xs") {
       width: clamp(52.5px, 105 / 480 * 100vw, 210px);

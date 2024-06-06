@@ -72,7 +72,7 @@ export const Calculator = () => {
   return (
     <>
       <div className={styles.calculator}>
-        <div className="flex items-start justify-between">
+        <div className={styles.calculator__container}>
           <div className="flex flex-col items-center">
             <div className="flex flex-col items-center">
               <span className={styles.calculator__counter_text}>
