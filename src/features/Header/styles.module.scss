@@ -11,13 +11,14 @@
   position: fixed;
   top: 0px;
   left: 0;
-  z-index: 10000;
+  z-index: 1000000000;
   @apply pt-4;
   @apply pb-4;
   // @apply mt-16;
 
   &__container {
     width: 86.6%;
+    z-index: 1000000000;
   }
 
   &__logo {
@@ -74,6 +75,7 @@
   &__nav {
     display: flex;
     align-items: center;
+    z-index: 1000000000;
     @apply gap-8;
   }
 }

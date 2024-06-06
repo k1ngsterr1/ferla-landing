@@ -4,7 +4,7 @@
   left: 0;
   width: 100%; // Set width to 100% to allow scaleX to work properly
   height: 4px;
-  z-index: 99999;
+  z-index: 99999999999;
   transform-origin: left center;
   transform: scaleX(0); // Start with an empty bar
   @apply bg-red;

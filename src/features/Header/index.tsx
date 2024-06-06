@@ -1,20 +1,20 @@
 "use client";
-import React, { RefObject, useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import logo from "@assets/vectors/logo_dark.svg";
 import LinkButton from "@shared/ui/LinkButton";
 import Image from "next/image";
 import useHeaderScroll from "@shared/lib/animations/headerAnimation";
 import { useHoverMenu } from "@shared/lib/hooks/useHoverEffect";
-
+import { BikesMenu } from "@features/BikesMenu";
 import { NavLink } from "@shared/ui/NavLink";
 import { navLinks } from "@shared/lib/content/navLinks";
 
 import styles from "./styles.module.scss";
-import { BikesMenu } from "@features/BikesMenu";
 
 export const Header = () => {
   const headerRef = useRef<null>(null);
-  const { isVisible, openMenu, closeMenu } = useHoverMenu();
+
+  const { openMenu, closeMenu, setRef } = useHoverMenu();
 
   useHeaderScroll(headerRef);
 
@@ -33,7 +33,7 @@ export const Header = () => {
       <div
         className={`${styles.header__container}  m-auto w-full  !flex !flex-row items-center justify-between`}
       >
-        {isVisible && <BikesMenu onMouseLeave={closeMenu} />}
+        <BikesMenu onMouseLeave={closeMenu} setMenuRef={setRef} />
         <Image
           priority
           src={logo}

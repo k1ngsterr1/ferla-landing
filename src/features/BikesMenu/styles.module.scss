@@ -12,7 +12,9 @@
   position: fixed;
   background: #fbfbfb;
   left: 0;
-  top: 0;
+  top: -20000px;
+  opacity: 0;
+  z-index: -10000;
   @apply p-8;
   @apply shadow-lg;
   @apply rounded-lg;

@@ -1,16 +1,32 @@
-import React from "react";
+import React, { LegacyRef, RefObject, useRef, useEffect } from "react";
 import { cartsMenuContent } from "@shared/lib/content/bikesMenuContent";
+import { BikeMenuCard } from "@entities/BikeMenuCard";
 
 import styles from "./styles.module.scss";
-import { BikeMenuCard } from "@entities/BikeMenuCard";
 
 interface IBikesMenu {
   onMouseLeave: () => void;
+  setMenuRef: any;
 }
 
-export const BikesMenu: React.FC<IBikesMenu> = ({ onMouseLeave }) => {
+export const BikesMenu: React.FC<IBikesMenu> = ({
+  onMouseLeave,
+  setMenuRef,
+}) => {
+  const localRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (localRef.current) {
+      setMenuRef(localRef.current);
+    }
+  }, [setMenuRef]);
+
   return (
-    <div className={styles.bikes_menu} onMouseLeave={onMouseLeave}>
+    <div
+      className={styles.bikes_menu}
+      onMouseLeave={onMouseLeave}
+      ref={localRef}
+    >
       <div className={styles.bikes_menu__content}>
         <div className={styles.bikes_menu__content__cards}>
           {cartsMenuContent.map((card, index) => (
