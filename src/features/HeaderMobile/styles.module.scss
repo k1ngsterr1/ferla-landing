@@ -1,3 +1,6 @@
+@import "../../shared/styles/mixins";
+@import "../../shared/styles/variables";
+
 .header_mob {
   width: 100%;
   position: fixed;
@@ -13,6 +16,10 @@
     &__logo {
       width: clamp(60px, 33.333vw, 240px);
       flex-shrink: 0;
+
+      @include respond-to("fsf") {
+        width: clamp(90px, 31.304vw, 360px);
+      }
     }
 
     &__link {

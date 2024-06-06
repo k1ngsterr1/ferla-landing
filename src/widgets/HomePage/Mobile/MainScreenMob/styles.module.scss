@@ -14,6 +14,10 @@
     height: 90svh;
   }
 
+  @include respond-to("fsf") {
+    height: 100svh;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;
