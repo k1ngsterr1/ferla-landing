@@ -29,7 +29,7 @@
     @apply mt-4;
 
     @include respond-to("xs") {
-      font-size: clamp(9px, 18 / 480 * 100vw, 36px);
+      font-size: clamp(10px, 4.6728vw, 40px);
     }
 
     @include respond-to("sm") {
@@ -72,7 +72,7 @@
     @apply mt-2;
 
     @include respond-to("xs") {
-      font-size: clamp(8px, 16 / 1360 * 100vw, 32px);
+      font-size: clamp(8px, 3.333vw, 32px);
     }
 
     @include respond-to("sm") {

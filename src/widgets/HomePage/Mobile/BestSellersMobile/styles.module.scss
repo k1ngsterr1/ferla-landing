@@ -15,7 +15,7 @@
   &__content {
     width: 90%;
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: start;
     flex-direction: column;
 
@@ -46,5 +46,9 @@
     width: clamp(152.5px, 84.722vw, 610px);
     height: clamp(166.5px, 92.5vwv, 666px);
     @apply mt-8;
+
+    @include respond-to("fsf") {
+      height: 110%;
+    }
   }
 }

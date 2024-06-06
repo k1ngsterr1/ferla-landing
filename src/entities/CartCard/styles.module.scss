@@ -21,12 +21,12 @@
 
   @include respond-to("xxs") {
     width: 90%;
-    height: clamp(125px, 69.444vw, 500px);
+    height: clamp(140px, 65.41919999999999vw, 560px);
   }
 
   @include respond-to("xs") {
-    width: 100%;
-    height: clamp(114.5px, 229 / 480 * 100vw, 458px);
+    width: 90%;
+    height: clamp(150px, 70.092vw, 600px);
   }
 
   @include respond-to("sm") {
@@ -74,12 +74,8 @@
     height: clamp(125px, 250 / 360 * 100vw, 500px);
 
     @include respond-to("xxs") {
-      width: 70%;
-      height: 85%;
-    }
-
-    @include respond-to("xs") {
-      height: clamp(125px, 250 / 480 * 100vw, 500px);
+      width: 57%;
+      height: 70%;
     }
 
     @include respond-to("sm") {
