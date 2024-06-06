@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./styles.module.scss";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDot } from "@shared/ui/IconDot";
 
 interface IAboutCard {

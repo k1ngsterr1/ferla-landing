@@ -170,7 +170,7 @@ p {
   }
 
   @include respond-to("xs") {
-    font-size: clamp(8px, 16 / 480 * 100vw, 32px);
+    font-size: clamp(9px, 3.75vw, 36px);
   }
 
   @include respond-to("sm") {
