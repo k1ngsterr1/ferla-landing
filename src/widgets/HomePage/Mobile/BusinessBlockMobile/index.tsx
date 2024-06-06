@@ -22,7 +22,7 @@ export const BusinessBlockMobile = () => {
       <div className={styles.business_block_mob__content}>
         <div className={styles.business_block_mob__content__text}>
           <MiniText text="Aesthetic Vending Solutions" />
-          <h2 className="mt-4">
+          <h2 className={styles.business_block_mob__content__text__heading}>
             Perfect <strong className="text-red">for Any Business</strong>
           </h2>
           <p className={styles.business_block_mob__content__text__paragraph}>

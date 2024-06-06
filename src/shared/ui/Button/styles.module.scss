@@ -25,9 +25,9 @@
   }
 
   @include respond-to("sm") {
-    width: clamp(125px, 250 / 768 * 100vw, 500px);
-    height: clamp(27.5px, 55 / 768 * 100vw, 110px);
-    font-size: clamp(8px, 16 / 768 * 100vw, 32px);
+    width: clamp(175px, 48.611vw, 700px);
+    height: clamp(32.5px, 9.028vw, 130px);
+    font-size: clamp(10px, 2.778vw, 40px);
   }
 
   @include respond-to("md") {

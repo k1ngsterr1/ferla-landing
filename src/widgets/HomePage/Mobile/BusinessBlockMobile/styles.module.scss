@@ -1,3 +1,6 @@
+@import "../../../../shared/styles/mixins";
+@import "../../../../shared/styles/variables";
+
 .business_block_mob {
   width: 100%;
   display: flex;
@@ -21,6 +24,14 @@
       align-items: center;
       flex-direction: column;
       @apply mt-16;
+
+      &__heading {
+        @apply mt-4;
+
+        @include respond-to("sm") {
+          width: 75%;
+        }
+      }
 
       &__paragraph {
         width: 75%;
