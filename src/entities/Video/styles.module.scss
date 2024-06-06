@@ -4,8 +4,8 @@
 
 .video {
   position: relative;
-  width: clamp(180px,84.1104vw,720px);
-  height: clamp(125px,58.41vw,500px);
+  width: clamp(180px, 84.1104vw, 720px);
+  height: clamp(125px, 58.41vw, 500px);
 
   @include respond-to("xs") {
     width: clamp(183px, 366 / 480 * 100vw, 732px);
@@ -44,18 +44,19 @@
 
   @include respond-to("4xl") {
     width: clamp(750px, 78.125vw, 3000px);
+    height: clamp(249px, 498 / 1920 * 100vw, 996px);
   }
 
   @include respond-to("5xl") {
     width: clamp(603.5px, 47.148vw, 2414px);
-    height: clamp(270px, 540 / 2560 * 100vw, 1080px);
+    height: clamp(300px, 600 / 2560 * 100vw, 1200px);
   }
 
   &__market {
     width: 100%;
     height: 100%;
 
-    @include respond-to('xxs') {
+    @include respond-to("xxs") {
       border-radius: 8px;
     }
   }

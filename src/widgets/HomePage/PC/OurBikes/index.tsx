@@ -2,13 +2,26 @@ import React from "react";
 import { cartsContent } from "@shared/lib/content/cartsContent";
 import { CartCard } from "@entities/CartCard";
 import { Popup } from "@entities/Popup";
+import Link from "next/link";
 
 import styles from "./styles.module.scss";
 
-export const OurBikes = () => {
+interface IOurBikesScreen {
+  allBikes: boolean;
+}
+
+export const OurBikes: React.FC<IOurBikesScreen> = ({ allBikes }) => {
   return (
     <section className={styles.bikes} id="bikes">
       <div className={styles.bikes__upper}>
+        {allBikes && (
+          <Link
+            href="/products"
+            className={`${styles.bikes__upper__link} hoverable`}
+          >
+            All Bikes
+          </Link>
+        )}
         <h6 className={styles.bikes__upper__heading}>
           Our <strong className="text-red">Bikes</strong>
         </h6>
@@ -20,6 +33,7 @@ export const OurBikes = () => {
             name={card.name}
             paragraph={card.paragraph}
             photo={card.image}
+            href={card.href}
             key={index}
           />
         ))}

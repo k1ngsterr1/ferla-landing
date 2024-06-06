@@ -139,6 +139,7 @@
   @apply gap-2;
 
   &:hover {
+    text-decoration: underline;
     @apply text-red;
 
     &::after {
@@ -148,8 +149,8 @@
   }
 
   &__icon {
-    width: 12px;
-    height: 12px;
+    width: clamp(6px, 0.62496vw, 24px);
+    height: clamp(6px, 0.62496vw, 24px);
     @apply text-red;
   }
 

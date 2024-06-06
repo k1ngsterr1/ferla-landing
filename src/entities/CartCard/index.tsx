@@ -46,13 +46,13 @@ export const CartCard: React.FC<ICartCard> = ({
         <span className={styles.cart_card__name}>{name}</span>
       </div>
       <div className="flex items-center justify-center gap-2 mt-4">
-        <span className={`${styles.link} hoverable`}>
+        <a href={href} className={`${styles.link} hoverable`}>
           Explore
           <FontAwesomeIcon
             icon={faChevronRight}
             className={styles.link__icon}
           />
-        </span>
+        </a>
       </div>
     </div>
   );

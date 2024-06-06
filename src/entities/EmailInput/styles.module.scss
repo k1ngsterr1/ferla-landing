@@ -7,10 +7,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: #fbfbfb;
   @apply p-2;
   @apply mt-4;
   @apply rounded-full;
-  @apply bg-white;
 
   @include respond-to("xxs") {
     width: clamp(170px, 79.43759999999999vw, 680px);
@@ -61,6 +61,7 @@
     font-size: clamp(8px, 16 / 360 * 100vw, 32px);
     border: none;
     outline: none;
+    background: #fbfbfb;
     @apply pl-2;
     @apply pr-1;
     @apply text-dark;

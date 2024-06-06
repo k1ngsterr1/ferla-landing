@@ -1,4 +1,4 @@
-import React, { LegacyRef, RefObject, useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import { cartsMenuContent } from "@shared/lib/content/bikesMenuContent";
 import { BikeMenuCard } from "@entities/BikeMenuCard";
 
