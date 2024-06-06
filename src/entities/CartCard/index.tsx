@@ -13,6 +13,7 @@ interface ICartCard {
   name: string;
   title: string;
   paragraph: string;
+  href: string;
 }
 
 export const CartCard: React.FC<ICartCard> = ({
@@ -20,6 +21,7 @@ export const CartCard: React.FC<ICartCard> = ({
   name,
   paragraph,
   title,
+  href,
 }) => {
   const { toggleCartPopup } = useCartPopup();
 
@@ -28,17 +30,18 @@ export const CartCard: React.FC<ICartCard> = ({
       image: photo,
       name: name,
       title: title,
+      href: href,
       paragraph: paragraph,
     };
     toggleCartPopup(cardData);
   };
 
   return (
-    <div
-      className="flex flex-col items-center hoverable"
-      onClick={handleCardClick}
-    >
-      <div className={`${styles.cart_card} hoverable`}>
+    <div className="flex flex-col items-center hoverable">
+      <div
+        className={`${styles.cart_card} hoverable`}
+        onClick={handleCardClick}
+      >
         <Image src={photo} alt={name} className={styles.cart_card__image} />
         <span className={styles.cart_card__name}>{name}</span>
       </div>

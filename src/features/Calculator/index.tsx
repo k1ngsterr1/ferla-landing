@@ -32,15 +32,15 @@ export const Calculator = () => {
   };
 
   const handleDecrementAverageOrderPrice = () => {
-    setAverageOrderPrice(averageOrderPrice - 1);
+    setAverageOrderPrice(Math.max(0, averageOrderPrice - 1));
   };
 
   const handleIncrementDaysPerWeek = () => {
-    setDaysPerWeek(daysPerWeek + 1);
+    setDaysPerWeek(Math.max(7, daysPerWeek + 1));
   };
 
   const handleDecrementDaysPerWeek = () => {
-    setDaysPerWeek(daysPerWeek - 1);
+    setDaysPerWeek(Math.max(0, daysPerWeek - 1));
   };
 
   const handleDecrementOrders = () => {
@@ -48,7 +48,7 @@ export const Calculator = () => {
   };
 
   const handleIncrementOrders = () => {
-    setOrdersPerDay((currentOrders) => Number(currentOrders) + 1);
+    setOrdersPerDay((currentOrders) => Math.max(0, currentOrders + 1));
   };
 
   useEffect(() => {
@@ -127,8 +127,11 @@ export const Calculator = () => {
             onChange={handleSelectorChange}
           />
         </div>
+        <Result
+          moneyBack={makeMoneyBack}
+          estimatedEarnings={estimatedEarnings}
+        />
       </div>
-      <Result moneyBack={makeMoneyBack} estimatedEarnings={estimatedEarnings} />
     </>
   );
 };
