@@ -11,8 +11,30 @@ import { CartGallery } from "@widgets/CartPage/PC/Gallery";
 import image from "@assets/webp/pc/mainImage_pc.png";
 
 import styles from "../../styles.module.scss";
+import { CartsFeatures } from "@features/CartFeatures";
+import { featureTabsContent } from "@shared/lib/content/featureTabsContent";
 
 const CartPage = () => {
+  const imageProp = image;
+  const imagesProp = [
+    {
+      url: image,
+      alt: "Description of the image",
+    },
+    {
+      url: image,
+      alt: "Description of the image",
+    },
+    {
+      url: image,
+      alt: "Description of the image",
+    },
+    {
+      url: image,
+      alt: "Description of the image",
+    },
+  ];
+
   return (
     <>
       <div className={styles.pc}>
@@ -35,9 +57,16 @@ const CartPage = () => {
           title="Lorem Ipsum"
           paragraph="Starting a business doesn’t always require a hefty investment. In fact, there are numerous low-cost business ideas, particularly in the realm of food carts, that allow aspiring entrepreneurs to kickstart their ventures without breaking the bank. Here’s a curated list of the top 12 low-cost business ideas with a focus on the cheapest business to start:"
           miniText="Lorem Ipsum"
-          image={image}
+          image={imageProp}
+          images={imagesProp}
         />
-        <Form />
+        <CartsFeatures
+          title="Features"
+          miniText="Ferla X"
+          image={image}
+          featureTabs={featureTabsContent}
+          paragraph="Paragraph"
+        />
         <Footer />
       </div>
     </>

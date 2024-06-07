@@ -48,6 +48,10 @@
     @apply text-4xl;
     @apply font-bold;
     @apply text-red;
+
+    @include respond-to("xl") {
+      @apply text-xl;
+    }
   }
 
   &__paragraph {

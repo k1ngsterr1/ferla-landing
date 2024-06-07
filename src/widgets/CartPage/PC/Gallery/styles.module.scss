@@ -13,6 +13,10 @@
     @apply text-red;
     @apply text-2xl;
     @apply font-bold;
+
+    @include respond-to("xl") {
+      @apply text-xl;
+    }
   }
 
   &__title {
@@ -22,7 +26,7 @@
     @apply text-dark;
 
     @include respond-to("xl") {
-      font-size: clamp(32px, 64 / 1360 * 100vw, 128px);
+      font-size: clamp(24px, 48 / 1360 * 100vw, 96px);
     }
 
     @include respond-to("2xl") {
@@ -46,6 +50,10 @@
     width: 50%;
     text-align: left;
     @apply mt-4;
+
+    @include respond-to("xl") {
+      width: 70%;
+    }
   }
 
   &__link {
@@ -53,6 +61,9 @@
     align-items: center;
     text-decoration: none;
     transition: 0.3s all;
+    outline: none;
+    border: none;
+    background: none;
     position: relative;
     @apply text-red;
     @apply mt-4;
@@ -145,5 +156,10 @@
 
   &__image {
     width: 100%;
+
+    @include respond-to("xl") {
+      width: clamp(300px, 600 / 1360 * 100vw, 1200px);
+      height: clamp(250px, 500 / 1360 * 100vw, 1000px);
+    }
   }
 }
