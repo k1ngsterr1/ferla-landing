@@ -70,6 +70,7 @@
     }
 
     @include respond-to("lg") {
+      width: 100%;
       text-align: left;
       font-size: clamp(9px, 18 / 1200 * 100vw, 36px);
     }
