@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "@shared/ui/Button";
 import Link from "next/link";
-import { HeaderMobile } from "@features/HeaderMobile";
 
 import styles from "./styles.module.scss";
 

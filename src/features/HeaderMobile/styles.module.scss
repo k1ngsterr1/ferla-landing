@@ -19,6 +19,12 @@
 
       @include respond-to("fsf") {
         width: clamp(90px, 31.304vw, 360px);
+        height: clamp(27.5px, 9.565vw, 110px);
+      }
+
+      @include respond-to("sm") {
+        width: clamp(125px, 34.722vw, 500px);
+        height: clamp(37.5px, 10.417vw, 150px);
       }
     }
 

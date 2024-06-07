@@ -12,12 +12,14 @@ export const Blog = () => {
       </div>
       <div className={styles.blog__content}>
         {blogContent.map((card, index) => (
-          <BlogCard
-            title={card.title}
-            href={card.href}
-            image={card.image}
-            key={index}
-          />
+          <div className={styles.blog__content__card} key={index}>
+            <BlogCard
+              title={card.title}
+              href={card.href}
+              image={card.image}
+              key={index}
+            />
+          </div>
         ))}
       </div>
     </section>

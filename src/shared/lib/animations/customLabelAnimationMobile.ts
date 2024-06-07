@@ -10,10 +10,10 @@ export const useCustomLabel = () => {
     if (labelRef.current) {
       // Move the label up
       gsap.to(labelRef.current, {
-        bottom: "32px", // Move up when focused
+        bottom: "clamp(15px,7.0092vw,60px)", // Move up when focused
         fontSize: "clamp(7px,3.2709599999999996vw,28px)", // Increase font size
         color: "#E33A3A", // Change color to red
-        duration: 0.3,
+        duration: 0.2,
         ease: "power3.out",
       });
     }
@@ -27,7 +27,7 @@ export const useCustomLabel = () => {
         bottom: "4px",
         fontSize: "clamp(9px,4.20552vw,36px)",
         color: "#232121",
-        duration: 0.3,
+        duration: 0.2,
         ease: "power3.out",
       });
     }

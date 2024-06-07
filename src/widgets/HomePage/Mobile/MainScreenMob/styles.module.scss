@@ -34,6 +34,10 @@
       text-transform: capitalize;
       text-align: center;
       width: 96%;
+
+      @include respond-to("sm") {
+        width: 60%;
+      }
     }
 
     &__paragraph {
@@ -42,6 +46,10 @@
       text-align: center;
       width: 93%;
       @apply mt-8;
+
+      @include respond-to("sm") {
+        width: 80%;
+      }
     }
 
     &__link {
@@ -54,6 +62,10 @@
       color: #fff;
       font-size: clamp(8px, 4.444vw, 32px);
       @apply mt-4;
+
+      @include respond-to("sm") {
+        font-size: clamp(12px, 3.333vw, 48px);
+      }
 
       &:hover {
         @apply text-red;

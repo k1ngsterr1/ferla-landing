@@ -40,16 +40,22 @@ export const SubmitFormMobile = () => {
         <InputMobile
           labelText="Your Name"
           type="text"
-          margin="mt-4"
+          name="name"
+          margin="mt-8"
+          value={name}
           required
+          onChange={(e) => setName(e.target.value)}
           // {...register("name", { required: true, maxLength: 50 })}
         />
         {/* {errors.name && <p className={styles.error}>Name is required!</p>} */}
         <InputMobile
           labelText="Phone Number"
           type="phone"
-          margin="mt-14"
+          name="phone"
+          margin="mt-16"
           required
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
           // {...register("phoneNumber", { required: true, pattern: /^[0-9]+$/ })}
         />
         {/* {errors.phoneNumber && (
@@ -58,14 +64,17 @@ export const SubmitFormMobile = () => {
         <InputMobile
           labelText="Email"
           type="email"
-          margin="mt-14"
+          name="email"
+          margin="mt-16"
           required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           // {...register("email", { required: true, pattern: /^\S+@\S+\.\S+$/ })}
         />
         {/* {errors.email && <p className={styles.error}>Invalid email address!</p>} */}
         <DatePickerInput
           placeholder="Pick a Date"
-          margin="mt-14"
+          margin="mt-16"
           date={date}
           onChange={(
             selectedDate: Date | null,

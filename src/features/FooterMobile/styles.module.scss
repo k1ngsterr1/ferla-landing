@@ -14,6 +14,14 @@
   &__logo {
     width: clamp(98.5px, 54.722vw, 394px);
     @apply mt-16;
+
+    @include respond-to("xs") {
+      height: clamp(30px, 12.5vw, 120px);
+    }
+
+    @include respond-to("sm") {
+      height: clamp(45px, 12.5vw, 180px);
+    }
   }
 
   &__nav {
@@ -23,5 +31,9 @@
     flex-direction: column;
     @apply gap-4;
     @apply mt-8;
+
+    @include respond-to("fsf") {
+      @apply gap-6;
+    }
   }
 }

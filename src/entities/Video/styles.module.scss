@@ -13,8 +13,8 @@
   }
 
   @include respond-to("sm") {
-    width: clamp(183px, 366 / 720 * 100vw, 732px);
-    height: clamp(150px, 300 / 720 * 100vw, 600px);
+    width: clamp(250px, 69.444vw, 1000px);
+    height: clamp(175px, 48.611vw, 700px);
   }
 
   @include respond-to("md") {

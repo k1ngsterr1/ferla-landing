@@ -22,7 +22,11 @@
   }
 
   @include respond-to("xs") {
-    @apply mt-12;
+    @apply mb-12;
+  }
+
+  @include respond-to("sm") {
+    @apply mb-44;
   }
 
   @include respond-to("md") {
@@ -53,7 +57,8 @@
     }
 
     @include respond-to("sm") {
-      font-size: clamp(9px, 18 / 768 * 100vw, 36px);
+      width: 55%;
+      font-size: clamp(12px, 3.333vw, 48px);
     }
 
     @include respond-to("md") {
@@ -101,9 +106,9 @@
       height: clamp(122.5px, 245 / 480 * 100vw, 490px);
     }
 
-    @include respond-to("sm") {
-      height: clamp(122.5px, 245 / 720 * 100vw, 490px);
-    }
+    // @include respond-to("sm") {
+    //   // height: clamp(200px, 55.556vw, 800px);
+    // }
 
     @include respond-to("md") {
       height: clamp(122.5px, 245 / 992 * 100vw, 490px);
@@ -154,7 +159,7 @@
     }
 
     @include respond-to("sm") {
-      font-size: clamp(8.5px, 17 / 720 * 100vw, 34px);
+      font-size: clamp(10px, 2.778vw, 40px);
     }
 
     @include respond-to("md") {

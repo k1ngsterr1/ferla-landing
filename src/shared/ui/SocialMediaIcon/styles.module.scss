@@ -18,6 +18,21 @@
       @apply text-red;
     }
 
+    @include respond-to("xs") {
+      width: clamp(12px, 5.60736vw, 48px);
+      height: clamp(12px, 5.60736vw, 48px);
+    }
+
+    @include respond-to("sm") {
+      width: clamp(15px, 4.167vw, 60px);
+      height: clamp(15px, 4.167vw, 60px);
+    }
+
+    @include respond-to("md") {
+      width: clamp(21px, 42 / 1200 * 100vw, 84px);
+      height: clamp(21px, 42 / 1200 * 100vw, 84px);
+    }
+
     @include respond-to("lg") {
       width: clamp(21px, 42 / 1200 * 100vw, 84px);
       height: clamp(21px, 42 / 1200 * 100vw, 84px);
