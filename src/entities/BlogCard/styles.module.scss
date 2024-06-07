@@ -10,6 +10,12 @@
   align-items: flex-start;
   background-color: #fbfbfb;
   transition: 0.3s all;
+  @apply p-2;
+
+  &:hover {
+    @apply rounded-md;
+    @apply bg-gray-100;
+  }
 
   @include respond-to("xxs") {
     align-items: center;
@@ -28,6 +34,7 @@
   }
 
   &:hover &__title {
+    @apply font-bold;
     @apply text-red;
   }
 
@@ -112,7 +119,7 @@
     }
 
     @include respond-to("xl") {
-      height: clamp(100px, 200 / 1360 * 100vw, 400px);
+      height: clamp(80px, 160 / 1360 * 100vw, 320px);
     }
 
     @include respond-to("2xl") {
@@ -138,6 +145,10 @@
     text-decoration: none;
     @apply text-red;
     @apply mt-2;
+
+    &:hover {
+      text-decoration: underline;
+    }
 
     @include respond-to("xxs") {
       @apply mt-2;
@@ -202,7 +213,8 @@
 
   @include respond-to("xl") {
     width: clamp(125px, 250 / 1360 * 100vw, 500px);
-    height: clamp(205px, 410 / 1360 * 100vw, 820px);
+    height: clamp(170px, 340 / 1360 * 100vw, 680px);
+    @apply mb-12;
   }
 
   @include respond-to("2xl") {
@@ -221,6 +233,8 @@
 
   @include respond-to("5xl") {
     width: clamp(255px, 510 / 2560 * 100vw, 1020px);
-    height: clamp(205px, 410 / 2560 * 100vw, 820px);
+    height: auto;
+    @apply p-4;
+    @apply rounded-3xl;
   }
 }

@@ -29,13 +29,35 @@
     display: flex;
     align-items: start;
     justify-content: space-between;
+
     @include respond-to("xxs") {
       width: 50%;
       flex-direction: column;
     }
+
     @include respond-to("md") {
       flex-direction: row;
       width: 40%;
+    }
+
+    @include respond-to("lg") {
+      width: 45%;
+    }
+
+    @include respond-to("xl") {
+      width: 38%;
+    }
+
+    @include respond-to("3xl") {
+      width: 32%;
+    }
+
+    @include respond-to("4xl") {
+      width: 27%;
+    }
+
+    @include respond-to("5xl") {
+      width: 20%;
     }
   }
 
@@ -49,6 +71,10 @@
 
     @include respond-to("md") {
       @apply text-xl;
+    }
+
+    @include respond-to("lg") {
+      @apply text-base;
     }
   }
 

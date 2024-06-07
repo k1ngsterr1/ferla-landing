@@ -12,7 +12,9 @@
   position: fixed;
   background: #fbfbfb;
   left: 0;
-  top: 0;
+  top: -20000px;
+  opacity: 0;
+  z-index: -10000;
   @apply p-8;
   @apply shadow-lg;
   @apply rounded-lg;
@@ -57,8 +59,8 @@
       @apply mt-20;
 
       > * {
-        flex: 1 1 22%; // flex-grow, flex-shrink, flex-basis
-        max-width: 22%; // Ensure no single item grows beyond this width
+        flex: 1 1 22%;
+        max-width: 22%;
       }
     }
 

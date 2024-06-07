@@ -1,10 +1,11 @@
 import React from "react";
 import Image from "next/image";
+import { SubmitForm } from "../SubmitForm";
+
+import styles from "./styles.module.scss";
 
 import ferla_logo from "@assets/vectors/logo_dark.svg";
 import form_image from "@assets/webp/pc/form_image_pc.webp";
-import styles from "./styles.module.scss";
-import { SubmitForm } from "../SubmitForm";
 
 export const Form = () => {
   return (

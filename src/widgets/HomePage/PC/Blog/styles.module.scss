@@ -80,5 +80,9 @@
       width: 100%;
       flex-direction: row;
     }
+
+    @include respond-to("lg") {
+      @apply mt-0;
+    }
   }
 }

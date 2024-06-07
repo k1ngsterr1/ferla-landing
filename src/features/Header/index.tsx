@@ -1,20 +1,21 @@
 "use client";
-import React, { RefObject, useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import logo from "@assets/vectors/logo_dark.svg";
 import LinkButton from "@shared/ui/LinkButton";
 import Image from "next/image";
 import useHeaderScroll from "@shared/lib/animations/headerAnimation";
 import { useHoverMenu } from "@shared/lib/hooks/useHoverEffect";
-
+import { BikesMenu } from "@features/BikesMenu";
 import { NavLink } from "@shared/ui/NavLink";
 import { navLinks } from "@shared/lib/content/navLinks";
 
 import styles from "./styles.module.scss";
-import { BikesMenu } from "@features/BikesMenu";
+import Link from "next/link";
 
 export const Header = () => {
   const headerRef = useRef<null>(null);
-  const { isVisible, openMenu, closeMenu } = useHoverMenu();
+
+  const { openMenu, closeMenu, setRef } = useHoverMenu();
 
   useHeaderScroll(headerRef);
 
@@ -33,13 +34,15 @@ export const Header = () => {
       <div
         className={`${styles.header__container}  m-auto w-full  !flex !flex-row items-center justify-between`}
       >
-        {isVisible && <BikesMenu onMouseLeave={closeMenu} />}
-        <Image
-          priority
-          src={logo}
-          alt="Ferla Bikes Logo"
-          className={styles.header__logo}
-        />
+        <BikesMenu onMouseLeave={closeMenu} setMenuRef={setRef} />
+        <Link href="/">
+          <Image
+            priority
+            src={logo}
+            alt="Ferla Bikes Logo"
+            className={`${styles.header__logo} hoverable`}
+          />
+        </Link>
         <nav className={styles.header__nav}>
           {baseNavLinks.map((link, index) => (
             <NavLink

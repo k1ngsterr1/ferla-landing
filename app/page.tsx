@@ -8,7 +8,7 @@ import { BikesEverywhere } from "@widgets/HomePage/PC/BikesEverywhere";
 import { PartnersScreen } from "@widgets/HomePage/PC/Partners";
 import { ManageScreen } from "@widgets/HomePage/PC/ManageScreen";
 import { OurBikes } from "@widgets/HomePage/PC/OurBikes";
-import { Reviews } from "@widgets/HomePage/Reviews";
+import { Reviews } from "@widgets/HomePage/PC/Reviews";
 import { BestSellers } from "@widgets/HomePage/PC/BestSellers";
 import { VideoBlock } from "@widgets/HomePage/PC/VideoBlock";
 import { Blog } from "@widgets/HomePage/PC/Blog";
@@ -33,6 +33,7 @@ import { FormMobile } from "@widgets/HomePage/Mobile/FormMobile";
 import { FooterMobile } from "@features/FooterMobile/index";
 
 import styles from "./styles.module.scss";
+import { FormPopup } from "@entities/FormPopup";
 
 const HomePage = () => {
   return (
@@ -47,7 +48,7 @@ const HomePage = () => {
         <BikesEverywhere />
         <PartnersScreen />
         <ManageScreen />
-        <OurBikes />
+        <OurBikes allBikes={true} />
         <Reviews />
         <VideoBlock />
         <Blog />

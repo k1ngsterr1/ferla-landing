@@ -44,6 +44,12 @@
     }
   }
 
+  &__mini_text {
+    @apply text-4xl;
+    @apply font-bold;
+    @apply text-red;
+  }
+
   &__paragraph {
     width: 20%;
     @apply mt-8;
