@@ -23,9 +23,7 @@ export const OrderNow: React.FC<IOrderNow> = ({
     <section className={styles.order_screen} id="home">
       <div className="flex flex-col items-start">
         <span className={styles.order_screen__mini_text}>{miniText}</span>
-        <h5 className={`${styles.order_screen__heading} animate__fadeInLeft`}>
-          {title}
-        </h5>
+        <h5 className={styles.order_screen__heading}>{title}</h5>
         <p className={styles.order_screen__paragraph}>{paragraph}</p>
         <Button
           text="Order Now"

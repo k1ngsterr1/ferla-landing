@@ -86,7 +86,7 @@
     @apply text-dark;
 
     @include respond-to("lg") {
-      font-size: clamp(24px, 48 / 1200 * 100vw, 96px);
+      font-size: clamp(16px, 32 / 1200 * 100vw, 64px);
     }
 
     @include respond-to("xl") {

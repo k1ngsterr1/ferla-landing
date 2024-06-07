@@ -32,11 +32,13 @@
   }
 
   &__heading {
+    text-align: left;
     position: relative;
-    display: inline-block;
-    overflow: hidden;
     @apply text-dark;
-    animation: fadeRevealLeft 0.5s ease-out forwards;
+
+    @include respond-to("lg") {
+      font-size: clamp(16px, 32 / 1200 * 100vw, 64px);
+    }
 
     @include respond-to("3xl") {
       width: 50%;
@@ -52,6 +54,10 @@
     @apply font-bold;
     @apply text-red;
 
+    @include respond-to("lg") {
+      @apply text-xl;
+    }
+
     @include respond-to("xl") {
       @apply text-xl;
     }
@@ -63,7 +69,7 @@
     animation: fadeRevealLeft 0.7s ease-out forwards;
 
     @include respond-to("lg") {
-      width: 35%;
+      width: 70%;
     }
 
     @include respond-to("xl") {
@@ -87,6 +93,10 @@
     width: 30%;
     @apply text-base;
     @apply mt-8;
+
+    @include respond-to("lg") {
+      width: 100%;
+    }
 
     @include respond-to("4xl") {
       width: 50%;

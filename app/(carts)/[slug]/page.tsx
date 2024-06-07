@@ -3,17 +3,17 @@ import { Header } from "@features/Header";
 import { ProgressBar } from "@shared/ui/ProgressBar";
 import { Cursor } from "@shared/ui/Cursor";
 import { CartMain } from "@widgets/CartPage/PC/Main";
-import { Form } from "@widgets/HomePage/PC/Form";
 import { Footer } from "@features/Footer";
 import { CartAbout } from "@widgets/CartPage/PC/About";
 import { CartGallery } from "@widgets/CartPage/PC/Gallery";
+import { CartsFeatures } from "@features/CartFeatures";
+import { featureTabsContent } from "@shared/lib/content/featureTabsContent";
+import { OrderNow } from "@widgets/CartPage/PC/OrderNow";
 
 import image from "@assets/webp/pc/mainImage_pc.png";
 
 import styles from "../../styles.module.scss";
-import { CartsFeatures } from "@features/CartFeatures";
-import { featureTabsContent } from "@shared/lib/content/featureTabsContent";
-import { OrderNow } from "@widgets/CartPage/PC/OrderNow";
+import { SpecsScreen } from "@widgets/CartPage/PC/Spec";
 
 const CartPage = () => {
   const imageProp = image;
@@ -67,6 +67,11 @@ const CartPage = () => {
           image={image}
           featureTabs={featureTabsContent}
           paragraph="Paragraph"
+        />
+        <SpecsScreen
+          miniText="Ferla X - Glacier Edition"
+          title="Specs"
+          paragraph="Superior Performance. All-In-One Superior Vending Bike."
         />
         <OrderNow
           miniText="In Stock"
