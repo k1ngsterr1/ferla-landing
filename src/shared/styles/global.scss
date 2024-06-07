@@ -42,7 +42,7 @@ h1 {
   }
 
   @include respond-to("sm") {
-    font-size: clamp(25px, 50 / 720 * 100vw, 100px);
+    font-size: clamp(27.5px, 7.639vw, 110px);
   }
 
   @include respond-to("md") {
@@ -174,7 +174,7 @@ p {
   }
 
   @include respond-to("sm") {
-    font-size: clamp(8px, 16 / 768 * 100vw, 32px);
+    font-size: clamp(10px, 2.778vw, 40px);
   }
 
   @include respond-to("md") {

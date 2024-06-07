@@ -69,11 +69,11 @@
   }
 
   @include respond-to("xs") {
-    font-size: clamp(10px, 20 / 480 * 100vw, 40px);
+    @apply text-2xl;
   }
 
-  @include respond-to("sm") {
-    font-size: clamp(10px, 20 / 768 * 100vw, 40px);
+  @include respond-to("fsf") {
+    @apply text-3xl;
   }
 
   @include respond-to("md") {

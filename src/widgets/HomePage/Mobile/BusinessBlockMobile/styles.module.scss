@@ -1,3 +1,6 @@
+@import "../../../../shared/styles/mixins";
+@import "../../../../shared/styles/variables";
+
 .business_block_mob {
   width: 100%;
   display: flex;
@@ -22,12 +25,24 @@
       flex-direction: column;
       @apply mt-16;
 
+      &__heading {
+        @apply mt-4;
+
+        @include respond-to("sm") {
+          width: 75%;
+        }
+      }
+
       &__paragraph {
         width: 75%;
         flex-shrink: 0;
         text-align: center;
         line-height: 138.6%;
         @apply mt-4;
+
+        @include respond-to("sm") {
+          width: 60%;
+        }
       }
     }
 
@@ -38,6 +53,10 @@
       flex-direction: column;
       @apply mt-8;
       @apply gap-4;
+
+      @include respond-to("sm") {
+        @apply gap-8;
+      }
     }
   }
 }

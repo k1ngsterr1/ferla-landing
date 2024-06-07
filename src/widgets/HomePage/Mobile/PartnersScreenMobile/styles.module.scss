@@ -1,29 +1,38 @@
+@import "../../../../shared/styles/mixins";
+@import "../../../../shared/styles/variables";
+
 .partners_mob {
-    width: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @apply mt-16;
+
+  &__content {
+    width: 90%;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    @apply mt-16;
 
-    &__content {
-        width: 90%;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-
-        &__image {
-            width: clamp(105px,58.333vw,420px);
-            height: clamp(75.5px,41.944vw,302px);
-            flex-shrink: 0;
-            @apply mt-8;
-        }
+    &__heading {
+      @include respond-to("sm") {
+        width: 70%;
+      }
     }
 
-    &__marquee {
-        width: clamp(55px,30.556vw,220px);
-        @apply ml-8;
+    &__image {
+      width: clamp(105px, 58.333vw, 420px);
+      height: clamp(75.5px, 41.944vw, 302px);
+      flex-shrink: 0;
+      @apply mt-8;
     }
+  }
+
+  &__marquee {
+    width: clamp(55px, 30.556vw, 220px);
+    @apply ml-8;
+  }
 }

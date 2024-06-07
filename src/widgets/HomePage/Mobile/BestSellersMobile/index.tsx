@@ -16,7 +16,7 @@ export const BestSellersMobile = () => {
       <div className={styles.best_sellers_mob__content}>
         <div className={styles.best_sellers_mob__content__text}>
           <MiniText text="Best Sellers" />
-          <h3 className="mt-4">
+          <h3 className={styles.best_sellers_mob__content__text__heading}>
             <strong>Your Business, Your Cart, Your Way</strong>
           </h3>
           <p className={styles.best_sellers_mob__content__text__paragraph}>
