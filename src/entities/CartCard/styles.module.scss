@@ -1,5 +1,4 @@
 @import "breakpoint-slicer";
-
 @import "../../shared/styles/variables";
 @import "../../shared/styles/mixins";
 
@@ -35,8 +34,8 @@
   }
 
   @include respond-to("md") {
-    width: 100%;
-    height: clamp(114.5px, 229 / 992 * 100vw, 458px);
+    width: 70%;
+    height: clamp(250px, 500 / 992 * 100vw, 1000px);
   }
 
   @include respond-to("lg") {
@@ -83,7 +82,8 @@
     }
 
     @include respond-to("md") {
-      height: clamp(125px, 250 / 992 * 100vw, 500px);
+      width: 55%;
+      height: clamp(180px, 360 / 992 * 100vw, 720px);
     }
 
     @include respond-to("lg") {
@@ -120,6 +120,18 @@
     @apply font-medium;
     @apply mt-2;
     @apply text-2xl;
+
+    @include respond-to("fsf") {
+      @apply text-3xl;
+    }
+
+    @include respond-to("md") {
+      @apply text-4xl;
+    }
+
+    @include respond-to("lg") {
+      @apply text-2xl;
+    }
   }
 }
 
@@ -137,6 +149,19 @@
   transition: 0.3s all;
   @apply text-red;
   @apply gap-2;
+
+  @include respond-to("xs") {
+    font-size: clamp(9px, 18 / 480 * 100vw, 36px);
+  }
+
+  @include respond-to("fsf") {
+    font-size: clamp(10px, 20 / 575 * 100vw, 40px);
+  }
+
+  @include respond-to("sm") {
+    font-size: clamp(10px, 20 / 720 * 100vw, 40px);
+    font-size: clamp(10px, 20 / 720 * 100vw, 40px);
+  }
 
   &:hover {
     text-decoration: underline;
@@ -158,8 +183,13 @@
       height: clamp(6px, 2.80368vw, 24px);
     }
 
+    @include respond-to("fsf") {
+      font-size: clamp(6px, 12 / 575 * 100vw, 24px);
+    }
+
     @include respond-to("sm") {
-      font-size: clamp(10px, 2.778vw, 40px);
+      width: clamp(7px, 14 / 720 * 100vw, 28px);
+      height: clamp(7px, 14 / 720 * 100vw, 28px);
     }
 
     @include respond-to("md") {

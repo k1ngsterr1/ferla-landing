@@ -14,7 +14,7 @@
     flex-direction: column;
   }
 
-  @include respond-to("md") {
+  @include respond-to("lg") {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
@@ -33,14 +33,6 @@
       font-weight: 300;
     }
 
-    @include respond-to("es") {
-      width: 70%;
-    }
-
-    @include respond-to("md") {
-      text-align: left;
-    }
-
     @include respond-to("xs") {
       font-size: clamp(9px, 18 / 480 * 100vw, 36px);
     }
@@ -49,12 +41,19 @@
       font-size: clamp(9px, 18 / 720 * 100vw, 36px);
     }
 
+    @include respond-to("es") {
+      width: 70%;
+    }
+
     @include respond-to("md") {
-      font-size: clamp(9px, 18 / 992 * 100vw, 36px);
+      width: 80%;
+      text-align: center;
+      font-size: clamp(11px, 22 / 992 * 100vw, 44px);
     }
 
     @include respond-to("lg") {
       width: 60%;
+      text-align: left;
       font-size: clamp(7px, 14 / 1200 * 100vw, 28px);
     }
 
