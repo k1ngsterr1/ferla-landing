@@ -13,6 +13,7 @@ import image from "@assets/webp/pc/mainImage_pc.png";
 import styles from "../../styles.module.scss";
 import { CartsFeatures } from "@features/CartFeatures";
 import { featureTabsContent } from "@shared/lib/content/featureTabsContent";
+import { OrderNow } from "@widgets/CartPage/PC/OrderNow";
 
 const CartPage = () => {
   const imageProp = image;
@@ -66,6 +67,14 @@ const CartPage = () => {
           image={image}
           featureTabs={featureTabsContent}
           paragraph="Paragraph"
+        />
+        <OrderNow
+          miniText="In Stock"
+          question="Still have questions? You can always reach out to us at
+info@ferlabikes.com or request more information."
+          title="Order Now Your Own Fully Customized Ferla X Bike"
+          paragraph="Are you ready to be among the first to own a Ferla X? Take the first step in starting your own mobile business by Clicking the Order Link & Get Yourself a Ferla X."
+          image={image}
         />
         <Footer />
       </div>

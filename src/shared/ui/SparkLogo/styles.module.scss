@@ -36,6 +36,8 @@
 
   @include respond-to("4xl") {
     width: clamp(75px, 150 / 1920 * 100vw, 300px);
+    height: auto;
+    @apply mt-8;
   }
 
   @include respond-to("5xl") {
