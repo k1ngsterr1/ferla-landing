@@ -39,6 +39,10 @@
         text-align: center;
         line-height: 138.6%;
         @apply mt-4;
+
+        @include respond-to("sm") {
+          width: 60%;
+        }
       }
     }
 
@@ -49,6 +53,10 @@
       flex-direction: column;
       @apply mt-8;
       @apply gap-4;
+
+      @include respond-to("sm") {
+        @apply gap-8;
+      }
     }
   }
 }

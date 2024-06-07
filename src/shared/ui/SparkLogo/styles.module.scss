@@ -3,6 +3,21 @@
 @import "../../../shared/styles/variables";
 
 .logo {
+  @include respond-to("xs") {
+    width: clamp(120px, 56.0736vw, 480px);
+    height: clamp(40px, 18.6912vw, 160px);
+  }
+
+  @include respond-to("fsf") {
+    width: clamp(140px, 48.696vw, 560px);
+    height: clamp(50px, 17.391vw, 200px);
+  }
+
+  @include respond-to("sm") {
+    width: clamp(225px, 62.5vw, 900px);
+    height: clamp(50px, 13.889vw, 200px);
+  }
+
   @include respond-to("xl") {
     width: clamp(75px, 150 / 1360 * 100vw, 300px);
   }

@@ -44,6 +44,15 @@
     }
 
     &__heading {
+      @include respond-to("sm") {
+        width: 70%;
+        margin: auto;
+      }
+
+      @include respond-to("md") {
+        width: 100%;
+      }
+
       @include respond-to("xl") {
         font-size: clamp(19px, 38 / 1360 * 100vw, 76px);
       }
