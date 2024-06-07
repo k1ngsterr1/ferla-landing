@@ -8,7 +8,7 @@ import { BikesEverywhere } from "@widgets/HomePage/PC/BikesEverywhere";
 import { PartnersScreen } from "@widgets/HomePage/PC/Partners";
 import { ManageScreen } from "@widgets/HomePage/PC/ManageScreen";
 import { OurBikes } from "@widgets/HomePage/PC/OurBikes";
-import { Reviews } from "@widgets/HomePage/Reviews";
+import { Reviews } from "@widgets/HomePage/PC/Reviews";
 import { BestSellers } from "@widgets/HomePage/PC/BestSellers";
 import { VideoBlock } from "@widgets/HomePage/PC/VideoBlock";
 import { Blog } from "@widgets/HomePage/PC/Blog";
@@ -42,7 +42,6 @@ const HomePage = () => {
         <ProgressBar />
         <Header />
         <Cursor />
-
         <MainScreen />
         <BusinessBlock />
         <BestSellers />

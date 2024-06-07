@@ -27,8 +27,10 @@ export const BikesMenu: React.FC<IBikesMenu> = ({
     switch (activeFilter) {
       case "coffeeBikes":
         setFilteredContent(
-          cartsMenuContent.filter((card) => card.type === "Coffee Bike")
+          cartsMenuContent.filter((card) => card.type === "Coffee Bikes")
         );
+        console.log(filteredContent);
+
         break;
       case "coffeeCarts":
         setFilteredContent(
@@ -54,7 +56,7 @@ export const BikesMenu: React.FC<IBikesMenu> = ({
     >
       <div className={styles.bikes_menu__content}>
         <div className={styles.bikes_menu__content__cards}>
-          {cartsMenuContent.map((card, index) => (
+          {filteredContent.map((card, index) => (
             <BikeMenuCard
               name={card.name}
               image={card.image}
@@ -65,13 +67,22 @@ export const BikesMenu: React.FC<IBikesMenu> = ({
         </div>
         <span className={styles.bikes_menu__content__separator} />
         <div className="flex flex-col items-center gap-2">
-          <button className={`${styles.bikes_menu__content__button} hoverable`}>
+          <button
+            className={`${styles.bikes_menu__content__button} hoverable`}
+            onClick={() => setActiveFilter("Coffee Bikes")}
+          >
             Coffee Bikes
           </button>
-          <button className={`${styles.bikes_menu__content__button} hoverable`}>
+          <button
+            className={`${styles.bikes_menu__content__button} hoverable`}
+            onClick={() => setActiveFilter("coffeeCarts")}
+          >
             Coffee Carts
           </button>
-          <button className={`${styles.bikes_menu__content__button} hoverable`}>
+          <button
+            className={`${styles.bikes_menu__content__button} hoverable`}
+            onClick={() => setActiveFilter("ferlaCarts")}
+          >
             Ferla Carts
           </button>
         </div>
