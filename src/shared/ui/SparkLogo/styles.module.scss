@@ -18,6 +18,10 @@
     height: clamp(50px, 13.889vw, 200px);
   }
 
+  @include respond-to("lg") {
+    width: clamp(75px, 150 / 1200 * 100vw, 300px);
+  }
+
   @include respond-to("xl") {
     width: clamp(75px, 150 / 1360 * 100vw, 300px);
   }
