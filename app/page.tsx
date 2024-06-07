@@ -57,7 +57,6 @@ const HomePage = () => {
         <Form />
         <Footer />
       </div>
-      <div className={styles.tablet}></div>
       <div className={styles.mob}>
         <HeaderMobile />
         <MainScreenMobile />

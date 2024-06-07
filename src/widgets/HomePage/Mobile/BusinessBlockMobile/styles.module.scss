@@ -43,6 +43,10 @@
         @include respond-to("sm") {
           width: 60%;
         }
+
+        @include respond-to("md") {
+          width: 50%;
+        }
       }
     }
 
