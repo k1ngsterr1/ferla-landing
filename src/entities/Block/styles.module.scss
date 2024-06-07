@@ -33,6 +33,10 @@
       font-weight: 300;
     }
 
+    @include respond-to("es") {
+      width: 70%;
+    }
+
     @include respond-to("md") {
       text-align: left;
     }
