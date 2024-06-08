@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import { CartFeatureTab, ICartFeatureTabProps } from "@entities/CartFeatureTab";
 import Image, { StaticImageData } from "next/image";
 import Button from "@shared/ui/Button";
+import { CartFeatureTab, ICartFeatureTabProps } from "@entities/CartFeatureTab";
 import { Fade } from "react-awesome-reveal";
 
 import styles from "./styles.module.scss";

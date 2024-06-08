@@ -8,8 +8,8 @@ interface ISpecScreen {
   miniText: string;
   title: string;
   paragraph: string;
-  image: StaticImageData;
-  specs: ISpecTab[];
+  image?: StaticImageData;
+  specs?: ISpecTab[];
 }
 
 export const SpecsScreen: React.FC<ISpecScreen> = ({
