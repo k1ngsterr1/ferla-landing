@@ -30,9 +30,9 @@
   }
 
   @include respond-to("md") {
-    width: clamp(125px, 250 / 768 * 100vw, 500px);
-    height: clamp(27.5px, 55 / 768 * 100vw, 110px);
-    font-size: clamp(8px, (16 / 768) * 100vw, 32px);
+    width: clamp(225px, 45.363vw, 900px);
+    height: clamp(40px, 8.065vw, 160px);
+    font-size: clamp(12px, 2.419vw, 48px);
   }
 
   @include respond-to("tablet_sm") {

@@ -31,7 +31,7 @@ export const FooterMobile = () => {
         href="#form"
         margin="mt-8"
       />
-      <div className=" flex flex-row w-full gap-4 mt-8 items-center justify-center mb-8">
+      <div className=" flex flex-row w-full gap-6 mt-8 items-center justify-center mb-8">
         {socialMediaContent.map((icon, index) => (
           <SocialMediaIcon
             icon={icon.icon}

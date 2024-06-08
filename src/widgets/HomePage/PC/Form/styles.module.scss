@@ -75,8 +75,11 @@
     @include respond-to("md") {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
       @apply mt-8;
+    }
+
+    @include respond-to("lg") {
+      align-items: flex-start;
     }
 
     @include respond-to("xl") {
