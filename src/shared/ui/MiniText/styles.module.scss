@@ -22,7 +22,7 @@
   }
 
   @include respond-to("md") {
-    font-size: clamp(8px, 16 / 992 * 100vw, 32px);
+    font-size: clamp(14px, 28 / 992 * 100vw, 56px);
   }
 
   @include respond-to("lg") {

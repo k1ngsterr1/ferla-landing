@@ -30,6 +30,10 @@
   }
 
   @include respond-to("md") {
+    @apply mb-80;
+  }
+
+  @include respond-to("lg") {
     align-items: flex-start;
   }
 
@@ -62,10 +66,11 @@
     }
 
     @include respond-to("md") {
-      font-size: clamp(9px, 18 / 992 * 100vw, 36px);
+      font-size: clamp(14px, 28 / 992 * 100vw, 56px);
     }
 
     @include respond-to("lg") {
+      width: 100%;
       text-align: left;
       font-size: clamp(9px, 18 / 1200 * 100vw, 36px);
     }
@@ -111,7 +116,7 @@
     // }
 
     @include respond-to("md") {
-      height: clamp(122.5px, 245 / 992 * 100vw, 490px);
+      height: clamp(250px, 500 / 992 * 100vw, 1000px);
     }
 
     @include respond-to("lg") {
@@ -163,7 +168,7 @@
     }
 
     @include respond-to("md") {
-      font-size: clamp(8.5px, 17 / 992 * 100vw, 34px);
+      font-size: clamp(12px, 24 / 992 * 100vw, 48px);
     }
 
     @include respond-to("lg") {

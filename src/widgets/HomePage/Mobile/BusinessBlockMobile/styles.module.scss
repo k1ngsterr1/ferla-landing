@@ -9,7 +9,7 @@
   overflow-x: hidden;
 
   &__image {
-    width: clamp(215px, 119.444vw, 860px);
+    width: 100%;
     height: clamp(207px, 115vw, 828px);
   }
   &__content {
@@ -42,6 +42,10 @@
 
         @include respond-to("sm") {
           width: 60%;
+        }
+
+        @include respond-to("md") {
+          width: 50%;
         }
       }
     }

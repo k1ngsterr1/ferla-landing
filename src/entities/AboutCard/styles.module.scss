@@ -37,7 +37,7 @@
     }
 
     @include respond-to("md") {
-      font-size: clamp(8px, 16 / 992 * 100vw, 32px);
+      font-size: clamp(14px, 28 / 992 * 100vw, 56px);
     }
 
     @include respond-to("lg") {
@@ -80,7 +80,7 @@
     }
 
     @include respond-to("md") {
-      font-size: clamp(8px, 16 / 992 * 100vw, 32px);
+      font-size: clamp(11px, 22 / 992 * 100vw, 44px);
     }
 
     @include respond-to("lg") {
@@ -119,8 +119,8 @@
   }
 
   @include respond-to("md") {
-    width: clamp(115px, 230 / 992 * 100vw, 460px);
-    height: clamp(115px, 230 / 992 * 100vw, 460px);
+    width: clamp(170px, 340 / 992 * 100vw, 680px);
+    height: clamp(170px, 340 / 992 * 100vw, 680px);
   }
 
   @include respond-to("lg") {

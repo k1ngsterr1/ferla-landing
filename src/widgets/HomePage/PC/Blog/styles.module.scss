@@ -38,11 +38,6 @@
       flex-wrap: wrap;
     }
 
-    @include respond-to("md") {
-      width: 100%;
-      text-align: right;
-    }
-
     &__heading {
       @include respond-to("sm") {
         width: 70%;
@@ -50,7 +45,12 @@
       }
 
       @include respond-to("md") {
-        width: 100%;
+        width: 70%;
+        margin: auto;
+      }
+
+      @include respond-to("lg") {
+        text-align: right;
       }
 
       @include respond-to("xl") {
@@ -78,11 +78,11 @@
 
     @include respond-to("md") {
       width: 100%;
-      flex-direction: row;
     }
 
     @include respond-to("lg") {
       @apply mt-0;
+      flex-direction: row;
     }
   }
 }

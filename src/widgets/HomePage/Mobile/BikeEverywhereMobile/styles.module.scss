@@ -54,6 +54,11 @@
       width: clamp(155px, 86.111vw, 620px);
       height: clamp(165px, 86.111vw, 660px);
       flex-shrink: 0;
+
+      @include respond-to("es") {
+        width: clamp(375px, 87.209vw, 1500px);
+        height: clamp(365px, 84.884vw, 1460px);
+      }
     }
   }
 }

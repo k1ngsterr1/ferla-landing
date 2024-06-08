@@ -60,5 +60,10 @@
     @include respond-to("fsf") {
       height: 110%;
     }
+
+    @include respond-to("es") {
+      width: clamp(375px, 87.209vw, 1500px);
+      height: clamp(365px, 84.884vw, 1460px);
+    }
   }
 }
