@@ -56,6 +56,10 @@
     @include respond-to("tablet") {
       font-size: clamp(9px, 18 / 1100 * 100vw, 36px);
     }
+
+    @include respond-to("4xl") {
+      font-size: clamp(9px, 18 / 1920 * 100vw, 36px);
+    }
   }
 
   &__input {

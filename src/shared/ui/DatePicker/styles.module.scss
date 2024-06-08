@@ -44,6 +44,7 @@
   }
 
   @include respond-to("4xl") {
+    font-size: clamp(9px, 18 / 1920 * 100vw, 36px);
     width: clamp(150px, 300 / 1920 * 100vw, 600px);
     @apply mt-10;
   }
