@@ -7,11 +7,61 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-top: 720px;
+  @apply mt-32;
+
+  @include respond-to("lg") {
+    @apply mt-64;
+  }
+
+  @include respond-to("xl") {
+    margin-top: clamp(128px, 256 / 1360 * 100vw, 512px);
+  }
+
+  @include respond-to("3xl") {
+    margin-top: clamp(232px, 464 / 1920 * 100vw, 928px);
+  }
+
+  @include respond-to("4xl") {
+    margin-top: clamp(232px, 464 / 1920 * 100vw, 928px);
+  }
+
+  @include respond-to("5xl") {
+    margin-top: clamp(360px, 750 / 2560 * 100vw, 1500px);
+  }
 
   &__video {
-    width: 1200px;
-    height: 650px;
+    width: clamp(600px, 1200 / 1200 * 100vw, 2400px);
+    height: clamp(325px, 650 / 1200 * 100vw, 1300px);
+
+    @include respond-to("lg") {
+      width: clamp(300px, 600 / 1200 * 100vw, 1200px);
+      height: clamp(175px, 350 / 1200 * 100vw, 700px);
+    }
+
+    @include respond-to("xl") {
+      width: clamp(300px, 600 / 1360 * 100vw, 1200px);
+      height: clamp(200px, 400 / 1360 * 100vw, 800px);
+    }
+
+    @include respond-to("2xl") {
+      width: clamp(600px, 1200 / 1520 * 100vw, 2400px);
+      height: clamp(325px, 650 / 1520 * 100vw, 1300px);
+    }
+
+    @include respond-to("3xl") {
+      width: clamp(500px, 1000 / 1680 * 100vw, 2000px);
+      height: clamp(250px, 500 / 1680 * 100vw, 1000px);
+    }
+
+    @include respond-to("4xl") {
+      width: clamp(600px, 1200 / 1920 * 100vw, 2400px);
+      height: clamp(325px, 650 / 1920 * 100vw, 1300px);
+    }
+
+    @include respond-to("5xl") {
+      width: clamp(600px, 1200 / 2560 * 100vw, 2400px);
+      height: clamp(325px, 650 / 2560 * 100vw, 1300px);
+    }
   }
 
   &__mini_text {
@@ -19,6 +69,14 @@
     @apply text-red;
     @apply text-2xl;
     @apply font-bold;
+
+    @include respond-to("lg") {
+      @apply text-lg;
+    }
+
+    @include respond-to("xl") {
+      @apply text-xl;
+    }
   }
 
   &__title {
@@ -27,8 +85,12 @@
     @apply mt-2;
     @apply text-dark;
 
+    @include respond-to("lg") {
+      font-size: clamp(16px, 32 / 1200 * 100vw, 64px);
+    }
+
     @include respond-to("xl") {
-      font-size: clamp(32px, 64 / 1360 * 100vw, 128px);
+      font-size: clamp(24px, 48 / 1360 * 100vw, 96px);
     }
 
     @include respond-to("2xl") {
@@ -36,7 +98,7 @@
     }
 
     @include respond-to("3xl") {
-      font-size: clamp(32px, 64 / 1680 * 100vw, 128px);
+      font-size: clamp(24px, 48 / 1680 * 100vw, 96px);
     }
 
     @include respond-to("4xl") {
@@ -59,6 +121,10 @@
     text-decoration: none;
     transition: 0.3s all;
     position: relative;
+    background: transparent;
+    outline: none;
+    border: none;
+    @apply text-base;
     @apply text-red;
     @apply mt-4;
     @apply gap-2;
@@ -120,6 +186,11 @@
       transition: 0.3s all;
       @apply text-base;
       @apply text-red;
+
+      @include respond-to("lg") {
+        width: clamp(5px, 10 / 1200 * 100vw, 20px);
+        height: clamp(5px, 10 / 1200 * 100vw, 20px);
+      }
 
       @include respond-to("xl") {
         width: clamp(8px, 16 / 1360 * 100vw, 32px);

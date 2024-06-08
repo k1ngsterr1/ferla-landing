@@ -38,12 +38,10 @@ export const Footer = () => {
           />
         ))}
       </div>
-      <div className="flex flex-col items-center mt-12">
-        <SparkLogo />
-        <a href="https://sparkstudio.kz/home" className="text-white">
-          sparkstudio.kz
-        </a>
-      </div>
+      <SparkLogo />
+      <a href="https://sparkstudio.kz/home" className="text-white">
+        sparkstudio.kz
+      </a>
     </footer>
   );
 };
