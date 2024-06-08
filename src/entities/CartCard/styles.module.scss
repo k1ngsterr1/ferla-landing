@@ -38,6 +38,11 @@
     height: clamp(250px, 500 / 992 * 100vw, 1000px);
   }
 
+  @include respond-to("tablet") {
+    width: clamp(130px, 260 / 1100 * 100vw, 420px);
+    height: clamp(135px, 270 / 1100 * 100vw, 540px);
+  }
+
   @include respond-to("lg") {
     width: clamp(120px, 240 / 1200 * 100vw, 480px);
     height: clamp(135px, 270 / 1200 * 100vw, 540px);
@@ -86,6 +91,11 @@
       height: clamp(180px, 360 / 992 * 100vw, 720px);
     }
 
+    @include respond-to("tablet") {
+      width: 80%;
+      height: 69%;
+    }
+
     @include respond-to("lg") {
       width: 70%;
       height: 60%;
@@ -129,6 +139,10 @@
       @apply text-4xl;
     }
 
+    @include respond-to("tablet") {
+      @apply text-2xl;
+    }
+
     @include respond-to("lg") {
       @apply text-2xl;
     }
@@ -160,7 +174,10 @@
 
   @include respond-to("sm") {
     font-size: clamp(10px, 20 / 720 * 100vw, 40px);
-    font-size: clamp(10px, 20 / 720 * 100vw, 40px);
+  }
+
+  @include respond-to("md") {
+    font-size: clamp(8px, 16 / 992 * 100vw, 32px);
   }
 
   &:hover {
@@ -194,6 +211,8 @@
 
     @include respond-to("md") {
       font-size: clamp(9px, 18 / 992 * 100vw, 36px);
+      width: clamp(7px, 14 / 992 * 100vw, 28px);
+      height: clamp(7px, 14 / 992 * 100vw, 28px);
     }
 
     @include respond-to("lg") {

@@ -50,6 +50,11 @@
     height: clamp(80px, 160 / 992 * 100vw, 320px);
   }
 
+  @include respond-to("tablet") {
+    width: clamp(150px, 300 / 1100 * 100vw, 600px);
+    height: clamp(100px, 200 / 1100 * 100vw, 400px);
+  }
+
   @include respond-to("lg") {
     height: clamp(75px, 150 / 1200 * 100vw, 300px);
   }
@@ -182,6 +187,10 @@
       font-size: clamp(12px, 24 / 992 * 100vw, 48px);
     }
 
+    @include respond-to("tablet") {
+      font-size: clamp(11px, 22 / 1100 * 100vw, 44px);
+    }
+
     @include respond-to("lg") {
       width: 100%;
       font-size: clamp(8.5px, 17 / 1200 * 100vw, 34px);
@@ -228,6 +237,10 @@
 
     @include respond-to("md") {
       font-size: clamp(9px, 18 / 992 * 100vw, 36px);
+    }
+
+    @include respond-to("tablet") {
+      font-size: clamp(9px, 18 /1100 * 100vw, 36px);
     }
 
     @include respond-to("lg") {
@@ -278,9 +291,14 @@
       height: clamp(6px, 12 / 992 * 100vw, 48px);
     }
 
+    @include respond-to("tablet") {
+      width: clamp(6px, 12 / 1100 * 100vw, 24px);
+      height: clamp(6px, 12 / 1100 * 100vw, 24px);
+    }
+
     @include respond-to("lg") {
-      width: clamp(6px, 12 / 1200 * 100vw, 48px);
-      height: clamp(6px, 12 / 1200 * 100vw, 48px);
+      width: clamp(6px, 12 / 1200 * 100vw, 24px);
+      height: clamp(6px, 12 / 1200 * 100vw, 24px);
       @apply mt-2;
     }
 

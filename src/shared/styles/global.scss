@@ -49,6 +49,11 @@ h1 {
     font-size: clamp(35px, 7.056vw, 140px);
   }
 
+  @include respond-to("tablet") {
+    width: 50%;
+    font-size: clamp(30px, 60 / 1100 * 100vw, 120px);
+  }
+
   @include respond-to("lg") {
     width: 50%;
     font-size: clamp(27.5px, 55 / 1200 * 100vw, 110px);
@@ -117,6 +122,11 @@ h6 {
     font-size: clamp(32px, 64 / 992 * 100vw, 128px);
   }
 
+  @include respond-to("tablet") {
+    font-size: clamp(25px, 50 / 1100 * 100vw, 100px);
+    text-align: left;
+  }
+
   @include respond-to("lg") {
     font-size: clamp(20px, 40 / 1200 * 100vw, 80px);
   }
@@ -181,6 +191,10 @@ p {
     font-size: clamp(12px, 2.419vw, 48px);
   }
 
+  @include respond-to("tablet") {
+    font-size: clamp(8px, 16 / 1100 * 100vw, 32px);
+  }
+
   @include respond-to("lg") {
     font-size: clamp(8px, 16 / 1200 * 100vw, 32px);
   }
@@ -214,6 +228,13 @@ a {
 }
 
 .container {
+  @include respond-to("tablet") {
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+
   @include respond-to("lg") {
     width: 86.6%;
     display: flex;

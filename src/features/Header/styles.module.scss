@@ -19,6 +19,10 @@
   &__container {
     width: 86.6%;
     z-index: 1000000000;
+
+    @include respond-to("tablet") {
+      width: 95%;
+    }
   }
 
   &__logo {
@@ -39,6 +43,11 @@
     @include respond-to("md") {
       width: clamp(95px, 190 / 992 * 100vw, 380px);
       height: clamp(35px, 70 / 992 * 100vw, 140px);
+    }
+
+    @include respond-to("tablet") {
+      width: clamp(95px, 140 / 1100 * 100vw, 380px);
+      height: clamp(35px, 70 / 1100 * 100vw, 140px);
     }
 
     @include respond-to("lg") {

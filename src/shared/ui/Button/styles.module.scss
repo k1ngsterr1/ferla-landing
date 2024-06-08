@@ -36,6 +36,12 @@
     font-size: clamp(12px, 2.419vw, 48px);
   }
 
+  @include respond-to("tablet") {
+    width: clamp(102.5px, 205 / 1100 * 100vw, 410px);
+    height: clamp(22.5px, 45 / 1100 * 100vw, 90px);
+    font-size: clamp(7px, 14 / 1100 * 100vw, 28px);
+  }
+
   @include respond-to("lg") {
     width: clamp(102.5px, 205 / 1200 * 100vw, 410px);
     height: clamp(22.5px, 45 / 1200 * 100vw, 90px);

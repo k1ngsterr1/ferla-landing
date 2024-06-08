@@ -8,6 +8,10 @@
   flex-direction: column;
   @apply mt-80;
 
+  @include respond-to("tablet") {
+    margin-top: clamp(64px, 128 / 1100 * 100vw, 256px);
+  }
+
   @include respond-to("5xl") {
     margin-top: clamp(256px, 20vw, 1024px);
   }
@@ -40,6 +44,11 @@
     &__arrow {
       width: clamp(33px, 66 / 1200 * 100vw, 132px);
       height: clampI(31px, 62 / 1200 * 100vw, 124px);
+
+      @include respond-to("tablet") {
+        width: clamp(48px, 96 / 1100 * 100vw, 192px);
+        height: clamp(40px, 80 / 1100 * 100vw, 160px);
+      }
 
       @include respond-to("xl") {
         width: clamp(33px, 66 / 1360 * 100vw, 132px);
@@ -85,6 +94,10 @@
 
       @include respond-to("md") {
         font-size: clamp(8px, 16 / 992 * 100vw, 32px);
+      }
+
+      @include respond-to("tablet") {
+        width: 100%;
       }
 
       @include respond-to("lg") {
