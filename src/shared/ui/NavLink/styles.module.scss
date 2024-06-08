@@ -38,6 +38,7 @@
       transform: translate3d(0, -2px, 0);
     }
   }
+
   &:before {
     content: "";
     position: absolute;
@@ -78,6 +79,10 @@
 
   @include respond-to("md") {
     font-size: clamp(10px, 20 / 992 * 100vw, 40px);
+  }
+
+  @include respond-to("tablet_sm") {
+    font-size: clamp(6px, 12 / 1024 * 100vw, 24px);
   }
 
   @include respond-to("tablet") {

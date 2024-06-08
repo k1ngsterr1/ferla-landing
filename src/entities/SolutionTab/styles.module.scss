@@ -50,6 +50,11 @@
     height: clamp(80px, 160 / 992 * 100vw, 320px);
   }
 
+  @include respond-to("tablet_sm") {
+    width: clamp(130px, 260 / 1024 * 100vw, 520px);
+    height: clamp(100px, 200 / 1024 * 100vw, 400px);
+  }
+
   @include respond-to("tablet") {
     width: clamp(150px, 300 / 1100 * 100vw, 600px);
     height: clamp(100px, 200 / 1100 * 100vw, 400px);
@@ -187,6 +192,10 @@
       font-size: clamp(12px, 24 / 992 * 100vw, 48px);
     }
 
+    @include respond-to("tablet_sm") {
+      font-size: clamp(10px, 20 / 1024 * 100vw, 40px);
+    }
+
     @include respond-to("tablet") {
       font-size: clamp(11px, 22 / 1100 * 100vw, 44px);
     }
@@ -237,6 +246,10 @@
 
     @include respond-to("md") {
       font-size: clamp(9px, 18 / 992 * 100vw, 36px);
+    }
+
+    @include respond-to("tablet_sm") {
+      font-size: clamp(8px, 16 / 1024 * 100vw, 32px);
     }
 
     @include respond-to("tablet") {

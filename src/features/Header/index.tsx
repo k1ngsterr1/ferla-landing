@@ -1,16 +1,17 @@
 "use client";
-import React, { useRef, useEffect } from "react";
-import logo from "@assets/vectors/logo_dark.svg";
-import LinkButton from "@shared/ui/LinkButton";
-import Image from "next/image";
-import useHeaderScroll from "@shared/lib/animations/headerAnimation";
+import React, { useRef } from "react";
 import { useHoverMenu } from "@shared/lib/hooks/useHoverEffect";
 import { BikesMenu } from "@features/BikesMenu";
 import { NavLink } from "@shared/ui/NavLink";
 import { navLinks } from "@shared/lib/content/navLinks";
 
-import styles from "./styles.module.scss";
+import logo from "@assets/vectors/logo_dark.svg";
+import LinkButton from "@shared/ui/LinkButton";
 import Link from "next/link";
+import Image from "next/image";
+import useHeaderScroll from "@shared/lib/animations/headerAnimation";
+
+import styles from "./styles.module.scss";
 
 export const Header = () => {
   const headerRef = useRef<null>(null);
