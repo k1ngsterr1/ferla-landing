@@ -4,6 +4,8 @@ interface IBlogPageProps {
   title: string;
 }
 
-export const BlogPage = () => {
+const BlogPage = () => {
   return <main>page</main>;
 };
+
+export default BlogPage;
