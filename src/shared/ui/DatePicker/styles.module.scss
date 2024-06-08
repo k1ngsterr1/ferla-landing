@@ -16,7 +16,7 @@
   @apply pb-1;
 
   @include respond-to("md") {
-    width: clamp(200px, 400 / 1200 * 100vw, 800px);
+    width: clamp(150px, 70.092vw, 600px);
     font-size: clamp(9px, 0.93744vw, 36px);
   }
 

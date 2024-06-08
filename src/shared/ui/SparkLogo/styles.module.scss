@@ -3,19 +3,22 @@
 @import "../../../shared/styles/variables";
 
 .logo {
-  @include respond-to("xs") {
-    width: clamp(120px, 56.0736vw, 480px);
-    height: clamp(40px, 18.6912vw, 160px);
+  @include respond-to("xxs") {
+    width: clamp(90px, 50vw, 360px);
+    height: clamp(40px, 22.222vw, 160px);
   }
 
-  @include respond-to("fsf") {
-    width: clamp(140px, 48.696vw, 560px);
-    height: clamp(50px, 17.391vw, 200px);
+  @include respond-to("xs") {
+    width: clamp(100px, 41.667vw, 400px);
+    height: clamp(45px, 18.75vw, 180px);
   }
 
   @include respond-to("sm") {
-    width: clamp(225px, 62.5vw, 900px);
-    height: clamp(50px, 13.889vw, 200px);
+    width: clamp(110px, 30.556vw, 440px);
+  }
+
+  @include respond-to("md") {
+    width: clamp(128px, 256 / 992 * 100vw, 512px);
   }
 
   @include respond-to("lg") {
