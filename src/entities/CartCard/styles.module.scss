@@ -86,6 +86,11 @@
       height: clamp(180px, 360 / 992 * 100vw, 720px);
     }
 
+    @include respond-to("es") {
+      width: 60%;
+      height: 70%;
+    }
+
     @include respond-to("lg") {
       width: 70%;
       height: 60%;
