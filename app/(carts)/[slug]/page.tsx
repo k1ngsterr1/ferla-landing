@@ -3,16 +3,39 @@ import { Header } from "@features/Header";
 import { ProgressBar } from "@shared/ui/ProgressBar";
 import { Cursor } from "@shared/ui/Cursor";
 import { CartMain } from "@widgets/CartPage/PC/Main";
-import { Form } from "@widgets/HomePage/PC/Form";
 import { Footer } from "@features/Footer";
 import { CartAbout } from "@widgets/CartPage/PC/About";
 import { CartGallery } from "@widgets/CartPage/PC/Gallery";
+import { CartsFeatures } from "@features/CartFeatures";
+import { featureTabsContent } from "@shared/lib/content/featureTabsContent";
+import { OrderNow } from "@widgets/CartPage/PC/OrderNow";
 
 import image from "@assets/webp/pc/mainImage_pc.png";
 
 import styles from "../../styles.module.scss";
+import { SpecsScreen } from "@widgets/CartPage/PC/Spec";
 
 const CartPage = () => {
+  const imageProp = image;
+  const imagesProp = [
+    {
+      url: image,
+      alt: "Description of the image",
+    },
+    {
+      url: image,
+      alt: "Description of the image",
+    },
+    {
+      url: image,
+      alt: "Description of the image",
+    },
+    {
+      url: image,
+      alt: "Description of the image",
+    },
+  ];
+
   return (
     <>
       <div className={styles.pc}>
@@ -35,9 +58,29 @@ const CartPage = () => {
           title="Lorem Ipsum"
           paragraph="Starting a business doesn’t always require a hefty investment. In fact, there are numerous low-cost business ideas, particularly in the realm of food carts, that allow aspiring entrepreneurs to kickstart their ventures without breaking the bank. Here’s a curated list of the top 12 low-cost business ideas with a focus on the cheapest business to start:"
           miniText="Lorem Ipsum"
+          image={imageProp}
+          images={imagesProp}
+        />
+        <CartsFeatures
+          title="Features"
+          miniText="Ferla X"
+          image={image}
+          featureTabs={featureTabsContent}
+          paragraph="Paragraph"
+        />
+        <SpecsScreen
+          miniText="Ferla X - Glacier Edition"
+          title="Specs"
+          paragraph="Superior Performance. All-In-One Superior Vending Bike."
+        />
+        <OrderNow
+          miniText="In Stock"
+          question="Still have questions? You can always reach out to us at
+info@ferlabikes.com or request more information."
+          title="Order Now Your Own Fully Customized Ferla X Bike"
+          paragraph="Are you ready to be among the first to own a Ferla X? Take the first step in starting your own mobile business by Clicking the Order Link & Get Yourself a Ferla X."
           image={image}
         />
-        <Form />
         <Footer />
       </div>
     </>
