@@ -33,7 +33,7 @@ export const CartsFeatures: React.FC<ICartsFeaturesProps> = ({
         </Fade>
         <div className={styles.carts_features__tabs}>
           {featureTabs.map((featuerTab, index) => (
-            <Fade cascade>
+            <Fade cascade key={index}>
               <CartFeatureTab name={featuerTab.name} key={index} />
             </Fade>
           ))}
