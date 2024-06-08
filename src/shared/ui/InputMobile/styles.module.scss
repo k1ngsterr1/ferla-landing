@@ -25,6 +25,10 @@
     transition: all 0.4s ease;
     @apply bottom-2;
     @apply left-2;
+
+    @include respond-to("sm") {
+      font-size: clamp(12px, 3.333vw, 48px);
+    }
   }
 
   &__input {
@@ -36,5 +40,9 @@
     z-index: 1;
     @apply pl-2;
     @apply pb-1;
+
+    @include respond-to("sm") {
+      font-size: clamp(12px, 3.333vw, 48px);
+    }
   }
 }
