@@ -1,5 +1,6 @@
 import React from "react";
 import { SubmitFormMobile } from "@widgets/HomePage/Mobile/SubmitFormMobile";
+import { SubmitFormTablet } from "@widgets/HomePage/Tablet/SubmitFormTablet";
 
 import styles from "./styles.module.scss";
 
@@ -16,7 +17,7 @@ export const FormMobile = () => {
         <SubmitFormMobile />
       </div>
       <div className={styles.form_mob__tablet}>
-        <SubmitFormMobile />
+        <SubmitFormTablet />
       </div>
     </section>
   );

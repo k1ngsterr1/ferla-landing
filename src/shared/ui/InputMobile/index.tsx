@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react";
 import { useCustomLabel } from "@shared/lib/animations/customLabelAnimationMobile";
+import { useCustomLabelTablet } from "@shared/lib/animations/customLabelAnimationMobile";
 
 import styles from "./styles.module.scss";
 
@@ -20,6 +21,8 @@ export const InputMobile: React.FC<Input> = ({
   ...rest
 }) => {
   const { onLabelFocus, onLabelBlur, labelRef } = useCustomLabel();
+  const { onLabelTabletFocus, onLabelTabletBlur, tabletLabelRef } =
+    useCustomLabelTablet();
 
   const onFocusHandler = isMobile ? onLabelFocus : onLabelTabletFocus;
   const onBlurHandler = isMobile ? onLabelBlur : onLabelTabletBlur;

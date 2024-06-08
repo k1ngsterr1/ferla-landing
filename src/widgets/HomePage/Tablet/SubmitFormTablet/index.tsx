@@ -43,7 +43,7 @@ export const SubmitFormTablet = () => {
           name="name"
           margin="mt-8"
           value={name}
-          isMobile
+          isMobile={false}
           required
           onChange={(e) => setName(e.target.value)}
           // {...register("name", { required: true, maxLength: 50 })}
@@ -56,7 +56,7 @@ export const SubmitFormTablet = () => {
           margin="mt-16"
           required
           value={phone}
-          isMobile
+          isMobile={false}
           onChange={(e) => setPhone(e.target.value)}
           // {...register("phoneNumber", { required: true, pattern: /^[0-9]+$/ })}
         />
@@ -68,9 +68,9 @@ export const SubmitFormTablet = () => {
           type="email"
           name="email"
           margin="mt-16"
+          isMobile={false}
           required
           value={email}
-          isMobile
           onChange={(e) => setEmail(e.target.value)}
           // {...register("email", { required: true, pattern: /^\S+@\S+\.\S+$/ })}
         />
@@ -91,7 +91,6 @@ export const SubmitFormTablet = () => {
           }}
         />
         {/* {errors.date && <p className={styles.error}>Date is required!</p>} */}
-
         <Button
           text="Send Form"
           type="submit"

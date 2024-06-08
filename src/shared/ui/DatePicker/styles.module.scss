@@ -20,6 +20,10 @@
     font-size: clamp(9px, 0.93744vw, 36px);
   }
 
+  @include respond-to("sm") {
+    font-size: clamp(12px, 3.333vw, 48px);
+  }
+
   @include respond-to("lg") {
     width: clamp(100px, 200 / 1200 * 100vw, 400px);
   }
