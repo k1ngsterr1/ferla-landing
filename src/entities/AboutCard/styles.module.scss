@@ -40,6 +40,10 @@
       font-size: clamp(14px, 28 / 992 * 100vw, 56px);
     }
 
+    @include respond-to("tablet_sm") {
+      font-size: clamp(8px, 16 / 1024 * 100vw, 32px);
+    }
+
     @include respond-to("tablet") {
       font-size: clamp(8px, 16 / 1100 * 100vw, 32px);
     }
@@ -87,6 +91,10 @@
       font-size: clamp(11px, 22 / 992 * 100vw, 44px);
     }
 
+    @include respond-to("tablet_sm") {
+      font-size: clamp(7px, 14 / 1024 * 100vw, 28px);
+    }
+
     @include respond-to("tablet") {
       font-size: clamp(8px, 16 / 1100 * 100vw, 32px);
     }
@@ -129,6 +137,11 @@
   @include respond-to("md") {
     width: clamp(170px, 340 / 992 * 100vw, 680px);
     height: clamp(170px, 340 / 992 * 100vw, 680px);
+  }
+
+  @include respond-to("tablet_sm") {
+    width: clamp(100px, 200 / 1024 * 100vw, 400px);
+    height: clamp(100px, 200 / 1024 * 100vw, 400px);
   }
 
   @include respond-to("tablet") {

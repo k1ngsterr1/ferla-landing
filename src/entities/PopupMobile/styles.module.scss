@@ -84,7 +84,7 @@
     @apply text-dark;
     @apply mt-8;
 
-    @include respond-to("fsf") {
+    @include respond-to("xs") {
       @apply text-base;
     }
   }
