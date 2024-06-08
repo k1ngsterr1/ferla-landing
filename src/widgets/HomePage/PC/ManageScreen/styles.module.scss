@@ -18,6 +18,10 @@
     animation-timeline: view(40%);
     @apply mt-2;
 
+    @include respond-to("tablet_sm") {
+      width: 70%;
+    }
+
     @include respond-to("tablet") {
       width: 90%;
     }

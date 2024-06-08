@@ -14,6 +14,12 @@
     flex-direction: column;
   }
 
+  @include respond-to("tablet_sm") {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+
   @include respond-to("tablet") {
     display: flex;
     justify-content: flex-start;
@@ -55,6 +61,12 @@
       width: 80%;
       text-align: center;
       font-size: clamp(11px, 22 / 992 * 100vw, 44px);
+    }
+
+    @include respond-to("tablet_sm") {
+      width: 50%;
+      text-align: left;
+      font-size: clamp(8px, 16 / 1024 * 100vw, 32px);
     }
 
     @include respond-to("tablet") {

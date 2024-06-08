@@ -21,6 +21,11 @@
     width: clamp(128px, 256 / 992 * 100vw, 512px);
   }
 
+  @include respond-to("tablet_sm") {
+    width: clamp(75px, 150 / 1024 * 100vw, 300px);
+    height: clamp(75px, 150 / 1024 * 100vw, 300px);
+  }
+
   @include respond-to("tablet") {
     width: clamp(75px, 150 / 1100 * 100vw, 300px);
     height: clamp(75px, 150 / 1100 * 100vw, 300px);

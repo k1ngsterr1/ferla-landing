@@ -38,6 +38,10 @@
     @apply bg-red;
   }
 
+  @include respond-to("tablet_sm") {
+    margin-top: 0;
+  }
+
   @include respond-to("tablet") {
     margin-top: 0;
   }

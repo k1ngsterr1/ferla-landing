@@ -15,6 +15,11 @@
     @apply mt-32;
   }
 
+  &__logo {
+    width: clamp(64px, 128 / 1024 * 100vw, 256px);
+    height: clamp(64px, 128 / 1024 * 100vw, 256px);
+  }
+
   &__nav {
     @include respond-to("md") {
       display: flex;

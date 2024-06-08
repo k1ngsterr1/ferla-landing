@@ -38,9 +38,14 @@
     height: clamp(250px, 500 / 992 * 100vw, 1000px);
   }
 
+  @include respond-to("tablet_sm") {
+    width: clamp(115px, 230 / 1024 * 100vw, 460px);
+    height: clamp(115px, 230 / 1024 * 100vw, 460px);
+  }
+
   @include respond-to("tablet") {
     width: clamp(130px, 260 / 1100 * 100vw, 420px);
-    height: clamp(135px, 270 / 1100 * 100vw, 540px);
+    height: clamp(135px, 270 / 1100 * 100vw, 440px);
   }
 
   @include respond-to("lg") {
@@ -142,6 +147,10 @@
 
     @include respond-to("md") {
       @apply text-4xl;
+    }
+
+    @include respond-to("tablet_sm") {
+      @apply text-xl;
     }
 
     @include respond-to("tablet") {

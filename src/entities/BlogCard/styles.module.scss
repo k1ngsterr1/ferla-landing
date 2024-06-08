@@ -33,6 +33,10 @@
     @apply mb-80;
   }
 
+  @include respond-to("tablet_sm") {
+    @apply mb-2;
+  }
+
   @include respond-to("tablet") {
     @apply mb-16;
   }
@@ -71,6 +75,11 @@
 
     @include respond-to("md") {
       font-size: clamp(14px, 28 / 992 * 100vw, 56px);
+    }
+
+    @include respond-to("tablet_sm") {
+      width: 100%;
+      font-size: clamp(11px, 22 / 1024 * 100vw, 44px);
     }
 
     @include respond-to("tablet") {
@@ -128,8 +137,12 @@
       height: clamp(250px, 500 / 992 * 100vw, 1000px);
     }
 
+    @include respond-to("tablet_sm") {
+      height: clamp(85px, 170 / 1024 * 100vw, 340px);
+    }
+
     @include respond-to("tablet") {
-      height: 210px;
+      height: clamp(105px, 210 / 1024 * 100vw, 410px);
     }
 
     @include respond-to("lg") {
@@ -182,6 +195,10 @@
 
     @include respond-to("md") {
       font-size: clamp(12px, 24 / 992 * 100vw, 48px);
+    }
+
+    @include respond-to("tablet_sm") {
+      font-size: clamp(8px, 16 / 1024 * 100vw, 32px);
     }
 
     @include respond-to("tablet") {
