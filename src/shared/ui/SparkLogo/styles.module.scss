@@ -18,6 +18,11 @@
     height: clamp(50px, 13.889vw, 200px);
   }
 
+  @include respond-to("tablet") {
+    width: clamp(75px, 150 / 1100 * 100vw, 300px);
+    height: clamp(75px, 150 / 1100 * 100vw, 300px);
+  }
+
   @include respond-to("lg") {
     width: clamp(75px, 150 / 1200 * 100vw, 300px);
   }

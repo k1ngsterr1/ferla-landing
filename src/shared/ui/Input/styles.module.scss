@@ -52,6 +52,10 @@
       @apply bottom-1;
       @apply left-2;
     }
+
+    @include respond-to("tablet") {
+      font-size: clamp(9px, 18 / 1100 * 100vw, 36px);
+    }
   }
 
   &__input {

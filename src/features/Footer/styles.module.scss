@@ -11,6 +11,10 @@
   @apply mt-16;
   @apply mb-8;
 
+  @include respond-to("tablet") {
+    @apply mt-32;
+  }
+
   &__nav {
     @include respond-to("md") {
       display: flex;

@@ -20,6 +20,12 @@
     font-size: clamp(9px, 0.93744vw, 36px);
   }
 
+  @include respond-to("tablet") {
+    width: clamp(85px, 170 / 1100 * 100vw, 340px);
+    font-size: clamp(9px, 18 / 1100 * 100vw, 36px);
+    @apply mt-12;
+  }
+
   @include respond-to("lg") {
     width: clamp(100px, 200 / 1200 * 100vw, 400px);
   }

@@ -73,6 +73,10 @@
       @apply text-xl;
     }
 
+    @include respond-to("tablet") {
+      @apply text-base;
+    }
+
     @include respond-to("lg") {
       @apply text-base;
     }

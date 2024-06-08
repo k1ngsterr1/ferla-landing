@@ -38,6 +38,10 @@
     @apply bg-red;
   }
 
+  @include respond-to("tablet") {
+    margin-top: 0;
+  }
+
   @include respond-to("xl") {
     @apply mt-0;
   }
