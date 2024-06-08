@@ -9,15 +9,21 @@ interface Input extends React.InputHTMLAttributes<HTMLInputElement> {
   labelText: string;
   margin?: string;
   type: string;
+  isMobile: boolean;
 }
 
 export const InputMobile: React.FC<Input> = ({
   labelText,
   margin,
   type,
+  isMobile,
   ...rest
 }) => {
   const { onLabelFocus, onLabelBlur, labelRef } = useCustomLabel();
+
+  const onFocusHandler = isMobile ? onLabelFocus : onLabelTabletFocus;
+  const onBlurHandler = isMobile ? onLabelBlur : onLabelTabletBlur;
+  const labelRefHandler = isMobile ? labelRef : tabletLabelRef;
 
   return (
     <div
@@ -26,14 +32,14 @@ export const InputMobile: React.FC<Input> = ({
     >
       <label
         className={`${styles.input_container__label} hoverable`}
-        ref={labelRef}
+        ref={labelRefHandler}
       >
         {labelText}
       </label>
       <input
         type={type}
-        onFocus={onLabelFocus}
-        onBlur={onLabelBlur}
+        onFocus={onFocusHandler}
+        onBlur={onBlurHandler}
         className={`${styles.input_container__input} hoverable`}
       />
     </div>

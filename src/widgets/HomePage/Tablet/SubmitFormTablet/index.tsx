@@ -15,7 +15,7 @@ interface IData {
   date: Date;
 }
 
-export const SubmitFormMobile = () => {
+export const SubmitFormTablet = () => {
   const [name, setName] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
   const [email, setEmail] = useState<string>("");

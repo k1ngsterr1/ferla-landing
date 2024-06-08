@@ -12,7 +12,12 @@ export const FormMobile = () => {
       <p className={styles.form_mob__paragraph}>
         We have got more options Hop on a call with us today!
       </p>
-      <SubmitFormMobile />
+      <div className={styles.form_mob__mobile}>
+        <SubmitFormMobile />
+      </div>
+      <div className={styles.form_mob__tablet}>
+        <SubmitFormMobile />
+      </div>
     </section>
   );
 };
