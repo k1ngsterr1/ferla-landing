@@ -49,7 +49,7 @@
 
   @include respond-to("4xl") {
     width: clamp(750px, 78.125vw, 3000px);
-    height: clamp(249px, 498 / 1920 * 100vw, 996px);
+    height: clamp(300px, 600 / 1920 * 100vw, 1200px);
   }
 
   @include respond-to("5xl") {

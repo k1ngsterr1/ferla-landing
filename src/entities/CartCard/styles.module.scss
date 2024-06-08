@@ -180,6 +180,10 @@
     font-size: clamp(8px, 16 / 992 * 100vw, 32px);
   }
 
+  @include respond-to("4xl") {
+    font-size: clamp(8px, 16 / 1920 * 100vw, 32px);
+  }
+
   &:hover {
     text-decoration: underline;
     @apply text-red;
@@ -232,7 +236,9 @@
     }
 
     @include respond-to("4xl") {
-      font-size: clamp(9px, 18 / 1920 * 100vw, 36px);
+      width: clamp(8px, 16 / 1920 * 100vw, 32px);
+      height: clamp(8px, 16 / 1920 * 100vw, 32px);
+      font-size: clamp(8px, 16 / 1920 * 100vw, 32px);
     }
 
     @include respond-to("5xl") {
