@@ -69,7 +69,7 @@
     @apply text-dark;
 
     @include respond-to("xxs") {
-      font-size: clamp(7.5px, 3.5046vw, 30px);
+      font-size: clamp(8px, 16 / 360 * 100vw, 32px);
       width: 80%;
     }
 
@@ -118,8 +118,8 @@
     @apply rounded-full;
 
     @include respond-to("xxs") {
-      width: clamp(30px, 14.0184vw, 120px);
-      height: clamp(15px, 7.0092vw, 60px);
+      width: 30%;
+      height: clamp(16px, 32 / 360 * 100vw, 64px);
     }
 
     @include respond-to("xs") {

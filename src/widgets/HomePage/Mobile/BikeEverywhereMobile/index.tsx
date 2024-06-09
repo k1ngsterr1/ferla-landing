@@ -10,7 +10,7 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 export const BikesEverywhereMobile = () => {
   return (
-    <section className={styles.bikes_everywhere_mob}>
+    <section className={styles.bikes_everywhere_mob} id="bikes-mob">
       <div className={styles.bikes_everywhere_mob__text}>
         <h4 className={styles.bikes_everywhere_mob__text__heading}>
           Ferla Bikes<strong className="text-red">everywhere</strong>

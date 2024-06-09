@@ -29,6 +29,7 @@ import { PartnersScreenMobile } from "@widgets/HomePage/Mobile/PartnersScreenMob
 import { ManageScreenMobile } from "@widgets/HomePage/Mobile/ManageScreenMobile";
 import { OurBikesMobile } from "@widgets/HomePage/Mobile/OurBikesMobile";
 import { ReviewsMobile } from "@widgets/HomePage/Mobile/ReviewsScreenMobile";
+import { EmailFormMobile } from "@widgets/HomePage/Mobile/EmailFormMobile";
 import { FormMobile } from "@widgets/HomePage/Mobile/FormMobile";
 import { FooterMobile } from "@features/FooterMobile/index";
 
@@ -49,7 +50,7 @@ const HomePage = () => {
         <ManageScreen />
         <OurBikes allBikes={true} />
         <Reviews />
-        <VideoBlock />
+        <VideoBlock id="video" />
         <Blog />
         <EmailForm />
         <CalculatorBlock />
@@ -67,9 +68,9 @@ const HomePage = () => {
         <ManageScreenMobile />
         <OurBikesMobile />
         <ReviewsMobile />
-        <VideoBlock />
+        <VideoBlock id="video-mob" />
         <Blog />
-        <EmailForm />
+        <EmailFormMobile />
         <CalculatorBlock />
         <FormMobile />
         <FooterMobile />

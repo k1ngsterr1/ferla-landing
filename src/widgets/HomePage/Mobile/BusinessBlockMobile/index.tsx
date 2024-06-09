@@ -13,7 +13,7 @@ import styles from "./styles.module.scss";
 
 export const BusinessBlockMobile = () => {
   return (
-    <section className={styles.business_block_mob}>
+    <section className={styles.business_block_mob} id="perfect-mob">
       <Image
         src={main_pc}
         alt="Ferla Bikes Main Image"

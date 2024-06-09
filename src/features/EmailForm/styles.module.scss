@@ -28,10 +28,6 @@
     background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
-    @apply p-4;
-    @apply mt-32;
-    @apply rounded-xl;
-    @apply bg-red;
   }
 
   @include respond-to("tablet") {
@@ -104,6 +100,10 @@
     @include respond-to("lg") {
       width: 30%;
     }
+  }
+
+  @include respond-to("xxs") {
+    height: clamp(155px, 310 / 360 * 100vw, 620px);
   }
 
   @include respond-to("xs") {

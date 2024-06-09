@@ -4,9 +4,13 @@ import red_logo from "@assets/vectors/logo.svg";
 
 import styles from "./styles.module.scss";
 
-export const VideoBlock = () => {
+interface IVideoID {
+  id: string;
+}
+
+export const VideoBlock: React.FC<IVideoID> = ({ id }) => {
   return (
-    <section className={styles.video_block} id="video">
+    <section className={styles.video_block} id={id}>
       <Image
         src={red_logo}
         className={styles.video_block__logo}

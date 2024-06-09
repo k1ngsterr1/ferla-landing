@@ -6,7 +6,7 @@ import styles from "./styles.module.scss";
 
 export const MainScreenMobile = () => {
   return (
-    <main className={styles.main_screen_mob}>
+    <main className={styles.main_screen_mob} id="home-mob">
       <div className={styles.main_screen_mob__content}>
         <h1 className={styles.main_screen_mob__content__heading}>
           <strong>Business on Wheels for Everyone</strong>
@@ -20,8 +20,12 @@ export const MainScreenMobile = () => {
           text="Get A Free Consultation"
           buttonType="filled"
           margin="mt-8"
+          targetId="form-mob"
         />
-        <Link className={styles.main_screen_mob__content__link} href="#video">
+        <Link
+          className={styles.main_screen_mob__content__link}
+          href="#video-mob"
+        >
           Watch the true story
         </Link>
       </div>
