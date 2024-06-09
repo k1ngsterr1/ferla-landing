@@ -5,6 +5,7 @@ import { InputMobile } from "@shared/ui/InputMobile/index";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { DatePickerInput } from "@shared/ui/DatePicker";
 import { useSendEmail } from "@shared/lib/hooks/useSendEmail";
+import { FormPopup } from "@entities/FormPopup";
 
 import styles from "../../PC/Form/styles.module.scss";
 
@@ -91,13 +92,13 @@ export const SubmitFormMobile = () => {
           }}
         />
         {/* {errors.date && <p className={styles.error}>Date is required!</p>} */}
-
         <Button
           text="Send Form"
           type="submit"
           buttonType="outlinemob"
           margin="mt-8"
         />
+        <FormPopup />
       </form>
     </>
   );
