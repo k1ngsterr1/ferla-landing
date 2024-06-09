@@ -7,7 +7,7 @@ import { tabs } from "@shared/lib/content/solutionTabContent";
 
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
-import main_pc from "@assets/webp/pc/mainImage_pc.png";
+import main_pc from "@assets/webp/pc/mainImage_pc.webp";
 
 import styles from "./styles.module.scss";
 

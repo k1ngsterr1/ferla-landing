@@ -2,7 +2,7 @@ import React from "react";
 import Button from "@shared/ui/Button";
 import Link from "next/link";
 import Image from "next/image";
-import main_pc from "@assets/webp/pc/mainImage_pc.png";
+import main_pc from "@assets/webp/pc/mainImage_pc.webp";
 
 import styles from "./styles.module.scss";
 

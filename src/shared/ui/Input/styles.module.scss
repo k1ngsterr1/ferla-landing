@@ -32,6 +32,7 @@
   }
 
   @include respond-to("4xl") {
+    width: clamp(150px, 300 / 1920 * 100vw, 600px);
     @apply mt-10;
   }
 

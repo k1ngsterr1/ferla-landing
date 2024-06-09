@@ -28,12 +28,12 @@
 
   @include respond-to("tablet") {
     width: clamp(85px, 170 / 1100 * 100vw, 340px);
-    font-size: clamp(9px, 18 / 1100 * 100vw, 36px);
+    font-size: clamp(9px, 18 / 1100 * 100vw, 36px) !important;
     @apply mt-12;
   }
 
   @include respond-to("sm") {
-    font-size: clamp(12px, 3.333vw, 48px);
+    font-size: clamp(12px, 3.333vw, 48px) !important;
   }
 
   @include respond-to("lg") {
@@ -54,7 +54,7 @@
   }
 
   @include respond-to("4xl") {
-    font-size: clamp(9px, 18 / 1920 * 100vw, 36px);
+    font-size: clamp(9px, 18 / 1920 * 100vw, 36px) !important;
     width: clamp(150px, 300 / 1920 * 100vw, 600px);
     @apply mt-10;
   }

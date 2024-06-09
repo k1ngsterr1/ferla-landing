@@ -47,18 +47,30 @@
     }
 
     @include respond-to("lg") {
+      display: flex;
+      flex-direction: row;
+      align-items: start;
       width: 45%;
     }
 
     @include respond-to("xl") {
+      display: flex;
+      flex-direction: row;
+      align-items: start;
       width: 38%;
     }
 
     @include respond-to("3xl") {
+      display: flex;
+      flex-direction: row;
+      align-items: start;
       width: 32%;
     }
 
     @include respond-to("4xl") {
+      display: flex;
+      flex-direction: row;
+      align-items: start;
       width: 27%;
     }
 

@@ -173,6 +173,11 @@
     @include respond-to("3xl") {
       height: clamp(375px, 750 / 1680 * 100vw, 1500px);
     }
+
+    @include respond-to("4xl") {
+      width: clamp(500px, 1000 / 1920 * 100vw, 2000px);
+      height: clamp(375px, 750 / 1920 * 100vw, 1500px);
+    }
   }
 }
 

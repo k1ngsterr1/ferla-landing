@@ -13,7 +13,9 @@ import styles from "./styles.module.scss";
 export const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className="flex items-center justify-between w-full">
+      <div
+        className={`flex items-center justify-between w-full ${styles.footer__container}`}
+      >
         <a href="#home">
           <Image
             className={styles.footer__logo}

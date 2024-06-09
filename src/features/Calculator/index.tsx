@@ -5,10 +5,10 @@ import { CalculatorInput } from "@shared/ui/CalculatorInput";
 import { options } from "@shared/lib/content/options";
 import { CalculatorRange } from "@shared/ui/CalculatorRange";
 import { DayCounter } from "@shared/ui/DayCounter";
+import { Result } from "@features/Result";
 import Selector from "@shared/ui/CalculatorSelector";
 
 import styles from "./styles.module.scss";
-import { Result } from "@features/Result";
 
 export const Calculator = () => {
   const [averageOrderPrice, setAverageOrderPrice] = useState<number>(0);
