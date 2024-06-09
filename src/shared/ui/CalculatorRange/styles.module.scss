@@ -30,9 +30,6 @@
   @include respond-to("xs") {
     width: 100%;
   }
-  @include respond-to("md") {
-    width: clamp(100px, 200 / 1200 * 100vw, 400px);
-  }
 
   @include respond-to("lg") {
     height: clamp(33px, 66 / 1200 * 100vw, 132px);

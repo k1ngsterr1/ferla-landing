@@ -34,9 +34,14 @@
     height: clamp(32.5px, 9.028vw, 130px);
   }
 
+  @include respond-to("es") {
+    width: clamp(125px, 29.07vw, 500px);
+    height: clamp(32.5px, 7.558vw, 130px);
+  }
+
   @include respond-to("md") {
-    width: clamp(125px, 250 / 1200 * 100vw, 500px);
-    height: clamp(32.5px, 65 / 1200 * 100vw, 130px);
+    width: clamp(125px, 250 / 992 * 100vw, 500px);
+    height: clamp(32.5px, 65 / 992 * 100vw, 130px);
   }
 
   @include respond-to("xl") {
@@ -100,10 +105,15 @@
     width: clamp(125px, 34.722vw, 500px);
   }
 
+  @include respond-to("es") {
+    width: clamp(125px, 29.07vw, 500px);
+    max-height: clamp(100px, 23.256vw, 400px);
+  }
+
   @include respond-to("md") {
-    min-height: clamp(30px, 60 / 1200 * 100vw, 120px);
-    max-height: clamp(100px, 100 / 1200 * 100vw, 200px);
-    width: clamp(125px, 250 / 1200 * 100vw, 500px);
+    min-height: clamp(30px, 60 / 992 * 100vw, 120px);
+    max-height: clamp(120px, 240 / 992 * 100vw, 480px);
+    width: clamp(125px, 250 / 992 * 100vw, 500px);
   }
 
   @include respond-to("xl") {

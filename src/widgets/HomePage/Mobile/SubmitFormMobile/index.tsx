@@ -53,7 +53,7 @@ export const SubmitFormMobile = () => {
           labelText="Phone Number"
           type="phone"
           name="phone"
-          margin="mt-16"
+          margin="mt-12"
           required
           value={phone}
           isMobile
@@ -67,7 +67,7 @@ export const SubmitFormMobile = () => {
           labelText="Email"
           type="email"
           name="email"
-          margin="mt-16"
+          margin="mt-12"
           required
           value={email}
           isMobile
@@ -77,7 +77,7 @@ export const SubmitFormMobile = () => {
         {/* {errors.email && <p className={styles.error}>Invalid email address!</p>} */}
         <DatePickerInput
           placeholder="Pick a Date"
-          margin="mt-16"
+          margin="mt-12"
           date={date}
           onChange={(
             selectedDate: Date | null,
