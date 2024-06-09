@@ -1,6 +1,7 @@
 @import "breakpoint-slicer";
 @import "../../../../shared/styles/mixins";
 @import "../../../../shared/styles/variables";
+@import "../../../../shared/styles/animations";
 
 .best_sellers_mob {
   width: 100%;
@@ -41,14 +42,6 @@
           width: 50%;
         }
       }
-    }
-
-    &__swiper {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      @apply mt-8;
     }
   }
 
