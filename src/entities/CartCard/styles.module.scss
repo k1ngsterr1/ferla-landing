@@ -182,7 +182,7 @@
   }
 
   @include respond-to("md") {
-    font-size: clamp(8px, 16 / 992 * 100vw, 32px);
+    font-size: clamp(12px, 24 / 992 * 100vw, 48px);
   }
 
   @include respond-to("4xl") {
@@ -219,9 +219,8 @@
     }
 
     @include respond-to("md") {
-      font-size: clamp(9px, 18 / 992 * 100vw, 36px);
-      width: clamp(7px, 14 / 992 * 100vw, 28px);
-      height: clamp(7px, 14 / 992 * 100vw, 28px);
+      width: clamp(10px, 20 / 992 * 100vw, 40px);
+      height: clamp(10px, 20 / 992 * 100vw, 40px);
     }
 
     @include respond-to("lg") {

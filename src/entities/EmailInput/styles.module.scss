@@ -22,11 +22,13 @@
   }
 
   @include respond-to("sm") {
-    width: clamp(170px, 340 / 720 * 100vw, 680px);
+    width: clamp(230px, 63.889vw, 920px);
   }
 
   @include respond-to("md") {
-    width: clamp(170px, 340 / 992 * 100vw, 680px);
+    width: clamp(275px, 55.444vw, 1100px);
+    height: 16%;
+    @apply mt-12;
   }
 
   @include respond-to("lg") {
@@ -76,11 +78,7 @@
     }
 
     @include respond-to("sm") {
-      font-size: clamp(8px, 16 / 720 * 100vw, 32px);
-    }
-
-    @include respond-to("md") {
-      font-size: clamp(8px, 16 / 992 * 100vw, 32px);
+      @apply text-xl;
     }
 
     @include respond-to("lg") {
@@ -129,15 +127,18 @@
       height: clamp(20px, 40 / 480 * 100vw, 80px);
     }
 
+    @include respond-to("fsf") {
+      @apply text-lg;
+    }
+
     @include respond-to("sm") {
       width: clamp(52.5px, 105 / 720 * 100vw, 210px);
       height: clamp(20px, 40 / 720 * 100vw, 80px);
-      @apply text-base;
     }
 
     @include respond-to("md") {
-      width: clamp(52.5px, 105 / 992 * 100vw, 210px);
-      height: clamp(20px, 40 / 922 * 100vw, 80px);
+      width: 25%;
+      height: 100%;
     }
 
     @include respond-to("lg") {

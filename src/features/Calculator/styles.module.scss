@@ -27,19 +27,22 @@
 
   &__container {
     display: flex;
-    align-items: start;
-    justify-content: space-between;
 
     @include respond-to("xxs") {
-      width: 50%;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
       flex-direction: column;
     }
 
-    @include respond-to("md") {
-      width: 40%;
-    }
+    // @include respond-to("md") {
+    //   width: 40%;
+    // }
 
     @include respond-to("lg") {
+      align-items: start;
+      justify-content: space-between;
+      flex-direction: row;
       width: 45%;
     }
 

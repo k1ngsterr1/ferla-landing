@@ -27,6 +27,9 @@
     @apply mb-3.5;
   }
 
+  @include respond-to("xs") {
+    width: 100%;
+  }
   @include respond-to("md") {
     width: clamp(100px, 200 / 1200 * 100vw, 400px);
   }
