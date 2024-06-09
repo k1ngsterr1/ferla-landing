@@ -16,6 +16,10 @@
     margin-top: clamp(64px, 128 / 1100 * 100vw, 256px);
   }
 
+  @include respond-to("3xl") {
+    margin-top: clamp(185px, 370 / 1680 * 100vw, 740px);
+  }
+
   @include respond-to("5xl") {
     margin-top: clamp(256px, 20vw, 1024px);
   }

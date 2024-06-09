@@ -171,7 +171,8 @@
     animation: fadeRevealRight 0.7s ease-out forwards;
 
     @include respond-to("3xl") {
-      height: clamp(375px, 750 / 1680 * 100vw, 1500px);
+      width: clamp(440px, 880 / 1680 * 100vw, 1760px);
+      height: clamp(350px, 700 / 1680 * 100vw, 1400px);
     }
 
     @include respond-to("4xl") {

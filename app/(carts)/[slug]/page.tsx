@@ -9,11 +9,11 @@ import { CartGallery } from "@widgets/CartPage/PC/Gallery";
 import { CartsFeatures } from "@features/CartFeatures";
 import { featureTabsContent } from "@shared/lib/content/featureTabsContent";
 import { OrderNow } from "@widgets/CartPage/PC/OrderNow";
+import { SpecsScreen } from "@widgets/CartPage/PC/Spec";
 
 import image from "@assets/webp/pc/mainImage_pc.png";
 
 import styles from "../../styles.module.scss";
-import { SpecsScreen } from "@widgets/CartPage/PC/Spec";
 
 const CartPage = () => {
   const imageProp = image;
