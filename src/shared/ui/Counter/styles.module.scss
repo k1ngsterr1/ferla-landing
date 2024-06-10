@@ -18,9 +18,29 @@
     height: clamp(32.5px, 15.186599999999999vw, 130px);
   }
 
+  @include respond-to("xs") {
+    width: clamp(75px, 31.25vw, 300px);
+    height: clamp(32.5px, 13.542vw, 130px);
+  }
+
+  @include respond-to("fsf") {
+    width: clamp(75px, 26.087vw, 300px);
+    height: clamp(32.5px, 11.304vw, 130px);
+  }
+
+  @include respond-to("sm") {
+    width: clamp(75px, 20.833vw, 300px);
+    height: clamp(32.5px, 9.028vw, 130px);
+  }
+
+  @include respond-to("es") {
+    width: clamp(75px, 17.442vw, 300px);
+    height: clamp(32.5px, 7.558vw, 130px);
+  }
+
   @include respond-to("md") {
-    width: clamp(75px, 150 / 1200 * 100vw, 300px);
-    height: clamp(32.5px, 65 / 1200 * 100vw, 130px);
+    width: clamp(75px, 150 / 992 * 100vw, 300px);
+    height: clamp(32.5px, 65 / 992 * 100vw, 130px);
   }
 
   @include respond-to("xl") {

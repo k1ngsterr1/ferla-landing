@@ -17,6 +17,10 @@
     @include respond-to("sm") {
       width: 70%;
     }
+
+    @include respond-to("md") {
+      width: 50%;
+    }
   }
   &__mobile {
     display: block;

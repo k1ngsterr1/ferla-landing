@@ -2,7 +2,7 @@ import React from "react";
 import dark_logo from "@assets/vectors/logo_dark.svg";
 import Image from "next/image";
 import LinkButton from "@shared/ui/LinkButton";
-import { navLinks } from "@shared/lib/content/navLinks";
+import { navLinksMob } from "@shared/lib/content/navLinks";
 import { NavLink } from "@shared/ui/NavLink";
 import { socialMediaContent } from "@shared/lib/content/socialMediaContent";
 import { SocialMediaIcon } from "@shared/ui/SocialMediaIcon";
@@ -21,14 +21,14 @@ export const FooterMobile = () => {
         />
       </a>
       <nav className={styles.footer__nav}>
-        {navLinks.map((link, index) => (
+        {navLinksMob.map((link, index) => (
           <NavLink label={link.label} href={link.href} key={index} />
         ))}
       </nav>
       <LinkButton
         buttonType="outline"
         text="Contact Us"
-        href="#form"
+        href="#form-mob"
         margin="mt-8"
       />
       <div className=" flex flex-row w-full gap-6 mt-8 items-center justify-center mb-8">

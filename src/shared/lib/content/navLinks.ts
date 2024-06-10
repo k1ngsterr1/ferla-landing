@@ -13,3 +13,13 @@ export const navLinks: INavLink[] = [
   { label: "Reviews", href: "#reviews" },
   { label: "Markets", href: "#markets" },
 ];
+
+export const navLinksMob: INavLink[] = [
+  { label: "Home", href: "#home-mob" },
+  { label: "Perfect For", href: "#perfect-mob" },
+  { label: "Business", href: "#business-mob" },
+  { label: "Bikes", href: "#bikes-mob" },
+  { label: "Partners", href: "#partners-mob" },
+  { label: "Reviews", href: "#reviews-mob" },
+  { label: "Markets", href: "#markets-mob" },
+];

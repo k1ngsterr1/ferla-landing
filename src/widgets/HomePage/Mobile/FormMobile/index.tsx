@@ -6,7 +6,7 @@ import styles from "./styles.module.scss";
 
 export const FormMobile = () => {
   return (
-    <section className={styles.form_mob}>
+    <section className={styles.form_mob} id="form-mob">
       <h6>
         <strong>Contact Us</strong>
       </h6>
