@@ -11,7 +11,7 @@ import { featureTabsContent } from "@shared/lib/content/featureTabsContent";
 import { OrderNow } from "@widgets/CartPage/PC/OrderNow";
 import { SpecsScreen } from "@widgets/CartPage/PC/Spec";
 
-import image from "@assets/webp/pc/mainImage_pc.png";
+import image from "@assets/webp/pc/mainImage_pc.webp";
 
 import styles from "../../styles.module.scss";
 
