@@ -181,21 +181,3 @@
     }
   }
 }
-
-@keyframes a-ltr-after {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(100%);
-  } // Move right to reveal text
-}
-
-@keyframes a-ltr-before {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  } // Move left to reveal text
-}

@@ -3,7 +3,6 @@
 @import "../../shared/styles/variables";
 
 .calculator {
-  width: 100%;
   display: flex;
   flex-direction: column;
   background-image: url("../../assets/webp/pc/ferla.webp");
@@ -15,10 +14,18 @@
   @apply rounded-xl;
 
   @include respond-to("xxs") {
+    width: 100%;
     background-size: contain;
   }
 
+  @include respond-to("md") {
+    width: 90%;
+    margin: auto;
+    @apply mt-8;
+  }
+
   @include respond-to("lg") {
+    width: 100%;
     min-height: clamp(175px, 350 / 1200 * 100vw, 700px);
     background-size: auto;
     background-position: center;
@@ -27,17 +34,17 @@
 
   &__container {
     display: flex;
-    align-items: start;
-    justify-content: space-between;
 
     @include respond-to("xxs") {
-      width: 50%;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
       flex-direction: column;
     }
 
-    @include respond-to("md") {
-      width: 40%;
-    }
+    // @include respond-to("md") {
+    //   width: 40%;
+    // }
 
     @include respond-to("tablet_sm") {
       display: flex;
@@ -50,6 +57,9 @@
       display: flex;
       flex-direction: row;
       align-items: start;
+      align-items: start;
+      justify-content: space-between;
+      flex-direction: row;
       width: 45%;
     }
 
@@ -133,6 +143,10 @@
   }
 
   @include respond-to("md") {
+    width: 90%;
+  }
+
+  @include respond-to("lg") {
     width: 50%;
   }
 }

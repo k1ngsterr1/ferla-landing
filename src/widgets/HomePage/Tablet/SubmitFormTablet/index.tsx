@@ -5,8 +5,10 @@ import { InputMobile } from "@shared/ui/InputMobile/index";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { DatePickerInput } from "@shared/ui/DatePicker";
 import { useSendEmail } from "@shared/lib/hooks/useSendEmail";
+import { FormPopup } from "@entities/FormPopup";
 
 import styles from "../../PC/Form/styles.module.scss";
+import { Popup } from "@entities/Popup";
 
 interface IData {
   name: string;
@@ -97,6 +99,7 @@ export const SubmitFormTablet = () => {
           buttonType="outlinemob"
           margin="mt-8"
         />
+        <FormPopup />
       </form>
     </>
   );

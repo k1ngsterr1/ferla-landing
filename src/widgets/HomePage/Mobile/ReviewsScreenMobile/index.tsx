@@ -5,7 +5,7 @@ import styles from "./styles.module.scss";
 
 export const ReviewsMobile = () => {
   return (
-    <section className={styles.reviews_mob} id="reviews">
+    <section className={styles.reviews_mob} id="reviews-mob">
       <h6>
         <strong>Reviews</strong>
       </h6>

@@ -3,27 +3,23 @@
 @import "../../shared/styles/variables";
 
 .email_form {
-  @include respond-to("xxs") {
-    width: 90%;
-    margin: auto;
-    height: clamp(140px, 65.41919999999999vw, 560px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: url("../../assets/webp/pc/ferla.webp");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    @apply p-4;
-    @apply mt-32;
-    @apply rounded-xl;
-    @apply bg-red;
-  }
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../assets/webp/pc/ferla.webp");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  @apply p-4;
+  @apply mt-32;
+  @apply rounded-xl;
+  @apply bg-red;
 
-  @include respond-to("md") {
+  @include respond-to("lg") {
     width: 100%;
-    height: clamp(165px, 330 / 360 * 100vw, 660px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,10 +28,6 @@
     background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
-    @apply p-4;
-    @apply mt-32;
-    @apply rounded-xl;
-    @apply bg-red;
   }
 
   @include respond-to("tablet_sm") {
@@ -63,11 +55,11 @@
     }
 
     @include respond-to("sm") {
-      font-size: clamp(12px, 24 / 768 * 100vw, 48px);
+      font-size: clamp(16px, 32 / 720 * 100vw, 64px);
     }
 
     @include respond-to("md") {
-      font-size: clamp(12px, 24 / 992 * 100vw, 48px);
+      font-size: clamp(20px, 40 / 992 * 100vw, 80px);
     }
 
     @include respond-to("lg") {
@@ -105,9 +97,17 @@
       width: 80%;
     }
 
-    @include respond-to("md") {
+    @include respond-to("sm") {
+      width: 50%;
+    }
+
+    @include respond-to("lg") {
       width: 30%;
     }
+  }
+
+  @include respond-to("xxs") {
+    height: clamp(155px, 310 / 360 * 100vw, 620px);
   }
 
   @include respond-to("xs") {
@@ -115,11 +115,11 @@
   }
 
   @include respond-to("sm") {
-    height: clamp(165px, 330 / 720 * 100vw, 660px);
+    height: clamp(180px, 360 / 720 * 100vw, 720px);
   }
 
   @include respond-to("md") {
-    height: clamp(165px, 330 / 992 * 100vw, 660px);
+    height: clamp(225px, 45.363vw, 900px);
   }
 
   @include respond-to("lg") {

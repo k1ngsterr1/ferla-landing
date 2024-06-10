@@ -28,8 +28,15 @@
   @apply border-red;
 
   &__logo {
-    width: clamp(125px, 250 / 1200 * 100vw, 500px);
-    height: auto;
+    @include respond-to("xxs") {
+      width: 70%;
+      height: 20%;
+    }
+
+    @include respond-to("lg") {
+      width: clamp(125px, 250 / 1200 * 100vw, 500px);
+      height: auto;
+    }
 
     @include respond-to("xl") {
       width: clamp(125px, 250 / 1360 * 100vw, 500px);
@@ -53,15 +60,53 @@
   }
 
   &__heading {
-    @apply text-3xl;
     @apply font-bold;
     @apply mt-4;
     @apply text-red;
+
+    @include respond-to("xxs") {
+      text-align: center;
+      @apply text-xl;
+    }
+
+    @include respond-to("xs") {
+      @apply text-2xl;
+    }
+
+    @include respond-to("fsf") {
+      @apply text-3xl;
+    }
+
+    @include respond-to("es") {
+      @apply text-4xl;
+    }
+
+    @include respond-to("lg") {
+      @apply text-3xl;
+    }
   }
 
   &__paragraph {
-    font-size: clamp(9px, 18 / 1200 * 100vw, 36px) !important;
-    @apply text-dark;
+    font-size: clamp(9px, 18 / 360 * 100vw, 36px) !important;
+
+    @include respond-to("xs") {
+      font-size: clamp(9px, 18 / 480 * 100vw, 36px) !important;
+      width: 70%;
+    }
+
+    @include respond-to("fsf") {
+      font-size: clamp(9px, 18 / 575 * 100vw, 36px) !important;
+    }
+
+    @include respond-to("es") {
+      font-size: clamp(12px, 24 / 860 * 100vw, 48px) !important;
+      width: 100%;
+    }
+
+    @include respond-to("lg") {
+      font-size: clamp(9px, 18 / 1200 * 100vw, 36px) !important;
+      @apply text-dark;
+    }
 
     @include respond-to("xl") {
       font-size: clamp(9px, 18 / 1360 * 100vw, 36px) !important;
@@ -82,6 +127,16 @@
     @include respond-to("5xl") {
       font-size: clamp(9px, 18 / 2560 * 100vw, 36px) !important;
     }
+  }
+
+  @include respond-to("xxs") {
+    width: 90%;
+    margin: auto;
+    height: 40%;
+  }
+
+  @include respond-to("fsf") {
+    height: 50%;
   }
 
   @include respond-to("lg") {
@@ -119,12 +174,15 @@
   }
 
   &__title {
-    font-size: clamp(16px, 32 / 1200 * 100vw, 64px);
     font-family: "Rubik";
     text-align: left;
     @apply font-bold;
     @apply text-2xl;
     @apply text-red;
+
+    @include respond-to("lg") {
+      font-size: clamp(16px, 32 / 1200 * 100vw, 64px);
+    }
 
     @include respond-to("xl") {
       font-size: clamp(16px, 32 / 1360 * 100vw, 64px);
@@ -148,9 +206,16 @@
   }
 
   &__paragraph {
-    text-align: left;
     @apply text-base;
     @apply text-dark;
     @apply mt-8;
+
+    @include respond-to("xxs") {
+      text-align: center;
+    }
+
+    @include respond-to("lg") {
+      text-align: left;
+    }
   }
 }

@@ -12,7 +12,7 @@ import bike from "@assets/webp/mob/best_sellers_mob.webp";
 
 export const BestSellersMobile = () => {
   return (
-    <section className={styles.best_sellers_mob}>
+    <section className={styles.best_sellers_mob} id="business-mob">
       <div className={styles.best_sellers_mob__content}>
         <div className={styles.best_sellers_mob__content__text}>
           <MiniText text="Best Sellers" />
