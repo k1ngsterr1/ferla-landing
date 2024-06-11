@@ -1,12 +1,18 @@
 import React from "react";
 import Image from "next/image";
 import Button from "@shared/ui/Button";
+import dynamic from "next/dynamic";
 
 import { bikes } from "@shared/lib/content/bikesImagesContent";
 
 import styles from "./styles.module.scss";
 
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+
+const HeavyImage = dynamic(() => import("../LazyImageMobile/bikeseverywhere"), {
+  loading: () => <p>Loading...</p>,
+  ssr: false,
+});
 
 async function getData() {
   const res = await fetch(
@@ -42,14 +48,7 @@ export const BikesEverywhereMobile = () => {
         </p>
       </div>
       <div className={styles.bikes_everywhere_mob__gallery}>
-        {bikes.map((bike, index) => (
-          <Image
-            key={index}
-            src={bike.image}
-            className={styles.bikes_everywhere_mob__gallery_image}
-            alt="bike"
-          />
-        ))}
+        <HeavyImage />
       </div>
       <Button
         text="Start Selling"

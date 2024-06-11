@@ -13,7 +13,7 @@ import styles from "./styles.module.scss";
 export const FooterMobile = () => {
   return (
     <footer className={styles.footer}>
-      <a href="#home">
+      <a href="#home-mob">
         <Image
           className={styles.footer__logo}
           src={dark_logo}

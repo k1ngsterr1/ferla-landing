@@ -4,12 +4,18 @@ import Button from "@shared/ui/Button";
 import { MiniText } from "@shared/ui/MiniText";
 import { SolutionTab } from "@entities/SolutionTab";
 import { tabs } from "@shared/lib/content/solutionTabContent";
+import dynamic from "next/dynamic";
 
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 import main_pc from "@assets/webp/pc/mainImage_pc.webp";
 
 import styles from "./styles.module.scss";
+
+const HeavyImage = dynamic(() => import("../LazyImageMobile/business"), {
+  loading: () => <p>Loading...</p>,
+  ssr: false,
+});
 
 async function getData() {
   const res = await fetch(
@@ -35,11 +41,7 @@ export default async function Page() {
 export const BusinessBlockMobile = () => {
   return (
     <section className={styles.business_block_mob} id="perfect-mob">
-      <Image
-        src={main_pc}
-        alt="Ferla Bikes Main Image"
-        className={styles.business_block_mob__image}
-      />
+      <HeavyImage />
       <div className={styles.business_block_mob__content}>
         <div className={styles.business_block_mob__content__text}>
           <MiniText text="Aesthetic Vending Solutions" />

@@ -8,7 +8,7 @@ import dynamic from "next/dynamic";
 
 import styles from "./styles.module.scss";
 
-const HeavyImage = dynamic(() => import("../LazyImage/index"), {
+const HeavyImage = dynamic(() => import("../LazyImage/main"), {
   loading: () => <p>Loading...</p>,
   ssr: false,
 });
