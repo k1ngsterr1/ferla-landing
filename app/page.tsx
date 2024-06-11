@@ -35,14 +35,31 @@ import { FooterMobile } from "@features/FooterMobile/index";
 
 import styles from "./styles.module.scss";
 
-const HomePage = () => {
+async function getData() {
+  const res = await fetch(
+    "https://ferla-backend-production.up.railway.app/api/components/get-components",
+    { cache: "force-cache", next: { revalidate: 3600 } }
+  );
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+const HomePage = async () => {
+  const data = await getData();
+
+  console.log("data:", data.components["1"].value);
+
   return (
     <>
       <div className={styles.pc}>
         <ProgressBar />
         <Header />
         <Cursor />
-        <MainScreen />
+        <MainScreen data={data} />
         <BusinessBlock />
         <BestSellers />
         <BikesEverywhere />
