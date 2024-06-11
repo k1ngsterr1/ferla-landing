@@ -1,10 +1,17 @@
 import React from "react";
 import Button from "@shared/ui/Button";
 import Link from "next/link";
+import { Suspense } from "react";
 import Image from "next/image";
 import main_pc from "@assets/webp/pc/mainImage_pc.webp";
+import dynamic from "next/dynamic";
 
 import styles from "./styles.module.scss";
+
+const HeavyImage = dynamic(() => import("../LazyImage/index"), {
+  loading: () => <p>Loading...</p>,
+  ssr: false,
+});
 
 export const MainScreen = () => {
   return (
@@ -27,11 +34,7 @@ export const MainScreen = () => {
       <Link className={`${styles.main_screen__link} hoverable`} href="#video">
         Watch the true story
       </Link>
-      <Image
-        src={main_pc}
-        alt="Ferla Bikes Main Image"
-        className={styles.main_screen__image}
-      />
+      <HeavyImage />
     </main>
   );
 };
