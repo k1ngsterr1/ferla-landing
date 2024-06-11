@@ -5,7 +5,7 @@ import { bikes } from "@shared/lib/content/bikesImagesContent";
 
 import styles from "../BikeEverywhereMobile/styles.module.scss";
 
-const LazyImage: React.FC<ISrc> = () => {
+const LazyImage = () => {
   return (
     <>
       {bikes.map((bike, index) => (
