@@ -76,14 +76,41 @@
     height: clamp(391.5px, 40.781vw, 1566px);
     animation: reveal 3s linear both;
     transition: 0.3s all;
+    @apply rounded-lg;
+
+    @include respond-to("tablet_sm") {
+      width: 50%;
+      height: 50%;
+    }
+
+    @include respond-to("tablet") {
+      width: 50%;
+      height: 50%;
+    }
+
+    @include respond-to("lg") {
+      width: 50%;
+      height: 50%;
+    }
 
     @include respond-to("xl") {
+      height: 50%;
       width: 50%;
     }
 
+    @include respond-to("2xl") {
+      width: 50%;
+      height: 50%;
+    }
+
+    @include respond-to("4xl") {
+      width: 50%;
+      height: 50%;
+    }
+
     @include respond-to("5xl") {
-      width: clamp(362.5px, 28.32vw, 1450px);
-      height: clamp(391.5px, 30.586vw, 1566px);
+      width: 50%;
+      height: 50%;
     }
   }
 }
