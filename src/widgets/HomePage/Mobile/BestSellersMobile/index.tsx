@@ -3,12 +3,16 @@ import Button from "@shared/ui/Button";
 import { MiniText } from "@shared/ui/MiniText";
 import Image from "next/image";
 import { AboutCardSwiper } from "@features/AboutCardSwiper";
+import dynamic from "next/dynamic";
 
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./styles.module.scss";
 
-import bike from "@assets/webp/mob/best_sellers_mob.webp";
+const HeavyImage = dynamic(() => import("../LazyImageMobile/bestsellers"), {
+  loading: () => <p>Loading...</p>,
+  ssr: false,
+});
 
 async function getData() {
   const res = await fetch(
@@ -53,11 +57,7 @@ export const BestSellersMobile = () => {
           icon={faChevronRight}
         />
       </div>
-      <Image
-        src={bike}
-        alt="Best Sellers"
-        className={styles.best_sellers_mob__image}
-      />
+      <HeavyImage />
     </section>
   );
 };

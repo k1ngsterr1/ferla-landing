@@ -1,12 +1,18 @@
 import React from "react";
 import Image from "next/image";
 import Button from "@shared/ui/Button";
+import dynamic from "next/dynamic";
 
 import { bikes } from "@shared/lib/content/bikesImagesContent";
 
 import styles from "./styles.module.scss";
 
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+
+const HeavyImage = dynamic(() => import("../LazyImageMobile/bikeseverywhere"), {
+  loading: () => <p>Loading...</p>,
+  ssr: false,
+});
 
 async function getData() {
   const res = await fetch(
