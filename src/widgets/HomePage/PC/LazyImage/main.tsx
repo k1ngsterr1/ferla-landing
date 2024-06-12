@@ -10,14 +10,12 @@ interface ILazyImage {
 }
 
 const LazyImage: React.FC<ILazyImage> = ({ src }) => {
-  console.log("url:", src);
-
   return (
     <Image
       src={src}
       priority
-      width={"50"}
-      height={"50"}
+      width={"925"}
+      height={"820"}
       alt="Ferla Bikes Main Image"
       className={styles.main_screen__image}
     />

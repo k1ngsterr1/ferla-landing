@@ -1,15 +1,20 @@
 import React from "react";
 import Image from "next/image";
+import market_image from "@assets/webp/pc/market_leader_pc.webp";
 
 import styles from "../../../../entities/Video/styles.module.scss";
 
-import market_image from "@assets/webp/pc/market_leader_pc.webp";
+interface ILazyImage {
+  src: string;
+}
 
-const LazyImage = () => {
+const LazyImage: React.FC<ILazyImage> = ({ src }) => {
   return (
     <Image
       priority
-      src={market_image}
+      src={src}
+      width={"925"}
+      height={"820"}
       className={styles.video__market}
       alt="Video Market"
     />
