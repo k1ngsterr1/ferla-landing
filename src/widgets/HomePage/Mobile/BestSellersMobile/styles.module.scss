@@ -49,6 +49,7 @@
     width: clamp(152.5px, 84.722vw, 610px);
     height: clamp(166.5px, 92.5vwv, 666px);
     @apply mt-8;
+    @apply rounded-md;
 
     @include respond-to("fsf") {
       height: 110%;

@@ -9,47 +9,35 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./styles.module.scss";
 
+import bike from "@assets/webp/mob/best_sellers_mob.webp";
+
 const HeavyImage = dynamic(() => import("../LazyImageMobile/bestsellers"), {
   loading: () => <p>Loading...</p>,
   ssr: false,
 });
 
-// async function getData() {
-//   const res = await fetch(
-//     "https://spark-admin-production.up.railway.app/api/site/content/:url"
-//   );
-//   // The return value is *not* serialized
-//   // You can return Date, Map, Set, etc.
+interface IBestSellers {
+  data: any;
+}
 
-//   if (!res.ok) {
-//     // This will activate the closest `error.js` Error Boundary
-//     throw new Error("Failed to fetch data");
-//   }
-
-//   return res.json();
-// }
-
-// export default async function Page() {
-//   const data = await getData();
-
-//   return <main></main>;
-// }
-
-export const BestSellersMobile = () => {
+export const BestSellersMobile: React.FC<IBestSellers> = ({ data }) => {
   return (
     <section className={styles.best_sellers_mob} id="business-mob">
       <div className={styles.best_sellers_mob__content}>
         <div className={styles.best_sellers_mob__content__text}>
           <MiniText text="Best Sellers" />
           <h3 className={styles.best_sellers_mob__content__text__heading}>
-            <strong>Your Business, Your Cart, Your Way</strong>
+            {data.components && data.components["13"]
+              ? data.components["13"].value
+              : "Your Bike, Your Way"}
           </h3>
           <p className={styles.best_sellers_mob__content__text__paragraph}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit.
+            {data.components && data.components["14"]
+              ? data.components["14"].value
+              : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
           </p>
         </div>
-        <AboutCardSwiper />
+        <AboutCardSwiper data={data} />
         <Button
           text="Manage Your Business"
           buttonType="transparent"
@@ -57,7 +45,13 @@ export const BestSellersMobile = () => {
           icon={faChevronRight}
         />
       </div>
-      <HeavyImage />
+      <HeavyImage
+        src={
+          data.components && data.components["23"]
+            ? data.components["23"].value
+            : bike
+        }
+      />
     </section>
   );
 };

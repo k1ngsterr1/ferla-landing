@@ -13,7 +13,7 @@ interface IManageScreen {
   data: any;
 }
 
-export const ManageScreen = ({ data }) => {
+export const ManageScreen: React.FC<IManageScreen> = ({ data }) => {
   return (
     <section className={styles.manage_block} id="markets">
       <div className="flex flex-col items-start w-full">

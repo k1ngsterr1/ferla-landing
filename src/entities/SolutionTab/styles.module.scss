@@ -4,7 +4,7 @@
 @import "../../shared/styles/mixins";
 
 .solution_tab {
-  width: 100%;
+  width: 150%;
   height: clamp(75px, 150 / 360 * 100vw, 300px);
   position: relative;
   display: flex;
@@ -41,11 +41,10 @@
   }
 
   @include respond-to("es") {
-    width: 150%;
+    width: 250%;
   }
 
   @include respond-to("md") {
-    width: 170%;
     height: clamp(80px, 160 / 992 * 100vw, 320px);
   }
 
@@ -89,6 +88,10 @@
 
   &__text {
     @include respond-to("xxs") {
+      margin-top: clamp(35px, 70 / 360 * 100vw, 140px);
+    }
+
+    @include respond-to("xs") {
       @apply mt-16;
     }
 

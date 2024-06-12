@@ -1,11 +1,15 @@
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 import { bikes } from "@shared/lib/content/bikesImagesContent";
 
 import styles from "../BikeEverywhereMobile/styles.module.scss";
 
-const LazyImage = () => {
+interface ILazyImage {
+  src: { image: StaticImageData }[];
+}
+
+const LazyImage: React.FC<ILazyImage> = ({ src }) => {
   return (
     <>
       {bikes.map((bike, index) => (

@@ -1,63 +1,75 @@
 import React from "react";
-import Image from "next/image";
 import Button from "@shared/ui/Button";
 import { MiniText } from "@shared/ui/MiniText";
 import { faChevronRight, faMoneyBill } from "@fortawesome/free-solid-svg-icons";
 import { Block } from "@entities/Block";
 import { Video } from "@entities/Video";
 
+import market_image from "@assets/webp/pc/market_leader_pc.webp";
+
 import styles from "./styles.module.scss";
 
-// async function getData() {
-//   const res = await fetch(
-//     "https://spark-admin-production.up.railway.app/api/site/content/:url"
-//   );
-//   // The return value is *not* serialized
-//   // You can return Date, Map, Set, etc.
+interface IManageScreen {
+  data: any;
+}
 
-//   if (!res.ok) {
-//     // This will activate the closest `error.js` Error Boundary
-//     throw new Error("Failed to fetch data");
-//   }
-
-//   return res.json();
-// }
-
-// export default async function Page() {
-//   const data = await getData();
-
-//   return <main></main>;
-// }
-
-export const ManageScreenMobile = () => {
+export const ManageScreenMobile: React.FC<IManageScreen> = ({ data }) => {
   return (
     <section className={styles.manage_screen_mob} id="markets-mob">
       <MiniText text="From Initial Concept to" />
       <MiniText text="Market Leader" />
       <h6 className={styles.manage_screen_mob__heading}>
-        Redefining Mobile Business Solutions with
-        <strong className="text-red"> Ferla Bikes</strong>
+        {data.components &&
+        data.components["38"] &&
+        data.components["38"].value.split("Ferla Bikes").length > 0 ? (
+          <>
+            {data.components["38"].value.split("Ferla Bikes")[0]}
+            <strong className="text-red"> Ferla Bikes</strong>
+            {data.components["38"].value.split("Ferla Bikes")[1]}
+          </>
+        ) : (
+          `Redefining Mobile Business Solutions With Ferla Bikes`
+        )}
       </h6>
       <div className="flex flex-col justify-center items-center mt-8">
         <Block
           icon={faMoneyBill}
-          paragraph="Unlock the potential of mobile commerce with Ferla Bikes' premier range of innovative and eco-friendly commercial bikes and carts. Our specialty lies in enhancing the dynamic event industry with unparalleled solutions."
+          paragraph={
+            data.components && data.components["40"]
+              ? data.components["40"].value
+              : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          }
         />
         <hr className={styles.manage_screen_mob__separator} />
         <Block
           icon={faMoneyBill}
           margin="mt-8"
-          paragraph="Unlock the potential of mobile commerce with Ferla Bikes' premier range of innovative and eco-friendly commercial bikes and carts. Our specialty lies in enhancing the dynamic event industry with unparalleled solutions."
+          paragraph={
+            data.components && data.components["41"]
+              ? data.components["41"].value
+              : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          }
         />
         <hr className={styles.manage_screen_mob__separator} />
         <Block
           icon={faMoneyBill}
           margin="mt-8"
-          paragraph="Unlock the potential of mobile commerce with Ferla Bikes' premier range of innovative and eco-friendly commercial bikes and carts. Our specialty lies in enhancing the dynamic event industry with unparalleled solutions."
+          paragraph={
+            data.components && data.components["42"]
+              ? data.components["42"].value
+              : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          }
         />
       </div>
       <div className=" mt-16">
-        <Video video_link="https" />
+        <Video
+          video_link="https"
+          data={
+            data.components && data.components["44"]
+              ? data.components["44"].value
+              : market_image
+          }
+        />
       </div>
       <Button
         text="Manage Your Business"

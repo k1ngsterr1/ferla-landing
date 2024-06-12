@@ -1,51 +1,42 @@
 import React from "react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
+import dynamic from "next/dynamic";
+
 import { clientContent } from "@shared/lib/content/clientsContent";
 
 import styles from "./styles.module.scss";
 
-import planet from "@assets/vectors/illustrations.svg";
+interface IPartnersScreen {
+  data: any;
+}
 
-// async function getData() {
-//   const res = await fetch(
-//     "https://spark-admin-production.up.railway.app/api/site/content/:url"
-//   );
-//   // The return value is *not* serialized
-//   // You can return Date, Map, Set, etc.
+const HeavyImage = dynamic(() => import("../LazyImageMobile/planet"), {
+  loading: () => <p>Loading...</p>,
+  ssr: false,
+});
 
-//   if (!res.ok) {
-//     // This will activate the closest `error.js` Error Boundary
-//     throw new Error("Failed to fetch data");
-//   }
-
-//   return res.json();
-// }
-
-// export default async function Page() {
-//   const data = await getData();
-
-//   return <main></main>;
-// }
-
-export const PartnersScreenMobile = () => {
+export const PartnersScreenMobile: React.FC<IPartnersScreen> = ({ data }) => {
   return (
     <section className={styles.partners_mob} id="partners-mob">
       <div className={styles.partners_mob__content}>
         <h5 className={styles.partners_mob__content__heading}>
-          Partnering with Industry Giants{" "}
-          <strong className="text-red">Ferla’s</strong> Trusted Collaborators
+          {data.components && data.components["31"]
+            ? data.components["31"].value
+            : "Partnering with Industry Giants Ferla’s Trusted Collaborators"}
         </h5>
-        <Image
-          src={planet}
-          alt="planet"
-          className={styles.partners_mob__content__image}
-        />
+        <HeavyImage />
       </div>
       <Marquee speed={100} className="mt-12">
         {clientContent.map((image, index) => (
           <Image
-            src={image.image}
+            width={"256"}
+            height={"256"}
+            src={
+              data.components && data.components[`${32 + index}`]
+                ? data.components[`${32 + index}`].value
+                : image.image
+            }
             alt={image.alt}
             key={index}
             className={styles.partners_mob__marquee}
