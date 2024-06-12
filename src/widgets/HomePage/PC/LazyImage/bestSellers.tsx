@@ -5,10 +5,16 @@ import styles from "../BestSellers/styles.module.scss";
 
 import main_pc from "@assets/webp/pc/best_sellers_pc.webp";
 
-const LazyImage = () => {
+interface ILazyImage {
+  src: string;
+}
+
+const LazyImage: React.FC<ILazyImage> = ({ src }) => {
   return (
     <Image
-      src={main_pc}
+      src={src}
+      width={"925"}
+      height={"820"}
       priority
       alt="Ferla Bikes Main Image"
       className={styles.best_sellers__image}

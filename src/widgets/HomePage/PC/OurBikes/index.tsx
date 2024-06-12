@@ -8,9 +8,12 @@ import styles from "./styles.module.scss";
 
 interface IOurBikesScreen {
   allBikes: boolean;
+  data: any;
 }
 
-export const OurBikes: React.FC<IOurBikesScreen> = ({ allBikes }) => {
+export const OurBikes: React.FC<IOurBikesScreen> = ({ allBikes, data }) => {
+  console.log("data:", data.components["45"].value);
+
   return (
     <section className={styles.bikes} id="bikes">
       <div className={styles.bikes__upper}>
@@ -23,7 +26,17 @@ export const OurBikes: React.FC<IOurBikesScreen> = ({ allBikes }) => {
           </Link>
         )}
         <h6 className={styles.bikes__upper__heading}>
-          Our <strong className="text-red">Bikes</strong>
+          {data.components &&
+          data.components["45"] &&
+          data.components["45"].value.split("Our").length > 0 ? (
+            <>
+              {data.components["45"].value.split("Bikes")[0]}
+              <strong className="text-red">Bikes</strong>
+              {data.components["45"].value.split("Bikes")[1]}
+            </>
+          ) : (
+            "Our Bikes"
+          )}
         </h6>
       </div>
       <div className={styles.bikes__cards}>
