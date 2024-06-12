@@ -84,9 +84,9 @@ const HomePage = async () => {
         <OurBikesMobile />
         <ReviewsMobile />
         <VideoBlock id="video-mob" />
-        <Blog />
+        <Blog data={data} />
         <EmailFormMobile />
-        <CalculatorBlock />
+        <CalculatorBlock data={data} />
         <FormMobile />
         <FooterMobile />
       </div>
