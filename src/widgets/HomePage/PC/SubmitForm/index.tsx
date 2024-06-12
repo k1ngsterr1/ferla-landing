@@ -4,9 +4,9 @@ import Button from "@shared/ui/Button";
 import { Input } from "@shared/ui/Input";
 import { DatePickerInput } from "@shared/ui/DatePicker";
 import { useSendEmail } from "@shared/lib/hooks/useSendEmail";
+import { FormPopup } from "@entities/FormPopup";
 
 import styles from "../../PC/Form/styles.module.scss";
-import { FormPopup } from "@entities/FormPopup";
 
 export interface IData {
   name: string;

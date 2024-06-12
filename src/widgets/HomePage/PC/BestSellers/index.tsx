@@ -24,7 +24,13 @@ export const BestSellers: React.FC<IBestSellers> = ({ data }) => {
   return (
     <section className={styles.best_sellers} id="business">
       <div className="flex flex-col items-start">
-        <MiniText text="Best Sellers" />
+        <MiniText
+          text={
+            data.components && data.components["12"]
+              ? data.components["12"].value
+              : "Best Sellers"
+          }
+        />
         <h3 className={styles.best_sellers__heading}>
           {data.components && data.components["13"]
             ? data.components["13"].value
