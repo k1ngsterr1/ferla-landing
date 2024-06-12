@@ -3,7 +3,6 @@
 @import "../../shared/styles/mixins";
 
 .cart_card {
-  width: 100%;
   height: clamp(114.5px, 229 / 360 * 100vw, 458px);
   display: flex;
   flex-direction: column;
