@@ -15,6 +15,10 @@
     @apply mt-32;
   }
 
+  @include respond-to("xl") {
+    @apply mt-16;
+  }
+
   &__container {
     @include respond-to("4xl") {
       height: clamp(16px, 32 / 1920 * 100vw, 64px);

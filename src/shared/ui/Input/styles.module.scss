@@ -27,8 +27,13 @@
     width: clamp(125px, 250 / 1024 * 100vw, 500px);
   }
 
+  @include respond-to("lg") {
+    width: clamp(110px, 220 / 1100 * 100vw, 440px);
+  }
+
   @include respond-to("xl") {
-    @apply mt-8;
+    width: clamp(110px, 220 / 1360 * 100vw, 440px);
+    @apply mt-12;
   }
 
   @include respond-to("4xl") {
@@ -64,6 +69,10 @@
 
     @include respond-to("tablet") {
       font-size: clamp(9px, 18 / 1100 * 100vw, 36px);
+    }
+
+    @include respond-to("xl") {
+      font-size: clamp(10px, 20 / 1360 * 100vw, 40px);
     }
 
     @include respond-to("4xl") {
