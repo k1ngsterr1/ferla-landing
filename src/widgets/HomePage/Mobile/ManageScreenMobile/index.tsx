@@ -8,28 +8,11 @@ import { Video } from "@entities/Video";
 
 import styles from "./styles.module.scss";
 
-// async function getData() {
-//   const res = await fetch(
-//     "https://spark-admin-production.up.railway.app/api/site/content/:url"
-//   );
-//   // The return value is *not* serialized
-//   // You can return Date, Map, Set, etc.
+interface IManageScreenMobile {
+  data: any;
+}
 
-//   if (!res.ok) {
-//     // This will activate the closest `error.js` Error Boundary
-//     throw new Error("Failed to fetch data");
-//   }
-
-//   return res.json();
-// }
-
-// export default async function Page() {
-//   const data = await getData();
-
-//   return <main></main>;
-// }
-
-export const ManageScreenMobile = () => {
+export const ManageScreenMobile: React.FC<IManageScreenMobile> = ({ data }) => {
   return (
     <section className={styles.manage_screen_mob} id="markets-mob">
       <MiniText text="From Initial Concept to" />
@@ -57,7 +40,7 @@ export const ManageScreenMobile = () => {
         />
       </div>
       <div className=" mt-16">
-        <Video video_link="https" />
+        <Video video_link="https" data={data} />
       </div>
       <Button
         text="Manage Your Business"
