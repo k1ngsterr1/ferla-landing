@@ -46,8 +46,8 @@ export const MainScreen: React.FC<IMainScreen> = ({ data }) => {
       </Link>
       <HeavyImage
         src={
-          data.components && data.components["4"]
-            ? data.components["4"].value
+          data?.components && data?.components["4"]
+            ? data?.components["4"].value
             : image
         }
       />

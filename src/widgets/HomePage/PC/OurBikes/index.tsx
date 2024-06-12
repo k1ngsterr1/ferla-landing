@@ -12,8 +12,6 @@ interface IOurBikesScreen {
 }
 
 export const OurBikes: React.FC<IOurBikesScreen> = ({ allBikes, data }) => {
-  console.log("data:", data.components["45"].value);
-
   return (
     <section className={styles.bikes} id="bikes">
       <div className={styles.bikes__upper}>

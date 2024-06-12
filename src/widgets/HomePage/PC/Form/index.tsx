@@ -12,8 +12,6 @@ interface IForm {
 }
 
 export const Form: React.FC<IForm> = ({ data }) => {
-  console.log("image:", data?.components["58"].value);
-
   return (
     <section className={styles.form_section} id="form">
       <div className={styles.form_section__upper}>
