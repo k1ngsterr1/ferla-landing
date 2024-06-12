@@ -80,7 +80,7 @@ const HomePage = async () => {
         <BestSellersMobile />
         <BikesEverywhereMobile />
         <PartnersScreenMobile />
-        <ManageScreenMobile />
+        <ManageScreenMobile data={data} />
         <OurBikesMobile />
         <ReviewsMobile />
         <VideoBlock id="video-mob" />
