@@ -15,6 +15,10 @@
   @apply pl-2;
   @apply pb-1;
 
+  @include respond-to("sm") {
+    font-size: clamp(12px, 3.333vw, 48px) !important;
+  }
+
   @include respond-to("md") {
     width: clamp(150px, 70.092vw, 600px);
     font-size: clamp(9px, 0.93744vw, 36px);
@@ -27,13 +31,9 @@
   }
 
   @include respond-to("tablet") {
-    width: clamp(85px, 170 / 1100 * 100vw, 340px);
+    width: clamp(135px, 270 / 1100 * 100vw, 540px);
     font-size: clamp(9px, 18 / 1100 * 100vw, 36px) !important;
     @apply mt-12;
-  }
-
-  @include respond-to("sm") {
-    font-size: clamp(12px, 3.333vw, 48px) !important;
   }
 
   @include respond-to("lg") {
