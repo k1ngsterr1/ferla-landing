@@ -2,10 +2,14 @@ import React from "react";
 import Button from "@shared/ui/Button";
 import Link from "next/link";
 import Image from "next/image";
-
-import mob_bg from "@assets/webp/mob/phone_bg.webp";
+import dynamic from "next/dynamic";
 
 import styles from "./styles.module.scss";
+
+const HeavyImage = dynamic(() => import("../LazyImageMobile/main"), {
+  loading: () => <p>Loading...</p>,
+  ssr: false,
+});
 
 interface IMainScreen {
   data: any;
@@ -14,12 +18,7 @@ interface IMainScreen {
 export const MainScreenMobile: React.FC<IMainScreen> = ({ data }) => {
   return (
     <main className={styles.main_screen_mob} id="home-mob">
-      <Image
-        src={mob_bg}
-        alt="background image"
-        priority
-        className={styles.main_screen_mob__image}
-      />
+      <HeavyImage />
       <div className={styles.main_screen_mob__content}>
         <h1 className={styles.main_screen_mob__content__heading}>
           {/* Let us introduce <strong className="text-red">ferla bikes</strong> */}

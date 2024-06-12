@@ -76,7 +76,7 @@ const HomePage = async () => {
       <div className={styles.mob}>
         <HeaderMobile />
         <MainScreenMobile data={data} />
-        <BusinessBlockMobile />
+        <BusinessBlockMobile data={data} />
         <BestSellersMobile />
         <BikesEverywhereMobile />
         <PartnersScreenMobile />
@@ -84,9 +84,9 @@ const HomePage = async () => {
         <OurBikesMobile />
         <ReviewsMobile />
         <VideoBlock id="video-mob" />
-        <Blog />
+        <Blog data={data} />
         <EmailFormMobile />
-        <CalculatorBlock />
+        <CalculatorBlock data={data} />
         <FormMobile />
         <FooterMobile />
       </div>
