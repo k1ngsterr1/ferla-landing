@@ -5,11 +5,15 @@ import Button from "@shared/ui/Button";
 import { MiniText } from "@shared/ui/MiniText";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { SolutionTab } from "@entities/SolutionTab";
-
-import styles from "./styles.module.scss";
 import { ArrowLeft } from "@shared/ui/ArrowLeft";
 
-export const BusinessBlock = () => {
+import styles from "./styles.module.scss";
+
+interface IBusinessBlock {
+  data: any;
+}
+
+export const BusinessBlock: React.FC<IBusinessBlock> = ({ data }) => {
   return (
     <section className={styles.business_block} id="perfect">
       <div className="flex flex-col items-start w-full">
