@@ -75,19 +75,19 @@ const HomePage = async () => {
       <div className={styles.tablet}></div>
       <div className={styles.mob}>
         <HeaderMobile />
-        <MainScreenMobile />
-        <BusinessBlockMobile />
-        <BestSellersMobile />
-        <BikesEverywhereMobile />
-        <PartnersScreenMobile />
+        <MainScreenMobile data={data} />
+        <BusinessBlockMobile data={data} />
+        <BestSellersMobile data={data} />
+        <BikesEverywhereMobile data={data} />
+        <PartnersScreenMobile data={data} />
         <ManageScreenMobile data={data} />
-        <OurBikesMobile />
-        <ReviewsMobile />
+        <OurBikesMobile data={data} allBikes />
+        <ReviewsMobile data={data} />
         <VideoBlock id="video-mob" />
         <Blog data={data} />
-        <EmailFormMobile />
+        <EmailFormMobile data={data} />
         <CalculatorBlock data={data} />
-        <FormMobile />
+        <FormMobile data={data} />
         <FooterMobile />
       </div>
     </>

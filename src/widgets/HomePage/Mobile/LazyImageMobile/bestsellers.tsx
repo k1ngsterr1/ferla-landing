@@ -3,12 +3,16 @@ import Image from "next/image";
 
 import styles from "../BestSellersMobile/styles.module.scss";
 
-import bike from "@assets/webp/mob/best_sellers_mob.webp";
+interface ILazyImage {
+  src: string;
+}
 
-const LazyImage = () => {
+const LazyImage: React.FC<ILazyImage> = ({ src }) => {
   return (
     <Image
-      src={bike}
+      src={src}
+      width={200}
+      height={200}
       priority
       alt="Ferla Bikes Main Image"
       className={styles.best_sellers_mob__image}
