@@ -2,10 +2,10 @@
 import React from "react";
 import Image from "next/image";
 import { useCartPopup } from "@shared/lib/context/PopupContext";
-
-import styles from "./styles.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
+
+import styles from "./styles.module.scss";
 
 export const Popup = () => {
   const { isCartPopupVisible, toggleCartPopup, cartData } = useCartPopup();
