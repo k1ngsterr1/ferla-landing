@@ -17,6 +17,10 @@
     top: 0;
     z-index: -1;
 
+    @include respond-to("390") {
+      height: 110svh;
+    }
+
     @include respond-to("xs") {
       height: 120svh;
     }
@@ -25,6 +29,11 @@
       height: 140svh;
     }
   }
+
+  @include respond-to("390") {
+    height: 110svh;
+  }
+
   @include respond-to("xs") {
     height: 120svh;
   }
@@ -91,18 +100,6 @@
 
       &:hover {
         @apply text-red;
-      }
-
-      &::after {
-        position: absolute;
-        content: "";
-        top: 100%;
-        width: 70%;
-        height: 1px;
-        @apply bg-red;
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 250ms;
       }
     }
   }

@@ -17,26 +17,26 @@ const HeavyImage = dynamic(() => import("../LazyImageMobile/business"), {
   ssr: false,
 });
 
-async function getData() {
-  const res = await fetch(
-    "https://spark-admin-production.up.railway.app/api/site/content/:url"
-  );
-  // The return value is *not* serialized
-  // You can return Date, Map, Set, etc.
+// async function getData() {
+//   const res = await fetch(
+//     "https://spark-admin-production.up.railway.app/api/site/content/:url"
+//   );
+//   // The return value is *not* serialized
+//   // You can return Date, Map, Set, etc.
 
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error("Failed to fetch data");
-  }
+//   if (!res.ok) {
+//     // This will activate the closest `error.js` Error Boundary
+//     throw new Error("Failed to fetch data");
+//   }
 
-  return res.json();
-}
+//   return res.json();
+// }
 
-export default async function Page() {
-  const data = await getData();
+// export default async function Page() {
+//   const data = await getData();
 
-  return <main></main>;
-}
+//   return <main></main>;
+// }
 
 export const BusinessBlockMobile = () => {
   return (
