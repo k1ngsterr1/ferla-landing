@@ -51,8 +51,6 @@ async function getData() {
 const HomePage = async () => {
   const data = await getData();
 
-  console.log("data:", data.components["1"].value);
-
   return (
     <>
       <div className={styles.pc}>
@@ -60,18 +58,18 @@ const HomePage = async () => {
         <Header />
         <Cursor />
         <MainScreen data={data} />
-        <BusinessBlock />
-        <BestSellers />
-        <BikesEverywhere />
-        <PartnersScreen />
-        <ManageScreen />
-        <OurBikes allBikes={true} />
-        <Reviews />
+        <BusinessBlock data={data} />
+        <BestSellers data={data} />
+        <BikesEverywhere data={data} />
+        <PartnersScreen data={data} />
+        <ManageScreen data={data} />
+        <OurBikes allBikes={true} data={data} />
+        <Reviews data={data} />
         <VideoBlock id="video" />
-        <Blog />
-        <EmailForm />
-        <CalculatorBlock />
-        <Form />
+        <Blog data={data} />
+        <EmailForm data={data} />
+        <CalculatorBlock data={data} />
+        <Form data={data} />
         <Footer />
       </div>
       <div className={styles.tablet}></div>

@@ -44,13 +44,13 @@ export const MainScreen: React.FC<IMainScreen> = ({ data }) => {
           ? data.components["3"].value
           : "Watch the true story"}
       </Link>
-      {/* <HeavyImage
+      <HeavyImage
         src={
           data.components && data.components["4"]
             ? data.components["4"].value
             : image
         }
-      /> */}
+      />
     </main>
   );
 };
