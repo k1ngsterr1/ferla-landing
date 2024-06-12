@@ -160,7 +160,6 @@ h6 {
 
   @include respond-to("5xl") {
     text-align: left;
-    // font-size: clamp(24px, 48 / 2560 * 100vw, 96px);
   }
 }
 
