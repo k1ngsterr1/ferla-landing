@@ -77,7 +77,7 @@ const HomePage = async () => {
       <div className={styles.tablet}></div>
       <div className={styles.mob}>
         <HeaderMobile />
-        <MainScreenMobile />
+        <MainScreenMobile data={data} />
         <BusinessBlockMobile />
         <BestSellersMobile />
         <BikesEverywhereMobile />
