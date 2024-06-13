@@ -78,6 +78,14 @@
     @include respond-to("4xl") {
       font-size: clamp(10px, 1.0416vw, 40px);
     }
+
+    @include respond-to("5xl") {
+      font-size: clamp(10px, 1.0416vw, 40px);
+    }
+
+    @include respond-to("6xl") {
+      font-size: clamp(10px, 1.0416vw, 40px);
+    }
   }
 
   &__input {

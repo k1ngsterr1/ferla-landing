@@ -7,7 +7,6 @@ import dynamic from "next/dynamic";
 import styles from "./styles.module.scss";
 
 interface IVideoProps {
-  video_link: string;
   data: any;
 }
 
@@ -19,7 +18,7 @@ const HeavyImage = dynamic(
   }
 );
 
-export const Video: React.FC<IVideoProps> = ({ video_link, data }) => {
+export const Video: React.FC<IVideoProps> = ({ data }) => {
   return (
     <div className={styles.video}>
       <VideoButton
