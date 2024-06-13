@@ -18,7 +18,7 @@ export const useCustomLabel = (labelRef: RefObject<HTMLElement>) => {
     if (labelRef.current && e.target.value === "") {
       gsap.to(labelRef.current, {
         bottom: "4px",
-        fontSize: "clamp(9px,0.93744vw,36px)",
+        fontSize: "clamp(10px,1.0416vw,40px)",
         color: "#232121",
         duration: 0.5,
         ease: "power3.out",

@@ -53,30 +53,30 @@
   &__label {
     position: absolute;
     z-index: -1;
-    font-size: clamp(9px, 4.20552vw, 36px);
+    font-size: clamp(10px, 1.0416vw, 40px);
     @apply bottom-1;
     @apply left-2;
 
     @include respond-to("md") {
-      font-size: clamp(9px, 0.93744vw, 36px);
+      font-size: clamp(10px, 1.0416vw, 40px);
       @apply bottom-1;
       @apply left-2;
     }
 
     @include respond-to("tablet_sm") {
-      font-size: clamp(9px, 18 / 1024 * 100vw, 36px);
+      font-size: clamp(10px, 1.0416vw, 40px);
     }
 
     @include respond-to("tablet") {
-      font-size: clamp(9px, 18 / 1100 * 100vw, 36px);
+      font-size: clamp(10px, 1.0416vw, 40px);
     }
 
     @include respond-to("xl") {
-      font-size: clamp(10px, 20 / 1360 * 100vw, 40px);
+      font-size: clamp(10px, 1.0416vw, 40px);
     }
 
     @include respond-to("4xl") {
-      font-size: clamp(9px, 18 / 1920 * 100vw, 36px);
+      font-size: clamp(10px, 1.0416vw, 40px);
     }
   }
 
