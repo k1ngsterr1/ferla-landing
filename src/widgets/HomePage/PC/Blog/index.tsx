@@ -1,6 +1,7 @@
 import React from "react";
 import { blogContent } from "@shared/lib/content/blogContent";
 import { BlogCard } from "@entities/BlogCard";
+import { useGetBlogs } from "@shared/lib/hooks/Get/useGetBlogs";
 
 import styles from "./styles.module.scss";
 
@@ -9,6 +10,8 @@ interface IBlog {
 }
 
 export const Blog: React.FC<IBlog> = ({ data }) => {
+  const { blogs } = useGetBlogs();
+
   return (
     <section className={styles.blog}>
       <div className={styles.blog__upper}>
