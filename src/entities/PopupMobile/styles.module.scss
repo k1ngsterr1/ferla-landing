@@ -29,6 +29,7 @@
   &__x {
     width: 110%;
     margin-top: clamp(-20px, -9.3456vw, -80px);
+    @apply mb-2;
 
     @include respond-to("fsf") {
       width: 105%;

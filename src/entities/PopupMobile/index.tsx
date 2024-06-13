@@ -17,20 +17,22 @@ export const PopupMobile = () => {
       {cartData ? (
         <div className={styles.layout} onClick={() => toggleCartPopup()}>
           <div className={styles.popup}>
-            <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center w-[100%]">
               <div className={`${styles.popup__x} flex items-end justify-end`}>
                 <FontAwesomeIcon
                   icon={faClose}
                   className="text-red text-4xl hoverable"
                 />
               </div>
-              <span className={styles.popup__title}>{cartData.title}</span>
+              <span className={styles.popup__title}>{cartData.name}</span>
               <Image
-                src={cartData?.image}
-                alt={cartData?.title}
+                src={cartData?.img_url}
+                alt={cartData?.name}
                 className={styles.popup__image}
+                width={300}
+                height={300}
               />
-              <p className={styles.popup__paragraph}>{cartData?.paragraph}</p>
+              <p className={styles.popup__paragraph}>{cartData?.description}</p>
             </div>
           </div>
         </div>

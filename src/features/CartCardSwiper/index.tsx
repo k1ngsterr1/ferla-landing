@@ -38,10 +38,10 @@ export const CartCardSwiper: React.FC<IOurBikesScreen> = ({ allBikes }) => {
           <SwiperSlide key={index}>
             <CartCard
               name={card.name}
-              title={card.title}
-              paragraph={card.paragraph}
-              photo={card.image}
-              href={card.href}
+              title={card.name}
+              description={card.description}
+              img_url={card.img_url}
+              // href={card.href}
             />
           </SwiperSlide>
         ))}
