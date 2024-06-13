@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import styles from "../MainScreenMob/styles.module.scss";
 
-import mob_bg from "@assets/webp/mob/phone_bg.webp";
+import mob_bg from "@assets/webp/mob/web.webp";
 
 const LazyImage = () => {
   return (
