@@ -32,13 +32,7 @@ export const BikesEverywhereMobile: React.FC<IBikesEverywhere> = ({ data }) => {
         </p>
       </div>
       <div className={styles.bikes_everywhere_mob__gallery}>
-        <HeavyImage
-          data={
-            data.components && data.components["26"]
-              ? data.components["26"].value
-              : bikes
-          }
-        />
+        <HeavyImage data={data} />
       </div>
       <Button
         text="Start Selling"
