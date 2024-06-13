@@ -49,7 +49,7 @@
     width: clamp(152.5px, 84.722vw, 610px);
     height: clamp(166.5px, 92.5vwv, 666px);
     @apply mt-8;
-    @apply rounded-md;
+    @apply rounded-lg;
 
     @include respond-to("fsf") {
       height: 110%;
@@ -57,7 +57,6 @@
 
     @include respond-to("es") {
       width: clamp(375px, 87.209vw, 1500px);
-      height: clamp(365px, 84.884vw, 1460px);
     }
   }
 }

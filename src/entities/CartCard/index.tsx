@@ -9,29 +9,29 @@ import { useCartPopup } from "@shared/lib/context/PopupContext";
 import styles from "./styles.module.scss";
 
 interface ICartCard {
-  photo: string | StaticImageData;
+  img_url: string | StaticImageData;
   name: string;
   title: string;
-  paragraph: string;
-  href: string;
+  description: string;
+  // href: string;
 }
 
 export const CartCard: React.FC<ICartCard> = ({
-  photo,
+  img_url,
   name,
-  paragraph,
+  description,
   title,
-  href,
+  // href,
 }) => {
   const { toggleCartPopup } = useCartPopup();
 
   const handleCardClick = () => {
     const cardData = {
-      image: photo,
+      img_url: img_url,
       name: name,
-      title: title,
-      href: href,
-      paragraph: paragraph,
+      title: name,
+      // href: href,
+      description: description,
     };
     toggleCartPopup(cardData);
   };
@@ -42,10 +42,16 @@ export const CartCard: React.FC<ICartCard> = ({
         className={`${styles.cart_card} hoverable`}
         onClick={handleCardClick}
       >
-        <Image src={photo} alt={name} className={styles.cart_card__image} />
+        <Image
+          src={img_url}
+          alt={name}
+          className={styles.cart_card__image}
+          width={200}
+          height={200}
+        />
         <span className={styles.cart_card__name}>{name}</span>
       </div>
-      <div className="flex items-center justify-center gap-2 mt-4">
+      {/* <div className="flex items-center justify-center gap-2 mt-4">
         <a href={href} className={`${styles.link} hoverable`}>
           Explore
           <FontAwesomeIcon
@@ -53,7 +59,7 @@ export const CartCard: React.FC<ICartCard> = ({
             className={styles.link__icon}
           />
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };

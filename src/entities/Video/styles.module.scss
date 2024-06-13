@@ -74,5 +74,13 @@
     @include respond-to("xxs") {
       border-radius: 8px;
     }
+
+    @include respond-to("xs") {
+      height: 90%;
+    }
+
+    @include respond-to("sm") {
+      height: 100%;
+    }
   }
 }

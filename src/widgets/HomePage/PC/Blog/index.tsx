@@ -1,6 +1,8 @@
+"use client";
+
 import React from "react";
-import { blogContent } from "@shared/lib/content/blogContent";
-import { BlogCard } from "@entities/BlogCard";
+import { BlogCard } from "@entities/BlogCard/index";
+import { useGetBlogs } from "@shared/lib/hooks/Get/useGetBlogs";
 
 import styles from "./styles.module.scss";
 
@@ -9,6 +11,8 @@ interface IBlog {
 }
 
 export const Blog: React.FC<IBlog> = ({ data }) => {
+  const { blogs, loading } = useGetBlogs();
+
   return (
     <section className={styles.blog}>
       <div className={styles.blog__upper}>
@@ -19,13 +23,12 @@ export const Blog: React.FC<IBlog> = ({ data }) => {
         </h6>
       </div>
       <div className={styles.blog__content}>
-        {blogContent.map((card, index) => (
+        {blogs?.map((blog, index) => (
           <div className={styles.blog__content__card} key={index}>
             <BlogCard
-              title={card.title}
-              href={card.href}
-              image={card.image}
-              key={index}
+              title={blog?.title}
+              href={blog?.href}
+              image={blog?.image}
             />
           </div>
         ))}
