@@ -38,7 +38,7 @@ import styles from "./styles.module.scss";
 async function getData() {
   const res = await fetch(
     "https://ferla-backend-production.up.railway.app/api/components/get-components",
-    { cache: "force-cache", next: { revalidate: 3600 } }
+    { cache: "force-cache", next: { revalidate: 60 } }
   );
 
   if (!res.ok) {

@@ -2,6 +2,7 @@ import React from "react";
 import TrustIndexWidget from "@features/TrustIndexWidget";
 
 import styles from "./styles.module.scss";
+import TrustIndexParent from "@features/TrustIndexParent";
 
 interface IReviews {
   data: any;

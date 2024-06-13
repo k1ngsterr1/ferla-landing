@@ -28,7 +28,7 @@ const TrustIndexMob = () => {
     };
 
     const interval = setInterval(handleWidgetPlacement, 500);
-    handleWidgetPlacement(); // Also execute immediately
+    handleWidgetPlacement();
 
     return () => clearInterval(interval);
   }, []);

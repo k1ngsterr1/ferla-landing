@@ -33,7 +33,7 @@ export const BikesEverywhereMobile: React.FC<IBikesEverywhere> = ({ data }) => {
       </div>
       <div className={styles.bikes_everywhere_mob__gallery}>
         <HeavyImage
-          src={
+          data={
             data.components && data.components["26"]
               ? data.components["26"].value
               : bikes
