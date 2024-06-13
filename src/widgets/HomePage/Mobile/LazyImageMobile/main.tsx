@@ -11,6 +11,8 @@ const LazyImage = () => {
       src={mob_bg}
       alt="background image"
       priority
+      width={950}
+      height={950}
       className={styles.main_screen_mob__image}
     />
   );
