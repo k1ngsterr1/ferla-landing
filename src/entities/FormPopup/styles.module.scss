@@ -88,6 +88,7 @@
 
   &__paragraph {
     font-size: clamp(9px, 18 / 360 * 100vw, 36px) !important;
+    text-align: center !important;
 
     @include respond-to("xs") {
       font-size: clamp(9px, 18 / 480 * 100vw, 36px) !important;

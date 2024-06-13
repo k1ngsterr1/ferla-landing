@@ -41,6 +41,7 @@ export const SubmitForm = () => {
           type="text"
           name="name"
           margin="mt-4"
+          required
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
@@ -49,6 +50,7 @@ export const SubmitForm = () => {
           type="phone"
           name="phone"
           margin="mt-14"
+          required
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
         />
@@ -57,6 +59,7 @@ export const SubmitForm = () => {
           type="email"
           name="email"
           margin="mt-14"
+          required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
