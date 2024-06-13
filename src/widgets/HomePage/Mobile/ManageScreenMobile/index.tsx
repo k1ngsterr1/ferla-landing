@@ -63,7 +63,6 @@ export const ManageScreenMobile: React.FC<IManageScreen> = ({ data }) => {
       </div>
       <div className=" mt-16">
         <Video
-          video_link="https"
           data={
             data.components && data.components["44"]
               ? data.components["44"].value
