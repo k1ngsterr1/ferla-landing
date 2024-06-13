@@ -16,8 +16,9 @@ export const CalculatorBlock: React.FC<ICalculatorBlock> = ({ data }) => {
           : "Calculator"}
       </h6>
       <p className={styles.calculator__paragraph}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem ipsum
-        dolor sit amet, consectetur adipiscing elit.
+        {data?.components && data?.components["51"]
+          ? data?.components["51"].value
+          : "Lorem Ipsum"}
       </p>
       <Calculator />
     </section>

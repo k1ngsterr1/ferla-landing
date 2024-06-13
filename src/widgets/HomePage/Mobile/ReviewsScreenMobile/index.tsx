@@ -2,6 +2,7 @@ import React from "react";
 import TrustIndexWidget from "@features/TrustIndexWidget";
 
 import styles from "./styles.module.scss";
+import TrustIndexMob from "@features/TrustIndexMob";
 
 interface IReviews {
   data: any;
@@ -20,7 +21,7 @@ export const ReviewsMobile: React.FC<IReviews> = ({ data }) => {
           ? data.components["47"].value
           : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
       </p>
-      <TrustIndexWidget />
+      <TrustIndexMob />
     </section>
   );
 };

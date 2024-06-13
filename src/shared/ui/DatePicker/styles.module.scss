@@ -4,7 +4,7 @@
 
 .input {
   width: clamp(150px, 70.092vw, 600px);
-  font-size: clamp(9px, 4.20552vw, 36px);
+  font-size: clamp(10px, 1.0416vw, 40px);
   background: transparent;
   border: none;
   outline: none;
@@ -21,29 +21,29 @@
 
   @include respond-to("md") {
     width: clamp(150px, 70.092vw, 600px);
-    font-size: clamp(9px, 0.93744vw, 36px);
+    font-size: clamp(10px, 1.0416vw, 40px);
   }
 
   @include respond-to("tablet_sm") {
     width: clamp(125px, 250 / 1024 * 100vw, 500px);
-    font-size: clamp(9px, 18 / 1024 * 100vw, 36px) !important;
+    font-size: clamp(10px, 1.0416vw, 40px) !important;
     @apply mt-12;
   }
 
   @include respond-to("tablet") {
     width: clamp(135px, 270 / 1100 * 100vw, 540px);
-    font-size: clamp(9px, 18 / 1100 * 100vw, 36px) !important;
+    font-size: clamp(10px, 1.0416vw, 40px) !important;
     @apply mt-12;
   }
 
   @include respond-to("lg") {
     width: clamp(120px, 240 / 1200 * 100vw, 480px);
-    font-size: clamp(9px, 18 / 1200 * 100vw, 36px) !important;
+    font-size: clamp(10px, 1.0416vw, 40px) !important;
   }
 
   @include respond-to("xl") {
     width: clamp(110px, 220 / 1360 * 100vw, 440px);
-    font-size: clamp(9px, 18 / 1360 * 100vw, 36px) !important;
+    font-size: clamp(10px, 1.0416vw, 40px) !important;
     @apply mt-12;
   }
 
@@ -56,7 +56,7 @@
   }
 
   @include respond-to("4xl") {
-    font-size: clamp(9px, 18 / 1920 * 100vw, 36px) !important;
+    font-size: clamp(10px, 1.0416vw, 40px) !important;
     width: clamp(150px, 300 / 1920 * 100vw, 600px);
     @apply mt-10;
   }
