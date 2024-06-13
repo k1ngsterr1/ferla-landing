@@ -32,6 +32,7 @@
   }
 
   @include respond-to("lg") {
+    width: clamp(170px, 340 / 12000 * 100vw, 680px);
     height: clamp(33px, 66 / 1200 * 100vw, 132px);
   }
 
