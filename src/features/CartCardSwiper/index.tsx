@@ -3,7 +3,6 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { CartCard } from "@entities/CartCard";
 import { useGetCarts } from "@shared/lib/hooks/Get/useGetCarts";
-import { cartsContent } from "@shared/lib/content/cartsContent";
 import { PopupMobile } from "@entities/PopupMobile";
 import Link from "next/link";
 
@@ -18,7 +17,7 @@ interface IOurBikesScreen {
 }
 
 export const CartCardSwiper: React.FC<IOurBikesScreen> = ({ allBikes }) => {
-  const { data } = useGetCarts();
+  const { carts } = useGetCarts();
 
   return (
     <>
@@ -34,14 +33,14 @@ export const CartCardSwiper: React.FC<IOurBikesScreen> = ({ allBikes }) => {
         className={styles.swiper}
         navigation={false}
       >
-        {data?.map((card, index) => (
+        {carts?.map((card, index) => (
           <SwiperSlide key={index}>
             <CartCard
               name={card.name}
               title={card.name}
               description={card.description}
               img_url={card.img_url}
-              // href={card.href}
+              key={index}
             />
           </SwiperSlide>
         ))}

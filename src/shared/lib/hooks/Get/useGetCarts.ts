@@ -12,7 +12,7 @@ interface Cart {
 
 // Function to fetch blocks
 export function useGetCarts() {
-  const [data, setData] = useState<Cart[]>([]);
+  const [carts, setCarts] = useState<Cart[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ export function useGetCarts() {
         const response = await axios.get(
           `https://ferla-backend-production.up.railway.app/api/carts/get-carts`
         );
-        setData(response.data.carts as Cart[]);
+        setCarts(response.data.carts as Cart[]);
         console.log(response.data);
       } catch (error) {
         console.error("Failed to fetch carts:", error);
@@ -31,5 +31,5 @@ export function useGetCarts() {
     };
     getCarts();
   }, []);
-  return { data, loading };
+  return { carts, loading };
 }

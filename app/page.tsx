@@ -82,7 +82,7 @@ const HomePage = async () => {
         <PartnersScreenMobile data={data} />
         <ManageScreenMobile data={data} />
         <OurBikesMobile data={data} allBikes />
-        <ReviewsMobile data={data} />
+        {/* <ReviewsMobile data={data} /> */}
         <VideoBlock id="video-mob" />
         <Blog data={data} />
         <EmailFormMobile data={data} />
