@@ -78,7 +78,6 @@ export const ManageScreen: React.FC<IManageScreen> = ({ data }) => {
             />
           </div>
           <Video
-            video_link="https"
             data={
               data.components && data.components["44"]
                 ? data.components["44"].value

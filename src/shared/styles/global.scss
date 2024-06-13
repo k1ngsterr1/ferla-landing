@@ -31,6 +31,26 @@ body {
   cursor: none;
 }
 
+@include respond-to("sm") {
+  #trustindex-widget-container-mobile {
+    display: flex;
+  }
+
+  #trustindex-widget-container {
+    display: none;
+  }
+}
+
+@include respond-to("md") {
+  #trustindex-widget-container-mobile {
+    display: none;
+  }
+
+  #trustindex-widget-container {
+    display: flex;
+  }
+}
+
 h1 {
   font-size: clamp(25px, 50 / 360 * 100vw, 100px);
   text-transform: capitalize;

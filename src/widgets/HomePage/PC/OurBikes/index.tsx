@@ -15,14 +15,14 @@ export const OurBikes: React.FC<IOurBikesScreen> = ({ allBikes, data }) => {
   return (
     <section className={styles.bikes} id="bikes">
       <div className={styles.bikes__upper}>
-        {allBikes && (
+        {/* {allBikes && (
           <Link
             href="/products"
             className={`${styles.bikes__upper__link} hoverable`}
           >
             All Bikes
           </Link>
-        )}
+        )} */}
         <h6 className={styles.bikes__upper__heading}>
           {data.components &&
           data.components["45"] &&

@@ -13,7 +13,7 @@ interface IForm {
 
 export const Form: React.FC<IForm> = ({ data }) => {
   return (
-    <section className={styles.form_section} id="form">
+    <section className={styles.form_section} id="form-pc">
       <div className={styles.form_section__upper}>
         <div className="flex flex-col items-start">
           <h6 className={styles.form_section__upper__heading}>

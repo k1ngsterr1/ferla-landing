@@ -38,7 +38,7 @@ import styles from "./styles.module.scss";
 async function getData() {
   const res = await fetch(
     "https://ferla-backend-production.up.railway.app/api/components/get-components",
-    { cache: "force-cache", next: { revalidate: 10 } }
+    { cache: "force-cache", next: { revalidate: 60 } }
   );
 
   if (!res.ok) {
@@ -82,7 +82,7 @@ const HomePage = async () => {
         <PartnersScreenMobile data={data} />
         <ManageScreenMobile data={data} />
         <OurBikesMobile data={data} allBikes />
-        <ReviewsMobile data={data} />
+        {/* <ReviewsMobile data={data} /> */}
         <VideoBlock id="video-mob" />
         <Blog data={data} />
         <EmailFormMobile data={data} />

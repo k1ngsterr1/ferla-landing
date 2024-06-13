@@ -6,6 +6,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  @apply pt-32;
   @apply mt-16;
 
   @include respond-to("xxs") {

@@ -1,23 +1,41 @@
 "use client";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
-function useScript(src: string) {
+const useScript = (src: string) => {
+  const [loaded, setLoaded] = useState(false);
+  const [error, setError] = useState(null);
+
   useEffect(() => {
-    // Check if the script is already loaded
-    if (document.querySelector(`script[src="${src}"]`)) {
-      return;
+    let script = document.querySelector(`script[src="${src}"]`);
+
+    if (!script) {
+      script = document.createElement("script");
+      script.src = src;
+      script.async = true;
+      document.body.appendChild(script);
+
+      const handleLoad = () => {
+        setLoaded(true);
+      };
+
+      const handleError = () => {
+        setError(true);
+      };
+
+      script.addEventListener("load", handleLoad);
+      script.addEventListener("error", handleError);
+
+      return () => {
+        script.removeEventListener("load", handleLoad);
+        script.removeEventListener("error", handleError);
+      };
+    } else {
+      // If script already exists in the document, assume it's loaded
+      setLoaded(true);
     }
-
-    const script = document.createElement("script");
-    script.src = src;
-    script.async = true;
-    script.defer = true;
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
   }, [src]);
-}
+
+  return { loaded, error };
+};
 
 export default useScript;

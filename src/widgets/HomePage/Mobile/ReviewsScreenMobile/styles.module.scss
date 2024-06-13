@@ -1,15 +1,25 @@
-.reviews_mob {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    @apply mt-16;
+@import "breakpoint-slicer";
+@import "../../../../shared/styles/mixins";
+@import "../../../../shared/styles/variables";
 
-    &__paragraph {
-        width: 75%;
-        text-align: center;
-        @apply mt-4;
-    }
+.reviews_mob {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @apply mt-16;
+
+  &__paragraph {
+    width: 75%;
+    text-align: center;
+    @apply mt-4;
+  }
+}
+
+@include respond-to("md") {
+  .reviews_mob {
+    display: none;
+  }
 }
