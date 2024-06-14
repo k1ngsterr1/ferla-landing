@@ -28,7 +28,7 @@ import { BikesEverywhereMobile } from "@widgets/HomePage/Mobile/BikeEverywhereMo
 import { PartnersScreenMobile } from "@widgets/HomePage/Mobile/PartnersScreenMobile";
 import { ManageScreenMobile } from "@widgets/HomePage/Mobile/ManageScreenMobile";
 import { OurBikesMobile } from "@widgets/HomePage/Mobile/OurBikesMobile";
-import { ReviewsMobile } from "@widgets/HomePage/Mobile/ReviewsScreenMobile";
+// import { ReviewsMobile } from "@widgets/HomePage/Mobile/ReviewsScreenMobile";
 import { EmailFormMobile } from "@widgets/HomePage/Mobile/EmailFormMobile";
 import { FormMobile } from "@widgets/HomePage/Mobile/FormMobile";
 import { FooterMobile } from "@features/FooterMobile/index";
