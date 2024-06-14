@@ -16,8 +16,6 @@ interface IMainScreen {
 }
 
 export const MainScreen: React.FC<IMainScreen> = ({ data }) => {
-  console.log(data.components["4"].value);
-
   return (
     <main className={styles.main_screen} id="home">
       <h1 className={`${styles.main_screen__heading} animate__fadeInLeft`}>
