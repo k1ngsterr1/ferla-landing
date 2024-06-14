@@ -14,7 +14,7 @@ const useHeaderScroll = (headerRef: RefObject<HTMLHeadElement>) => {
       ease: "power1.out",
       scrollTrigger: {
         trigger: headerElement,
-        start: "top+=100 top",
+        start: "top+=10 top",
         toggleActions: "play none none reverse",
       },
     });

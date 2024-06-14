@@ -19,6 +19,7 @@ const VideoFrame: React.FC<IVideoFrame> = ({ src, thumbnail }) => {
       {!loaded ? (
         <img
           src={thumbnail}
+          className={styles.video_block__cover__image}
           alt="Video thumbnail"
           style={{ width: "100%", cursor: "pointer" }}
         />
