@@ -16,6 +16,8 @@ interface IMainScreen {
 }
 
 export const MainScreen: React.FC<IMainScreen> = ({ data }) => {
+  console.log(data.components["4"].value);
+
   return (
     <main className={styles.main_screen} id="home">
       <h1 className={`${styles.main_screen__heading} animate__fadeInLeft`}>
@@ -36,7 +38,7 @@ export const MainScreen: React.FC<IMainScreen> = ({ data }) => {
         text="Get A Free Consultation"
         animation="fade-reveal-left"
         buttonType="filled"
-        targetId="form"
+        targetId="form-pc"
         margin="mt-8"
       />
       <Link className={`${styles.main_screen__link} hoverable`} href="#video">

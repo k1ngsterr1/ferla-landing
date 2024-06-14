@@ -17,45 +17,52 @@ const HeavyImage = dynamic(() => import("../LazyImageMobile/business"), {
   ssr: false,
 });
 
-// async function getData() {
-//   const res = await fetch(
-//     "https://spark-admin-production.up.railway.app/api/site/content/:url"
-//   );
-//   // The return value is *not* serialized
-//   // You can return Date, Map, Set, etc.
+interface IBusinessBlock {
+  data: any;
+}
 
-//   if (!res.ok) {
-//     // This will activate the closest `error.js` Error Boundary
-//     throw new Error("Failed to fetch data");
-//   }
-
-//   return res.json();
-// }
-
-// export default async function Page() {
-//   const data = await getData();
-
-//   return <main></main>;
-// }
-
-export const BusinessBlockMobile = () => {
+export const BusinessBlockMobile: React.FC<IBusinessBlock> = ({ data }) => {
   return (
     <section className={styles.business_block_mob} id="perfect-mob">
-      <HeavyImage />
+      <HeavyImage
+        src={
+          data.components && data.components["4"]
+            ? data.components["4"].value
+            : main_pc
+        }
+      />
       <div className={styles.business_block_mob__content}>
         <div className={styles.business_block_mob__content__text}>
-          <MiniText text="Aesthetic Vending Solutions" />
+          <MiniText
+            text={
+              data.components && data.components["6"]
+                ? data.components["6"].value
+                : "Aesthetic Vending Solutions"
+            }
+          />
           <h2 className={styles.business_block_mob__content__text__heading}>
-            Perfect <strong className="text-red">for Any Business</strong>
+            {/* Perfect <strong className="text-red">for Any Business</strong> */}
+            {data.components && data.components["5"]
+              ? data.components["5"].value
+              : "Perfect for any Business"}
           </h2>
           <p className={styles.business_block_mob__content__text__paragraph}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem
-            ipsum dolor sit amet.
+            {data.components && data.components["7"]
+              ? data.components["7"].value
+              : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
           </p>
         </div>
         <div className={styles.business_block_mob__content__tabs}>
           {tabs.map((tab) => (
-            <SolutionTab key={tab.name} name={tab.name} href={tab.href} />
+            <SolutionTab
+              name={
+                data.components && data.components["8"]
+                  ? data.components["8"].value
+                  : tab.name
+              }
+              href={tab.href}
+              key={tab.name}
+            />
           ))}
         </div>
         <Button

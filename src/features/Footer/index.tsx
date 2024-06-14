@@ -28,9 +28,9 @@ export const Footer = () => {
             <NavLink label={link.label} href={link.href} key={index} />
           ))}
         </nav>
-        <LinkButton buttonType="outline" text="Contact Us" href="#form" />
+        <LinkButton buttonType="outline" text="Contact Us" href="#form-pc" />
       </div>
-      <div className="flex items-center justify-center w-full gap-4 mt-8">
+      <div className="flex items-center justify-center w-full gap-4 mt-4">
         {socialMediaContent.map((icon, index) => (
           <SocialMediaIcon
             icon={icon.icon}

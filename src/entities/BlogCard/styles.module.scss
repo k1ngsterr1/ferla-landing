@@ -257,7 +257,7 @@
   }
 
   @include respond-to("2xl") {
-    width: 20%;
+    width: 100%;
     height: clamp(205px, 410 / 1520 * 100vw, 820px);
   }
 

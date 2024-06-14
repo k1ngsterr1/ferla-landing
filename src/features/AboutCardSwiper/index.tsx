@@ -12,7 +12,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 
-export const AboutCardSwiper = () => {
+interface IBestSellers {
+  data: any;
+}
+
+export const AboutCardSwiper: React.FC<IBestSellers> = ({ data }) => {
   return (
     <Swiper
       spaceBetween={20}
@@ -27,7 +31,19 @@ export const AboutCardSwiper = () => {
       {content.map((item, index) => (
         <SwiperSlide key={index}>
           <div className="flex justify-center items-center">
-            <AboutCard name={item.name} icon={item.icon} text={item.text} />
+            <AboutCard
+              icon={item.icon}
+              name={
+                data.components && data.components["15"]
+                  ? data.components["15"].value
+                  : item.name
+              }
+              text={
+                data.components && data.components["16"]
+                  ? data.components["16"].value
+                  : item.text
+              }
+            />
           </div>
         </SwiperSlide>
       ))}

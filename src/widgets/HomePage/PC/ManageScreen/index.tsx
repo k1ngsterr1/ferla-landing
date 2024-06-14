@@ -13,21 +13,27 @@ interface IManageScreen {
   data: any;
 }
 
-export const ManageScreen = ({ data }) => {
+export const ManageScreen: React.FC<IManageScreen> = ({ data }) => {
   return (
     <section className={styles.manage_block} id="markets">
       <div className="flex flex-col items-start w-full">
         <div className="flex flex-col items-start w-full">
-          <MiniText text="From Initial Concept to Market Leader" />
+          <MiniText
+            text={
+              data.components && data.components["38"]
+                ? data.components["38"].value
+                : "From Initial Concept To Market Leader"
+            }
+          />
           <div className="w-full flex items-start justify-between">
             <h6 className={styles.manage_block__heading}>
               {data.components &&
-              data.components["38"] &&
-              data.components["38"].value.split("Ferla Bikes").length > 0 ? (
+              data.components["39"] &&
+              data.components["39"].value.split("Ferla Bikes").length > 0 ? (
                 <>
-                  {data.components["38"].value.split("Ferla Bikes")[0]}
+                  {data.components["39"].value.split("Ferla Bikes")[0]}
                   <strong className="text-red"> Ferla Bikes</strong>
-                  {data.components["38"].value.split("Ferla Bikes")[1]}
+                  {data.components["39"].value.split("Ferla Bikes")[1]}
                 </>
               ) : (
                 `Redefining Mobile Business Solutions With Ferla Bikes`
@@ -72,7 +78,6 @@ export const ManageScreen = ({ data }) => {
             />
           </div>
           <Video
-            video_link="https"
             data={
               data.components && data.components["44"]
                 ? data.components["44"].value

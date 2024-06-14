@@ -3,13 +3,16 @@ import Image from "next/image";
 
 import styles from "../BusinessBlockMobile/styles.module.scss";
 
-import main_pc from "@assets/webp/pc/mainImage_pc.webp";
-
-const LazyImage = () => {
+interface ILazyImage {
+  src: string;
+}
+const LazyImage: React.FC<ILazyImage> = ({ src }) => {
   return (
     <Image
-      src={main_pc}
+      src={src}
       priority
+      width={200}
+      height={200}
       alt="Ferla Bikes Main Image"
       className={styles.business_block_mob__image}
     />

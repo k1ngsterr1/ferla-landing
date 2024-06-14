@@ -7,15 +7,30 @@ import { Form } from "@widgets/HomePage/PC/Form";
 import { Footer } from "@features/Footer";
 import { OurBikes } from "@widgets/HomePage/PC/OurBikes";
 
-const Products = () => {
+async function getData() {
+  const res = await fetch(
+    "https://ferla-backend-production.up.railway.app/api/components/get-components",
+    { cache: "force-cache", next: { revalidate: 3600 } }
+  );
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+const Products = async () => {
+  const data = await getData();
+
   return (
     <>
       <Header />
       <Cursor />
       <div className={`${styles.pc} mt-8`}>
-        <OurBikes allBikes={false} />
+        <OurBikes allBikes={false} data={data} />
       </div>
-      <Form />
+      <Form data={data} />
       <Footer />
     </>
   );

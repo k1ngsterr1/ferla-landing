@@ -22,11 +22,33 @@ html {
 }
 
 body {
+  width: 100vw !important;
+  margin: auto !important;
   font-family: "Rubik" !important;
   overflow-x: hidden;
   background-color: #fbfbfb;
   scroll-behavior: smooth;
   cursor: none;
+}
+
+@include respond-to("sm") {
+  #trustindex-widget-container-mobile {
+    display: flex;
+  }
+
+  #trustindex-widget-container {
+    display: none;
+  }
+}
+
+@include respond-to("md") {
+  #trustindex-widget-container-mobile {
+    display: none;
+  }
+
+  #trustindex-widget-container {
+    display: flex;
+  }
 }
 
 h1 {

@@ -193,6 +193,10 @@
     font-size: clamp(12px, 24 / 992 * 100vw, 48px);
   }
 
+  @include respond-to("lg") {
+    @apply text-lg;
+  }
+
   @include respond-to("4xl") {
     font-size: clamp(8px, 16 / 1920 * 100vw, 32px);
   }
@@ -232,18 +236,26 @@
     }
 
     @include respond-to("lg") {
+      width: clamp(10px, 20 / 1200 * 100vw, 40px);
+      height: clamp(10px, 20 / 1200 * 100vw, 40px);
       font-size: clamp(9px, 18 / 1200 * 100vw, 36px);
     }
 
     @include respond-to("xl") {
+      width: clamp(10px, 20 / 1360 * 100vw, 40px);
+      height: clamp(10px, 20 / 1360 * 100vw, 40px);
       font-size: clamp(9px, 18 / 1360 * 100vw, 36px);
     }
 
     @include respond-to("2xl") {
+      width: clamp(10px, 20 / 1520 * 100vw, 40px);
+      height: clamp(10px, 20 / 1520 * 100vw, 40px);
       font-size: clamp(9px, 18 / 1520 * 100vw, 36px);
     }
 
     @include respond-to("3xl") {
+      width: clamp(10px, 20 / 1680 * 100vw, 40px);
+      height: clamp(10px, 20 / 1680 * 100vw, 40px);
       font-size: clamp(9px, 18 / 1680 * 100vw, 36px);
     }
 

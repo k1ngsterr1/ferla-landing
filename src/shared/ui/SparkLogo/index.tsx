@@ -11,7 +11,7 @@ export const SparkLogo = () => {
     <Image
       className={`hoverable ${styles.logo}`}
       src={spark_logo}
-      onClick={() => (window.location.href = "https://sparkstudio.kz/home")}
+      onClick={() => window.open("https://sparkstudio.kz/home", "_blank")}
       alt="Spark Studio Logotype"
     />
   );

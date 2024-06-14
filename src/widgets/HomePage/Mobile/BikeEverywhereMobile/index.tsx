@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Button from "@shared/ui/Button";
 import dynamic from "next/dynamic";
 
@@ -7,46 +6,33 @@ import styles from "./styles.module.scss";
 
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
+import { bikes } from "@shared/lib/content/bikesImagesContent";
+
 const HeavyImage = dynamic(() => import("../LazyImageMobile/bikeseverywhere"), {
   loading: () => <p>Loading...</p>,
   ssr: false,
 });
 
-// async function getData() {
-//   const res = await fetch(
-//     "https://spark-admin-production.up.railway.app/api/site/content/:url"
-//   );
-//   // The return value is *not* serialized
-//   // You can return Date, Map, Set, etc.
-
-//   if (!res.ok) {
-//     // This will activate the closest `error.js` Error Boundary
-//     throw new Error("Failed to fetch data");
-//   }
-
-//   return res.json();
-// }
-
-// export default async function Page() {
-//   const data = await getData();
-
-//   return <main></main>;
-// }
-
-export const BikesEverywhereMobile = () => {
+interface IBikesEverywhere {
+  data: any;
+}
+export const BikesEverywhereMobile: React.FC<IBikesEverywhere> = ({ data }) => {
   return (
     <section className={styles.bikes_everywhere_mob} id="bikes-mob">
       <div className={styles.bikes_everywhere_mob__text}>
         <h4 className={styles.bikes_everywhere_mob__text__heading}>
-          Ferla Bikes<strong className="text-red">everywhere</strong>
+          {data.components && data.components["24"]
+            ? data.components["24"].value
+            : "Ferla Bikes Everywhere"}
         </h4>
         <p className={styles.bikes_everywhere_mob__text__paragraph}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit.
+          {data.components && data.components["25"]
+            ? data.components["25"].value
+            : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
         </p>
       </div>
       <div className={styles.bikes_everywhere_mob__gallery}>
-        <HeavyImage />
+        <HeavyImage data={data} />
       </div>
       <Button
         text="Start Selling"

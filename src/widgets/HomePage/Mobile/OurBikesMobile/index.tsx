@@ -3,32 +3,26 @@ import { CartCardSwiper } from "@features/CartCardSwiper";
 
 import styles from "./styles.module.scss";
 
-// async function getData() {
-//   const res = await fetch(
-//     "https://spark-admin-production.up.railway.app/api/site/content/:url"
-//   );
-//   // The return value is *not* serialized
-//   // You can return Date, Map, Set, etc.
+interface IOurBikesScreen {
+  allBikes: boolean;
+  data: any;
+}
 
-//   if (!res.ok) {
-//     // This will activate the closest `error.js` Error Boundary
-//     throw new Error("Failed to fetch data");
-//   }
-
-//   return res.json();
-// }
-
-// export default async function Page() {
-//   const data = await getData();
-
-//   return <main></main>;
-// }
-
-export const OurBikesMobile = () => {
+export const OurBikesMobile: React.FC<IOurBikesScreen> = ({ data }) => {
   return (
     <section className={styles.our_bikes_mob}>
       <h6>
-        <strong>Our Bikes</strong>
+        {data.components &&
+        data.components["45"] &&
+        data.components["45"].value.split("Our").length > 0 ? (
+          <>
+            {data.components["45"].value.split("Bikes")[0]}
+            <strong className="text-red">Bikes</strong>
+            {data.components["45"].value.split("Bikes")[1]}
+          </>
+        ) : (
+          "Our Bikes"
+        )}
       </h6>
       <CartCardSwiper allBikes={true} />
     </section>

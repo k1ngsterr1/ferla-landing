@@ -8,6 +8,7 @@
   height: auto;
   display: flex;
   align-items: center;
+  @apply pt-32;
   @apply mt-32;
 
   &__heading {

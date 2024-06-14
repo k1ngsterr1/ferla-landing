@@ -38,6 +38,10 @@
     margin-top: 0;
   }
 
+  @include respond-to("lg") {
+    @apply mt-24;
+  }
+
   @include respond-to("xl") {
     @apply mt-0;
   }

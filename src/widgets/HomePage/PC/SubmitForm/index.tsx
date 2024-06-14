@@ -4,9 +4,9 @@ import Button from "@shared/ui/Button";
 import { Input } from "@shared/ui/Input";
 import { DatePickerInput } from "@shared/ui/DatePicker";
 import { useSendEmail } from "@shared/lib/hooks/useSendEmail";
+import { FormPopup } from "@entities/FormPopup";
 
 import styles from "../../PC/Form/styles.module.scss";
-import { FormPopup } from "@entities/FormPopup";
 
 export interface IData {
   name: string;
@@ -41,6 +41,7 @@ export const SubmitForm = () => {
           type="text"
           name="name"
           margin="mt-4"
+          required
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
@@ -49,6 +50,7 @@ export const SubmitForm = () => {
           type="phone"
           name="phone"
           margin="mt-14"
+          required
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
         />
@@ -57,6 +59,7 @@ export const SubmitForm = () => {
           type="email"
           name="email"
           margin="mt-14"
+          required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />

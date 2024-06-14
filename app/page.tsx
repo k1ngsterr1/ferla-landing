@@ -38,7 +38,7 @@ import styles from "./styles.module.scss";
 async function getData() {
   const res = await fetch(
     "https://ferla-backend-production.up.railway.app/api/components/get-components",
-    { cache: "force-cache", next: { revalidate: 3600 } }
+    { cache: "force-cache", next: { revalidate: 60 } }
   );
 
   if (!res.ok) {
@@ -75,19 +75,19 @@ const HomePage = async () => {
       <div className={styles.tablet}></div>
       <div className={styles.mob}>
         <HeaderMobile />
-        <MainScreenMobile />
-        <BusinessBlockMobile />
-        <BestSellersMobile />
-        <BikesEverywhereMobile />
-        <PartnersScreenMobile />
-        <ManageScreenMobile />
-        <OurBikesMobile />
-        <ReviewsMobile />
+        <MainScreenMobile data={data} />
+        <BusinessBlockMobile data={data} />
+        <BestSellersMobile data={data} />
+        <BikesEverywhereMobile data={data} />
+        <PartnersScreenMobile data={data} />
+        <ManageScreenMobile data={data} />
+        <OurBikesMobile data={data} allBikes />
+        {/* <ReviewsMobile data={data} /> */}
         <VideoBlock id="video-mob" />
-        <Blog />
-        <EmailFormMobile />
-        <CalculatorBlock />
-        <FormMobile />
+        <Blog data={data} />
+        <EmailFormMobile data={data} />
+        <CalculatorBlock data={data} />
+        <FormMobile data={data} />
         <FooterMobile />
       </div>
     </>
