@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect } from "react";
 import useScript from "@shared/lib/hooks/useScript";
 
@@ -8,27 +7,6 @@ const TrustIndexWidget = () => {
     "https://cdn.trustindex.io/loader.js?9fa959e30e81566f4c668f3ff30";
   useScript(scriptUrl);
 
-  console.log("Trust Index is here!");
-
-  // Effect to relocate the TrustIndex widget after it loads
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     const widget = document.querySelector(".ti-widget"); // TrustIndex should provide the correct class or ID
-  //     const targetContainer = document.getElementById(
-  //       "trustindex-widget-container"
-  //     );
-
-  //     if (widget && targetContainer) {
-  //       console.log("widget:", widget, "target container:", targetContainer);
-  //       targetContainer.appendChild(widget); // Move the widget to the specified container
-  //       console.log("children:", targetContainer.children);
-  //       clearInterval(interval);
-  //     }
-  //   }, 1000);
-
-  //   return () => clearInterval(interval);
-  // }, []);
-
   useEffect(() => {
     const handleWidgetPlacement = () => {
       const widget = document.querySelector(".ti-widget");
@@ -36,35 +14,25 @@ const TrustIndexWidget = () => {
         "trustindex-widget-container"
       );
 
-      if (widget && targetContainer) {
-        console.log("Checking widget placement...");
-
-        // Check if the widget is already a child of the target container
-        if (targetContainer.contains(widget)) {
-          console.log("Widget is already in the correct container.");
-          return;
-        }
-
+      if (widget && targetContainer && !targetContainer.contains(widget)) {
         console.log("Moving widget to the target container.");
-        // Move the widget only if it's not already there
         targetContainer.appendChild(widget);
       } else {
-        console.log("Widget or target container not found:", {
-          widget,
-          targetContainer,
-        });
+        console.log(
+          "Widget or target container not found or widget already placed correctly:",
+          { widget, targetContainer }
+        );
       }
     };
 
-    const interval = setInterval(handleWidgetPlacement, 500);
-    handleWidgetPlacement(); // Also execute immediately
+    // Add a slight delay to allow for script and widget initialization
+    const timeout = setTimeout(handleWidgetPlacement, 500);
 
-    return () => clearInterval(interval);
-  }, []);
+    // Clean up the timeout when the component unmounts
+    return () => clearTimeout(timeout);
+  }, []); // Empty dependency array ensures this effect runs only once after mounting
 
-  return (
-    <div id="trustindex-widget-container"></div> // Container where you want the widget to appear
-  );
+  return <div id="trustindex-widget-container"></div>; // Container where you want the widget to appear
 };
 
 export default TrustIndexWidget;
