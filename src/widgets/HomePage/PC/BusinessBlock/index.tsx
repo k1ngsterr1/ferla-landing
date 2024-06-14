@@ -43,7 +43,7 @@ export const BusinessBlock: React.FC<IBusinessBlock> = ({ data }) => {
                     : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
                 </p>
                 <Button
-                  id="form"
+                  id="form-pc"
                   text="Get Started"
                   buttonType="transparent"
                   margin="mt-4"
