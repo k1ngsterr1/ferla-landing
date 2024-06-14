@@ -53,14 +53,14 @@ export const BusinessBlockMobile: React.FC<IBusinessBlock> = ({ data }) => {
           </p>
         </div>
         <div className={styles.business_block_mob__content__tabs}>
-          {tabs.map((tab) => (
+          {tabs.map((tab, index) => (
             <SolutionTab
               name={
-                data.components && data.components["8"]
-                  ? data.components["8"].value
+                data.components && data.components[`${8 + index}`]
+                  ? data.components[`${8 + index}`].value
                   : tab.name
               }
-              href={tab.href}
+              href={"test"}
               key={tab.name}
             />
           ))}

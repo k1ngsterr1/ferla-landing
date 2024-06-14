@@ -44,7 +44,7 @@ export const OurBikes: React.FC<IOurBikesScreen> = ({ allBikes, data }) => {
             name={card.name}
             paragraph={card.paragraph}
             photo={card.image}
-            href={card.href}
+            href={"test"}
             key={index}
           />
         ))}

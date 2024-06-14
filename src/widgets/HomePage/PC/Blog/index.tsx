@@ -23,7 +23,7 @@ export const Blog: React.FC<IBlog> = ({ data }) => {
           <div className={styles.blog__content__card} key={index}>
             <BlogCard
               title={card.title}
-              href={card.href}
+              href={"test"}
               image={card.image}
               key={index}
             />
