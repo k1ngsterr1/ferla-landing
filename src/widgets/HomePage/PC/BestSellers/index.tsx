@@ -45,7 +45,7 @@ export const BestSellers: React.FC<IBestSellers> = ({ data }) => {
           <ArrowAnimation />
         </div>
         <Button
-          id="form"
+          targetId="form-pc"
           text="Manage Your Business"
           buttonType="transparent"
           margin="mt-8"
