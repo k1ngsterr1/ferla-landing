@@ -28,27 +28,25 @@ export const AboutCardSwiper: React.FC<IBestSellers> = ({ data }) => {
       className={styles.swiper}
       navigation={false}
     >
-      {content.map((item, index) => {
-        const nameKey = `18 + ${index * 2}`;
-        const textKey = `19 + ${index * 2}`;
-
-        return (
-          <AboutCard
-            key={index}
-            icon={item.icon}
-            name={
-              data.components && data.components[nameKey]
-                ? data.components[nameKey].value
-                : "Content Not Found"
-            }
-            text={
-              data.components && data.components[textKey]
-                ? data.components[textKey].value
-                : "Content Not Found"
-            }
-          />
-        );
-      })}
+      {content.map((item, index) => (
+        <SwiperSlide key={index}>
+          <div className="flex justify-center items-center">
+            <AboutCard
+              icon={item.icon}
+              name={
+                data.components && data.components[18 + index * 2]
+                  ? data.components[18 + index * 2].value
+                  : "Content Not Found"
+              }
+              text={
+                data.components && data.components[19 + index * 2]
+                  ? data.components[19 + index * 2].value
+                  : "Content Not Found"
+              }
+            />
+          </div>
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };
