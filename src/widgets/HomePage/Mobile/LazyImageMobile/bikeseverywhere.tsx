@@ -19,8 +19,8 @@ const LazyImage: React.FC<ILazyImage> = ({ data }) => {
           height={950}
           key={index}
           src={
-            data.components && data.components[`${26 + index}`]
-              ? data.components[`${26 + index}`].value
+            data.components && data.components[`${30 + index}`]
+              ? data.components[`${30 + index}`].value
               : image
           }
           priority

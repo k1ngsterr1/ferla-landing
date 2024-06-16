@@ -32,13 +32,7 @@ export const BikesEverywhereMobile: React.FC<IBikesEverywhere> = ({ data }) => {
         </p>
       </div>
       <div className={styles.bikes_everywhere_mob__gallery}>
-        <HeavyImage
-          data={
-            data.components && data.components["30"]
-              ? data.components["30"].value
-              : "Content Not Found"
-          }
-        />
+        <HeavyImage data={data} />
       </div>
       <Button
         text={
