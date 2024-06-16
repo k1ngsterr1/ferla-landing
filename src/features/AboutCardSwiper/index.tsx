@@ -34,7 +34,7 @@ export const AboutCardSwiper: React.FC<IBestSellers> = ({ data }) => {
             <AboutCard
               icon={item.icon}
               name={
-                data.components && data.components[`${18 + index + 1}`]
+                data.components && data.components[`${18 + index}`]
                   ? data.components[`${18 + index + 1}`].value
                   : item.name
               }
