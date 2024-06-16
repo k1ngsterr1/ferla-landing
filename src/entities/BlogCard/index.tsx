@@ -8,7 +8,7 @@ export interface IBlogCard {
   title: string;
   image: string | StaticImageData;
   href: string;
-  data: any;
+  data?: any;
 }
 
 export const BlogCard: React.FC<IBlogCard> = ({ title, href, image, data }) => {
