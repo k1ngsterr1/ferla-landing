@@ -15,7 +15,6 @@ const LazyImage: React.FC<ILazyImage> = ({ src }) => {
       src={src}
       width={"925"}
       height={"820"}
-      priority
       alt="Ferla Bikes Main Image"
       className={styles.best_sellers__image}
     />

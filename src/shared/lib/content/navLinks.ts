@@ -2,6 +2,8 @@ export interface INavLink {
   label: string;
   href: string;
   onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
+  onClick?: () => void;
 }
 
 export const navLinks: INavLink[] = [

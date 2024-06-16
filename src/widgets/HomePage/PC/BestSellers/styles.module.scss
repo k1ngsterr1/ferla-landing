@@ -8,6 +8,7 @@
   position: relative;
   display: flex;
   justify-content: space-between;
+  @apply pt-32;
   @apply mt-32;
 
   &__heading {

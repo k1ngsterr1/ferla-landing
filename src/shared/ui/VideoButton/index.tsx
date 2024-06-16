@@ -10,7 +10,11 @@ interface IVideoButton {
 
 export const VideoButton: React.FC<IVideoButton> = ({ onClick }) => {
   return (
-    <button className={`${styles.button} hoverable`} onClick={onClick}>
+    <button
+      className={`${styles.button} hoverable`}
+      onClick={onClick}
+      name="Video Button"
+    >
       <FontAwesomeIcon icon={faPlay} className={styles.button__icon} />
     </button>
   );

@@ -26,10 +26,7 @@ export const HeaderMobile = () => {
           alt="Ferla Bikes Logo"
           className={styles.header_mob__container__logo}
         />
-        <Link
-          className={styles.header_mob__container__link}
-          href="#email-mobile"
-        >
+        <Link className={styles.header_mob__container__link} href="#email-mob">
           Get a quote
         </Link>
       </div>

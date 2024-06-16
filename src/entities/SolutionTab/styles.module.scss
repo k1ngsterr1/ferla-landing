@@ -28,6 +28,7 @@
   }
 
   @include respond-to("xxs") {
+    width: 100%;
     height: clamp(75px, 41.667vw, 300px);
   }
 

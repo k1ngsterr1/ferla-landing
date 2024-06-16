@@ -7,7 +7,7 @@ interface IReviews {
   data: any;
 }
 
-export const Reviews: React.FC<IReviews> = ({ data }) => {
+const Reviews: React.FC<IReviews> = ({ data }) => {
   return (
     <section className={styles.reviews} id="reviews">
       <h6 className={styles.reviews__heading}>
@@ -24,3 +24,5 @@ export const Reviews: React.FC<IReviews> = ({ data }) => {
     </section>
   );
 };
+
+export default Reviews;

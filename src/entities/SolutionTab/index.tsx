@@ -22,7 +22,7 @@ export const SolutionTab: React.FC<ISolutionTab> = ({ name, href }) => {
             href={href}
             className={`${styles.solution_tab__link} hoverable`}
           >
-            Learn More
+            Learn All Products
           </Link>
           <FontAwesomeIcon
             icon={faChevronRight}

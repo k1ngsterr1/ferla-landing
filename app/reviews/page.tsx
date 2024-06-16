@@ -1,5 +1,5 @@
 import React from "react";
-import { Reviews as ReviewsSwiper } from "@widgets/HomePage/PC/Reviews/index";
+// import { Reviews as ReviewsSwiper } from "@widgets/HomePage/PC/Reviews/index";
 import { Header } from "@features/Header";
 import { Footer } from "@features/Footer";
 import { Cursor } from "@shared/ui/Cursor";
@@ -28,7 +28,7 @@ const Reviews = async () => {
       <Header />
       <Cursor />
       <div className={`${styles.pc} mt-8`}>
-        <ReviewsSwiper data={data} />
+        {/* <ReviewsSwiper data={data} /> */}
       </div>
       <Form data={data} />
       <Footer />

@@ -24,7 +24,14 @@ export const Header = () => {
     if (link.label === "Bikes") {
       return {
         ...link,
+        onClick: closeMenu,
         onMouseEnter: openMenu,
+      };
+    } else {
+      return {
+        ...link,
+        onMouseLeave: closeMenu,
+        onClick: closeMenu,
       };
     }
     return link;
@@ -51,6 +58,8 @@ export const Header = () => {
               href={link.href}
               key={index}
               onMouseEnter={link.onMouseEnter}
+              onMouseLeave={link.onMouseLeave}
+              onClick={link.onClick}
             />
           ))}
         </nav>
@@ -58,7 +67,7 @@ export const Header = () => {
           text="Contact Us"
           buttonType="outline"
           zIndex="!z-[100000000]"
-          href="#form"
+          href="#form-pc"
         />
       </div>
     </header>

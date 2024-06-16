@@ -4,7 +4,7 @@
 @import "../../../../shared/styles/animations";
 
 .main_screen_mob {
-  height: 100svh;
+  height: 110svh;
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
@@ -50,6 +50,7 @@
     margin: auto;
     overflow-x: hidden;
     @apply mt-56;
+    @apply mb-10;
 
     &__heading {
       color: #fff;

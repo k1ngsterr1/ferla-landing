@@ -8,7 +8,6 @@ import { BikesEverywhere } from "@widgets/HomePage/PC/BikesEverywhere";
 import { PartnersScreen } from "@widgets/HomePage/PC/Partners";
 import { ManageScreen } from "@widgets/HomePage/PC/ManageScreen";
 import { OurBikes } from "@widgets/HomePage/PC/OurBikes";
-import { Reviews } from "@widgets/HomePage/PC/Reviews";
 import { BestSellers } from "@widgets/HomePage/PC/BestSellers";
 import { VideoBlock } from "@widgets/HomePage/PC/VideoBlock";
 import { Blog } from "@widgets/HomePage/PC/Blog";
@@ -28,17 +27,26 @@ import { BikesEverywhereMobile } from "@widgets/HomePage/Mobile/BikeEverywhereMo
 import { PartnersScreenMobile } from "@widgets/HomePage/Mobile/PartnersScreenMobile";
 import { ManageScreenMobile } from "@widgets/HomePage/Mobile/ManageScreenMobile";
 import { OurBikesMobile } from "@widgets/HomePage/Mobile/OurBikesMobile";
-import { ReviewsMobile } from "@widgets/HomePage/Mobile/ReviewsScreenMobile";
+// import { ReviewsMobile } from "@widgets/HomePage/Mobile/ReviewsScreenMobile";
 import { EmailFormMobile } from "@widgets/HomePage/Mobile/EmailFormMobile";
 import { FormMobile } from "@widgets/HomePage/Mobile/FormMobile";
 import { FooterMobile } from "@features/FooterMobile/index";
+import dynamic from "next/dynamic";
 
 import styles from "./styles.module.scss";
+
+const LazyReviews = dynamic(
+  () => import("../src/widgets/HomePage/PC/Reviews/index"),
+  {
+    loading: () => <p>Loading...</p>,
+    ssr: false,
+  }
+);
 
 async function getData() {
   const res = await fetch(
     "https://ferla-backend-production.up.railway.app/api/components/get-components",
-    { cache: "force-cache", next: { revalidate: 10 } }
+    { cache: "force-cache", next: { revalidate: 60 } }
   );
 
   if (!res.ok) {
@@ -64,7 +72,7 @@ const HomePage = async () => {
         <PartnersScreen data={data} />
         <ManageScreen data={data} />
         <OurBikes allBikes={true} data={data} />
-        <Reviews data={data} />
+        <LazyReviews data={data} />
         <VideoBlock id="video" />
         <Blog data={data} />
         <EmailForm data={data} />
@@ -82,7 +90,7 @@ const HomePage = async () => {
         <PartnersScreenMobile data={data} />
         <ManageScreenMobile data={data} />
         <OurBikesMobile data={data} allBikes />
-        <ReviewsMobile data={data} />
+        {/* <ReviewsMobile data={data} /> */}
         <VideoBlock id="video-mob" />
         <Blog data={data} />
         <EmailFormMobile data={data} />

@@ -8,6 +8,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @apply pt-32;
   @apply mt-32;
 
   @include respond-to("xxs") {
@@ -72,14 +73,25 @@
     @apply rounded-xl;
     @apply mt-8;
 
+    &__image {
+      @apply rounded-md;
+    }
+
+    @include respond-to("xxs") {
+      height: auto;
+      @apply mt-4;
+    }
+
     @include respond-to("xs") {
       width: 100%;
       height: clamp(174px, 350 / 480 * 100vw, 700px);
+      @apply mt-4;
     }
 
     @include respond-to("sm") {
       width: 100%;
       height: clamp(174px, 350 / 720 * 100vw, 700px);
+      @apply mt-4;
     }
 
     @include respond-to("md") {
@@ -99,6 +111,7 @@
 
     @include respond-to("2xl") {
       width: 100%;
+      @apply mb-64;
     }
 
     @include respond-to("3xl") {
@@ -115,6 +128,10 @@
       width: 100%;
       height: clamp(400px, 800 / 2560 * 100vw, 1600px);
     }
+  }
+
+  @include respond-to("xxs") {
+    @apply mt-0;
   }
 
   @include respond-to("lg") {

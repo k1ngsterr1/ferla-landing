@@ -42,7 +42,7 @@ export const MainScreen: React.FC<IMainScreen> = ({ data }) => {
         }
         animation="fade-reveal-left"
         buttonType="filled"
-        targetId="form"
+        targetId="form-pc"
         margin="mt-8"
       />
       <Link className={`${styles.main_screen__link} hoverable`} href="#video">
