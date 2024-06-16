@@ -21,8 +21,8 @@ export const PartnersScreenMobile: React.FC<IPartnersScreen> = ({ data }) => {
     <section className={styles.partners_mob} id="partners-mob">
       <div className={styles.partners_mob__content}>
         <h5 className={styles.partners_mob__content__heading}>
-          {data.components && data.components["31"]
-            ? data.components["31"].value
+          {data.components && data.components["35"]
+            ? data.components["35"].value
             : "Partnering with Industry Giants Ferla’s Trusted Collaborators"}
         </h5>
         <HeavyImage />
@@ -33,8 +33,8 @@ export const PartnersScreenMobile: React.FC<IPartnersScreen> = ({ data }) => {
             width={"256"}
             height={"256"}
             src={
-              data.components && data.components[`${32 + index}`]
-                ? data.components[`${32 + index}`].value
+              data.components && data.components[`${36 + index}`]
+                ? data.components[`${36 + index}`].value
                 : image.image
             }
             alt={image.alt}

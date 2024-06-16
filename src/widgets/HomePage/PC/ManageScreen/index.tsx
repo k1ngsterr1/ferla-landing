@@ -31,9 +31,9 @@ export const ManageScreen: React.FC<IManageScreen> = ({ data }) => {
               data.components["43"] &&
               data.components["43"].value.split("Ferla Bikes").length > 0 ? (
                 <>
-                  {data.components["44"].value.split("Ferla Bikes")[0]}
+                  {data.components["43"].value.split("Ferla Bikes")[0]}
                   <strong className="text-red"> Ferla Bikes</strong>
-                  {data.components["44"].value.split("Ferla Bikes")[1]}
+                  {data.components["43"].value.split("Ferla Bikes")[1]}
                 </>
               ) : (
                 `Redefining Mobile Business Solutions With Ferla Bikes`

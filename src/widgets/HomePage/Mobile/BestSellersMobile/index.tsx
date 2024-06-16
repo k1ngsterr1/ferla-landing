@@ -25,21 +25,31 @@ export const BestSellersMobile: React.FC<IBestSellers> = ({ data }) => {
     <section className={styles.best_sellers_mob} id="business-mob">
       <div className={styles.best_sellers_mob__content}>
         <div className={styles.best_sellers_mob__content__text}>
-          <MiniText text="Best Sellers" />
+          <MiniText
+            text={
+              data.components && data.components["14"]
+                ? data.components["14"].value
+                : "Your Bike, Your Way"
+            }
+          />
           <h3 className={styles.best_sellers_mob__content__text__heading}>
-            {data.components && data.components["13"]
-              ? data.components["13"].value
+            {data.components && data.components["15"]
+              ? data.components["15"].value
               : "Your Bike, Your Way"}
           </h3>
           <p className={styles.best_sellers_mob__content__text__paragraph}>
-            {data.components && data.components["14"]
-              ? data.components["14"].value
+            {data.components && data.components["16"]
+              ? data.components["16"].value
               : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
           </p>
         </div>
         <AboutCardSwiper data={data} />
         <Button
-          text="Manage Your Business"
+          text={
+            data.components && data.components["17"]
+              ? data.components["17"]
+              : "Content Not Found"
+          }
           buttonType="transparent"
           margin="mt-8"
           icon={faChevronRight}
@@ -47,8 +57,8 @@ export const BestSellersMobile: React.FC<IBestSellers> = ({ data }) => {
       </div>
       <HeavyImage
         src={
-          data.components && data.components["23"]
-            ? data.components["23"].value
+          data.components && data.components["26"]
+            ? data.components["26"].value
             : bike
         }
       />

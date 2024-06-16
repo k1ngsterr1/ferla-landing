@@ -14,9 +14,13 @@ import "swiper/css/pagination";
 
 interface IOurBikesScreen {
   allBikes: boolean;
+  data: any;
 }
 
-export const CartCardSwiper: React.FC<IOurBikesScreen> = ({ allBikes }) => {
+export const CartCardSwiper: React.FC<IOurBikesScreen> = ({
+  allBikes,
+  data,
+}) => {
   return (
     <>
       {allBikes && (
@@ -34,7 +38,7 @@ export const CartCardSwiper: React.FC<IOurBikesScreen> = ({ allBikes }) => {
         {cartsContent.map((card, index) => (
           <SwiperSlide key={index}>
             <CartCard
-              data={""}
+              data={data}
               name={card.name}
               title={card.title}
               paragraph={card.paragraph}

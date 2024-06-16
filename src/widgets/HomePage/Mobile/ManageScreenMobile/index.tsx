@@ -16,16 +16,22 @@ interface IManageScreen {
 export const ManageScreenMobile: React.FC<IManageScreen> = ({ data }) => {
   return (
     <section className={styles.manage_screen_mob} id="markets-mob">
-      <MiniText text="From Initial Concept to" />
-      <MiniText text="Market Leader" />
+      <MiniText
+        text={
+          data.components && data.components["42"]
+            ? data.components["42"].value
+            : "From Initial Concept To Market Leader"
+        }
+      />
+      {/* <MiniText text="Market Leader" /> */}
       <h6 className={styles.manage_screen_mob__heading}>
         {data.components &&
-        data.components["38"] &&
-        data.components["38"].value.split("Ferla Bikes").length > 0 ? (
+        data.components["43"] &&
+        data.components["43"].value.split("Ferla Bikes").length > 0 ? (
           <>
-            {data.components["38"].value.split("Ferla Bikes")[0]}
+            {data.components["43"].value.split("Ferla Bikes")[0]}
             <strong className="text-red"> Ferla Bikes</strong>
-            {data.components["38"].value.split("Ferla Bikes")[1]}
+            {data.components["43"].value.split("Ferla Bikes")[1]}
           </>
         ) : (
           `Redefining Mobile Business Solutions With Ferla Bikes`
@@ -35,8 +41,8 @@ export const ManageScreenMobile: React.FC<IManageScreen> = ({ data }) => {
         <Block
           icon={faMoneyBill}
           paragraph={
-            data.components && data.components["40"]
-              ? data.components["40"].value
+            data.components && data.components["45"]
+              ? data.components["4е"].value
               : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
           }
         />
@@ -45,8 +51,8 @@ export const ManageScreenMobile: React.FC<IManageScreen> = ({ data }) => {
           icon={faMoneyBill}
           margin="mt-8"
           paragraph={
-            data.components && data.components["41"]
-              ? data.components["41"].value
+            data.components && data.components["46"]
+              ? data.components["46"].value
               : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
           }
         />
@@ -55,8 +61,8 @@ export const ManageScreenMobile: React.FC<IManageScreen> = ({ data }) => {
           icon={faMoneyBill}
           margin="mt-8"
           paragraph={
-            data.components && data.components["42"]
-              ? data.components["42"].value
+            data.components && data.components["47"]
+              ? data.components["47"].value
               : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
           }
         />
@@ -64,14 +70,18 @@ export const ManageScreenMobile: React.FC<IManageScreen> = ({ data }) => {
       <div className=" mt-16">
         <Video
           data={
-            data.components && data.components["44"]
-              ? data.components["44"].value
+            data.components && data.components["48"]
+              ? data.components["48"].value
               : market_image
           }
         />
       </div>
       <Button
-        text="Manage Your Business"
+        text={
+          data.components && data.components["44"]
+            ? data.components["44"].value
+            : "Manage Your Business"
+        }
         buttonType="transparent"
         icon={faChevronRight}
         margin="mt-8"

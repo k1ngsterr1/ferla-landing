@@ -47,7 +47,7 @@ export const BestSellers: React.FC<IBestSellers> = ({ data }) => {
         <Button
           id="form"
           text={
-            data.components ** data.components["17"]
+            data.components && data.components["17"]
               ? data.components["17"]
               : "Content Not Found"
           }
