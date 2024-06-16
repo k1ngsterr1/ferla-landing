@@ -42,7 +42,7 @@ export const ManageScreenMobile: React.FC<IManageScreen> = ({ data }) => {
           icon={faMoneyBill}
           paragraph={
             data.components && data.components["45"]
-              ? data.components["4е"].value
+              ? data.components["44"].value
               : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
           }
         />

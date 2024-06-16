@@ -47,7 +47,7 @@ export const BestSellersMobile: React.FC<IBestSellers> = ({ data }) => {
         <Button
           text={
             data.components && data.components["17"]
-              ? data.components["17"]
+              ? data.components["17"].value
               : "Content Not Found"
           }
           buttonType="transparent"
