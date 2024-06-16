@@ -34,13 +34,13 @@ export const AboutCardSwiper: React.FC<IBestSellers> = ({ data }) => {
             <AboutCard
               icon={item.icon}
               name={
-                data.components && data.components[`18 + ${index * 2}`]
-                  ? data.components[`18 + ${index * 2}`].value
+                data.components && data.components[18 + `${index * 2}`]
+                  ? data.components[18 + `${index * 2}`].value
                   : "Content Not Found"
               }
               text={
-                data.components && data.components[`19 + ${index * 2}`]
-                  ? data.components[`19 + ${index * 2}`].value
+                data.components && data.components[19 + `${index * 2}`]
+                  ? data.components[19 + `${index * 2}`].value
                   : "Content Not Found"
               }
             />
