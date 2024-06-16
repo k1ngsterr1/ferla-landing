@@ -34,6 +34,7 @@ export const CartCardSwiper: React.FC<IOurBikesScreen> = ({ allBikes }) => {
         {cartsContent.map((card, index) => (
           <SwiperSlide key={index}>
             <CartCard
+              data={""}
               name={card.name}
               title={card.title}
               paragraph={card.paragraph}
