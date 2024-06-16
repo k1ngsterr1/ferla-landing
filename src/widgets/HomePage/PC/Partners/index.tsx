@@ -22,8 +22,8 @@ export const PartnersScreen: React.FC<IPartnersScreen> = ({ data }) => {
           {/* Partnering with Industry Giants <br />
           <strong className="text-red">Ferla’s {""}</strong>
           Trusted Collaborators */}
-          {data.components && data.components["31"]
-            ? data.components["31"].value
+          {data.components && data.components["35"]
+            ? data.components["35"].value
             : "Partnering with Industry Giants Ferla’s Trusted Collaborators"}
         </h5>
       </div>
@@ -33,8 +33,8 @@ export const PartnersScreen: React.FC<IPartnersScreen> = ({ data }) => {
             width={"256"}
             height={"256"}
             src={
-              data.components && data.components[`${32 + index}`]
-                ? data.components[`${32 + index}`].value
+              data.components && data.components[`${36 + index}`]
+                ? data.components[`${36 + index}`].value
                 : image.image
             }
             alt={image.alt}

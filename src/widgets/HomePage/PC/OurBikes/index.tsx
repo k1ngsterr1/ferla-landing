@@ -25,12 +25,12 @@ export const OurBikes: React.FC<IOurBikesScreen> = ({ allBikes, data }) => {
         )}
         <h6 className={styles.bikes__upper__heading}>
           {data.components &&
-          data.components["45"] &&
-          data.components["45"].value.split("Our").length > 0 ? (
+          data.components["49"] &&
+          data.components["49"].value.split("Our").length > 0 ? (
             <>
-              {data.components["45"].value.split("Bikes")[0]}
+              {data.components["49"].value.split("Bikes")[0]}
               <strong className="text-red">Bikes</strong>
-              {data.components["45"].value.split("Bikes")[1]}
+              {data.components["49"].value.split("Bikes")[1]}
             </>
           ) : (
             "Our Bikes"
@@ -40,6 +40,7 @@ export const OurBikes: React.FC<IOurBikesScreen> = ({ allBikes, data }) => {
       <div className={styles.bikes__cards}>
         {cartsContent.map((card, index) => (
           <CartCard
+            data={data}
             title={card.title}
             name={card.name}
             paragraph={card.paragraph}
