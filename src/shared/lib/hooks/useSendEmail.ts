@@ -57,6 +57,7 @@ export function useSendEmail() {
     const webhookResponse = await fetch(webhookUrl, postData).then(() =>
       toggleFormPopup()
     );
+
     addForm(data);
   };
 
