@@ -33,21 +33,25 @@ export const MainScreen: React.FC<IMainScreen> = ({ data }) => {
           : "From Coffee Bikes and Ice Cream Bikes to Marketing & Promo Bikes, Hospitality Bikes, Vending Carts and more, we provide the perfect solution for your mobile retail pop-up."}
       </p>
       <Button
-        text="Get A Free Consultation"
+        text={
+          data.components && data.components["3"]
+            ? data.components["3"].value
+            : "Watch the true story"
+        }
         animation="fade-reveal-left"
         buttonType="filled"
         targetId="form-pc"
         margin="mt-8"
       />
       <Link className={`${styles.main_screen__link} hoverable`} href="#video">
-        {data.components && data.components["3"]
-          ? data.components["3"].value
+        {data.components && data.components["4"]
+          ? data.components["4"].value
           : "Watch the true story"}
       </Link>
       <HeavyImage
         src={
-          data.components && data.components["4"]
-            ? data.components["4"].value
+          data.components && data.components["5"]
+            ? data.components["5"].value
             : image
         }
       />

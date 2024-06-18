@@ -35,7 +35,11 @@ export const MainScreenMobile: React.FC<IMainScreen> = ({ data }) => {
             : "From Coffee Bikes and Ice Cream Bikes to Marketing & Promo Bikes, Hospitality Bikes, Vending Carts and more, we provide the perfect solution for your mobile retail pop-up."}
         </p>
         <Button
-          text="Get A Free Consultation"
+          text={
+            data.components && data.components["3"]
+              ? data.components["3"].value
+              : "Get A Free Consultation"
+          }
           buttonType="filled"
           margin="mt-8"
           targetId="form-mob"
@@ -44,8 +48,8 @@ export const MainScreenMobile: React.FC<IMainScreen> = ({ data }) => {
           className={`${styles.main_screen_mob__content__link} hoverable`}
           href="#video-mob"
         >
-          {data.components && data.components["3"]
-            ? data.components["3"].value
+          {data.components && data.components["4"]
+            ? data.components["4"].value
             : "Watch the true story"}
         </Link>
       </div>

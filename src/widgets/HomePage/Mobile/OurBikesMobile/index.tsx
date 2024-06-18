@@ -13,18 +13,18 @@ export const OurBikesMobile: React.FC<IOurBikesScreen> = ({ data }) => {
     <section className={styles.our_bikes_mob}>
       <h6>
         {data.components &&
-        data.components["45"] &&
-        data.components["45"].value.split("Our").length > 0 ? (
+        data.components["49"] &&
+        data.components["49"].value.split("Our").length > 0 ? (
           <>
-            {data.components["45"].value.split("Bikes")[0]}
+            {data.components["49"].value.split("Bikes")[0]}
             <strong className="text-red">Bikes</strong>
-            {data.components["45"].value.split("Bikes")[1]}
+            {data.components["49"].value.split("Bikes")[1]}
           </>
         ) : (
           "Our Bikes"
         )}
       </h6>
-      <CartCardSwiper allBikes={true} />
+      <CartCardSwiper allBikes={true} data={data} />
     </section>
   );
 };

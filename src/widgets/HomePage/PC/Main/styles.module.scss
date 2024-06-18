@@ -18,11 +18,11 @@
   }
 
   @include respond-to("lg") {
-    @apply mt-32;
+    @apply mt-16;
   }
 
   @include respond-to("xl") {
-    @apply mt-32;
+    @apply mt-16;
   }
 
   @include respond-to("2xl") {

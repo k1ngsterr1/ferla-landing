@@ -13,8 +13,8 @@ export const Blog: React.FC<IBlog> = ({ data }) => {
     <section className={styles.blog}>
       <div className={styles.blog__upper}>
         <h6 className={styles.blog__upper__heading}>
-          {data?.components && data?.components["49"]
-            ? data?.components["49"].value
+          {data?.components && data?.components["54"]
+            ? data?.components["54"].value
             : "Fresh From Our Blog"}
         </h6>
       </div>
@@ -22,8 +22,9 @@ export const Blog: React.FC<IBlog> = ({ data }) => {
         {blogContent.map((card, index) => (
           <div className={styles.blog__content__card} key={index}>
             <BlogCard
+              data={data}
               title={card.title}
-              href={card.href}
+              href={"test"}
               image={card.image}
               key={index}
             />

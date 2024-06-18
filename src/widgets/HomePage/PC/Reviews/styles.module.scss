@@ -10,6 +10,16 @@
   @apply pt-32;
   @apply mt-32;
 
+  @include respond-to("lg") {
+    @apply mt-24;
+    @apply pt-24;
+  }
+
+  @include respond-to("2xl") {
+    @apply mt-32;
+    @apply pt-32;
+  }
+
   &__paragraph {
     width: 30%;
     @apply text-dark;

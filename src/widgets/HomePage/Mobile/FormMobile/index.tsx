@@ -12,13 +12,13 @@ export const FormMobile: React.FC<IForm> = ({ data }) => {
   return (
     <section className={styles.form_mob} id="form-mob">
       <h6>
-        {data?.components && data?.components["54"]
-          ? data?.components["54"].value
+        {data?.components && data?.components["61"]
+          ? data?.components["61"].value
           : "Contact us"}
       </h6>
       <p className={styles.form_mob__paragraph}>
-        {data?.components && data?.components["59"]
-          ? data?.components["59"].value
+        {data?.components && data?.components["58"]
+          ? data?.components["58"].value
           : "We have got more options Hop on a call with us today!"}
       </p>
       <div className={styles.form_mob__mobile}>
