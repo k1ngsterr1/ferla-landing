@@ -19,8 +19,6 @@ export function useAddForm() {
         "https://ferla-backend-production.up.railway.app/api/forms/add",
         updatedData
       );
-
-      console.log(response.data);
     } catch (error: any) {
       console.error("Failed to create data:", error);
       if (error.response) {
