@@ -4,15 +4,16 @@ import Button from "@shared/ui/Button";
 import { Input } from "@shared/ui/Input";
 import { DatePickerInput } from "@shared/ui/DatePicker";
 import { useSendEmail } from "@shared/lib/hooks/useSendEmail";
+import { useAddForm } from "@shared/lib/hooks/useAddForm";
 import { FormPopup } from "@entities/FormPopup";
 
 import styles from "../../PC/Form/styles.module.scss";
 
 export interface IData {
   name: string;
-  phone: string;
+  phoneNumber: string;
   email: string;
-  date: Date;
+  date: string;
 }
 
 export const SubmitForm = () => {
@@ -25,7 +26,7 @@ export const SubmitForm = () => {
 
   useEffect(() => {
     setValue("name", name);
-    setValue("phone", phone);
+    setValue("phoneNumber", phone);
     setValue("email", email);
     setValue("date", date);
   }, [name, phone, email, date, setValue]);

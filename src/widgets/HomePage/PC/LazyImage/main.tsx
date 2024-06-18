@@ -17,7 +17,7 @@ const LazyImage: React.FC<ILazyImage> = ({ src }) => {
       priority
       width={"820"}
       height={"820"}
-      placeholder="blur"
+      // placeholder="blur"
       // blurDataURL={"../../../../assets/webp/pc/compressed_image.jpg"}
       alt="Ferla Bikes Main Image"
       className={styles.main_screen__image}
