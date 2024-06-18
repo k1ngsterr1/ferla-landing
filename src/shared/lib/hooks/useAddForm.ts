@@ -12,16 +12,14 @@ export function useAddForm() {
     try {
       const updatedData = {
         ...data,
-        code: "SPARK-STUDIO-85209af2e07011fafd442671ef8ae84b647be17c7f517ea5942075dda6fbeeb7", // Укажите значение нового поля
+        code: "SPARK-STUDIO-85209af2e07011fafd442671ef8ae84b647be17c7f517ea5942075dda6fbeeb7",
       };
 
-      // Отправляем данные
       const response = await axios.post(
         "https://ferla-backend-production.up.railway.app/api/forms/add",
         updatedData
       );
 
-      // Можно использовать formData для других целей, если требуется
       console.log(response.data);
     } catch (error: any) {
       console.error("Failed to create data:", error);
