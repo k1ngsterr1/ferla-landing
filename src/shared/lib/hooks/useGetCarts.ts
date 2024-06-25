@@ -7,6 +7,7 @@ interface IResponseData {
   description: string;
   img_url: string;
   price: number;
+  carts: any;
 }
 
 export function useGetCarts() {
