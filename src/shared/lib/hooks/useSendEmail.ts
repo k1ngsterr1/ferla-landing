@@ -20,7 +20,7 @@ export function useSendEmail() {
   const { toggleFormPopup } = useFormPopup();
   const { addForm } = useAddForm();
 
-  const onSubmit = async (data: IData, event?: React.BaseSyntheticEvent) => {
+  const onSubmit = async (data: any, event?: React.BaseSyntheticEvent) => {
     event?.preventDefault();
 
     // Prepare the data for the webhook
