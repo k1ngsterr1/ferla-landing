@@ -8,12 +8,7 @@ interface TextArea extends React.TextareaHTMLAttributes<HTMLInputElement> {
   type: string;
 }
 
-export const TextArea: React.FC<Input> = ({
-  labelText,
-  margin,
-  type,
-  ...rest
-}) => {
+export const TextArea: React.FC<TextArea> = ({ margin, type, ...rest }) => {
   return (
     <textarea
       className={`${styles.input_container} hoverable ${margin} hoverable`}
