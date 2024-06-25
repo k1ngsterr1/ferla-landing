@@ -79,7 +79,7 @@ export const SubmitFormMobile = () => {
           isMobile
           labelText="Write Your Message"
           type="text"
-          name="date"
+          name="message"
           // margin="mt-14"
           required
           value={message}

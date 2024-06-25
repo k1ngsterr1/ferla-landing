@@ -21,16 +21,16 @@ export const SubmitFormTablet = () => {
   const [name, setName] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
   const [email, setEmail] = useState<string>("");
-  const [date, setDate] = useState<any>();
+  const [message, setMessage] = useState<string>("");
 
   const { handleSubmit, onSubmit, setValue } = useSendEmail();
 
   useEffect(() => {
     setValue("name", name);
-    setValue("phone", phone);
+    setValue("phoneNumber", phone);
     setValue("email", email);
-    setValue("date", date);
-  }, [name, phone, email, date, setValue]);
+    setValue("message", message);
+  }, [name, phone, email, message, setValue]);
 
   return (
     <>
@@ -77,20 +77,15 @@ export const SubmitFormTablet = () => {
           // {...register("email", { required: true, pattern: /^\S+@\S+\.\S+$/ })}
         />
         {/* {errors.email && <p className={styles.error}>Invalid email address!</p>} */}
-        <DatePickerInput
-          placeholder="Pick a Date"
-          margin="mt-16"
-          date={date}
-          onChange={(
-            selectedDate: Date | null,
-            event: React.SyntheticEvent<any, Event> | undefined
-          ) => {
-            if (selectedDate) {
-              setDate(selectedDate.toISOString());
-            } else {
-              setDate("");
-            }
-          }}
+        <InputMobile
+          isMobile
+          labelText="Write Your Message"
+          type="text"
+          name="message"
+          // margin="mt-14"
+          required
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
         />
         {/* {errors.date && <p className={styles.error}>Date is required!</p>} */}
         <Button
