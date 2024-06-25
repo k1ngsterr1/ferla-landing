@@ -24,8 +24,6 @@ export const Calculator = () => {
 
     const selectedOption = options.find((option) => option.value === value);
 
-    console.log(selectedOption.price);
-
     // If found, set the bikePrice to the price of the selected option
     if (selectedOption) {
       setBikePrice(selectedOption.price);
