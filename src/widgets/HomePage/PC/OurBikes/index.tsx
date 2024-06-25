@@ -41,7 +41,7 @@ export const OurBikes: React.FC<IOurBikesScreen> = ({ allBikes, data }) => {
         </h6>
       </div>
       <div className={styles.bikes__cards}>
-        {cartsData?.map((card, index) => (
+        {cartsData?.map((card: any, index: number) => (
           <CartCard
             data={data}
             title={card.title}

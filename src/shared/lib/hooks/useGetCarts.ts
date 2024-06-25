@@ -11,7 +11,7 @@ interface IResponseData {
 }
 
 export function useGetCarts() {
-  const [cartsData, setData] = useState<IResponseData | null>(null);
+  const [cartsData, setData] = useState<IResponseData | null | any>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
