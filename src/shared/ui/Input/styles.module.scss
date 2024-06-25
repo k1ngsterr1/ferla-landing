@@ -29,6 +29,10 @@
 
   @include respond-to("lg") {
     width: clamp(110px, 220 / 1100 * 100vw, 440px);
+    @apply mt-2;
+    &:not(:first-child) {
+      @apply mt-12;
+    }
   }
 
   @include respond-to("xl") {
@@ -36,9 +40,14 @@
     @apply mt-12;
   }
 
+  @include respond-to("2xl") {
+    width: clamp(110px, 220 / 1360 * 100vw, 440px);
+    @apply mt-12;
+  }
+
   @include respond-to("4xl") {
     width: clamp(150px, 300 / 1920 * 100vw, 600px);
-    @apply mt-10;
+    @apply mt-12;
   }
 
   @include respond-to("5xl") {

@@ -42,8 +42,8 @@ export const SubmitForm = () => {
           labelText="Your Name"
           type="text"
           name="name"
-          margin="mt-4"
           required
+          margin="min-[1440px]:mt-4"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
@@ -51,7 +51,7 @@ export const SubmitForm = () => {
           labelText="Phone Number"
           type="phone"
           name="phone"
-          margin="mt-14"
+          // margin="mt-14"
           required
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
@@ -60,16 +60,16 @@ export const SubmitForm = () => {
           labelText="Email"
           type="email"
           name="email"
-          margin="mt-14"
+          // margin="mt-14"
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <TextArea
+        <Input
           labelText="Write Your Message"
           type="text"
           name="date"
-          margin="mt-14"
+          // margin="mt-14"
           required
           value={message}
           onChange={(e) => setMessage(e.target.value)}

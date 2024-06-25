@@ -22,7 +22,7 @@ export const Input: React.FC<Input> = ({
 
   return (
     <div
-      className={`${styles.input_container} hoverable ${margin} hoverable`}
+      className={`${styles.input_container}  hoverable ${margin} hoverable`}
       {...rest}
     >
       <label
