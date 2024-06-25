@@ -1,0 +1,60 @@
+@import "breakpoint-slicer";
+@import "../../../shared/styles/mixins";
+@import "../../../shared/styles/variables";
+
+.input_container {
+  width: clamp(150px, 70.092vw, 600px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 1px solid;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s all;
+  @apply pl-2;
+
+  @include respond-to("md") {
+    font-size: clamp(9px, 0.93744vw, 36px);
+  }
+
+  @include respond-to("md") {
+    width: clamp(150px, 15.624vw, 600px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid;
+    cursor: pointer;
+    transition: 0.3s all;
+  }
+
+  @include respond-to("tablet_sm") {
+    width: clamp(125px, 250 / 1024 * 100vw, 500px);
+  }
+
+  @include respond-to("lg") {
+    width: clamp(110px, 220 / 1100 * 100vw, 440px);
+  }
+
+  @include respond-to("xl") {
+    width: clamp(110px, 220 / 1360 * 100vw, 440px);
+    @apply mt-12;
+  }
+
+  @include respond-to("4xl") {
+    width: clamp(150px, 300 / 1920 * 100vw, 600px);
+    @apply mt-10;
+  }
+
+  @include respond-to("5xl") {
+    @apply mt-12;
+  }
+
+  &:hover {
+    @apply border-red;
+    @apply text-red;
+  }
+}

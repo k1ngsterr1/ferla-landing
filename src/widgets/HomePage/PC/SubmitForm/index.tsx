@@ -8,19 +8,20 @@ import { useAddForm } from "@shared/lib/hooks/useAddForm";
 import { FormPopup } from "@entities/FormPopup";
 
 import styles from "../../PC/Form/styles.module.scss";
+import { TextArea } from "@shared/ui/TextArea";
 
 export interface IData {
   name: string;
   phoneNumber: string;
   email: string;
-  date: string;
+  message: string;
 }
 
 export const SubmitForm = () => {
   const [name, setName] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
   const [email, setEmail] = useState<string>("");
-  const [date, setDate] = useState<any>();
+  const [message, setMessage] = useState<string>("");
 
   const { handleSubmit, onSubmit, setValue } = useSendEmail();
 
@@ -28,8 +29,8 @@ export const SubmitForm = () => {
     setValue("name", name);
     setValue("phoneNumber", phone);
     setValue("email", email);
-    setValue("date", date);
-  }, [name, phone, email, date, setValue]);
+    setValue("message", message);
+  }, [name, phone, email, message, setValue]);
 
   return (
     <>
@@ -64,20 +65,14 @@ export const SubmitForm = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <DatePickerInput
-          placeholder="Pick a Date"
+        <TextArea
+          labelText="Write Your Message"
+          type="text"
+          name="date"
           margin="mt-14"
-          date={date}
-          onChange={(
-            selectedDate: Date | null,
-            event: React.SyntheticEvent<any, Event> | undefined
-          ) => {
-            if (selectedDate) {
-              setDate(selectedDate.toISOString());
-            } else {
-              setDate("");
-            }
-          }}
+          required
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
         />
         <Button
           text="Send Form"

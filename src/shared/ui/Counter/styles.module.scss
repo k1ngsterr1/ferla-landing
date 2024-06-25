@@ -64,12 +64,12 @@
   }
 
   @include respond-to("4xl") {
-    width: clamp(75px, 150 / 1920 * 100vw, 300px);
+    width: clamp(110px, 220 / 1920 * 100vw, 440px);
     height: clamp(32.5px, 65 / 1920 * 100vw, 130px);
   }
 
   @include respond-to("5xl") {
-    width: clamp(75px, 150 / 2560 * 100vw, 300px);
+    width: clamp(110px, 220 / 2560 * 100vw, 440px);
     height: clamp(32.5px, 65 / 2560 * 100vw, 130px);
   }
 

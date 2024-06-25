@@ -18,6 +18,7 @@ const Selector: React.FC<SelectorProps> = ({
   value,
   onChange,
   options,
+  margin,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -30,7 +31,7 @@ const Selector: React.FC<SelectorProps> = ({
 
   return (
     <div
-      className={`w-full flex flex-col items-center margin relative hoveralbe`}
+      className={`w-full flex flex-col items-center margin relative hoveralbe ${margin}`}
     >
       <div
         className={`${styles.selector} flex gap-2 hoverable`}
