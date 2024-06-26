@@ -44,9 +44,9 @@ export const OurBikes: React.FC<IOurBikesScreen> = ({ allBikes, data }) => {
         {cartsData?.map((card: any, index: number) => (
           <CartCard
             data={data}
-            title={card.title}
+            title={card.name}
             name={card.name}
-            paragraph={card.paragraph}
+            paragraph={card.description}
             photo={card.img_url}
             href={"test"}
             key={index}
