@@ -45,7 +45,12 @@ const LazyReviews = dynamic(
 
 async function getData() {
   const res = await fetch(
-    "https://ferla-backend-production.up.railway.app/api/components/get-components"
+    "https://ferla-backend-production.up.railway.app/api/components/get-components",
+    {
+      headers: {
+        "Cache-Control": "no-store",
+      },
+    }
   );
 
   if (!res.ok) {
