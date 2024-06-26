@@ -20,6 +20,8 @@ export const Popup = () => {
             <Image
               src={cartData?.image}
               alt={cartData?.title}
+              width={100}
+              height={100}
               className={styles.popup__image}
             />
             <div className="flex flex-col items-start ml-12">

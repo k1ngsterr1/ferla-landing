@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Button from "@shared/ui/Button";
 import Link from "next/link";
@@ -17,8 +16,6 @@ interface IMainScreen {
 }
 
 export const MainScreen: React.FC<IMainScreen> = ({ data }) => {
-  console.log("data:", data);
-
   return (
     <main className={styles.main_screen} id="home">
       <h1 className={`${styles.main_screen__heading} animate__fadeInLeft`}>
