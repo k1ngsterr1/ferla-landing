@@ -24,7 +24,7 @@ export const Popup = () => {
               height={100}
               className={styles.popup__image}
             />
-            <div className="flex flex-col items-start ml-12">
+            <div className="w-full flex flex-col items-start ml-12">
               <div className="w-full flex items-center justify-between">
                 <span className={styles.popup__title}>{cartData.title}</span>
                 <FontAwesomeIcon
