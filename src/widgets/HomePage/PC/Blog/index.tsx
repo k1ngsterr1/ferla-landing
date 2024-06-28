@@ -23,7 +23,7 @@ export const Blog: React.FC<IBlog> = ({ data }) => {
         </h6>
       </div>
       <div className={styles.blog__content}>
-        {blogData?.map((card, index) => (
+        {blogData?.map((card: any, index: number) => (
           <div className={styles.blog__content__card} key={index}>
             <BlogCard
               data={data}
