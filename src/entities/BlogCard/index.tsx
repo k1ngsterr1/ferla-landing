@@ -14,12 +14,19 @@ export interface IBlogCard {
 export const BlogCard: React.FC<IBlogCard> = ({ title, href, image, data }) => {
   return (
     <div className={`${styles.blog_card} hoverable`}>
-      <Image src={image} alt={title} className={styles.blog_card__image} />
+      <Image
+        src={image}
+        alt={title}
+        className={styles.blog_card__image}
+        width={700}
+        height={700}
+      />
       <span className={styles.blog_card__title}>{title}</span>
-      <Link href={href} className={`${styles.blog_card__link} hoverable`}>
-        {data?.components && data?.components["55"]
-          ? data?.components["55"].value
-          : "Fresh From Our Blog"}{" "}
+      <Link
+        href={`/blog/${href}`}
+        className={`${styles.blog_card__link} hoverable`}
+      >
+        Read More
       </Link>
     </div>
   );

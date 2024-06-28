@@ -2,9 +2,7 @@
 
 import React, { useRef } from "react";
 import useHeaderScroll from "@shared/lib/animations/headerAnimation";
-
 import Link from "next/link";
-
 import logo from "@assets/vectors/logo.svg";
 import Image from "next/image";
 

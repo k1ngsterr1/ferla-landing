@@ -31,7 +31,7 @@ export const CartCard: React.FC<ICartCard> = ({
     const cardData = {
       image: photo,
       name: name,
-      title: title,
+      title: name,
       href: href,
       paragraph: paragraph,
     };
