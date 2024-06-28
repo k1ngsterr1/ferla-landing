@@ -29,11 +29,11 @@
 
   @include respond-to("xxs") {
     width: 100%;
-    height: clamp(75px, 41.667vw, 300px);
+    height: clamp(105px, 210 / 360 * 100vw, 420px);
   }
 
   @include respond-to("xs") {
-    height: clamp(75px, 150 / 480 * 100vw, 300px);
+    height: clamp(110px, 220 / 480 * 100vw, 440px);
   }
 
   @include respond-to("sm") {

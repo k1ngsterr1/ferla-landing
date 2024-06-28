@@ -20,6 +20,17 @@
     display: flex;
     justify-content: space-between;
 
+    &__tab {
+      @include respond-to("xxs") {
+        width: 100%;
+        flex-direction: column;
+      }
+
+      @include respond-to("lg") {
+        flex-direction: row;
+      }
+    }
+
     @include respond-to("xxs") {
       width: 100%;
       align-items: center;

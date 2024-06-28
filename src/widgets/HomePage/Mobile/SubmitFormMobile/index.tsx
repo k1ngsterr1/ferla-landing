@@ -80,7 +80,7 @@ export const SubmitFormMobile = () => {
           labelText="Write Your Message"
           type="text"
           name="message"
-          // margin="mt-14"
+          margin="mt-12"
           required
           value={message}
           onChange={(e) => setMessage(e.target.value)}

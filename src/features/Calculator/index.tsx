@@ -82,7 +82,9 @@ export const Calculator = () => {
       <div className={styles.calculator}>
         <div className={styles.calculator__container}>
           <div className="flex flex-col items-start">
-            <div className="flex items-center gap-4 justify-center">
+            <div
+              className={`flex items-center  gap-4 justify-center ${styles.calculator__container__tab}`}
+            >
               <div className="flex flex-col items-center">
                 <span className={styles.calculator__counter_text}>
                   Average order price
@@ -93,7 +95,7 @@ export const Calculator = () => {
                   handleIncrement={handleIncrementAverageOrderPrice}
                 />
               </div>
-              <div className="flex flex-col items-start mt-4">
+              <div className="flex flex-col items-center mt-4">
                 <span className={styles.calculator__counter_text}>
                   Approximate orders per day
                 </span>
@@ -107,8 +109,10 @@ export const Calculator = () => {
                 />
               </div>
             </div>
-            <div className="flex items-center gap-4 justify-center">
-              <div className="flex flex-col items-start mt-0">
+            <div
+              className={`flex items-center gap-4 justify-center ${styles.calculator__container__tab}`}
+            >
+              <div className="flex flex-col items-center mt-0">
                 <span className={styles.calculator__counter_text}>
                   Working days per week
                 </span>
