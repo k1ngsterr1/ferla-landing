@@ -1,5 +1,8 @@
 "use client";
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
+
 import styles from "@widgets/HomePage/PC/VideoBlock/styles.module.scss";
 
 interface IVideoFrame {
@@ -17,12 +20,18 @@ const VideoFrame: React.FC<IVideoFrame> = ({ src, thumbnail }) => {
   return (
     <div className={styles.video_block__cover} onClick={loadVideo}>
       {!loaded ? (
-        <img
-          src={thumbnail}
-          className={styles.video_block__cover__image}
-          alt="Video thumbnail"
-          style={{ width: "100%", cursor: "pointer" }}
-        />
+        <div className="relative">
+          <FontAwesomeIcon
+            className={styles.video_block__cover__icon}
+            icon={faPlay}
+          />
+          <img
+            src={thumbnail}
+            className={styles.video_block__cover__image}
+            alt="Video thumbnail"
+            style={{ width: "100%", cursor: "pointer" }}
+          />
+        </div>
       ) : (
         <iframe
           src={src}

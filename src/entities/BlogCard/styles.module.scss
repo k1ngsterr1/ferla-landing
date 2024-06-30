@@ -146,27 +146,27 @@
     }
 
     @include respond-to("lg") {
-      height: clamp(130px, 260 / 1200 * 100vw, 520px);
+      height: clamp(205px, 410 / 1200 * 100vw, 820px);
     }
 
     @include respond-to("xl") {
-      height: clamp(80px, 160 / 1360 * 100vw, 320px);
+      height: clamp(100px, 200 / 1360 * 100vw, 400px);
     }
 
     @include respond-to("2xl") {
-      height: clamp(105px, 210 / 1520 * 100vw, 420px);
+      height: clamp(140px, 280 / 1520 * 100vw, 460px);
     }
 
     @include respond-to("3xl") {
-      height: clamp(110px, 220 / 1680 * 100vw, 440px);
+      height: clamp(140px, 280 / 1680 * 100vw, 460px);
     }
 
     @include respond-to("4xl") {
-      height: clamp(130px, 260 / 1920 * 100vw, 520px);
+      height: clamp(205px, 410 / 1920 * 100vw, 820px);
     }
 
     @include respond-to("5xl") {
-      height: clamp(170px, 340 / 2560 * 100vw, 680px);
+      height: clamp(205px, 410 / 2560 * 100vw, 820px);
     }
   }
 
