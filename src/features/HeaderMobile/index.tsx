@@ -18,12 +18,14 @@ export const HeaderMobile = () => {
       <div
         className={`${styles.header_mob__container}  m-auto w-full  !flex !flex-row items-center`}
       >
-        <Image
-          priority
-          src={logo}
-          alt="Ferla Bikes Logo"
-          className={styles.header_mob__container__logo}
-        />
+        <Link href="/">
+          <Image
+            priority
+            src={logo}
+            alt="Ferla Bikes Logo"
+            className={styles.header_mob__container__logo}
+          />
+        </Link>
         <Link className={styles.header_mob__container__link} href="#email-mob">
           Get a quote
         </Link>
