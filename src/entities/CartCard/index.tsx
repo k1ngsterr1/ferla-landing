@@ -14,7 +14,6 @@ interface ICartCard {
   title: string;
   paragraph: string;
   href: string;
-  data: any;
 }
 
 export const CartCard: React.FC<ICartCard> = ({
@@ -23,7 +22,6 @@ export const CartCard: React.FC<ICartCard> = ({
   paragraph,
   title,
   href,
-  data,
 }) => {
   const { toggleCartPopup } = useCartPopup();
 
@@ -55,9 +53,7 @@ export const CartCard: React.FC<ICartCard> = ({
       </div>
       <div className="flex items-center justify-center gap-2 mt-4">
         <a href={href} className={`${styles.link} hoverable`}>
-          {data.components && data.components["50"]
-            ? data.components["50"].value
-            : "From Initial Concept To Market Leader"}
+          From Initial Concept To Market Leader
           <FontAwesomeIcon
             icon={faChevronRight}
             className={styles.link__icon}

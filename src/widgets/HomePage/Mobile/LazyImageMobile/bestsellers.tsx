@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "../BestSellersMobile/styles.module.scss";
 
 interface ILazyImage {
-  src: string;
+  src: any;
 }
 
 const LazyImage: React.FC<ILazyImage> = ({ src }) => {

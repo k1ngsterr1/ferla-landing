@@ -17,60 +17,28 @@ const HeavyImage = dynamic(() => import("../LazyImageMobile/business"), {
   ssr: false,
 });
 
-interface IBusinessBlock {
-  data: any;
-}
-
-export const BusinessBlockMobile: React.FC<IBusinessBlock> = ({ data }) => {
+export const BusinessBlockMobile = () => {
   return (
     <section className={styles.business_block_mob} id="perfect-mob">
-      <HeavyImage
-        src={
-          data.components && data.components["5"]
-            ? data.components["5"].value
-            : main_pc
-        }
-      />
+      <HeavyImage src={main_pc} />
       <div className={styles.business_block_mob__content}>
         <div className={styles.business_block_mob__content__text}>
-          <MiniText
-            text={
-              data.components && data.components["7"]
-                ? data.components["7"].value
-                : "Aesthetic Vending Solutions"
-            }
-          />
+          <MiniText text="Aesthetic Vending Solutions" />
           <h2 className={styles.business_block_mob__content__text__heading}>
-            {/* Perfect <strong className="text-red">for Any Business</strong> */}
-            {data.components && data.components["6"]
-              ? data.components["6"].value
-              : "Perfect for any Business"}
+            Perfect <strong className="text-red">for Any Business</strong>
           </h2>
           <p className={styles.business_block_mob__content__text__paragraph}>
-            {data.components && data.components["8"]
-              ? data.components["8"].value
-              : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
         </div>
         <div className={styles.business_block_mob__content__tabs}>
           {tabs.map((tab, index) => (
-            <SolutionTab
-              name={
-                data.components && data.components[`${10 + index}`]
-                  ? data.components[`${10 + index}`].value
-                  : tab.name
-              }
-              href={"test"}
-              key={tab.name}
-            />
+            <SolutionTab name={tab.name} href={"test"} key={tab.name} />
           ))}
         </div>
         <Button
-          text={
-            data.components && data.components["9"]
-              ? data.components["9"].value
-              : "Content not found"
-          }
+          text="Contact Us"
           buttonType="transparent"
           margin="mt-4"
           icon={faChevronRight}

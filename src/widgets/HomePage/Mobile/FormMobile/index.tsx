@@ -4,22 +4,12 @@ import { SubmitFormTablet } from "@widgets/HomePage/Tablet/SubmitFormTablet";
 
 import styles from "./styles.module.scss";
 
-interface IForm {
-  data: any;
-}
-
-export const FormMobile: React.FC<IForm> = ({ data }) => {
+export const FormMobile = () => {
   return (
     <section className={styles.form_mob} id="form-mob">
-      <h6>
-        {data?.components && data?.components["61"]
-          ? data?.components["61"].value
-          : "Contact us"}
-      </h6>
+      <h6>Contact us</h6>
       <p className={styles.form_mob__paragraph}>
-        {data?.components && data?.components["58"]
-          ? data?.components["58"].value
-          : "We have got more options Hop on a call with us today!"}
+        We have got more options Hop on a call with us today!
       </p>
       <div className={styles.form_mob__mobile}>
         <SubmitFormMobile />

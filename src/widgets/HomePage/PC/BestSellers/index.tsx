@@ -16,41 +16,22 @@ const HeavyImage = dynamic(() => import("../LazyImage/bestSellers"), {
   ssr: false,
 });
 
-interface IBestSellers {
-  data: any;
-}
-
-export const BestSellers: React.FC<IBestSellers> = ({ data }) => {
+export const BestSellers = () => {
   return (
     <section className={styles.best_sellers} id="business">
       <div className="flex flex-col items-start">
-        <MiniText
-          text={
-            data.components && data.components["14"]
-              ? data.components["14"].value
-              : "Best Sellers"
-          }
-        />
-        <h3 className={styles.best_sellers__heading}>
-          {data.components && data.components["15"]
-            ? data.components["15"].value
-            : "Your Bike, Your Way"}
-        </h3>
+        <MiniText text="Best Sellers" />
+        <h3 className={styles.best_sellers__heading}>Your Bike, Your Way</h3>
         <div className="flex items-center gap-10 mt-4">
           <p className={styles.best_sellers__paragraph}>
-            {data.components && data.components["16"]
-              ? data.components["16"].value
-              : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
           <ArrowAnimation />
         </div>
         <Button
           id="form"
-          text={
-            data.components && data.components["17"]
-              ? data.components["17"].value
-              : "Content Not Found"
-          }
+          text="Contact Us"
           buttonType="transparent"
           margin="mt-8"
           icon={faChevronRight}
@@ -59,68 +40,30 @@ export const BestSellers: React.FC<IBestSellers> = ({ data }) => {
           <div className="flex items-center gap-4">
             <AboutCard
               icon={faMoneyBill}
-              name={
-                data.components && data.components["18"]
-                  ? data.components["18"].value
-                  : "Coffee Bikes"
-              }
-              text={
-                data.components && data.components["19"]
-                  ? data.components["19"].value
-                  : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-              }
+              name="Coffee Bikes"
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             />
             <AboutCard
               icon={faMoneyBill}
-              name={
-                data.components && data.components["20"]
-                  ? data.components["20"].value
-                  : "Ice Cream Bikes"
-              }
-              text={
-                data.components && data.components["21"]
-                  ? data.components["21"].value
-                  : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-              }
+              name="Ice Cream Bikes"
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             />
           </div>
           <div className="flex items-center gap-4 ">
             <AboutCard
               icon={faMoneyBill}
-              name={
-                data.components && data.components["22"]
-                  ? data.components["22"].value
-                  : "Modern Bikes"
-              }
-              text={
-                data.components & data.components["23"]
-                  ? data.components["23"].value
-                  : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-              }
+              name="Modern Bikes"
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             />
             <AboutCard
               icon={faMoneyBill}
-              name={
-                data.components && data.components["24"]
-                  ? data.components["24"].value
-                  : "Hot Dog Bikes"
-              }
-              text={
-                data.components & data.components["25"]
-                  ? data.components["25"].value
-                  : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-              }
+              name="Hot Dog Bikes"
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             />
           </div>
         </div>
       </div>
-      <HeavyImage
-        src={
-          data.components && data.components["26"]
-            ? data.components["26"].value
-            : best_sellers_pc
-        }
-      />
+      <HeavyImage src={best_sellers_pc} />
     </section>
   );
 };

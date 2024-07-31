@@ -6,7 +6,7 @@ import styles from "../BestSellers/styles.module.scss";
 import main_pc from "@assets/webp/pc/best_sellers_pc.webp";
 
 interface ILazyImage {
-  src: string;
+  src: any;
 }
 
 const LazyImage: React.FC<ILazyImage> = ({ src }) => {

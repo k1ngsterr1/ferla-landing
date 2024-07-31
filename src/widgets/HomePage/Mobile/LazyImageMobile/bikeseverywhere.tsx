@@ -6,11 +6,7 @@ import { bikes } from "@shared/lib/content/bikesImagesContent";
 
 import styles from "../BikeEverywhereMobile/styles.module.scss";
 
-interface ILazyImage {
-  data: any;
-}
-
-const LazyImage: React.FC<ILazyImage> = ({ data }) => {
+const LazyImage = () => {
   return (
     <>
       {bikes.map((bike, index) => (
@@ -18,11 +14,7 @@ const LazyImage: React.FC<ILazyImage> = ({ data }) => {
           width={950}
           height={950}
           key={index}
-          src={
-            data.components && data.components[`${30 + index}`]
-              ? data.components[`${30 + index}`].value
-              : image
-          }
+          src={bike.image}
           priority
           className={styles.bikes_everywhere_mob__gallery_image}
           alt="bike"

@@ -5,26 +5,15 @@ import styles from "./styles.module.scss";
 
 interface IOurBikesScreen {
   allBikes: boolean;
-  data: any;
 }
 
-export const OurBikesMobile: React.FC<IOurBikesScreen> = ({ data }) => {
+export const OurBikesMobile: React.FC<IOurBikesScreen> = () => {
   return (
     <section className={styles.our_bikes_mob}>
       <h6>
-        {data.components &&
-        data.components["49"] &&
-        data.components["49"].value.split("Our").length > 0 ? (
-          <>
-            {data.components["49"].value.split("Bikes")[0]}
-            <strong className="text-red">Bikes</strong>
-            {data.components["49"].value.split("Bikes")[1]}
-          </>
-        ) : (
-          "Our Bikes"
-        )}
+        Our <span className="text-red">Bikes</span>
       </h6>
-      <CartCardSwiper allBikes={true} data={data} />
+      <CartCardSwiper allBikes={true} />
     </section>
   );
 };

@@ -7,7 +7,7 @@ import image from "../../../../assets/webp/pc/compressed_image.jpg";
 import main_pc from "@assets/webp/pc/mainImage_pc.webp";
 
 interface ILazyImage {
-  src: string;
+  src: any;
 }
 
 const LazyImage: React.FC<ILazyImage> = ({ src }) => {

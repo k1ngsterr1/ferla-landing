@@ -43,59 +43,44 @@ const LazyReviews = dynamic(
   }
 );
 
-async function getData() {
-  const res = await fetch(
-    "https://ferla-backend-production.up.railway.app/api/components/get-components",
-    { cache: "no-store" }
-  );
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-
-  return res.json();
-}
-
 const HomePage = async () => {
-  const data = await getData();
-
   return (
     <>
       <div className={styles.pc}>
         <ProgressBar />
         <Header />
         <Cursor />
-        <MainScreen data={data} />
-        <BusinessBlock data={data} />
-        <BestSellers data={data} />
-        <BikesEverywhere data={data} />
-        <PartnersScreen data={data} />
-        <ManageScreen data={data} />
-        <OurBikes allBikes={true} data={data} />
-        <LazyReviews data={data} />
+        <MainScreen />
+        <BusinessBlock />
+        <BestSellers />
+        <BikesEverywhere />
+        <PartnersScreen />
+        <ManageScreen />
+        <OurBikes allBikes={true} />
+        <LazyReviews />
         <VideoBlock id="video" />
-        <Blog data={data} />
-        <EmailForm data={data} />
-        <CalculatorBlock data={data} />
-        <Form data={data} />
+        <Blog />
+        <EmailForm />
+        <CalculatorBlock />
+        <Form />
         <Footer />
       </div>
       <div className={styles.tablet}></div>
       <div className={styles.mob}>
         <HeaderMobile />
-        <MainScreenMobile data={data} />
-        <BusinessBlockMobile data={data} />
-        <BestSellersMobile data={data} />
-        <BikesEverywhereMobile data={data} />
-        <PartnersScreenMobile data={data} />
-        <ManageScreenMobile data={data} />
-        <OurBikesMobile data={data} allBikes />
-        {/* <ReviewsMobile data={data} /> */}
+        <MainScreenMobile />
+        <BusinessBlockMobile />
+        <BestSellersMobile />
+        <BikesEverywhereMobile />
+        <PartnersScreenMobile />
+        <ManageScreenMobile />
+        <OurBikesMobile allBikes />
+        {/* <ReviewsMobile  /> */}
         <VideoBlock id="video-mob" />
-        <Blog data={data} />
-        <EmailFormMobile data={data} />
-        <CalculatorBlock data={data} />
-        <FormMobile data={data} />
+        <Blog />
+        <EmailFormMobile />
+        <CalculatorBlock />
+        <FormMobile />
         <FooterMobile />
       </div>
     </>

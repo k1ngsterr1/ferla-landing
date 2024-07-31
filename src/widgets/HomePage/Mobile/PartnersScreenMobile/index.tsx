@@ -7,23 +7,17 @@ import { clientContent } from "@shared/lib/content/clientsContent";
 
 import styles from "./styles.module.scss";
 
-interface IPartnersScreen {
-  data: any;
-}
-
 const HeavyImage = dynamic(() => import("../LazyImageMobile/planet"), {
   loading: () => <p>Loading...</p>,
   ssr: false,
 });
 
-export const PartnersScreenMobile: React.FC<IPartnersScreen> = ({ data }) => {
+export const PartnersScreenMobile = () => {
   return (
     <section className={styles.partners_mob} id="partners-mob">
       <div className={styles.partners_mob__content}>
         <h5 className={styles.partners_mob__content__heading}>
-          {data.components && data.components["35"]
-            ? data.components["35"].value
-            : "Partnering with Industry Giants Ferla’s Trusted Collaborators"}
+          Partnering with Industry Giants Ferla’s Trusted Collaborators
         </h5>
         <HeavyImage />
       </div>
@@ -32,11 +26,7 @@ export const PartnersScreenMobile: React.FC<IPartnersScreen> = ({ data }) => {
           <Image
             width={"256"}
             height={"256"}
-            src={
-              data.components && data.components[`${36 + index}`]
-                ? data.components[`${36 + index}`].value
-                : image.image
-            }
+            src={image.image}
             alt={image.alt}
             key={index}
             className={styles.partners_mob__marquee}

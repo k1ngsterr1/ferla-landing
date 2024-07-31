@@ -7,28 +7,15 @@ import { ArrowLeft } from "@shared/ui/ArrowLeft";
 
 import styles from "./styles.module.scss";
 
-interface IBusinessBlock {
-  data: any;
-}
-
-export const BusinessBlock: React.FC<IBusinessBlock> = ({ data }) => {
+export const BusinessBlock = () => {
   return (
     <section className={styles.business_block} id="perfect">
       <div className="flex flex-col items-start w-full">
         <div className={styles.business_block__upper}>
           <h2 className={styles.business_block__upper__heading}>
-            {/* Perfect <strong className="text-red">for Any Business</strong> */}
-            {data.components && data.components["6"]
-              ? data.components["6"].value
-              : "Perfect for any Business"}
+            Perfect <strong className="text-red">for Any Business</strong>
           </h2>
-          <MiniText
-            text={
-              data.components && data.components["7"]
-                ? data.components["7"].value
-                : "Aesthetic Vending Solutions"
-            }
-          />
+          <MiniText text={"Aesthetic Vending Solutions"} />
         </div>
         <div className={styles.business_block__perfect}>
           <div
@@ -38,17 +25,12 @@ export const BusinessBlock: React.FC<IBusinessBlock> = ({ data }) => {
               <ArrowLeft />
               <div className="flex flex-col items-start">
                 <p className={styles.business_block__perfect__paragraph}>
-                  {data.components && data.components["8"]
-                    ? data.components["8"].value
-                    : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.. Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit..
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
                 <Button
                   id="form"
-                  text={
-                    data.components && data.components["9"]
-                      ? data.components["9"].value
-                      : "Content not found"
-                  }
+                  text="Contact With Us"
                   buttonType="transparent"
                   margin="mt-4"
                   icon={faChevronRight}
@@ -60,42 +42,14 @@ export const BusinessBlock: React.FC<IBusinessBlock> = ({ data }) => {
             <div
               className={`flex justify-center items-center gap-4 ${styles.business_block__perfect__upper_tab}`}
             >
-              <SolutionTab
-                name={
-                  data.components && data.components["10"]
-                    ? data.components["10"].value
-                    : "Cafe-On-Wheels"
-                }
-                href="/products"
-              />
-              <SolutionTab
-                name={
-                  data.components && data.components["11"]
-                    ? data.components["11"].value
-                    : "Stand-Out Trade Shows"
-                }
-                href="/products"
-              />
+              <SolutionTab name="Cafe-On-Wheels" href="/products" />
+              <SolutionTab name="Stand-Out Trade Shows" href="/products" />
             </div>
             <div
               className={`flex justify-center items-center gap-4 mt-4 ${styles.business_block__perfect__lower_tab}`}
             >
-              <SolutionTab
-                name={
-                  data.components && data.components["12"]
-                    ? data.components["12"].value
-                    : "Stand-Out Trade Shows"
-                }
-                href="/products"
-              />
-              <SolutionTab
-                name={
-                  data.components && data.components["13"]
-                    ? data.components["13"].value
-                    : "Promo Activation Cart"
-                }
-                href="/products"
-              />
+              <SolutionTab name="Stand-Out Trade Shows" href="/products" />
+              <SolutionTab name="Promo Activation Cart" href="/products" />
             </div>
           </div>
         </div>

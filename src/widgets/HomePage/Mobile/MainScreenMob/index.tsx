@@ -11,35 +11,21 @@ const HeavyImage = dynamic(() => import("../LazyImageMobile/main"), {
   ssr: false,
 });
 
-interface IMainScreen {
-  data: any;
-}
-
-export const MainScreenMobile: React.FC<IMainScreen> = ({ data }) => {
+export const MainScreenMobile = () => {
   return (
     <main className={styles.main_screen_mob} id="home-mob">
       <HeavyImage />
       <div className={styles.main_screen_mob__content}>
         <h1 className={styles.main_screen_mob__content__heading}>
-          {/* Let us introduce <strong className="text-red">ferla bikes</strong> */}
-          {data.components && data.components["0"]
-            ? data.components["0"].value
-            : "Business on Wheels for Everyone"}
+          Let us introduce <strong className="text-red">ferla bikes</strong>
         </h1>
         <p className={styles.main_screen_mob__content__paragraph}>
-          {/* From Coffee Bikes and Ice Cream Bikes to Marketing & Promo Bikes,
-        Hospitality Bikes, Vending Carts and more, we provide the perfect
-        solution for your mobile retail pop-up. */}
-          {data.components && data.components["2"]
-            ? data.components["2"].value
-            : "From Coffee Bikes and Ice Cream Bikes to Marketing & Promo Bikes, Hospitality Bikes, Vending Carts and more, we provide the perfect solution for your mobile retail pop-up."}
+          From Coffee Bikes and Ice Cream Bikes to Marketing & Promo Bikes,
+          Hospitality Bikes, Vending Carts and more, we provide the perfect
+          solution for your mobile retail pop-up.
         </p>
         <Button
-          text={
-            data.components && data.components["3"]
-              ? data.components["3"].value
-              : "Get A Free Consultation"
-          }
+          text="Get A Free Consultation"
           buttonType="filled"
           margin="mt-8"
           targetId="form-mob"
@@ -48,9 +34,7 @@ export const MainScreenMobile: React.FC<IMainScreen> = ({ data }) => {
           className={`${styles.main_screen_mob__content__link} hoverable`}
           href="#video-mob"
         >
-          {data.components && data.components["4"]
-            ? data.components["4"].value
-            : "Watch the true story"}
+          Watch the true story
         </Link>
       </div>
     </main>
